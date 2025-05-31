@@ -1,0 +1,729 @@
+1
+00:00:00,000 --> 00:00:01,315
+Let's take a look at
+
+2
+00:00:01,315 --> 00:00:02,589
+arc length and curvature.
+
+3
+00:00:02,589 --> 00:00:03,850
+>> This is an
+overview of Section
+
+4
+00:00:03,850 --> 00:00:07,780
+11.51 and motivation.
+
+5
+00:00:07,780 --> 00:00:09,670
+When we want to describe
+
+6
+00:00:09,670 --> 00:00:12,205
+the position of an
+object around a curve,
+
+7
+00:00:12,205 --> 00:00:13,180
+we can do it
+
+8
+00:00:13,180 --> 00:00:15,520
+with a different
+parameterizations.
+
+9
+00:00:15,520 --> 00:00:18,385
+So on the pictures
+on the bottom left,
+
+10
+00:00:18,385 --> 00:00:20,605
+we have one
+parameterization
+
+11
+00:00:20,605 --> 00:00:23,770
+that shows that at
+time equals to 0,
+
+12
+00:00:23,770 --> 00:00:25,570
+where at this
+red point, time
+
+13
+00:00:25,570 --> 00:00:26,620
+equals to one here.
+
+14
+00:00:26,620 --> 00:00:28,570
+At time equals to two here.
+
+15
+00:00:28,570 --> 00:00:30,520
+Looking at the points as
+
+16
+00:00:30,520 --> 00:00:32,320
+t moves gives
+us some kind of
+
+17
+00:00:32,320 --> 00:00:34,255
+indication of the speed
+
+18
+00:00:34,255 --> 00:00:37,195
+that the position
+changes along the curve.
+
+19
+00:00:37,195 --> 00:00:39,925
+On the curve on the right,
+
+20
+00:00:39,925 --> 00:00:42,820
+S denotes arc length.
+
+21
+00:00:42,820 --> 00:00:46,015
+So here, when S is 0,
+
+22
+00:00:46,015 --> 00:00:48,730
+if you move one distance
+along the curve,
+
+23
+00:00:48,730 --> 00:00:50,065
+you get S equal to one.
+
+24
+00:00:50,065 --> 00:00:52,330
+We move one more distance
+along the curve,
+
+25
+00:00:52,330 --> 00:00:53,935
+we get S equal to two.
+
+26
+00:00:53,935 --> 00:00:56,680
+So the parametrization
+on the left gives us
+
+27
+00:00:56,680 --> 00:00:59,560
+a parameterization
+in terms at a time.
+
+28
+00:00:59,560 --> 00:01:01,300
+Unit t, the premises
+
+29
+00:01:01,300 --> 00:01:01,810
+realization on
+
+30
+00:01:01,810 --> 00:01:03,670
+the right because
+of privatization.
+
+31
+00:01:03,670 --> 00:01:05,080
+In terms of the arc length,
+
+32
+00:01:05,080 --> 00:01:10,345
+the distance S. To
+understand arc length,
+
+33
+00:01:10,345 --> 00:01:12,790
+let's start with
+a curve and
+
+34
+00:01:12,790 --> 00:01:14,140
+remember that we
+can have different
+
+35
+00:01:14,140 --> 00:01:15,520
+parameterizations.
+
+36
+00:01:15,520 --> 00:01:17,440
+The example here is
+
+37
+00:01:17,440 --> 00:01:19,180
+if you have the curve
+y equals x squared,
+
+38
+00:01:19,180 --> 00:01:20,785
+which is the
+well-known parabola.
+
+39
+00:01:20,785 --> 00:01:22,600
+We can parameterize
+that curve with
+
+40
+00:01:22,600 --> 00:01:25,975
+a position vector
+t comma t squared.
+
+41
+00:01:25,975 --> 00:01:28,330
+Or we could do it with
+this vector here,
+
+42
+00:01:28,330 --> 00:01:30,460
+two t for t squared.
+
+43
+00:01:30,460 --> 00:01:33,430
+The difference is, is
+that the second one,
+
+44
+00:01:33,430 --> 00:01:35,110
+an object will move much
+
+45
+00:01:35,110 --> 00:01:37,225
+faster compared
+to the first.
+
+46
+00:01:37,225 --> 00:01:38,980
+But at the end of the day,
+
+47
+00:01:38,980 --> 00:01:40,570
+they're tracing
+the same curve,
+
+48
+00:01:40,570 --> 00:01:42,280
+y equals x squared.
+
+49
+00:01:42,280 --> 00:01:44,185
+When we're finding
+arc length,
+
+50
+00:01:44,185 --> 00:01:45,160
+we can actually start
+
+51
+00:01:45,160 --> 00:01:46,975
+with any parameterization.
+
+52
+00:01:46,975 --> 00:01:49,180
+So you're doing
+calculations is probably
+
+53
+00:01:49,180 --> 00:01:49,930
+a good idea to start with
+
+54
+00:01:49,930 --> 00:01:52,100
+the simplest one possible.
+
+55
+00:01:52,350 --> 00:01:56,410
+So then the arc length
+of the curve along
+
+56
+00:01:56,410 --> 00:01:58,030
+the interval 0 to t is
+
+57
+00:01:58,030 --> 00:02:00,355
+given by the
+following expression.
+
+58
+00:02:00,355 --> 00:02:02,020
+It's the integral from 0 to
+
+59
+00:02:02,020 --> 00:02:04,270
+t of the magnitude of the
+
+60
+00:02:04,270 --> 00:02:09,635
+derivative. So
+here's an example.
+
+61
+00:02:09,635 --> 00:02:12,995
+Here's a position
+vector along a curve.
+
+62
+00:02:12,995 --> 00:02:14,750
+Let's find the
+parameterization
+
+63
+00:02:14,750 --> 00:02:15,920
+with respect to
+the arc length
+
+64
+00:02:15,920 --> 00:02:19,830
+S. First we take
+its derivative.
+
+65
+00:02:20,260 --> 00:02:23,540
+Then the arc length is
+the integral from 0 to
+
+66
+00:02:23,540 --> 00:02:26,330
+t of the magnitude
+of r prime.
+
+67
+00:02:26,330 --> 00:02:29,600
+There's a small typo
+here, should be R prime.
+
+68
+00:02:29,600 --> 00:02:32,240
+And that's the square
+root of this sum of
+
+69
+00:02:32,240 --> 00:02:34,250
+the squares of
+the components.
+
+70
+00:02:34,250 --> 00:02:36,470
+And so we end up getting
+that the arc length
+
+71
+00:02:36,470 --> 00:02:38,900
+S is equal to five
+t. We can use
+
+72
+00:02:38,900 --> 00:02:40,700
+the relationship
+between S and
+
+73
+00:02:40,700 --> 00:02:43,850
+T to solve for t and then
+
+74
+00:02:43,850 --> 00:02:45,680
+substitute that back in to
+
+75
+00:02:45,680 --> 00:02:48,320
+the original
+parametrization to
+
+76
+00:02:48,320 --> 00:02:50,795
+get the permutations
+in terms of s.
+
+77
+00:02:50,795 --> 00:02:52,640
+So here, if we solve for t,
+
+78
+00:02:52,640 --> 00:02:53,915
+we get S over five.
+
+79
+00:02:53,915 --> 00:02:55,820
+And if you put S
+O S divided by
+
+80
+00:02:55,820 --> 00:02:58,205
+five in for t into the
+original function,
+
+81
+00:02:58,205 --> 00:03:00,440
+we get this new
+parameterization
+
+82
+00:03:00,440 --> 00:03:01,730
+in terms of the arc length
+
+83
+00:03:01,730 --> 00:03:04,520
+s. And this
+parameterization
+
+84
+00:03:04,520 --> 00:03:07,350
+has a number of
+benefits as we'll see.
+
+85
+00:03:09,940 --> 00:03:12,110
+So let's investigate this
+
+86
+00:03:12,110 --> 00:03:13,580
+arc length parameter
+a little bit.
+
+87
+00:03:13,580 --> 00:03:16,850
+If we take the derivative
+of both sides of
+
+88
+00:03:16,850 --> 00:03:18,380
+the definition of
+
+89
+00:03:18,380 --> 00:03:21,050
+the arc length,
+that gives us this.
+
+90
+00:03:21,050 --> 00:03:22,970
+This tells us that
+the rate at which
+
+91
+00:03:22,970 --> 00:03:25,530
+the arc length changes
+
+92
+00:03:25,660 --> 00:03:29,975
+is simply the magnitude
+of the derivative.
+
+93
+00:03:29,975 --> 00:03:32,555
+Well, this is what
+we called speed.
+
+94
+00:03:32,555 --> 00:03:34,160
+So the derivative of,
+
+95
+00:03:34,160 --> 00:03:36,875
+the derivative of
+the arc length
+
+96
+00:03:36,875 --> 00:03:39,720
+with respect to
+time is the speed.
+
+97
+00:03:40,330 --> 00:03:42,665
+If we apply the chain rule
+
+98
+00:03:42,665 --> 00:03:43,910
+and we take the
+derivative of
+
+99
+00:03:43,910 --> 00:03:46,190
+the position vector
+function with respect to
+
+100
+00:03:46,190 --> 00:03:49,010
+time, we get the following.
+
+101
+00:03:49,010 --> 00:03:50,945
+And then you can solve for
+
+102
+00:03:50,945 --> 00:03:52,940
+the derivative of
+
+103
+00:03:52,940 --> 00:03:56,540
+the curve with
+respect to s,
+
+104
+00:03:56,540 --> 00:04:00,600
+And that gives us the
+unit tangent vector.
+
+105
+00:04:01,060 --> 00:04:03,665
+So the arc length
+
+106
+00:04:03,665 --> 00:04:06,020
+is actually the
+parameterization,
+
+107
+00:04:06,020 --> 00:04:07,850
+which is the one
+that always moves at
+
+108
+00:04:07,850 --> 00:04:10,770
+a constant velocity of one.
+
+109
+00:04:13,390 --> 00:04:15,620
+Curvature is the
+measure of how
+
+110
+00:04:15,620 --> 00:04:17,450
+much a curve bends.
+
+111
+00:04:17,450 --> 00:04:19,490
+It's actually a
+measure of how much
+
+112
+00:04:19,490 --> 00:04:23,250
+the unit tangent
+vector is turning.
+
+113
+00:04:23,500 --> 00:04:24,980
+Once you've
+
+114
+00:04:24,980 --> 00:04:26,630
+parameterised your
+curve with respect
+
+115
+00:04:26,630 --> 00:04:28,895
+to the arc length
+parameter.
+
+116
+00:04:28,895 --> 00:04:31,400
+We can find the
+curvature by taking
+
+117
+00:04:31,400 --> 00:04:34,010
+the magnitude of
+the derivative
+
+118
+00:04:34,010 --> 00:04:36,240
+of the unit tangent vector.
+
+119
+00:04:37,960 --> 00:04:41,390
+It turns out in certain
+situations when
+
+120
+00:04:41,390 --> 00:04:44,465
+the curve is described
+in different ways,
+
+121
+00:04:44,465 --> 00:04:46,070
+if flicker in number
+one, if the curve is
+
+122
+00:04:46,070 --> 00:04:48,545
+described just y as
+a function of x,
+
+123
+00:04:48,545 --> 00:04:49,460
+you can easily find
+
+124
+00:04:49,460 --> 00:04:51,650
+the curvature with
+this formula.
+
+125
+00:04:51,650 --> 00:04:54,020
+If you're just curve
+is described with
+
+126
+00:04:54,020 --> 00:04:55,370
+our parameterization and
+
+127
+00:04:55,370 --> 00:04:57,065
+are in two-dimensional
+space.
+
+128
+00:04:57,065 --> 00:04:59,315
+You can find it with
+number two here.
+
+129
+00:04:59,315 --> 00:05:01,190
+And then if it's defined
+
+130
+00:05:01,190 --> 00:05:03,080
+by a general vector
+valued function,
+
+131
+00:05:03,080 --> 00:05:04,895
+you can use number three.
+
+132
+00:05:04,895 --> 00:05:07,340
+These three formulas just
+
+133
+00:05:07,340 --> 00:05:09,750
+involve some, some algebra.
+
+134
+00:05:10,420 --> 00:05:12,170
+So here's an example.
+
+135
+00:05:12,170 --> 00:05:13,490
+Find the curvature
+of a circle with
+
+136
+00:05:13,490 --> 00:05:16,040
+radius r given by this.
+
+137
+00:05:16,040 --> 00:05:17,030
+This is a circle
+
+138
+00:05:17,030 --> 00:05:18,320
+spinning
+counterclockwise with
+
+139
+00:05:18,320 --> 00:05:22,760
+radius r. Since the curve
+
+140
+00:05:22,760 --> 00:05:26,674
+is given to us in this
+form, x of t, y of t.
+
+141
+00:05:26,674 --> 00:05:28,430
+>> We can use option two in
+
+142
+00:05:28,430 --> 00:05:37,595
+the previous slide
+in our problem,
+
+143
+00:05:37,595 --> 00:05:39,200
+X is equal to r cosine t,
+
+144
+00:05:39,200 --> 00:05:41,074
+y is equal to r sine t.
+
+145
+00:05:41,074 --> 00:05:43,055
+>> So you can find
+its derivatives
+
+146
+00:05:43,055 --> 00:05:45,050
+and squares and
+
+147
+00:05:45,050 --> 00:05:46,400
+then plug it with
+all of that into
+
+148
+00:05:46,400 --> 00:05:49,684
+the formula for
+the curvature.
+
+149
+00:05:49,684 --> 00:05:51,440
+>> And when you
+plug that all,
+
+150
+00:05:51,440 --> 00:05:52,640
+then you end up
+getting that
+
+151
+00:05:52,640 --> 00:05:55,710
+the curvature
+is one over r.
+
+152
+00:05:56,019 --> 00:05:58,445
+>> So unsurprisingly,
+
+153
+00:05:58,445 --> 00:06:00,950
+the curvature
+of a circle of
+
+154
+00:06:00,950 --> 00:06:03,860
+radius r is inversely
+
+155
+00:06:03,860 --> 00:06:05,870
+proportional to the
+radius of the circle.
+
+156
+00:06:05,870 --> 00:06:08,660
+So the bigger the
+circle gets smaller,
+
+157
+00:06:08,660 --> 00:06:10,070
+the curvature
+is going to be,
+
+158
+00:06:10,070 --> 00:06:11,990
+the smaller the radius,
+
+159
+00:06:11,990 --> 00:06:14,640
+the larger the curvature
+is going to be.

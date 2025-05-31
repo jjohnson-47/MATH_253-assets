@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Flow and Flux
+2:03  Definition of Flux and Flow
+4:05  Calculating Flow and Flux Examples
+6:08  Green's Theorem Overview
+8:11  Divergence Theorem Explanation
+```

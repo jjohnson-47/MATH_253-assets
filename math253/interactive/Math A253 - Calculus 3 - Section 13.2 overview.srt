@@ -1,0 +1,1063 @@
+1
+00:00:00,260 --> 00:00:01,770
+Hi class.
+
+2
+00:00:01,770 --> 00:00:02,430
+>> Let's take a look at
+
+3
+00:00:02,430 --> 00:00:04,590
+double integration
+and volume.
+
+4
+00:00:04,590 --> 00:00:08,260
+This is an overview
+of Section 13.2.
+
+5
+00:00:08,780 --> 00:00:11,835
+We can define double
+integrals with
+
+6
+00:00:11,835 --> 00:00:13,530
+Riemann sums in
+a similar way
+
+7
+00:00:13,530 --> 00:00:15,165
+we do in calculus too,
+
+8
+00:00:15,165 --> 00:00:16,830
+where we sub-divide
+
+9
+00:00:16,830 --> 00:00:18,300
+the region of integration,
+
+10
+00:00:18,300 --> 00:00:20,460
+which we're going
+to refer to as our.
+
+11
+00:00:20,460 --> 00:00:22,965
+In here we have this
+circular region.
+
+12
+00:00:22,965 --> 00:00:25,320
+And you can see
+we can estimate
+
+13
+00:00:25,320 --> 00:00:27,779
+the region with tiny
+little rectangles.
+
+14
+00:00:27,779 --> 00:00:30,990
+And within each
+rectangle we can find
+
+15
+00:00:30,990 --> 00:00:32,310
+the volume underneath
+
+16
+00:00:32,310 --> 00:00:34,450
+the surface of a function.
+
+17
+00:00:34,450 --> 00:00:36,320
+So in each rectangle we
+
+18
+00:00:36,320 --> 00:00:38,150
+have a width and a height,
+
+19
+00:00:38,150 --> 00:00:40,820
+and then the
+width and length,
+
+20
+00:00:40,820 --> 00:00:43,280
+and then the height is
+the functions value at
+
+21
+00:00:43,280 --> 00:00:46,970
+some point inside
+the rectangle.
+
+22
+00:00:46,970 --> 00:00:50,180
+Now, usually in a
+calculus class,
+
+23
+00:00:50,180 --> 00:00:51,950
+we take just any point
+
+24
+00:00:51,950 --> 00:00:52,910
+within that rectangle
+
+25
+00:00:52,910 --> 00:00:54,350
+to determine the height.
+
+26
+00:00:54,350 --> 00:00:56,000
+We can do in more
+sophisticated
+
+27
+00:00:56,000 --> 00:00:57,200
+ways where maybe we take
+
+28
+00:00:57,200 --> 00:00:58,430
+the height to be
+
+29
+00:00:58,430 --> 00:00:59,180
+the maximum of
+
+30
+00:00:59,180 --> 00:01:00,290
+the function within
+the rectangle.
+
+31
+00:01:00,290 --> 00:01:00,980
+But we don't really
+
+32
+00:01:00,980 --> 00:01:02,405
+need to worry
+about that much.
+
+33
+00:01:02,405 --> 00:01:03,770
+But any ways for each
+
+34
+00:01:03,770 --> 00:01:04,730
+of these little rectangles,
+
+35
+00:01:04,730 --> 00:01:06,635
+we can estimate
+the volume there.
+
+36
+00:01:06,635 --> 00:01:08,360
+And the idea is to find
+
+37
+00:01:08,360 --> 00:01:10,400
+these slivers of volumes
+
+38
+00:01:10,400 --> 00:01:11,240
+and then add them all
+
+39
+00:01:11,240 --> 00:01:13,470
+up to estimate
+the integral.
+
+40
+00:01:16,030 --> 00:01:18,290
+So we can define the double
+
+41
+00:01:18,290 --> 00:01:20,570
+integral over a region as
+
+42
+00:01:20,570 --> 00:01:25,685
+the sum of all of these
+sliver volume pieces,
+
+43
+00:01:25,685 --> 00:01:28,670
+as this part here,
+
+44
+00:01:28,670 --> 00:01:31,250
+which is the
+magnitude of delta a,
+
+45
+00:01:31,250 --> 00:01:33,095
+gets close to 0.
+
+46
+00:01:33,095 --> 00:01:35,660
+And that's just a way
+
+47
+00:01:35,660 --> 00:01:38,390
+to keep track of how
+big the rectangles are.
+
+48
+00:01:38,390 --> 00:01:41,300
+And INR book, we're
+defining delta a
+
+49
+00:01:41,300 --> 00:01:42,860
+as the sort of
+maximum length
+
+50
+00:01:42,860 --> 00:01:44,090
+of all the rectangles,
+
+51
+00:01:44,090 --> 00:01:44,960
+maximum length of
+
+52
+00:01:44,960 --> 00:01:46,310
+the diagonals
+above rectangle.
+
+53
+00:01:46,310 --> 00:01:47,870
+So that small, then
+
+54
+00:01:47,870 --> 00:01:49,550
+all of the rectangles
+are small.
+
+55
+00:01:49,550 --> 00:01:51,740
+And we're just
+taking the sum of
+
+56
+00:01:51,740 --> 00:01:53,990
+these smaller and smaller
+and smaller pieces.
+
+57
+00:01:53,990 --> 00:01:55,520
+And the limit of that is
+
+58
+00:01:55,520 --> 00:01:57,275
+what we're calling
+the double integral.
+
+59
+00:01:57,275 --> 00:01:59,990
+And it's intuition is
+
+60
+00:01:59,990 --> 00:02:01,790
+that the volume underneath
+the surface over
+
+61
+00:02:01,790 --> 00:02:05,720
+the region for beneath
+
+62
+00:02:05,720 --> 00:02:06,770
+them allows us to write
+
+63
+00:02:06,770 --> 00:02:09,710
+these double integrals
+as iterated integrals,
+
+64
+00:02:09,710 --> 00:02:11,405
+so that we can
+actually compute them,
+
+65
+00:02:11,405 --> 00:02:13,685
+but only for
+certain regions.
+
+66
+00:02:13,685 --> 00:02:15,185
+So regions that are
+
+67
+00:02:15,185 --> 00:02:17,540
+bounded between
+two constants with
+
+68
+00:02:17,540 --> 00:02:19,430
+respect to one
+variable and then
+
+69
+00:02:19,430 --> 00:02:20,660
+between two functions
+
+70
+00:02:20,660 --> 00:02:22,680
+with respect to the other.
+
+71
+00:02:24,640 --> 00:02:26,885
+Let's take a look
+at an example.
+
+72
+00:02:26,885 --> 00:02:28,010
+So here we have a function
+
+73
+00:02:28,010 --> 00:02:29,795
+x, y plus e to the y.
+
+74
+00:02:29,795 --> 00:02:32,375
+And we want to
+find the volume,
+
+75
+00:02:32,375 --> 00:02:34,370
+and we're saying signed
+volume because if
+
+76
+00:02:34,370 --> 00:02:37,175
+the graph where to go
+below the xy axis,
+
+77
+00:02:37,175 --> 00:02:38,735
+z values will be negative
+
+78
+00:02:38,735 --> 00:02:41,135
+and its volume there
+would count as negative.
+
+79
+00:02:41,135 --> 00:02:42,320
+We're trying to find
+
+80
+00:02:42,320 --> 00:02:44,795
+that volume under
+the surface,
+
+81
+00:02:44,795 --> 00:02:46,310
+over the region
+R, which is,
+
+82
+00:02:46,310 --> 00:02:48,095
+happens to be a rectangle.
+
+83
+00:02:48,095 --> 00:02:49,850
+In this case, the limits of
+
+84
+00:02:49,850 --> 00:02:52,325
+integration are quite
+easy to deal with.
+
+85
+00:02:52,325 --> 00:02:54,950
+We have x is going between
+
+86
+00:02:54,950 --> 00:02:58,565
+34 and y values
+going between 12.
+
+87
+00:02:58,565 --> 00:03:02,090
+So we can write this
+integral either as a DX,
+
+88
+00:03:02,090 --> 00:03:06,290
+DY integral where we hold y
+
+89
+00:03:06,290 --> 00:03:08,330
+constant between
+12 and then
+
+90
+00:03:08,330 --> 00:03:09,710
+integrate with respect to
+
+91
+00:03:09,710 --> 00:03:11,480
+X from three to four,
+
+92
+00:03:11,480 --> 00:03:14,390
+or vice versa, where
+we hold x constant
+
+93
+00:03:14,390 --> 00:03:15,950
+between 34 and
+then integrate
+
+94
+00:03:15,950 --> 00:03:17,570
+Y from one to two.
+
+95
+00:03:17,570 --> 00:03:19,250
+And either way,
+if we compute
+
+96
+00:03:19,250 --> 00:03:20,570
+these inter
+iterated integrals
+
+97
+00:03:20,570 --> 00:03:22,500
+will get the same value.
+
+98
+00:03:22,900 --> 00:03:25,550
+The properties of
+double integrals
+
+99
+00:03:25,550 --> 00:03:27,125
+are very familiar.
+
+100
+00:03:27,125 --> 00:03:29,435
+Thankfully, they're
+pretty much the same as
+
+101
+00:03:29,435 --> 00:03:32,600
+integrals over a
+region in calculus,
+
+102
+00:03:32,600 --> 00:03:34,685
+to a one-dimensional
+region,
+
+103
+00:03:34,685 --> 00:03:36,245
+we can pull constants out,
+
+104
+00:03:36,245 --> 00:03:38,300
+add, and subtract them.
+
+105
+00:03:38,300 --> 00:03:40,835
+If the function
+is positive,
+
+106
+00:03:40,835 --> 00:03:43,325
+then the integral
+should be positive.
+
+107
+00:03:43,325 --> 00:03:45,365
+If you have two functions,
+
+108
+00:03:45,365 --> 00:03:46,730
+one is always greater than
+
+109
+00:03:46,730 --> 00:03:47,960
+the other that
+moves like the
+
+110
+00:03:47,960 --> 00:03:49,310
+integral of the
+larger one to be
+
+111
+00:03:49,310 --> 00:03:51,095
+greater than the integral
+of the smaller one.
+
+112
+00:03:51,095 --> 00:03:52,940
+And number five is the part
+
+113
+00:03:52,940 --> 00:03:55,730
+that might not seem that
+important at first,
+
+114
+00:03:55,730 --> 00:03:57,140
+but incredibly important,
+
+115
+00:03:57,140 --> 00:03:58,580
+which says that
+if we're trying
+
+116
+00:03:58,580 --> 00:04:00,950
+to find the
+volume underneath
+
+117
+00:04:00,950 --> 00:04:02,165
+the surface of a function
+
+118
+00:04:02,165 --> 00:04:03,680
+over a particular region.
+
+119
+00:04:03,680 --> 00:04:05,240
+And maybe it's that reasons
+
+120
+00:04:05,240 --> 00:04:07,505
+complicated or has
+a couple parts.
+
+121
+00:04:07,505 --> 00:04:09,620
+And it's difficult to write
+
+122
+00:04:09,620 --> 00:04:11,480
+a singular
+iterated integral,
+
+123
+00:04:11,480 --> 00:04:13,249
+integral that will do that.
+
+124
+00:04:13,249 --> 00:04:15,290
+>> We can cut our into
+
+125
+00:04:15,290 --> 00:04:17,510
+pieces that are
+non-overlapping,
+
+126
+00:04:17,510 --> 00:04:19,070
+in whose union
+is the whole,
+
+127
+00:04:19,070 --> 00:04:20,659
+the whole space R.
+
+128
+00:04:20,659 --> 00:04:22,325
+>> And then we
+can just find
+
+129
+00:04:22,325 --> 00:04:25,500
+those individual integrals
+and add them up.
+
+130
+00:04:27,280 --> 00:04:29,555
+So here's a double integral
+
+131
+00:04:29,555 --> 00:04:31,790
+of the function
+form minus y.
+
+132
+00:04:31,790 --> 00:04:35,014
+And we're trying
+to find the volume
+
+133
+00:04:35,014 --> 00:04:39,259
+of this between the
+two parabolas here.
+
+134
+00:04:39,259 --> 00:04:40,940
+>> So the first thing
+we always do is sketch
+
+135
+00:04:40,940 --> 00:04:42,890
+the region of
+integration just to
+
+136
+00:04:42,890 --> 00:04:44,270
+get a visual of where
+
+137
+00:04:44,270 --> 00:04:46,955
+we are finding integral.
+
+138
+00:04:46,955 --> 00:04:49,624
+And here we have
+our two functions.
+
+139
+00:04:49,624 --> 00:04:53,030
+>> And we have the
+choice to evaluate the
+
+140
+00:04:53,030 --> 00:04:56,480
+integral as an iterated
+integral with dx,
+
+141
+00:04:56,480 --> 00:04:58,805
+dy, or dy dx.
+
+142
+00:04:58,805 --> 00:05:00,710
+Whatever happens to be
+
+143
+00:05:00,710 --> 00:05:02,960
+easier is usually
+the best choice.
+
+144
+00:05:02,960 --> 00:05:08,345
+Here I'm choosing
+to do dy, dx, dy y.
+
+145
+00:05:08,345 --> 00:05:14,435
+Because if we add
+
+146
+00:05:14,435 --> 00:05:18,605
+up for any fixed
+y from 0 to four,
+
+147
+00:05:18,605 --> 00:05:21,110
+we can integrate from x
+
+148
+00:05:21,110 --> 00:05:23,360
+is going from
+left to right.
+
+149
+00:05:23,360 --> 00:05:25,490
+And left to right
+means x goes
+
+150
+00:05:25,490 --> 00:05:28,720
+from y squared
+over four here,
+
+151
+00:05:28,720 --> 00:05:31,430
+22 square root of y.
+
+152
+00:05:32,700 --> 00:05:35,980
+So the way I'm setting
+up this problem here,
+
+153
+00:05:35,980 --> 00:05:40,090
+and you can set up
+easily with edX as well.
+
+154
+00:05:40,090 --> 00:05:43,285
+But I'm setting up as
+an integral dx, d y.
+
+155
+00:05:43,285 --> 00:05:45,220
+And then the limits
+of integration
+
+156
+00:05:45,220 --> 00:05:46,330
+are determined
+by the sketch
+
+157
+00:05:46,330 --> 00:05:48,050
+of the region here.
+
+158
+00:05:48,270 --> 00:05:51,310
+Then we just calculate
+the integral using
+
+159
+00:05:51,310 --> 00:05:53,860
+an iterative process
+where we hold y
+
+160
+00:05:53,860 --> 00:05:55,690
+constant and then integrate
+
+161
+00:05:55,690 --> 00:05:57,520
+the inside as if
+
+162
+00:05:57,520 --> 00:05:59,635
+y is a constant
+with respect to x.
+
+163
+00:05:59,635 --> 00:06:01,420
+And that means finding
+an antiderivative and
+
+164
+00:06:01,420 --> 00:06:03,940
+using the fundamental
+theorem of calculus,
+
+165
+00:06:03,940 --> 00:06:06,520
+then we can expand
+everything out.
+
+166
+00:06:06,520 --> 00:06:09,070
+And now we just have
+a normal polynomial
+
+167
+00:06:09,070 --> 00:06:10,770
+with respect to
+one variable y.
+
+168
+00:06:10,770 --> 00:06:13,800
+And we would integrate
+that in the usual way.
+
+169
+00:06:15,880 --> 00:06:18,845
+Sometimes were
+actually forced
+
+170
+00:06:18,845 --> 00:06:21,380
+to change the limits
+of integration.
+
+171
+00:06:21,380 --> 00:06:23,900
+Consider this
+integral here,
+
+172
+00:06:23,900 --> 00:06:26,570
+e to the negative
+x squared dx d y.
+
+173
+00:06:26,570 --> 00:06:29,270
+This is a famous example
+because let's say we
+
+174
+00:06:29,270 --> 00:06:30,620
+try to evaluate
+
+175
+00:06:30,620 --> 00:06:33,110
+this integral just
+the way that it is.
+
+176
+00:06:33,110 --> 00:06:36,035
+Well, that would
+mean trying to find
+
+177
+00:06:36,035 --> 00:06:38,300
+an anti-derivative
+of the function e to
+
+178
+00:06:38,300 --> 00:06:41,255
+the negative x squared
+with respect to x.
+
+179
+00:06:41,255 --> 00:06:44,330
+And this is a
+famous example from
+
+180
+00:06:44,330 --> 00:06:47,855
+calculus to this is
+a Gaussian function.
+
+181
+00:06:47,855 --> 00:06:48,950
+It does not have
+
+182
+00:06:48,950 --> 00:06:50,210
+an antiderivative
+
+183
+00:06:50,210 --> 00:06:52,280
+and elementary
+antiderivative.
+
+184
+00:06:52,280 --> 00:06:54,380
+So that's an actual
+impossible task.
+
+185
+00:06:54,380 --> 00:06:56,240
+If we were to
+try to evaluate
+
+186
+00:06:56,240 --> 00:06:58,280
+this integral as
+it's written,
+
+187
+00:06:58,280 --> 00:06:59,690
+we could not use the
+
+188
+00:06:59,690 --> 00:07:01,355
+fundamental theorem
+of calculus.
+
+189
+00:07:01,355 --> 00:07:02,120
+We would have to use
+
+190
+00:07:02,120 --> 00:07:03,770
+some numerical
+approximation or
+
+191
+00:07:03,770 --> 00:07:06,170
+something like
+that instead.
+
+192
+00:07:06,170 --> 00:07:09,410
+Well, we can do is
+investigate the region of
+
+193
+00:07:09,410 --> 00:07:11,540
+integration and
+see if we can now
+
+194
+00:07:11,540 --> 00:07:14,480
+rewrite the integral
+in terms of dy,
+
+195
+00:07:14,480 --> 00:07:16,490
+dx and then perhaps
+
+196
+00:07:16,490 --> 00:07:17,450
+give us a function that
+
+197
+00:07:17,450 --> 00:07:19,445
+does have an
+antiderivative.
+
+198
+00:07:19,445 --> 00:07:20,840
+So if we sketch
+
+199
+00:07:20,840 --> 00:07:22,040
+the region of
+integration here,
+
+200
+00:07:22,040 --> 00:07:24,890
+we see that y between 03,
+
+201
+00:07:24,890 --> 00:07:30,930
+we're going to integrate
+x from y to three.
+
+202
+00:07:32,400 --> 00:07:35,800
+What we'd like
+to do is rewrite
+
+203
+00:07:35,800 --> 00:07:36,910
+the integral and change
+
+204
+00:07:36,910 --> 00:07:38,575
+the order of integration.
+
+205
+00:07:38,575 --> 00:07:43,600
+So now we can see for
+every x between 03,
+
+206
+00:07:43,600 --> 00:07:44,830
+y is indeed going to be
+
+207
+00:07:44,830 --> 00:07:47,660
+integrated from 0 to x.
+
+208
+00:07:49,800 --> 00:07:51,955
+And we see that reflected
+
+209
+00:07:51,955 --> 00:07:53,815
+in the integral right here.
+
+210
+00:07:53,815 --> 00:07:56,290
+Now, the very first move we
+
+211
+00:07:56,290 --> 00:07:58,360
+make is the iterated
+integral on the inside,
+
+212
+00:07:58,360 --> 00:07:59,080
+which is the find the
+
+213
+00:07:59,080 --> 00:08:00,880
+anti-derivative
+with respect to y.
+
+214
+00:08:00,880 --> 00:08:02,470
+Well, e to the
+negative x squared
+
+215
+00:08:02,470 --> 00:08:04,135
+is a constant with
+respect to y.
+
+216
+00:08:04,135 --> 00:08:06,940
+So you just attach a
+why to it and then
+
+217
+00:08:06,940 --> 00:08:08,080
+apply the fundamental
+theorem of
+
+218
+00:08:08,080 --> 00:08:10,524
+calculus at the endpoints.
+
+219
+00:08:10,524 --> 00:08:13,215
+And the result
+is a function
+
+220
+00:08:13,215 --> 00:08:14,750
+that now when we
+
+221
+00:08:14,750 --> 00:08:16,280
+find the antiderivative
+with respect to x,
+
+222
+00:08:16,280 --> 00:08:19,140
+we can do it using
+substitution.
+
+223
+00:08:21,010 --> 00:08:23,270
+We can use the notion of
+
+224
+00:08:23,270 --> 00:08:24,470
+double integrals to find
+
+225
+00:08:24,470 --> 00:08:26,345
+the average value
+of a function
+
+226
+00:08:26,345 --> 00:08:29,060
+over a region is a
+function of two variables.
+
+227
+00:08:29,060 --> 00:08:31,475
+And here we're just
+using the idea that
+
+228
+00:08:31,475 --> 00:08:34,160
+a function's average
+on a region is
+
+229
+00:08:34,160 --> 00:08:36,724
+the volume underneath
+that surface
+
+230
+00:08:36,724 --> 00:08:37,940
+over the region divided
+
+231
+00:08:37,940 --> 00:08:40,080
+by the area of the base.
+
+232
+00:08:40,120 --> 00:08:43,770
+That's an easy way to
+remember this formula.

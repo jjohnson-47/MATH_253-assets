@@ -1,0 +1,6 @@
+```
+0:00  Introduction to Surface Integrals
+2:15  Parameterization of Surfaces
+4:00  Mass Calculation via Integrals
+5:30  Flux Measurement Across Surfaces
+```

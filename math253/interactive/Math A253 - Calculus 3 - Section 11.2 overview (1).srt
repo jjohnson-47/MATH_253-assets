@@ -1,0 +1,1334 @@
+1
+00:00:00,000 --> 00:00:02,340
+Hello and welcome
+to a video on
+
+2
+00:00:02,340 --> 00:00:04,590
+calculus and vector
+valued functions.
+
+3
+00:00:04,590 --> 00:00:07,110
+This is an overview
+of Section 11.2.
+
+4
+00:00:07,110 --> 00:00:10,725
+This is a particularly
+midi section
+
+5
+00:00:10,725 --> 00:00:12,150
+and it shows how we can
+
+6
+00:00:12,150 --> 00:00:15,000
+extend pretty much the
+basics of calculus.
+
+7
+00:00:15,000 --> 00:00:17,400
+122 are new objects
+
+8
+00:00:17,400 --> 00:00:19,530
+of vector valued functions.
+
+9
+00:00:19,530 --> 00:00:22,230
+First, let's
+look at limits.
+
+10
+00:00:22,230 --> 00:00:23,820
+If we have the limit of
+
+11
+00:00:23,820 --> 00:00:25,290
+a vector valued function,
+
+12
+00:00:25,290 --> 00:00:26,520
+it's defined in
+
+13
+00:00:26,520 --> 00:00:28,875
+the normal epsilon
+delta away.
+
+14
+00:00:28,875 --> 00:00:30,765
+Now the notation here
+
+15
+00:00:30,765 --> 00:00:32,429
+can be somewhat confusing,
+
+16
+00:00:32,429 --> 00:00:33,990
+but what it's really saying
+
+17
+00:00:33,990 --> 00:00:35,115
+is straightforward,
+
+18
+00:00:35,115 --> 00:00:37,230
+especially if we
+look at the picture.
+
+19
+00:00:37,230 --> 00:00:39,750
+If we're going to
+take the limit of
+
+20
+00:00:39,750 --> 00:00:41,085
+a vector valued function
+
+21
+00:00:41,085 --> 00:00:43,085
+that may be changing,
+
+22
+00:00:43,085 --> 00:00:45,550
+then the limit actually
+
+23
+00:00:45,550 --> 00:00:47,995
+approaches a
+another vector.
+
+24
+00:00:47,995 --> 00:00:51,760
+If for any circle of size
+
+25
+00:00:51,760 --> 00:00:54,580
+epsilon around
+
+26
+00:00:54,580 --> 00:00:56,485
+the distance between
+the vectors,
+
+27
+00:00:56,485 --> 00:00:58,180
+that the vectors will
+
+28
+00:00:58,180 --> 00:01:00,640
+eventually be that
+distance apart.
+
+29
+00:01:00,640 --> 00:01:01,600
+So let me begin
+
+30
+00:01:01,600 --> 00:01:03,920
+the animation to show
+you what I mean.
+
+31
+00:01:04,769 --> 00:01:07,790
+>> So in this picture,
+
+32
+00:01:09,510 --> 00:01:13,299
+the green arrow is r of t.
+
+33
+00:01:13,299 --> 00:01:15,520
+>> The green arrow
+is changing and
+
+34
+00:01:15,520 --> 00:01:19,149
+the blue arrow is
+the limit vector.
+
+35
+00:01:19,149 --> 00:01:20,890
+>> And what we're
+trying to understand
+
+36
+00:01:20,890 --> 00:01:22,150
+is what does it mean for
+
+37
+00:01:22,150 --> 00:01:25,585
+the green arrow to
+approach the blue arrow?
+
+38
+00:01:25,585 --> 00:01:27,940
+What it means for the
+green arrow to approach
+
+39
+00:01:27,940 --> 00:01:31,765
+the blue arrow means
+that the distance
+
+40
+00:01:31,765 --> 00:01:33,880
+between the blue arrow
+
+41
+00:01:33,880 --> 00:01:35,440
+and the green
+arrow given by
+
+42
+00:01:35,440 --> 00:01:37,630
+the red arrow
+eventually has
+
+43
+00:01:37,630 --> 00:01:41,875
+magnitude less
+than epsilon.
+
+44
+00:01:41,875 --> 00:01:44,710
+Now, epsilon was
+arbitrarily given,
+
+45
+00:01:44,710 --> 00:01:47,425
+so I made a circle
+of size epsilon.
+
+46
+00:01:47,425 --> 00:01:48,940
+But maybe you're not
+
+47
+00:01:48,940 --> 00:01:50,110
+convinced and
+you say, Well,
+
+48
+00:01:50,110 --> 00:01:53,514
+make epsilon smaller
+and shrink that circle.
+
+49
+00:01:53,514 --> 00:01:57,100
+>> And then if it's
+still true that
+
+50
+00:01:57,100 --> 00:01:59,890
+eventually the red arrow
+
+51
+00:01:59,890 --> 00:02:02,079
+is within that
+small circle.
+
+52
+00:02:02,079 --> 00:02:04,570
+>> That's how we conclude
+that the limit of
+
+53
+00:02:04,570 --> 00:02:08,054
+the green arrow is going
+to the blue arrow.
+
+54
+00:02:08,054 --> 00:02:09,259
+>> Okay?
+
+55
+00:02:09,259 --> 00:02:10,280
+>> So I'll play
+this one more.
+
+56
+00:02:10,280 --> 00:02:13,730
+>> Time limits in
+
+57
+00:02:13,730 --> 00:02:16,040
+vectors can occur in
+
+58
+00:02:16,040 --> 00:02:18,200
+sort of more
+ways than we do.
+
+59
+00:02:18,200 --> 00:02:18,950
+>> And we look at limits
+
+60
+00:02:18,950 --> 00:02:20,000
+in real valued functions,
+
+61
+00:02:20,000 --> 00:02:21,260
+can think there's more room
+
+62
+00:02:21,260 --> 00:02:23,730
+to spin around and
+things like that.
+
+63
+00:02:26,890 --> 00:02:29,630
+The vector of the limit of
+
+64
+00:02:29,630 --> 00:02:31,610
+a vector valued function
+can be found by
+
+65
+00:02:31,610 --> 00:02:34,400
+taking the limits
+of the components.
+
+66
+00:02:34,400 --> 00:02:36,680
+So really this is just
+a sneaky way of saying
+
+67
+00:02:36,680 --> 00:02:37,820
+now that we're going
+to find limits
+
+68
+00:02:37,820 --> 00:02:39,260
+of vector valued functions,
+
+69
+00:02:39,260 --> 00:02:41,915
+we're just finding
+two limits at once
+
+70
+00:02:41,915 --> 00:02:43,340
+for looking at R2 or three
+
+71
+00:02:43,340 --> 00:02:44,885
+limits at once and R3.
+
+72
+00:02:44,885 --> 00:02:47,360
+So all of the
+properties of limits in
+
+73
+00:02:47,360 --> 00:02:48,380
+the techniques for taking
+
+74
+00:02:48,380 --> 00:02:50,225
+limits applies here.
+
+75
+00:02:50,225 --> 00:02:51,860
+May you have, you have them
+
+76
+00:02:51,860 --> 00:02:54,480
+occurring in each
+coordinate separately.
+
+77
+00:02:55,780 --> 00:02:58,130
+Here's a vector-valued
+function,
+
+78
+00:02:58,130 --> 00:02:59,240
+and it's asking
+us to find the
+
+79
+00:02:59,240 --> 00:03:00,380
+limit as t goes to
+
+80
+00:03:00,380 --> 00:03:03,575
+0 using the
+previous theorem.
+
+81
+00:03:03,575 --> 00:03:05,060
+The limit as t goes to
+
+82
+00:03:05,060 --> 00:03:06,560
+0 of the vector valued
+function is the
+
+83
+00:03:06,560 --> 00:03:07,790
+same as the limit
+as t goes to
+
+84
+00:03:07,790 --> 00:03:09,949
+0 of each individual
+component.
+
+85
+00:03:09,949 --> 00:03:12,124
+>> And now we just have
+some limit problems.
+
+86
+00:03:12,124 --> 00:03:13,790
+>> Remember, the
+limit as t goes to
+
+87
+00:03:13,790 --> 00:03:15,740
+0 of sine t over
+
+88
+00:03:15,740 --> 00:03:19,520
+t is that famous
+result where it's one.
+
+89
+00:03:19,520 --> 00:03:21,470
+And you could use
+L'Hopital's rule to see
+
+90
+00:03:21,470 --> 00:03:23,030
+that the limit as
+
+91
+00:03:23,030 --> 00:03:24,800
+t goes to 0 of
+a polynomial,
+
+92
+00:03:24,800 --> 00:03:27,200
+here is 0. Melody
+as t goes to 0.
+
+93
+00:03:27,200 --> 00:03:30,350
+Cosine t. Since T
+is continuous at 0,
+
+94
+00:03:30,350 --> 00:03:31,700
+you simply can plug 0
+
+95
+00:03:31,700 --> 00:03:34,020
+in and get the
+value of one.
+
+96
+00:03:35,470 --> 00:03:38,120
+We can also talk
+about continuity for
+
+97
+00:03:38,120 --> 00:03:40,100
+vector valued functions or
+
+98
+00:03:40,100 --> 00:03:43,370
+functions continuous
+if it's a limit
+
+99
+00:03:43,370 --> 00:03:45,200
+exists at every
+point and is
+
+100
+00:03:45,200 --> 00:03:46,370
+actually equal to the value
+
+101
+00:03:46,370 --> 00:03:48,020
+of the function
+at that point.
+
+102
+00:03:48,020 --> 00:03:50,840
+So the same as in
+Calculus One and Two,
+
+103
+00:03:50,840 --> 00:03:52,880
+except now our functions,
+
+104
+00:03:52,880 --> 00:03:54,050
+our vector valued
+functions,
+
+105
+00:03:54,050 --> 00:03:56,400
+not real valued functions.
+
+106
+00:03:56,920 --> 00:04:00,350
+In this animation, I
+show a discontinuity.
+
+107
+00:04:00,350 --> 00:04:01,130
+So we have
+
+108
+00:04:01,130 --> 00:04:02,630
+a vector valued function
+spinning around
+
+109
+00:04:02,630 --> 00:04:06,290
+the circle but
+suddenly moves,
+
+110
+00:04:06,290 --> 00:04:08,760
+so it's discontinuous.
+
+111
+00:04:10,020 --> 00:04:12,520
+The way you can
+check continuity of
+
+112
+00:04:12,520 --> 00:04:14,125
+a vector valued function
+
+113
+00:04:14,125 --> 00:04:15,790
+under some circumstances
+
+114
+00:04:15,790 --> 00:04:17,560
+is to just look at
+the continuity of
+
+115
+00:04:17,560 --> 00:04:19,330
+each component and then
+
+116
+00:04:19,330 --> 00:04:20,410
+its continuity in
+
+117
+00:04:20,410 --> 00:04:22,760
+the same sense
+as Calculus one.
+
+118
+00:04:23,850 --> 00:04:26,590
+The derivative is differ.
+
+119
+00:04:26,590 --> 00:04:28,300
+A vector valued
+function is defined
+
+120
+00:04:28,300 --> 00:04:30,535
+also similar to
+calculus one.
+
+121
+00:04:30,535 --> 00:04:32,905
+It's the limit of the
+difference quotient.
+
+122
+00:04:32,905 --> 00:04:34,480
+So the derivative
+at a point
+
+123
+00:04:34,480 --> 00:04:36,730
+c is the limit as
+
+124
+00:04:36,730 --> 00:04:41,600
+h goes to 0 of the
+difference quotient.
+
+125
+00:04:42,210 --> 00:04:44,860
+The derivative function at
+
+126
+00:04:44,860 --> 00:04:48,200
+any point t is
+given by the same,
+
+127
+00:04:48,210 --> 00:04:50,410
+the notation that
+we'll use for
+
+128
+00:04:50,410 --> 00:04:52,365
+derivatives of vector
+valued functions,
+
+129
+00:04:52,365 --> 00:04:54,260
+pretty much the same as
+
+130
+00:04:54,260 --> 00:04:55,895
+real valued functions,
+
+131
+00:04:55,895 --> 00:04:57,920
+except we have
+a vector arrow
+
+132
+00:04:57,920 --> 00:05:00,270
+over the vector
+value function.
+
+133
+00:05:01,840 --> 00:05:04,550
+It's nice that
+the derivative
+
+134
+00:05:04,550 --> 00:05:05,915
+of a vector valued function
+
+135
+00:05:05,915 --> 00:05:09,110
+is the derivative
+of the components.
+
+136
+00:05:09,110 --> 00:05:11,330
+And this is actually
+
+137
+00:05:11,330 --> 00:05:13,355
+an extension of the limit.
+
+138
+00:05:13,355 --> 00:05:15,260
+Remember, derivatives
+are just limits.
+
+139
+00:05:15,260 --> 00:05:17,930
+And this is just
+saying that the,
+
+140
+00:05:17,930 --> 00:05:19,805
+we can take the derivative
+
+141
+00:05:19,805 --> 00:05:21,320
+in each compounded
+because the
+
+142
+00:05:21,320 --> 00:05:23,520
+limit works at
+each component.
+
+143
+00:05:23,620 --> 00:05:26,090
+What about vector
+value functions
+
+144
+00:05:26,090 --> 00:05:27,395
+of three dimensions?
+
+145
+00:05:27,395 --> 00:05:28,490
+Here's an example we'll
+
+146
+00:05:28,490 --> 00:05:29,540
+be seeing several times.
+
+147
+00:05:29,540 --> 00:05:32,030
+What we have is
+a simple helix,
+
+148
+00:05:32,030 --> 00:05:34,489
+cosine t, sine t and t.
+
+149
+00:05:34,489 --> 00:05:37,564
+>> Now we want to
+compute the derivative.
+
+150
+00:05:37,564 --> 00:05:39,890
+>> So given that
+that's cosine t,
+
+151
+00:05:39,890 --> 00:05:41,420
+sine t t, you
+
+152
+00:05:41,420 --> 00:05:42,080
+take the derivative of
+
+153
+00:05:42,080 --> 00:05:44,030
+each function separately.
+
+154
+00:05:44,030 --> 00:05:46,310
+And I'm, in this sketch,
+
+155
+00:05:46,310 --> 00:05:47,390
+what you see,
+the derivative
+
+156
+00:05:47,390 --> 00:05:49,010
+is the red arrow.
+
+157
+00:05:49,010 --> 00:05:51,200
+The yellow arrow is
+
+158
+00:05:51,200 --> 00:05:52,880
+the vector valued
+function itself,
+
+159
+00:05:52,880 --> 00:05:55,740
+and the red arrow
+is the derivative.
+
+160
+00:05:57,730 --> 00:06:00,470
+And you might be
+already noticing
+
+161
+00:06:00,470 --> 00:06:02,210
+some interesting
+properties of
+
+162
+00:06:02,210 --> 00:06:04,070
+the derivative of
+a vector valued
+
+163
+00:06:04,070 --> 00:06:07,620
+function. It's
+the velocity.
+
+164
+00:06:09,370 --> 00:06:11,540
+Taking derivatives
+of vector valued
+
+165
+00:06:11,540 --> 00:06:12,680
+functions allow us to
+
+166
+00:06:12,680 --> 00:06:16,070
+find the tangent to the
+graph at the point.
+
+167
+00:06:16,070 --> 00:06:17,360
+And then we can find
+
+168
+00:06:17,360 --> 00:06:18,800
+the tangent line
+to the graph at
+
+169
+00:06:18,800 --> 00:06:21,410
+a point where we're given,
+
+170
+00:06:21,410 --> 00:06:23,705
+here is the equation
+for a tangent line.
+
+171
+00:06:23,705 --> 00:06:26,180
+And you should notice
+its similarity to
+
+172
+00:06:26,180 --> 00:06:28,340
+the equation of
+the linearization
+
+173
+00:06:28,340 --> 00:06:30,860
+of a function at a point
+from calculus one,
+
+174
+00:06:30,860 --> 00:06:32,750
+you have the mesial at,
+
+175
+00:06:32,750 --> 00:06:34,490
+at the value C, you have
+
+176
+00:06:34,490 --> 00:06:37,175
+the initial value plus
+
+177
+00:06:37,175 --> 00:06:39,800
+scaled by the
+direction vector,
+
+178
+00:06:39,800 --> 00:06:41,720
+the slope, what we
+
+179
+00:06:41,720 --> 00:06:44,250
+normally use in
+calculus one.
+
+180
+00:06:45,850 --> 00:06:49,460
+So looking at our previous
+example, cosine t,
+
+181
+00:06:49,460 --> 00:06:51,665
+sine t t, we can find
+
+182
+00:06:51,665 --> 00:06:52,700
+the equation of
+
+183
+00:06:52,700 --> 00:06:55,025
+the tangent line
+at pi over two.
+
+184
+00:06:55,025 --> 00:06:58,355
+We simply put the values
+into this function.
+
+185
+00:06:58,355 --> 00:07:00,470
+And as you can see
+from the graph,
+
+186
+00:07:00,470 --> 00:07:01,850
+it looks like
+the tangent line
+
+187
+00:07:01,850 --> 00:07:04,200
+exactly how we
+would expect it.
+
+188
+00:07:04,690 --> 00:07:07,970
+Finally, smoothed
+vectors are
+
+189
+00:07:07,970 --> 00:07:11,135
+vectors that have
+a derivative.
+
+190
+00:07:11,135 --> 00:07:11,720
+So we know that
+
+191
+00:07:11,720 --> 00:07:13,460
+not all vectors
+have a derivative.
+
+192
+00:07:13,460 --> 00:07:16,729
+>> Some R, R2
+pointy or jerky.
+
+193
+00:07:16,729 --> 00:07:18,800
+>> The derivative
+is continuous on
+
+194
+00:07:18,800 --> 00:07:22,920
+the interval and the
+derivative is never 0.
+
+195
+00:07:25,000 --> 00:07:27,665
+Some important properties
+of derivatives,
+
+196
+00:07:27,665 --> 00:07:28,970
+these are things that we
+
+197
+00:07:28,970 --> 00:07:30,530
+really get used
+to in calculus.
+
+198
+00:07:30,530 --> 00:07:32,000
+One is that the
+derivative of
+
+199
+00:07:32,000 --> 00:07:33,020
+a sum is the sum of the
+
+200
+00:07:33,020 --> 00:07:34,505
+derivatives and so on.
+
+201
+00:07:34,505 --> 00:07:36,544
+We can pull constants out.
+
+202
+00:07:36,544 --> 00:07:38,210
+>> Maybe the
+surprising thing here
+
+203
+00:07:38,210 --> 00:07:40,415
+is that in properties 345,
+
+204
+00:07:40,415 --> 00:07:43,640
+the product rule
+applies when we have
+
+205
+00:07:43,640 --> 00:07:46,880
+normal multiplication
+and the dot product
+
+206
+00:07:46,880 --> 00:07:48,724
+and the cross product.
+
+207
+00:07:48,724 --> 00:07:50,270
+>> So that's a
+nice, we don't have
+
+208
+00:07:50,270 --> 00:07:51,770
+to memorize anymore rules.
+
+209
+00:07:51,770 --> 00:07:52,580
+We have the product rule
+
+210
+00:07:52,580 --> 00:07:53,900
+that applies to all three,
+
+211
+00:07:53,900 --> 00:07:55,115
+and then the chain rule
+
+212
+00:07:55,115 --> 00:07:57,300
+applies in a similar way.
+
+213
+00:07:59,020 --> 00:08:02,705
+An important application
+of physics is that
+
+214
+00:08:02,705 --> 00:08:06,230
+a vector that has
+constant length,
+
+215
+00:08:06,230 --> 00:08:07,430
+so it might be moving,
+
+216
+00:08:07,430 --> 00:08:08,945
+but the length is the same,
+
+217
+00:08:08,945 --> 00:08:12,065
+is orthogonal to
+its derivative.
+
+218
+00:08:12,065 --> 00:08:15,510
+This is how we describe
+circular motion.
+
+219
+00:08:17,230 --> 00:08:21,980
+Now, integration, we have
+
+220
+00:08:21,980 --> 00:08:23,390
+a vector valued function.
+
+221
+00:08:23,390 --> 00:08:23,930
+We want to be able to
+
+222
+00:08:23,930 --> 00:08:26,105
+talk about its integral.
+
+223
+00:08:26,105 --> 00:08:27,965
+And just like in calc two,
+
+224
+00:08:27,965 --> 00:08:30,320
+its integral is defined as
+
+225
+00:08:30,320 --> 00:08:33,830
+the limit of these
+Riemann sums.
+
+226
+00:08:33,830 --> 00:08:35,375
+The only different is that
+
+227
+00:08:35,375 --> 00:08:36,710
+each of the summands
+
+228
+00:08:36,710 --> 00:08:40,320
+in the Riemann sum is
+now a vector value,
+
+229
+00:08:41,740 --> 00:08:43,670
+the integral, integral,
+
+230
+00:08:43,670 --> 00:08:45,005
+the vector valued function.
+
+231
+00:08:45,005 --> 00:08:46,430
+The components are just the
+
+232
+00:08:46,430 --> 00:08:48,660
+integrals of
+the components.
+
+233
+00:08:48,819 --> 00:08:51,800
+>> And each
+component we have
+
+234
+00:08:51,800 --> 00:08:54,770
+a integral that's just
+like an integral.
+
+235
+00:08:54,770 --> 00:09:00,470
+>> And calculus to this
+
+236
+00:09:00,470 --> 00:09:01,805
+is an important example
+
+237
+00:09:01,805 --> 00:09:03,665
+that relates to physics.
+
+238
+00:09:03,665 --> 00:09:06,530
+Now I'm going to use
+a language that is,
+
+239
+00:09:06,530 --> 00:09:07,580
+hasn't really
+been introduced
+
+240
+00:09:07,580 --> 00:09:08,390
+in the text yet,
+
+241
+00:09:08,390 --> 00:09:09,110
+but it's really common
+
+242
+00:09:09,110 --> 00:09:10,490
+in a problem like this.
+
+243
+00:09:10,490 --> 00:09:14,870
+If we're given a vector
+equation with r,
+
+244
+00:09:14,870 --> 00:09:18,094
+r of t, we'll call
+that position.
+
+245
+00:09:18,094 --> 00:09:19,760
+>> Its derivative is
+
+246
+00:09:19,760 --> 00:09:23,659
+velocity and its derivative
+is acceleration.
+
+247
+00:09:23,659 --> 00:09:25,384
+>> So in this example,
+
+248
+00:09:25,384 --> 00:09:28,580
+we're actually given an
+acceleration vector.
+
+249
+00:09:28,580 --> 00:09:31,955
+We're given an
+initial position
+
+250
+00:09:31,955 --> 00:09:33,800
+and an initial velocity.
+
+251
+00:09:33,800 --> 00:09:36,500
+And what we're
+asked to find is to
+
+252
+00:09:36,500 --> 00:09:38,390
+find a vector equation
+
+253
+00:09:38,390 --> 00:09:39,890
+for the position itself.
+
+254
+00:09:39,890 --> 00:09:41,450
+So given a vector equation
+
+255
+00:09:41,450 --> 00:09:42,950
+for the acceleration,
+
+256
+00:09:42,950 --> 00:09:44,180
+we're actually
+can find a vector
+
+257
+00:09:44,180 --> 00:09:46,470
+equation for the position.
+
+258
+00:09:48,540 --> 00:09:51,175
+First, we take
+the acceleration
+
+259
+00:09:51,175 --> 00:09:53,275
+r double prime, and
+we integrate it.
+
+260
+00:09:53,275 --> 00:09:54,985
+And we integrate
+each coordinate
+
+261
+00:09:54,985 --> 00:09:55,870
+and we're left with
+
+262
+00:09:55,870 --> 00:09:57,940
+some constants
+of integration.
+
+263
+00:09:57,940 --> 00:09:59,620
+But here is where we can
+
+264
+00:09:59,620 --> 00:10:01,450
+use the fact
+that we're given
+
+265
+00:10:01,450 --> 00:10:04,900
+that the initial
+velocity at 0 is 530.
+
+266
+00:10:04,900 --> 00:10:06,400
+>> So we can set this
+
+267
+00:10:06,400 --> 00:10:08,964
+vector expression
+equal to 530.
+
+268
+00:10:08,964 --> 00:10:09,760
+>> And that allows us to
+
+269
+00:10:09,760 --> 00:10:11,889
+solve for the coefficients.
+
+270
+00:10:11,889 --> 00:10:13,630
+Then we can put
+the coefficients
+
+271
+00:10:13,630 --> 00:10:15,610
+back in to r prime of
+
+272
+00:10:15,610 --> 00:10:17,380
+t. And that gives
+
+273
+00:10:17,380 --> 00:10:19,600
+us our update equation
+for velocity.
+
+274
+00:10:19,600 --> 00:10:21,190
+So now we have a vector
+
+275
+00:10:21,190 --> 00:10:22,930
+that describes the
+velocity in terms
+
+276
+00:10:22,930 --> 00:10:25,930
+of t. And then
+
+277
+00:10:25,930 --> 00:10:28,015
+we do the same thing
+again to find position.
+
+278
+00:10:28,015 --> 00:10:29,505
+We integrate the velocity,
+
+279
+00:10:29,505 --> 00:10:31,145
+you integrate
+each component,
+
+280
+00:10:31,145 --> 00:10:33,184
+we're left with constants
+of integration,
+
+281
+00:10:33,184 --> 00:10:34,850
+but we're given a vector
+
+282
+00:10:34,850 --> 00:10:36,920
+of the initial velocity.
+
+283
+00:10:36,920 --> 00:10:39,410
+So we can set that equal
+to negative seven,
+
+284
+00:10:39,410 --> 00:10:42,230
+negative one, to solve
+for the constants.
+
+285
+00:10:42,230 --> 00:10:44,450
+In this case, we get
+constants negative 70.
+
+286
+00:10:44,450 --> 00:10:46,550
+>> To put those back
+
+287
+00:10:46,550 --> 00:10:48,560
+in that we put
+
+288
+00:10:48,560 --> 00:10:51,049
+into the expression
+for the position.
+
+289
+00:10:51,049 --> 00:10:52,310
+>> And then finally we get
+
+290
+00:10:52,310 --> 00:10:54,630
+our position vector.
+
+291
+00:10:57,039 --> 00:10:59,765
+>> The arc length
+of a vector
+
+292
+00:10:59,765 --> 00:11:02,554
+is sound with the
+following expression.
+
+293
+00:11:02,554 --> 00:11:04,550
+>> It's the integral of
+
+294
+00:11:04,550 --> 00:11:07,380
+the magnitude of the
+velocity vector.

@@ -1,0 +1,1434 @@
+1
+00:00:00,260 --> 00:00:02,550
+Let's look at the
+volume between
+
+2
+00:00:02,550 --> 00:00:04,799
+surfaces and triple
+integration.
+
+3
+00:00:04,799 --> 00:00:07,845
+>> This is section 13.6.
+
+4
+00:00:07,845 --> 00:00:10,230
+If we have two functions of
+
+5
+00:00:10,230 --> 00:00:13,365
+two variables
+over a region R,
+
+6
+00:00:13,365 --> 00:00:15,390
+then we can find the volume
+
+7
+00:00:15,390 --> 00:00:16,470
+of the space between
+
+8
+00:00:16,470 --> 00:00:18,150
+them by just taking the
+
+9
+00:00:18,150 --> 00:00:20,505
+double integral of
+their difference.
+
+10
+00:00:20,505 --> 00:00:23,085
+Essentially this is
+just saying that the,
+
+11
+00:00:23,085 --> 00:00:25,815
+you take the
+larger volume of f
+
+12
+00:00:25,815 --> 00:00:28,920
+between surface
+and they XY axis,
+
+13
+00:00:28,920 --> 00:00:30,900
+subtract the volume from
+
+14
+00:00:30,900 --> 00:00:32,430
+the service of g to the x,
+
+15
+00:00:32,430 --> 00:00:33,510
+y axis, and then
+
+16
+00:00:33,510 --> 00:00:35,740
+you get the volume
+in-between.
+
+17
+00:00:36,909 --> 00:00:39,170
+>> Here we have an
+example where we
+
+18
+00:00:39,170 --> 00:00:40,730
+want to find the volume of
+
+19
+00:00:40,730 --> 00:00:44,480
+the region bounded
+between two planes
+
+20
+00:00:44,480 --> 00:00:47,750
+and the coordinate axes
+
+21
+00:00:47,750 --> 00:00:50,610
+x equal to 0 and
+y equal to 0.
+
+22
+00:00:51,729 --> 00:00:54,590
+>> First, we want to
+figure out what is
+
+23
+00:00:54,590 --> 00:00:55,850
+the region of integration
+
+24
+00:00:55,850 --> 00:00:57,124
+that we're
+integrating over.
+
+25
+00:00:57,124 --> 00:00:58,430
+>> So what is the area in
+
+26
+00:00:58,430 --> 00:00:59,870
+the XY plane for
+
+27
+00:00:59,870 --> 00:01:02,074
+which we want to
+find the integral.
+
+28
+00:01:02,074 --> 00:01:03,860
+>> This involves
+finding where
+
+29
+00:01:03,860 --> 00:01:05,660
+these two planes intersect.
+
+30
+00:01:05,660 --> 00:01:07,280
+So defined where
+the two points
+
+31
+00:01:07,280 --> 00:01:08,765
+intersect, you set the,
+
+32
+00:01:08,765 --> 00:01:10,310
+their equations
+that must be
+
+33
+00:01:10,310 --> 00:01:12,860
+true equal to each
+other simplify.
+
+34
+00:01:12,860 --> 00:01:15,140
+And we see that the
+line 2x plus y equal to
+
+35
+00:01:15,140 --> 00:01:16,730
+four defines that
+
+36
+00:01:16,730 --> 00:01:18,470
+region where
+they intersect.
+
+37
+00:01:18,470 --> 00:01:20,960
+So therefore, our
+region of integration
+
+38
+00:01:20,960 --> 00:01:23,120
+then is x being
+
+39
+00:01:23,120 --> 00:01:25,580
+bounded between
+02 and y being
+
+40
+00:01:25,580 --> 00:01:29,520
+bounded between
+04 minus 2x.
+
+41
+00:01:30,820 --> 00:01:34,414
+We can draw picture
+of this region.
+
+42
+00:01:34,414 --> 00:01:37,144
+>> And here we'll
+integrate DY DX.
+
+43
+00:01:37,144 --> 00:01:39,050
+>> So for any x, fixed x
+
+44
+00:01:39,050 --> 00:01:41,240
+between 02 will integrate
+
+45
+00:01:41,240 --> 00:01:46,560
+y from 0 to the
+function four minus 2x.
+
+46
+00:01:46,779 --> 00:01:48,920
+>> That allows us
+to write the double
+
+47
+00:01:48,920 --> 00:01:51,230
+integral has an
+iterated integral.
+
+48
+00:01:51,230 --> 00:01:52,820
+And then we evaluate that
+
+49
+00:01:52,820 --> 00:01:55,085
+integrated integral,
+integral normally.
+
+50
+00:01:55,085 --> 00:01:56,929
+And we see that
+the answer is 16.
+
+51
+00:01:56,929 --> 00:01:59,510
+>> So 16 R is the number of
+
+52
+00:01:59,510 --> 00:02:01,970
+cubic units bounded between
+
+53
+00:02:01,970 --> 00:02:04,950
+these two planes in
+this particular region.
+
+54
+00:02:07,509 --> 00:02:10,655
+>> We can also view
+the same example,
+
+55
+00:02:10,655 --> 00:02:14,239
+the same volume as a
+triple, triple integral.
+
+56
+00:02:14,239 --> 00:02:16,580
+>> So a triple
+integral is the
+
+57
+00:02:16,580 --> 00:02:19,625
+integral over a region,
+planar region R,
+
+58
+00:02:19,625 --> 00:02:21,620
+but over a
+three-dimensional region,
+
+59
+00:02:21,620 --> 00:02:24,020
+which we'll call d. And the
+
+60
+00:02:24,020 --> 00:02:25,160
+triple integral can be
+
+61
+00:02:25,160 --> 00:02:26,900
+written as an
+iterated integral.
+
+62
+00:02:26,900 --> 00:02:30,080
+>> In this case,
+where the last
+
+63
+00:02:30,080 --> 00:02:33,950
+integral is just
+the same expression
+
+64
+00:02:33,950 --> 00:02:35,450
+that we had before,
+
+65
+00:02:35,450 --> 00:02:39,529
+where we were looking
+at the, the distance,
+
+66
+00:02:39,529 --> 00:02:41,150
+the vertical distance,
+you might say
+
+67
+00:02:41,150 --> 00:02:43,520
+the z distance between
+
+68
+00:02:43,520 --> 00:02:45,844
+the top plane and
+the bottom plane.
+
+69
+00:02:45,844 --> 00:02:47,600
+>> So instead of
+just subtracting
+
+70
+00:02:47,600 --> 00:02:48,934
+those two functions,
+
+71
+00:02:48,934 --> 00:02:50,600
+we see that's
+just a result of
+
+72
+00:02:50,600 --> 00:02:52,325
+the fundamental
+theorem of calculus.
+
+73
+00:02:52,325 --> 00:02:53,690
+If we integrate with those
+
+74
+00:02:53,690 --> 00:02:55,009
+as the limit of
+integration,
+
+75
+00:02:55,009 --> 00:02:57,420
+limits of integration d z.
+
+76
+00:02:59,019 --> 00:03:03,230
+>> We can find a
+triple integrals by
+
+77
+00:03:03,230 --> 00:03:05,419
+Looking at the
+iterated integrals.
+
+78
+00:03:05,419 --> 00:03:06,590
+>> If our region happens to
+
+79
+00:03:06,590 --> 00:03:09,299
+be bounded by functions,
+
+80
+00:03:11,080 --> 00:03:13,790
+the definition of the
+
+81
+00:03:13,790 --> 00:03:15,230
+triple integral and how it
+
+82
+00:03:15,230 --> 00:03:17,240
+works comes down to
+
+83
+00:03:17,240 --> 00:03:19,190
+the same process as
+
+84
+00:03:19,190 --> 00:03:20,450
+defining the
+double integral,
+
+85
+00:03:20,450 --> 00:03:22,025
+where there were looking at
+
+86
+00:03:22,025 --> 00:03:24,350
+smaller and
+smaller rectangles
+
+87
+00:03:24,350 --> 00:03:25,670
+in the region
+of integration.
+
+88
+00:03:25,670 --> 00:03:26,690
+And here we're looking at
+
+89
+00:03:26,690 --> 00:03:28,219
+smaller and smaller cubes
+
+90
+00:03:28,219 --> 00:03:29,990
+and the region
+of integration.
+
+91
+00:03:29,990 --> 00:03:31,820
+Then we take the limit as
+
+92
+00:03:31,820 --> 00:03:32,840
+those cubes get smaller
+
+93
+00:03:32,840 --> 00:03:33,650
+and smaller and smaller.
+
+94
+00:03:33,650 --> 00:03:34,160
+>> And that's how we
+
+95
+00:03:34,160 --> 00:03:36,420
+define the triple integral.
+
+96
+00:03:38,559 --> 00:03:41,480
+>> Now here's a
+region bounded by
+
+97
+00:03:41,480 --> 00:03:43,700
+a plane and the,
+
+98
+00:03:43,700 --> 00:03:45,529
+and the coordinate axes.
+
+99
+00:03:45,529 --> 00:03:48,079
+>> So we want to
+determine this volume.
+
+100
+00:03:48,079 --> 00:03:49,820
+And because now that
+
+101
+00:03:49,820 --> 00:03:51,680
+we're looking at triple
+integrals with a DX,
+
+102
+00:03:51,680 --> 00:03:53,360
+DY, DZ, there's actually
+
+103
+00:03:53,360 --> 00:03:55,639
+six different ways
+we can do it.
+
+104
+00:03:55,639 --> 00:03:57,575
+>> D z, d y, dx,
+
+105
+00:03:57,575 --> 00:03:59,870
+dy dx, dy Weiss, and so on.
+
+106
+00:03:59,870 --> 00:04:03,545
+So the thing is, is
+each choice on how you
+
+107
+00:04:03,545 --> 00:04:04,820
+decide to write the
+
+108
+00:04:04,820 --> 00:04:07,309
+integral should give
+us the correct answer.
+
+109
+00:04:07,309 --> 00:04:09,800
+>> But it may differ
+in terms of how the
+
+110
+00:04:09,800 --> 00:04:11,570
+integral gets
+calculated because
+
+111
+00:04:11,570 --> 00:04:12,140
+of the limits of
+
+112
+00:04:12,140 --> 00:04:13,849
+integration might
+be different.
+
+113
+00:04:13,849 --> 00:04:16,640
+>> So let's first look
+at the case where
+
+114
+00:04:16,640 --> 00:04:20,284
+we integrated with
+respect to z first.
+
+115
+00:04:20,284 --> 00:04:22,220
+>> That means
+that we're going
+
+116
+00:04:22,220 --> 00:04:23,405
+to first look at
+
+117
+00:04:23,405 --> 00:04:28,025
+the portion of our
+region in the xy axis.
+
+118
+00:04:28,025 --> 00:04:29,510
+And we can see here that's
+
+119
+00:04:29,510 --> 00:04:30,770
+bounded by the
+line y equals
+
+120
+00:04:30,770 --> 00:04:34,294
+2x minus six minus 2x.
+
+121
+00:04:34,294 --> 00:04:36,770
+And we can get
+that by letting z
+
+122
+00:04:36,770 --> 00:04:37,880
+equals to 0 in
+
+123
+00:04:37,880 --> 00:04:39,529
+the equation of
+the plane here.
+
+124
+00:04:39,529 --> 00:04:41,180
+>> And so that's our region
+
+125
+00:04:41,180 --> 00:04:43,550
+R that we would normally
+integrate over.
+
+126
+00:04:43,550 --> 00:04:45,755
+But now we want
+to integrate z,
+
+127
+00:04:45,755 --> 00:04:49,445
+right when z is 0 to
+the top of this region,
+
+128
+00:04:49,445 --> 00:04:50,060
+but the top of
+
+129
+00:04:50,060 --> 00:04:51,350
+the regions bounded
+by the plane.
+
+130
+00:04:51,350 --> 00:04:53,150
+So we're going
+to integrate DZ
+
+131
+00:04:53,150 --> 00:04:55,099
+from 0 to the plane.
+
+132
+00:04:55,099 --> 00:04:58,055
+>> And then we'll
+integrate y
+
+133
+00:04:58,055 --> 00:05:04,684
+from 0 to six minus 2x.
+
+134
+00:05:04,684 --> 00:05:06,245
+>> Since that's
+the function of X,
+
+135
+00:05:06,245 --> 00:05:08,629
+that's the boundary
+of the region.
+
+136
+00:05:08,629 --> 00:05:10,415
+>> And then we'll
+integrate x
+
+137
+00:05:10,415 --> 00:05:13,620
+finally from 0 to three.
+
+138
+00:05:13,959 --> 00:05:16,370
+>> Now if we change,
+
+139
+00:05:16,370 --> 00:05:18,230
+we leave DZ to be first.
+
+140
+00:05:18,230 --> 00:05:19,340
+So we're still
+integrating from
+
+141
+00:05:19,340 --> 00:05:21,020
+the bottom here
+and on the x,
+
+142
+00:05:21,020 --> 00:05:23,809
+y axis to the top
+of the plane.
+
+143
+00:05:23,809 --> 00:05:25,010
+>> But now we're going to
+
+144
+00:05:25,010 --> 00:05:26,630
+change the
+direction in which
+
+145
+00:05:26,630 --> 00:05:30,680
+we integrate with
+respect to x and then y.
+
+146
+00:05:30,680 --> 00:05:33,530
+So notice that
+if we this line
+
+147
+00:05:33,530 --> 00:05:34,970
+here that denotes
+
+148
+00:05:34,970 --> 00:05:36,725
+the boundary of
+the bottom region,
+
+149
+00:05:36,725 --> 00:05:38,420
+if we were to
+solve for x would
+
+150
+00:05:38,420 --> 00:05:40,520
+be three minus 1.5 y.
+
+151
+00:05:40,520 --> 00:05:42,335
+So there we would integrate
+
+152
+00:05:42,335 --> 00:05:45,980
+x from 0 to three
+minus 1.5 Y.
+
+153
+00:05:45,980 --> 00:05:49,775
+And then finally integrate
+y from 0 to six,
+
+154
+00:05:49,775 --> 00:05:53,040
+which shows in these
+limits of integration.
+
+155
+00:05:54,579 --> 00:05:56,990
+>> Now let's integrate
+with respect
+
+156
+00:05:56,990 --> 00:05:58,324
+to x first.
+
+157
+00:05:58,324 --> 00:06:00,050
+>> So then the base of our
+
+158
+00:06:00,050 --> 00:06:02,824
+integral is now
+in the YZ axis.
+
+159
+00:06:02,824 --> 00:06:05,660
+>> So we're going
+to integrate from x
+
+160
+00:06:05,660 --> 00:06:08,764
+equals to 0 to the plane.
+
+161
+00:06:08,764 --> 00:06:10,730
+>> But the plane, if
+you were to solve for x
+
+162
+00:06:10,730 --> 00:06:14,899
+here is three minus
+1.5 y minus three z.
+
+163
+00:06:14,899 --> 00:06:18,360
+>> Then we integrate
+with respect to y.
+
+164
+00:06:19,719 --> 00:06:21,860
+>> If we solve for y here,
+
+165
+00:06:21,860 --> 00:06:24,825
+we get six minus three. Z
+
+166
+00:06:24,825 --> 00:06:27,100
+Which gives us this
+boundary. And finally,
+
+167
+00:06:27,100 --> 00:06:28,330
+x from 0 to two,
+
+168
+00:06:28,330 --> 00:06:30,670
+I'm sorry, z from 0 to two.
+
+169
+00:06:30,670 --> 00:06:35,110
+And again, we can
+switch the DZ, DY.
+
+170
+00:06:35,110 --> 00:06:37,870
+And all that's different
+is we will now write
+
+171
+00:06:37,870 --> 00:06:40,210
+this boundary of the region
+
+172
+00:06:40,210 --> 00:06:42,744
+as two minus 1 third Y.
+
+173
+00:06:42,744 --> 00:06:44,440
+>> And now we
+finally integrate
+
+174
+00:06:44,440 --> 00:06:47,110
+x, I'm sorry, and
+to integrate,
+
+175
+00:06:47,110 --> 00:06:51,910
+integrate y from
+0 to six K.
+
+176
+00:06:51,910 --> 00:06:53,200
+>> And then
+finally we look at
+
+177
+00:06:53,200 --> 00:06:54,790
+the reading the integrals
+
+178
+00:06:54,790 --> 00:06:56,154
+with respect to y first.
+
+179
+00:06:56,154 --> 00:06:58,345
+>> So now we have the
+base and the z-axis.
+
+180
+00:06:58,345 --> 00:07:01,345
+We integrate y
+from its base,
+
+181
+00:07:01,345 --> 00:07:03,460
+from 0 to the plane.
+
+182
+00:07:03,460 --> 00:07:05,230
+And if you solve
+for y here,
+
+183
+00:07:05,230 --> 00:07:08,150
+you get six minus
+2x minus three z.
+
+184
+00:07:08,640 --> 00:07:11,950
+Then we integrate
+with respect to z.
+
+185
+00:07:11,950 --> 00:07:13,300
+And we can see that
+
+186
+00:07:13,300 --> 00:07:14,740
+this gives us
+the boundary of
+
+187
+00:07:14,740 --> 00:07:18,385
+two minus two
+thirds x and then,
+
+188
+00:07:18,385 --> 00:07:21,410
+and then finally x
+from 0 to three.
+
+189
+00:07:21,420 --> 00:07:23,905
+And then similarly,
+if we change
+
+190
+00:07:23,905 --> 00:07:25,915
+the dx and DZ again,
+
+191
+00:07:25,915 --> 00:07:28,360
+and I'll throw in all
+six of these integrals.
+
+192
+00:07:28,360 --> 00:07:30,130
+The answer is 66 is
+
+193
+00:07:30,130 --> 00:07:31,690
+what we get for the volume.
+
+194
+00:07:31,690 --> 00:07:33,940
+Now, which one should
+we choose if all
+
+195
+00:07:33,940 --> 00:07:34,570
+through all six of
+
+196
+00:07:34,570 --> 00:07:36,130
+these integrals give
+us the same answer.
+
+197
+00:07:36,130 --> 00:07:38,320
+Six, the answer
+typically is the
+
+198
+00:07:38,320 --> 00:07:40,825
+one with the easiest
+calculations to do.
+
+199
+00:07:40,825 --> 00:07:42,400
+And in this case,
+
+200
+00:07:42,400 --> 00:07:43,270
+it kinda comes down to
+
+201
+00:07:43,270 --> 00:07:45,580
+maybe less fractions here.
+
+202
+00:07:45,580 --> 00:07:48,370
+And number 56, we
+get somewhat of
+
+203
+00:07:48,370 --> 00:07:52,640
+a nicer expression to
+work with immediately.
+
+204
+00:07:53,469 --> 00:07:55,714
+>> Here's another example.
+
+205
+00:07:55,714 --> 00:07:57,200
+>> We want to find
+the volume of
+
+206
+00:07:57,200 --> 00:07:59,135
+the region d shown here,
+
+207
+00:07:59,135 --> 00:08:00,980
+which is bounded above by
+
+208
+00:08:00,980 --> 00:08:03,425
+the plane z equals
+to minus y,
+
+209
+00:08:03,425 --> 00:08:06,380
+and bounded below by the x,
+
+210
+00:08:06,380 --> 00:08:08,120
+y axis and the
+
+211
+00:08:08,120 --> 00:08:09,440
+cylinder x squared plus
+
+212
+00:08:09,440 --> 00:08:11,550
+y squared equal to one.
+
+213
+00:08:12,100 --> 00:08:14,180
+So if we set up the triple
+
+214
+00:08:14,180 --> 00:08:16,100
+integral with respect to
+
+215
+00:08:16,100 --> 00:08:17,885
+z first than the base
+
+216
+00:08:17,885 --> 00:08:19,580
+is going to be in
+the x, y axis.
+
+217
+00:08:19,580 --> 00:08:22,640
+And we see the base here
+as the hemisphere in
+
+218
+00:08:22,640 --> 00:08:25,820
+the negative y hemisphere
+
+219
+00:08:25,820 --> 00:08:26,870
+of a circle of radius
+
+220
+00:08:26,870 --> 00:08:29,194
+one and the negative
+y direction.
+
+221
+00:08:29,194 --> 00:08:31,535
+>> So that's going to
+set up an interval,
+
+222
+00:08:31,535 --> 00:08:33,515
+an integral with,
+
+223
+00:08:33,515 --> 00:08:36,905
+with respect to
+d z d by dx.
+
+224
+00:08:36,905 --> 00:08:39,485
+So we can set up
+the integral.
+
+225
+00:08:39,485 --> 00:08:41,810
+And we're first
+gonna integrate d
+
+226
+00:08:41,810 --> 00:08:44,689
+z from 0 to negative Y.
+
+227
+00:08:44,689 --> 00:08:45,574
+>> Again.
+
+228
+00:08:45,574 --> 00:08:47,315
+>> Again, if we take
+an arbitrary point
+
+229
+00:08:47,315 --> 00:08:48,890
+here and then we
+
+230
+00:08:48,890 --> 00:08:51,364
+integrate from z equals
+to 0 to the top.
+
+231
+00:08:51,364 --> 00:08:54,169
+>> The top is bounded
+by this plane.
+
+232
+00:08:54,169 --> 00:08:55,700
+>> So that's
+where we get the
+
+233
+00:08:55,700 --> 00:08:57,094
+0 to negative y.
+
+234
+00:08:57,094 --> 00:08:59,480
+>> And then d y is gonna go
+
+235
+00:08:59,480 --> 00:09:03,574
+from negative root one
+minus x squared to 0.
+
+236
+00:09:03,574 --> 00:09:07,520
+>> Well, that's
+going to be here
+
+237
+00:09:07,520 --> 00:09:09,274
+on the edge of the circle.
+
+238
+00:09:09,274 --> 00:09:11,120
+>> X squared plus y
+squared equal to one.
+
+239
+00:09:11,120 --> 00:09:12,470
+If you were to solve for,
+
+240
+00:09:12,470 --> 00:09:14,270
+solve for y, and
+
+241
+00:09:14,270 --> 00:09:15,620
+then we were on
+the negative Y.
+
+242
+00:09:15,620 --> 00:09:17,060
+So we want the negative
+square root of
+
+243
+00:09:17,060 --> 00:09:19,880
+one minus x squared
+all the way to 0.
+
+244
+00:09:19,880 --> 00:09:21,935
+So that sets up the
+second integral.
+
+245
+00:09:21,935 --> 00:09:23,420
+Then finally, X
+is going to be
+
+246
+00:09:23,420 --> 00:09:25,070
+integrating from
+negative one to one.
+
+247
+00:09:25,070 --> 00:09:26,045
+Now this is just an
+
+248
+00:09:26,045 --> 00:09:27,140
+iterated integral where we
+
+249
+00:09:27,140 --> 00:09:30,050
+integrate the inside
+from the inside out.
+
+250
+00:09:30,050 --> 00:09:33,210
+So here the answer
+is two-thirds.
+
+251
+00:09:34,989 --> 00:09:36,770
+>> An important property
+
+252
+00:09:36,770 --> 00:09:38,060
+of triple integral
+integrals,
+
+253
+00:09:38,060 --> 00:09:39,470
+similar to double
+integrals,
+
+254
+00:09:39,470 --> 00:09:42,920
+is that we might be
+trying to do triple,
+
+255
+00:09:42,920 --> 00:09:45,185
+triple integral over
+a spacial region.
+
+256
+00:09:45,185 --> 00:09:46,955
+That's quite complicated,
+
+257
+00:09:46,955 --> 00:09:48,470
+or it's just
+not possible to
+
+258
+00:09:48,470 --> 00:09:50,270
+write a simple iterated
+
+259
+00:09:50,270 --> 00:09:52,910
+integral over that region,
+
+260
+00:09:52,910 --> 00:09:54,770
+maybe because
+the boundaries
+
+261
+00:09:54,770 --> 00:09:56,869
+aren't described by
+a single function.
+
+262
+00:09:56,869 --> 00:09:58,040
+>> Well, what we
+can do is take
+
+263
+00:09:58,040 --> 00:09:59,540
+that region and
+
+264
+00:09:59,540 --> 00:10:01,130
+divide it cleverly into
+
+265
+00:10:01,130 --> 00:10:03,140
+pieces that can be
+written easily.
+
+266
+00:10:03,140 --> 00:10:05,000
+And then we can
+find the overall
+
+267
+00:10:05,000 --> 00:10:08,010
+integral as the sum
+of the easier pieces.
+
+268
+00:10:10,089 --> 00:10:13,280
+>> We can write triple
+integrals bounded
+
+269
+00:10:13,280 --> 00:10:15,919
+by functions with the
+following formula.
+
+270
+00:10:15,919 --> 00:10:17,765
+>> This is just the,
+
+271
+00:10:17,765 --> 00:10:19,310
+the general case of what we
+
+272
+00:10:19,310 --> 00:10:20,809
+saw in our
+examples earlier.
+
+273
+00:10:20,809 --> 00:10:22,460
+>> And then the definition
+
+274
+00:10:22,460 --> 00:10:24,110
+of the triple integral of
+
+275
+00:10:24,110 --> 00:10:28,145
+a function is
+similarly defined.
+
+276
+00:10:28,145 --> 00:10:31,490
+It's the limit of these
+small little pieces,
+
+277
+00:10:31,490 --> 00:10:34,170
+a volume times the function
+
+278
+00:10:34,170 --> 00:10:35,680
+and add it all
+
+279
+00:10:35,680 --> 00:10:37,119
+up to approximate
+the integral.
+
+280
+00:10:37,119 --> 00:10:38,350
+>> But then we
+take the limit as
+
+281
+00:10:38,350 --> 00:10:41,750
+those small pieces
+of volume go to 0.
+
+282
+00:10:42,030 --> 00:10:44,739
+So an immediate application
+
+283
+00:10:44,739 --> 00:10:45,940
+that we see with a triple
+
+284
+00:10:45,940 --> 00:10:47,860
+integral over
+
+285
+00:10:47,860 --> 00:10:49,630
+of a function of
+three variables.
+
+286
+00:10:49,630 --> 00:10:52,465
+>> Here is thinking about
+
+287
+00:10:52,465 --> 00:10:56,274
+the function being
+the density function.
+
+288
+00:10:56,274 --> 00:10:59,515
+>> Because if we have
+a spatial region D,
+
+289
+00:10:59,515 --> 00:11:01,480
+and we have a density
+
+290
+00:11:01,480 --> 00:11:03,370
+function on that region.
+
+291
+00:11:03,370 --> 00:11:05,710
+And then integrating
+that with
+
+292
+00:11:05,710 --> 00:11:06,775
+respect to the area
+
+293
+00:11:06,775 --> 00:11:08,920
+is going to give
+us the mass.
+
+294
+00:11:08,920 --> 00:11:11,455
+Once we have a way
+to find the mass,
+
+295
+00:11:11,455 --> 00:11:12,730
+then we can find the center
+
+296
+00:11:12,730 --> 00:11:14,739
+of mass of the region.
+
+297
+00:11:14,739 --> 00:11:17,824
+>> And indeed That's
+what we have here.
+
+298
+00:11:17,824 --> 00:11:18,560
+>> We can find
+
+299
+00:11:18,560 --> 00:11:20,270
+that mass over a
+bounded region of
+
+300
+00:11:20,270 --> 00:11:21,995
+space with a
+density function
+
+301
+00:11:21,995 --> 00:11:23,435
+with the triple integral,
+
+302
+00:11:23,435 --> 00:11:25,550
+we can find the moments
+
+303
+00:11:25,550 --> 00:11:27,110
+with respect to the YZ,
+
+304
+00:11:27,110 --> 00:11:29,075
+X Z and X, Y plane.
+
+305
+00:11:29,075 --> 00:11:31,190
+Remember, these
+moments are just,
+
+306
+00:11:31,190 --> 00:11:34,130
+they're sort of
+numerators of
+
+307
+00:11:34,130 --> 00:11:37,325
+the weighted average right,
+
+308
+00:11:37,325 --> 00:11:38,330
+in each direction.
+
+309
+00:11:38,330 --> 00:11:39,350
+And correspondingly, this
+
+310
+00:11:39,350 --> 00:11:40,790
+one in the x direction,
+
+311
+00:11:40,790 --> 00:11:42,080
+this one in the
+y direction,
+
+312
+00:11:42,080 --> 00:11:43,370
+this one in the
+z direction.
+
+313
+00:11:43,370 --> 00:11:44,840
+So that, and then
+we divide by
+
+314
+00:11:44,840 --> 00:11:46,460
+the overall mass and we
+
+315
+00:11:46,460 --> 00:11:49,320
+get the center of
+mass of the object.

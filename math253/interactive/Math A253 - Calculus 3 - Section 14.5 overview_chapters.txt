@@ -1,0 +1,6 @@
+```
+0:00  Parameterized Surfaces Introduction
+2:30  Surface Parameterization Techniques
+5:00  Cylinder Surface Parameterization
+6:40  Surface Area Calculation Method
+```

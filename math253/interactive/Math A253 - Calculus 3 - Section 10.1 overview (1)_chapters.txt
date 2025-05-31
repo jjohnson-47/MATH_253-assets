@@ -1,0 +1,8 @@
+```
+0:00  Cartesian Coordinates in 3D
+1:30  Distance Formula in 3D Space
+2:45  Equations of Planes
+3:30  Understanding Cylinders
+4:15  Quadratic Surfaces Overview
+5:00  Sketching Quadratic Surfaces
+```

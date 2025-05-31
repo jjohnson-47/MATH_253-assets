@@ -1,0 +1,807 @@
+1
+00:00:00,140 --> 00:00:02,190
+Let's take a look at planes
+
+2
+00:00:02,190 --> 00:00:03,269
+in three-dimensional space.
+
+3
+00:00:03,269 --> 00:00:04,590
+>> This is an
+overview of section
+
+4
+00:00:04,590 --> 00:00:06,820
+10.6 from her book.
+
+5
+00:00:07,670 --> 00:00:10,050
+A plane in
+three-dimensional
+
+6
+00:00:10,050 --> 00:00:11,490
+space is thought of
+
+7
+00:00:11,490 --> 00:00:12,600
+as an infinitely
+
+8
+00:00:12,600 --> 00:00:15,224
+large 2-dimensional
+flat sheet.
+
+9
+00:00:15,224 --> 00:00:16,830
+>> Every plane has
+
+10
+00:00:16,830 --> 00:00:18,239
+what's called
+normal vectors.
+
+11
+00:00:18,239 --> 00:00:19,560
+>> It's represented
+by the nail
+
+12
+00:00:19,560 --> 00:00:21,389
+that you see in
+the picture here.
+
+13
+00:00:21,389 --> 00:00:23,520
+>> Normal vectors
+are vectors that
+
+14
+00:00:23,520 --> 00:00:25,259
+are orthogonal
+to the plane.
+
+15
+00:00:25,259 --> 00:00:27,030
+>> The plane itself
+
+16
+00:00:27,030 --> 00:00:29,250
+is a collection
+of points q,
+
+17
+00:00:29,250 --> 00:00:31,890
+in this case, such
+that the vector
+
+18
+00:00:31,890 --> 00:00:36,134
+PQ is orthogonal to
+this normal vector.
+
+19
+00:00:36,134 --> 00:00:37,470
+>> So if you have
+
+20
+00:00:37,470 --> 00:00:39,930
+a normal vector
+and a point p,
+
+21
+00:00:39,930 --> 00:00:42,205
+then the plane
+is all points Q,
+
+22
+00:00:42,205 --> 00:00:44,270
+such that the
+dot product of
+
+23
+00:00:44,270 --> 00:00:47,490
+PQ with the normal
+vector is equal to 0.
+
+24
+00:00:47,769 --> 00:00:50,270
+>> So if we have
+a point P with
+
+25
+00:00:50,270 --> 00:00:51,470
+coordinates x-naught,
+
+26
+00:00:51,470 --> 00:00:53,510
+y-naught, Z naught, and X.
+
+27
+00:00:53,510 --> 00:00:55,370
+>> And Q has
+coordinates x, y, z.
+
+28
+00:00:55,370 --> 00:01:00,574
+And the normal vector
+has components ABC.
+
+29
+00:01:00,574 --> 00:01:03,410
+>> Then we can take
+that equation expanded
+
+30
+00:01:03,410 --> 00:01:06,424
+out and will imply
+the dot product.
+
+31
+00:01:06,424 --> 00:01:08,630
+>> And that gives us
+this formula right here,
+
+32
+00:01:08,630 --> 00:01:10,819
+which is the standard
+form of a plane.
+
+33
+00:01:10,819 --> 00:01:12,920
+>> The thing to take
+away here is that
+
+34
+00:01:12,920 --> 00:01:16,010
+the normal vector is
+
+35
+00:01:16,010 --> 00:01:19,324
+right in the equation
+of the plane a, B, C.
+
+36
+00:01:19,324 --> 00:01:20,555
+>> They are the
+coefficients
+
+37
+00:01:20,555 --> 00:01:22,160
+that in front of x,
+
+38
+00:01:22,160 --> 00:01:23,839
+y, and z respectively.
+
+39
+00:01:23,839 --> 00:01:26,045
+>> And a point on the plane
+
+40
+00:01:26,045 --> 00:01:28,010
+we can see is x-naught,
+
+41
+00:01:28,010 --> 00:01:29,315
+y-naught, and Z naught.
+
+42
+00:01:29,315 --> 00:01:31,775
+If you substitute
+x naught for x,
+
+43
+00:01:31,775 --> 00:01:32,990
+y naught for y z,
+
+44
+00:01:32,990 --> 00:01:36,600
+not z, you get 0 plus
+0 plus 0, which is 0.
+
+45
+00:01:37,089 --> 00:01:39,710
+>> You can expand
+this out in
+
+46
+00:01:39,710 --> 00:01:42,290
+distribute a and b and
+c across the terms.
+
+47
+00:01:42,290 --> 00:01:44,810
+And then a and b
+and c are numbers.
+
+48
+00:01:44,810 --> 00:01:45,875
+And so our x, y,
+
+49
+00:01:45,875 --> 00:01:47,614
+x naught, y naught,
+and z naught.
+
+50
+00:01:47,614 --> 00:01:48,950
+>> Gather all
+those together,
+
+51
+00:01:48,950 --> 00:01:49,880
+put them on the other side,
+
+52
+00:01:49,880 --> 00:01:51,350
+and call that D. That gives
+
+53
+00:01:51,350 --> 00:01:53,910
+us another form
+of the plane.
+
+54
+00:01:55,149 --> 00:01:56,870
+>> An example, write
+
+55
+00:01:56,870 --> 00:01:58,250
+the equation of the plane
+that passes through
+
+56
+00:01:58,250 --> 00:02:03,214
+the points 11012,
+negative 1012.
+
+57
+00:02:03,214 --> 00:02:05,150
+>> The strategy here is
+
+58
+00:02:05,150 --> 00:02:06,200
+to use the three points,
+
+59
+00:02:06,200 --> 00:02:07,550
+define two vectors that
+
+60
+00:02:07,550 --> 00:02:09,260
+are parallel
+with the plane,
+
+61
+00:02:09,260 --> 00:02:10,730
+then define the
+normal vector.
+
+62
+00:02:10,730 --> 00:02:11,180
+>> We just take
+
+63
+00:02:11,180 --> 00:02:13,910
+the cross-product of
+those two vectors.
+
+64
+00:02:13,910 --> 00:02:19,100
+I found that, I found
+the vectors PQ and PR.
+
+65
+00:02:19,100 --> 00:02:20,720
+Those are two
+vectors that are
+
+66
+00:02:20,720 --> 00:02:22,115
+parallel with the plane.
+
+67
+00:02:22,115 --> 00:02:23,660
+If you take the
+cross product of
+
+68
+00:02:23,660 --> 00:02:25,819
+those two, I got 211.
+
+69
+00:02:25,819 --> 00:02:28,234
+>> And then a point
+on the plane is 110.
+
+70
+00:02:28,234 --> 00:02:29,675
+>> Now we have
+a normal vector
+
+71
+00:02:29,675 --> 00:02:31,174
+and a point on the plane.
+
+72
+00:02:31,174 --> 00:02:32,750
+>> So we can just
+put that into
+
+73
+00:02:32,750 --> 00:02:34,579
+the standard form
+for a plane.
+
+74
+00:02:34,579 --> 00:02:37,380
+>> And then we have our
+equation for a plane.
+
+75
+00:02:37,689 --> 00:02:39,860
+>> Give the
+parametric equations
+
+76
+00:02:39,860 --> 00:02:40,460
+of a line that is
+
+77
+00:02:40,460 --> 00:02:41,630
+the intersection
+
+78
+00:02:41,630 --> 00:02:44,160
+of the two planes
+that you see here.
+
+79
+00:02:44,909 --> 00:02:47,170
+>> The strategy is to find
+
+80
+00:02:47,170 --> 00:02:48,610
+a direction vector for
+
+81
+00:02:48,610 --> 00:02:50,259
+the line of intersection.
+
+82
+00:02:50,259 --> 00:02:51,550
+>> So we could start
+
+83
+00:02:51,550 --> 00:02:52,780
+by adding and subtracting
+
+84
+00:02:52,780 --> 00:02:54,100
+the equations to each other
+
+85
+00:02:54,100 --> 00:02:55,884
+and trying to
+eliminate variables.
+
+86
+00:02:55,884 --> 00:02:57,670
+>> But it's really
+handy to notice
+
+87
+00:02:57,670 --> 00:02:59,920
+that the direction
+vector of
+
+88
+00:02:59,920 --> 00:03:01,780
+the intersection line has
+
+89
+00:03:01,780 --> 00:03:04,165
+to be orthogonal to
+the first plane,
+
+90
+00:03:04,165 --> 00:03:05,560
+and it has to be
+orthogonal to the
+
+91
+00:03:05,560 --> 00:03:07,060
+section plane,
+the second plane.
+
+92
+00:03:07,060 --> 00:03:09,009
+So it has to be
+orthogonal to both.
+
+93
+00:03:09,009 --> 00:03:11,080
+>> And since both
+planes give us
+
+94
+00:03:11,080 --> 00:03:13,615
+the normal vectors,
+and in this case,
+
+95
+00:03:13,615 --> 00:03:15,775
+the normal vector of
+plane one is one,
+
+96
+00:03:15,775 --> 00:03:17,830
+negative 11, and
+the normal vector
+
+97
+00:03:17,830 --> 00:03:20,575
+of 0.2 is negative 211.
+
+98
+00:03:20,575 --> 00:03:22,765
+We can take the
+cross product,
+
+99
+00:03:22,765 --> 00:03:24,820
+which is negative
+two, negative three,
+
+100
+00:03:24,820 --> 00:03:25,960
+negative one, to find the
+
+101
+00:03:25,960 --> 00:03:27,794
+direction vector
+to the plane.
+
+102
+00:03:27,794 --> 00:03:29,510
+>> So it's common if
+
+103
+00:03:29,510 --> 00:03:30,740
+you take the cross
+product and you
+
+104
+00:03:30,740 --> 00:03:32,240
+find a possible direction
+
+105
+00:03:32,240 --> 00:03:33,320
+vector for the plane,
+
+106
+00:03:33,320 --> 00:03:35,899
+for, I'm sorry, for
+the intersection line.
+
+107
+00:03:35,899 --> 00:03:38,870
+>> You can scale it
+however you wish to find
+
+108
+00:03:38,870 --> 00:03:40,430
+another direction
+vector that's
+
+109
+00:03:40,430 --> 00:03:42,754
+parallel or the same line.
+
+110
+00:03:42,754 --> 00:03:44,510
+>> So if in this case,
+
+111
+00:03:44,510 --> 00:03:46,010
+all three were negative by
+
+112
+00:03:46,010 --> 00:03:48,020
+multiplying times
+negative one,
+
+113
+00:03:48,020 --> 00:03:49,925
+that changes
+the orientation
+
+114
+00:03:49,925 --> 00:03:50,975
+of the direction vector,
+
+115
+00:03:50,975 --> 00:03:52,280
+but it's still the same
+
+116
+00:03:52,280 --> 00:03:53,645
+direction as the line.
+
+117
+00:03:53,645 --> 00:03:55,460
+So I'm taking the
+direction vector to be
+
+118
+00:03:55,460 --> 00:03:57,799
+231 because the
+numbers are nicer.
+
+119
+00:03:57,799 --> 00:04:00,125
+>> The same thing
+can be done if
+
+120
+00:04:00,125 --> 00:04:01,670
+you had some
+messy fractions
+
+121
+00:04:01,670 --> 00:04:02,780
+and you wanted
+to just scale it
+
+122
+00:04:02,780 --> 00:04:05,195
+by a least common multiple,
+
+123
+00:04:05,195 --> 00:04:07,710
+and that would remove
+all the fractions.
+
+124
+00:04:07,959 --> 00:04:09,770
+>> Now we just need to find
+
+125
+00:04:09,770 --> 00:04:10,879
+a point on the line.
+
+126
+00:04:10,879 --> 00:04:11,330
+>> Here.
+
+127
+00:04:11,330 --> 00:04:11,930
+>> I subtracted
+
+128
+00:04:11,930 --> 00:04:13,640
+the two equations
+to eliminate Z,
+
+129
+00:04:13,640 --> 00:04:14,150
+and I was left with
+
+130
+00:04:14,150 --> 00:04:16,354
+3x minus two, i minus one.
+
+131
+00:04:16,354 --> 00:04:17,450
+>> Since there are
+
+132
+00:04:17,450 --> 00:04:18,980
+three variables
+and two equations,
+
+133
+00:04:18,980 --> 00:04:20,720
+we're free to let
+one variable,
+
+134
+00:04:20,720 --> 00:04:23,240
+the free I chose
+x equals to 0,
+
+135
+00:04:23,240 --> 00:04:24,980
+that gives us y is
+equal to negative one.
+
+136
+00:04:24,980 --> 00:04:26,360
+And we substitute,
+substitute
+
+137
+00:04:26,360 --> 00:04:27,500
+those into the
+first equation.
+
+138
+00:04:27,500 --> 00:04:29,569
+I get z is equal to
+negative three halves.
+
+139
+00:04:29,569 --> 00:04:31,460
+>> So a point in
+
+140
+00:04:31,460 --> 00:04:33,710
+both of the planes
+that I found was 0,
+
+141
+00:04:33,710 --> 00:04:35,719
+negative 1.5, and
+negative three-halves.
+
+142
+00:04:35,719 --> 00:04:37,399
+>> We have a point
+on the plane.
+
+143
+00:04:37,399 --> 00:04:38,570
+>> We have the
+direction vector
+
+144
+00:04:38,570 --> 00:04:39,964
+that we found previously.
+
+145
+00:04:39,964 --> 00:04:41,480
+>> So we can put that into
+
+146
+00:04:41,480 --> 00:04:43,865
+the parametric
+equations of a plane,
+
+147
+00:04:43,865 --> 00:04:46,789
+which of parity
+equations for a line.
+
+148
+00:04:46,789 --> 00:04:48,380
+>> And that gives
+us the equation
+
+149
+00:04:48,380 --> 00:04:50,400
+for the intersection line.
+
+150
+00:04:51,220 --> 00:04:53,060
+Something else
+we'll need to
+
+151
+00:04:53,060 --> 00:04:53,930
+do is be able to find
+
+152
+00:04:53,930 --> 00:04:56,644
+the distance from a
+point to a plane.
+
+153
+00:04:56,644 --> 00:04:58,985
+>> Here, if you take a
+look at the picture,
+
+154
+00:04:58,985 --> 00:05:01,925
+if we have a point
+q not on a plane,
+
+155
+00:05:01,925 --> 00:05:05,330
+we can find the distance
+h to the plane,
+
+156
+00:05:05,330 --> 00:05:07,444
+which is the shortest
+distance to the plane.
+
+157
+00:05:07,444 --> 00:05:10,430
+>> And notice that that
+shortest distance is
+
+158
+00:05:10,430 --> 00:05:11,690
+in the same direction as
+
+159
+00:05:11,690 --> 00:05:13,909
+the normal vector
+for the plane.
+
+160
+00:05:13,909 --> 00:05:16,790
+>> So if we take any
+point on the plane,
+
+161
+00:05:16,790 --> 00:05:20,329
+in this case p,
+form the vector PQ.
+
+162
+00:05:20,329 --> 00:05:23,000
+>> Then take the
+vector projection of
+
+163
+00:05:23,000 --> 00:05:25,340
+PQ onto the normal vector
+
+164
+00:05:25,340 --> 00:05:27,440
+that's going to give
+us a vector that has
+
+165
+00:05:27,440 --> 00:05:28,940
+the same length as
+
+166
+00:05:28,940 --> 00:05:30,979
+the height that we're
+trying to find.
+
+167
+00:05:30,979 --> 00:05:33,050
+>> And so that's
+the formula for
+
+168
+00:05:33,050 --> 00:05:34,774
+the distance from a
+point to a plane.
+
+169
+00:05:34,774 --> 00:05:36,260
+>> It's the magnitude of
+
+170
+00:05:36,260 --> 00:05:39,140
+the projection
+of PQ onto n,
+
+171
+00:05:39,140 --> 00:05:40,835
+where p is any
+point on the plane,
+
+172
+00:05:40,835 --> 00:05:42,170
+Q is the point
+off the plane,
+
+173
+00:05:42,170 --> 00:05:44,059
+and n is the normal
+vector to the plane.
+
+174
+00:05:44,059 --> 00:05:45,320
+>> It simplifies it to a
+
+175
+00:05:45,320 --> 00:05:47,880
+nice expression like this.

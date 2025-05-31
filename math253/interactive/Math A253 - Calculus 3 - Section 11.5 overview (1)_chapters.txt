@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Arc Length
+2:02  Arc Length Parameterization
+3:04  Derivative and Speed
+4:06  Curvature Definition and Formulas
+5:07  Curvature of a Circle
+```

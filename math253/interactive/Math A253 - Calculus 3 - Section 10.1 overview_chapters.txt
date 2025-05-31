@@ -1,0 +1,8 @@
+```
+0:00  Cartesian Coordinates in 3D
+1:30  Distance Formula in 3D Space
+2:45  Equation of a Sphere
+3:30  Planes in Three-Dimensional Space
+4:15  Quadratic Surfaces Overview
+5:30  Cross Sections of Surfaces
+```

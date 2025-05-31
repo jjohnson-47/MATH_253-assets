@@ -1,0 +1,622 @@
+1
+00:00:00,000 --> 00:00:01,620
+Let's take a
+look at surface
+
+2
+00:00:01,620 --> 00:00:04,630
+integrals in section 14.6.
+
+3
+00:00:04,640 --> 00:00:06,780
+The motivation for surface
+
+4
+00:00:06,780 --> 00:00:08,070
+integrals is finding
+
+5
+00:00:08,070 --> 00:00:09,300
+the mass of a sheet of
+
+6
+00:00:09,300 --> 00:00:12,340
+material or say
+sheet of metal.
+
+7
+00:00:12,560 --> 00:00:14,580
+It all is based on
+
+8
+00:00:14,580 --> 00:00:16,425
+the really important
+formula that the mass
+
+9
+00:00:16,425 --> 00:00:17,880
+is the amount of
+
+10
+00:00:17,880 --> 00:00:19,800
+surface area times
+the density.
+
+11
+00:00:19,800 --> 00:00:22,440
+If we have a density
+function which describes
+
+12
+00:00:22,440 --> 00:00:25,455
+the density at any point
+along the surface.
+
+13
+00:00:25,455 --> 00:00:27,915
+And we can take
+the mass to be the
+
+14
+00:00:27,915 --> 00:00:30,030
+integral of the
+density function
+
+15
+00:00:30,030 --> 00:00:31,930
+over the surface,
+
+16
+00:00:31,930 --> 00:00:34,820
+where ds here represents
+
+17
+00:00:34,820 --> 00:00:38,030
+a very small area
+along the surface.
+
+18
+00:00:38,030 --> 00:00:40,580
+So in general, to
+
+19
+00:00:40,580 --> 00:00:42,950
+find any kind of function,
+surface integral,
+
+20
+00:00:42,950 --> 00:00:45,050
+we have some
+function defined on
+
+21
+00:00:45,050 --> 00:00:46,370
+the surface and we
+
+22
+00:00:46,370 --> 00:00:48,665
+integrate that function
+over the surface.
+
+23
+00:00:48,665 --> 00:00:49,340
+This has
+
+24
+00:00:49,340 --> 00:00:51,575
+many important
+applications in physics.
+
+25
+00:00:51,575 --> 00:00:54,050
+If the function measures
+the static charge,
+
+26
+00:00:54,050 --> 00:00:55,310
+we can accumulate
+
+27
+00:00:55,310 --> 00:00:57,335
+that static charge
+across the sheet.
+
+28
+00:00:57,335 --> 00:00:58,955
+If it measures
+the amount of
+
+29
+00:00:58,955 --> 00:01:00,980
+measures of fluid passing
+through a screen,
+
+30
+00:01:00,980 --> 00:01:02,690
+we can accumulate all of
+
+31
+00:01:02,690 --> 00:01:03,770
+that fluid to
+find the total
+
+32
+00:01:03,770 --> 00:01:05,880
+amount that's
+moved through.
+
+33
+00:01:06,100 --> 00:01:08,810
+Here's an example
+of a triangular
+
+34
+00:01:08,810 --> 00:01:10,925
+region above a plane,
+
+35
+00:01:10,925 --> 00:01:12,230
+above a given plane to x
+
+36
+00:01:12,230 --> 00:01:14,105
+plus y plus z equals three.
+
+37
+00:01:14,105 --> 00:01:17,165
+And we want, and we have
+a density function.
+
+38
+00:01:17,165 --> 00:01:19,040
+And we want to find
+the mass of this
+
+39
+00:01:19,040 --> 00:01:22,355
+particular, this
+particular surface.
+
+40
+00:01:22,355 --> 00:01:25,430
+First, we need to
+parameterize the surface.
+
+41
+00:01:25,430 --> 00:01:27,455
+And we can start
+by parameterizing
+
+42
+00:01:27,455 --> 00:01:30,320
+the triangular region
+below the surface.
+
+43
+00:01:30,320 --> 00:01:32,630
+So as you moves from 0 to
+
+44
+00:01:32,630 --> 00:01:35,315
+one and v moves
+from 0 to one.
+
+45
+00:01:35,315 --> 00:01:37,250
+We can describe
+any point in
+
+46
+00:01:37,250 --> 00:01:39,950
+this short triangular
+region here with
+
+47
+00:01:39,950 --> 00:01:42,290
+a x-value view and
+
+48
+00:01:42,290 --> 00:01:46,220
+a y value of v times
+two minus two y2.
+
+49
+00:01:46,220 --> 00:01:48,320
+And that makes
+that assures that
+
+50
+00:01:48,320 --> 00:01:49,970
+any point u and v in
+
+51
+00:01:49,970 --> 00:01:53,600
+these intervals
+describes a unique point
+
+52
+00:01:53,600 --> 00:01:55,710
+inside the small triangle.
+
+53
+00:01:55,870 --> 00:01:59,030
+Now we take that if
+we take you far x
+
+54
+00:01:59,030 --> 00:02:00,530
+value and v times
+
+55
+00:02:00,530 --> 00:02:02,270
+two minus two y2
+for our y value,
+
+56
+00:02:02,270 --> 00:02:03,950
+put that into the equation
+
+57
+00:02:03,950 --> 00:02:05,780
+for the plane sulfur z.
+
+58
+00:02:05,780 --> 00:02:09,065
+To get the z value
+in terms of u and v,
+
+59
+00:02:09,065 --> 00:02:12,125
+We now have a
+parameterization for
+
+60
+00:02:12,125 --> 00:02:14,180
+the triangular
+region sitting
+
+61
+00:02:14,180 --> 00:02:16,410
+above in the plane.
+
+62
+00:02:17,230 --> 00:02:19,580
+We're going to
+find the mass.
+
+63
+00:02:19,580 --> 00:02:23,270
+So we need to use the
+partial derivatives.
+
+64
+00:02:23,270 --> 00:02:24,770
+So we take the
+partial derivative
+
+65
+00:02:24,770 --> 00:02:27,275
+of r with respect
+to u and v,
+
+66
+00:02:27,275 --> 00:02:30,080
+and we take the derivative
+in each component,
+
+67
+00:02:30,080 --> 00:02:32,720
+and then we find
+the cross product
+
+68
+00:02:32,720 --> 00:02:34,325
+of those two partial
+derivatives.
+
+69
+00:02:34,325 --> 00:02:36,960
+And then the magnitude
+of the cross-product,
+
+70
+00:02:38,200 --> 00:02:40,970
+the density, is given
+
+71
+00:02:40,970 --> 00:02:42,365
+as a function
+of x, y, and z.
+
+72
+00:02:42,365 --> 00:02:43,850
+So we have to
+find the density
+
+73
+00:02:43,850 --> 00:02:45,485
+in terms of u
+and v as well.
+
+74
+00:02:45,485 --> 00:02:47,405
+So we put our value of,
+
+75
+00:02:47,405 --> 00:02:48,950
+we put our values for x,
+
+76
+00:02:48,950 --> 00:02:50,810
+y, and z in terms
+of u and v,
+
+77
+00:02:50,810 --> 00:02:55,055
+found in the previous
+slide here, x, y,
+
+78
+00:02:55,055 --> 00:02:57,350
+and z in terms
+of U and V into
+
+79
+00:02:57,350 --> 00:03:02,060
+the density function
+and simplified.
+
+80
+00:03:02,060 --> 00:03:03,305
+And we now have the density
+
+81
+00:03:03,305 --> 00:03:05,120
+described in terms
+of the variables u
+
+82
+00:03:05,120 --> 00:03:06,950
+and v. And that allows us
+
+83
+00:03:06,950 --> 00:03:09,230
+to write the integral
+for the mass.
+
+84
+00:03:09,230 --> 00:03:10,790
+So the mass is the
+
+85
+00:03:10,790 --> 00:03:13,370
+integral of the
+density function over
+
+86
+00:03:13,370 --> 00:03:14,930
+U and V times
+
+87
+00:03:14,930 --> 00:03:15,710
+the magnitude of
+
+88
+00:03:15,710 --> 00:03:17,465
+the cross product
+of the derivatives,
+
+89
+00:03:17,465 --> 00:03:21,210
+and we end up getting
+about 12.6 x.
+
+90
+00:03:21,880 --> 00:03:24,485
+We also want to
+measure flux
+
+91
+00:03:24,485 --> 00:03:25,790
+across the surface.
+
+92
+00:03:25,790 --> 00:03:27,440
+And for flux, we need
+
+93
+00:03:27,440 --> 00:03:29,450
+to have a normal
+vector along
+
+94
+00:03:29,450 --> 00:03:31,010
+the surface that tells us
+
+95
+00:03:31,010 --> 00:03:32,330
+what direction it is
+
+96
+00:03:32,330 --> 00:03:34,385
+orthogonal to the surface.
+
+97
+00:03:34,385 --> 00:03:36,470
+The vector that we're
+going to use for
+
+98
+00:03:36,470 --> 00:03:38,450
+the normal vector
+is given here.
+
+99
+00:03:38,450 --> 00:03:40,190
+It's a unit normal vector.
+
+100
+00:03:40,190 --> 00:03:43,325
+And it's that familiar
+cross product
+
+101
+00:03:43,325 --> 00:03:44,915
+of the partial derivatives
+
+102
+00:03:44,915 --> 00:03:47,220
+of our parametrization.
+
+103
+00:03:49,180 --> 00:03:51,020
+So let's take a look at
+
+104
+00:03:51,020 --> 00:03:52,880
+the same triangular region,
+
+105
+00:03:52,880 --> 00:03:54,500
+but now we have
+a vector field
+
+106
+00:03:54,500 --> 00:03:57,305
+defined in three-dimensional
+space around it.
+
+107
+00:03:57,305 --> 00:03:59,000
+And we want to
+measure the flux
+
+108
+00:03:59,000 --> 00:04:00,740
+across S. Again,
+
+109
+00:04:00,740 --> 00:04:02,210
+imagine that this
+triangular region
+
+110
+00:04:02,210 --> 00:04:03,860
+is a screen and
+
+111
+00:04:03,860 --> 00:04:07,100
+the flux is some
+measure of fluid,
+
+112
+00:04:07,100 --> 00:04:08,960
+a fluid flowing through
+
+113
+00:04:08,960 --> 00:04:11,120
+it and they are
+integral is actually
+
+114
+00:04:11,120 --> 00:04:13,595
+going to give us a measure
+
+115
+00:04:13,595 --> 00:04:15,200
+of the amount
+of fluid that's
+
+116
+00:04:15,200 --> 00:04:17,630
+phone, that goes between.
+
+117
+00:04:17,630 --> 00:04:19,670
+So in the previous
+example we found
+
+118
+00:04:19,670 --> 00:04:23,315
+the cross-product
+of the two vectors.
+
+119
+00:04:23,315 --> 00:04:25,790
+So we have the vector field
+
+120
+00:04:25,790 --> 00:04:28,550
+when we put in are e, r,
+
+121
+00:04:28,550 --> 00:04:30,830
+u and v parameterizations
+
+122
+00:04:30,830 --> 00:04:33,800
+into the unto the f,
+
+123
+00:04:33,800 --> 00:04:35,780
+which is the vector field.
+
+124
+00:04:35,780 --> 00:04:37,190
+Now we have the
+vector field
+
+125
+00:04:37,190 --> 00:04:38,330
+described in terms of u and
+
+126
+00:04:38,330 --> 00:04:41,885
+v. So what is our flux?
+
+127
+00:04:41,885 --> 00:04:44,810
+Or flux is the integral
+over the surface of
+
+128
+00:04:44,810 --> 00:04:46,850
+the vector field
+dot product
+
+129
+00:04:46,850 --> 00:04:48,425
+with that normal vector.
+
+130
+00:04:48,425 --> 00:04:51,410
+But since we already
+found the normal vector,
+
+131
+00:04:51,410 --> 00:04:54,530
+we can use the theorem
+that allows us to take
+
+132
+00:04:54,530 --> 00:04:56,090
+the dot product of
+
+133
+00:04:56,090 --> 00:05:00,305
+the vector field with
+the normal vector,
+
+134
+00:05:00,305 --> 00:05:03,020
+which gives us an
+integral from 0 to one.
+
+135
+00:05:03,020 --> 00:05:05,375
+This function of u and v,
+
+136
+00:05:05,375 --> 00:05:08,399
+which turns out
+to be five-thirds

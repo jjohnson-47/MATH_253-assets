@@ -1,0 +1,1081 @@
+1
+00:00:00,290 --> 00:00:02,415
+Welcome to a short video
+
+2
+00:00:02,415 --> 00:00:03,900
+on an introduction
+to vectors.
+
+3
+00:00:03,900 --> 00:00:06,610
+There's a section
+10.2 in our book.
+
+4
+00:00:07,249 --> 00:00:09,930
+>> Factors can be
+thought about simply
+
+5
+00:00:09,930 --> 00:00:12,179
+as arrows and calculus.
+
+6
+00:00:12,179 --> 00:00:14,595
+>> We call a vector a
+directed line segment.
+
+7
+00:00:14,595 --> 00:00:16,740
+So that is part
+of a line between
+
+8
+00:00:16,740 --> 00:00:19,170
+two points and it
+has a direction,
+
+9
+00:00:19,170 --> 00:00:20,880
+meaning we want to
+think of moving from
+
+10
+00:00:20,880 --> 00:00:22,110
+a certain initial point
+
+11
+00:00:22,110 --> 00:00:23,475
+to the terminal point.
+
+12
+00:00:23,475 --> 00:00:25,050
+Once we have the
+initial point
+
+13
+00:00:25,050 --> 00:00:25,845
+and a terminal point,
+
+14
+00:00:25,845 --> 00:00:28,259
+the vector has a
+length or magnitude,
+
+15
+00:00:28,259 --> 00:00:29,550
+and the direction is just
+
+16
+00:00:29,550 --> 00:00:31,600
+the direction that
+it's pointing.
+
+17
+00:00:32,090 --> 00:00:34,200
+Some notation that we use
+
+18
+00:00:34,200 --> 00:00:35,700
+for vectors is this.
+
+19
+00:00:35,700 --> 00:00:37,965
+So if we know
+the two points
+
+20
+00:00:37,965 --> 00:00:39,685
+that the vector goes from,
+
+21
+00:00:39,685 --> 00:00:44,255
+then we can write the
+vector has the first,
+
+22
+00:00:44,255 --> 00:00:46,955
+then the second with
+an arrow over the top.
+
+23
+00:00:46,955 --> 00:00:49,025
+It matters which order
+
+24
+00:00:49,025 --> 00:00:50,150
+the points appear, right?
+
+25
+00:00:50,150 --> 00:00:51,710
+That was the vector PQ
+
+26
+00:00:51,710 --> 00:00:53,885
+is different than
+the vector QP.
+
+27
+00:00:53,885 --> 00:00:56,780
+All vectors that point
+in the same direction
+
+28
+00:00:56,780 --> 00:00:58,070
+and have the same length
+
+29
+00:00:58,070 --> 00:00:59,180
+are actually the same.
+
+30
+00:00:59,180 --> 00:01:00,440
+So we can think
+of vectors as
+
+31
+00:01:00,440 --> 00:01:02,390
+arrows that we
+simply just move
+
+32
+00:01:02,390 --> 00:01:05,570
+around wherever
+we want to sense.
+
+33
+00:01:05,570 --> 00:01:06,470
+It doesn't really matter
+
+34
+00:01:06,470 --> 00:01:07,580
+where the vector
+is pointing.
+
+35
+00:01:07,580 --> 00:01:09,560
+Usually we drop the points
+
+36
+00:01:09,560 --> 00:01:11,420
+and we just write
+the vector as
+
+37
+00:01:11,420 --> 00:01:13,760
+v or w or u
+
+38
+00:01:13,760 --> 00:01:14,780
+or something like that with
+
+39
+00:01:14,780 --> 00:01:16,865
+a little arrow
+over the top.
+
+40
+00:01:16,865 --> 00:01:19,550
+The length or magnitude
+of a vector is
+
+41
+00:01:19,550 --> 00:01:20,840
+written with this double
+
+42
+00:01:20,840 --> 00:01:23,100
+absolute value notation.
+
+43
+00:01:24,910 --> 00:01:27,830
+In math, we usually
+write vectors as
+
+44
+00:01:27,830 --> 00:01:30,305
+components with these
+angle brackets.
+
+45
+00:01:30,305 --> 00:01:33,155
+So in R2, or in
+two-dimensional space,
+
+46
+00:01:33,155 --> 00:01:35,420
+a vector is written
+as angle bracket
+
+47
+00:01:35,420 --> 00:01:38,134
+a comma b, another
+angle bracket.
+
+48
+00:01:38,134 --> 00:01:40,880
+>> And that's in the
+specific case where
+
+49
+00:01:40,880 --> 00:01:42,470
+the vector goes from
+
+50
+00:01:42,470 --> 00:01:45,829
+0 comma 0 to the
+point a comma b.
+
+51
+00:01:45,829 --> 00:01:48,230
+>> We also use this
+other notation
+
+52
+00:01:48,230 --> 00:01:50,030
+for vectors that
+you'll see is very
+
+53
+00:01:50,030 --> 00:01:52,520
+common as either
+a row vector
+
+54
+00:01:52,520 --> 00:01:54,440
+or a column vector.
+
+55
+00:01:54,440 --> 00:01:56,660
+That is when we're
+using vectors in
+
+56
+00:01:56,660 --> 00:01:59,550
+the context of
+matrices usually.
+
+57
+00:02:01,390 --> 00:02:03,260
+So how do we find
+
+58
+00:02:03,260 --> 00:02:04,970
+the component
+form of vector?
+
+59
+00:02:04,970 --> 00:02:09,020
+Well, if we're given
+two points from p to q,
+
+60
+00:02:09,020 --> 00:02:12,800
+then we can find
+the vector by
+
+61
+00:02:12,800 --> 00:02:14,945
+subtracting the
+initial points
+
+62
+00:02:14,945 --> 00:02:16,654
+from the terminal points.
+
+63
+00:02:16,654 --> 00:02:18,725
+>> So in the picture
+that you see here,
+
+64
+00:02:18,725 --> 00:02:21,409
+we have a vector that
+goes from a to B.
+
+65
+00:02:21,409 --> 00:02:23,255
+>> And if you subtract
+
+66
+00:02:23,255 --> 00:02:25,430
+the initial points from a,
+
+67
+00:02:25,430 --> 00:02:28,490
+that essentially
+translates that vector
+
+68
+00:02:28,490 --> 00:02:30,185
+down to the origin.
+
+69
+00:02:30,185 --> 00:02:32,480
+So the vector that
+goes from a, B,
+
+70
+00:02:32,480 --> 00:02:34,940
+C to XYZ is the
+
+71
+00:02:34,940 --> 00:02:38,660
+same as the vector
+that goes from 0002,
+
+72
+00:02:38,660 --> 00:02:40,655
+x minus a, y minus b,
+
+73
+00:02:40,655 --> 00:02:43,610
+z minus c. It's best to
+
+74
+00:02:43,610 --> 00:02:44,930
+think about factors
+
+75
+00:02:44,930 --> 00:02:46,760
+not as having coordinates,
+
+76
+00:02:46,760 --> 00:02:48,710
+but each number that's
+
+77
+00:02:48,710 --> 00:02:50,000
+separated by commas here
+
+78
+00:02:50,000 --> 00:02:53,450
+just tells you the
+value in the x,
+
+79
+00:02:53,450 --> 00:02:56,160
+y, and z directions
+respectively.
+
+80
+00:02:58,480 --> 00:03:00,350
+So here's an example.
+
+81
+00:03:00,350 --> 00:03:01,400
+Find the component form of
+
+82
+00:03:01,400 --> 00:03:01,790
+the vector
+
+83
+00:03:01,790 --> 00:03:03,530
+whose initial point
+is negative three,
+
+84
+00:03:03,530 --> 00:03:04,880
+negative two, negative one,
+
+85
+00:03:04,880 --> 00:03:06,350
+and whose terminal point is
+
+86
+00:03:06,350 --> 00:03:09,065
+negative one to four.
+
+87
+00:03:09,065 --> 00:03:11,240
+So if we graph the vector
+
+88
+00:03:11,240 --> 00:03:13,550
+here in
+three-dimensional space,
+
+89
+00:03:13,550 --> 00:03:15,965
+we can just write
+
+90
+00:03:15,965 --> 00:03:18,740
+the terminal points
+negative one to four,
+
+91
+00:03:18,740 --> 00:03:21,170
+and then subtract
+the initial points.
+
+92
+00:03:21,170 --> 00:03:23,645
+And that gives a
+simple calculation.
+
+93
+00:03:23,645 --> 00:03:26,910
+And it turns out to
+be the vector 245
+
+94
+00:03:27,930 --> 00:03:30,070
+A great thing about vectors
+
+95
+00:03:30,070 --> 00:03:31,435
+is we can scale them,
+
+96
+00:03:31,435 --> 00:03:33,280
+meaning that we
+can add them
+
+97
+00:03:33,280 --> 00:03:35,170
+together geometrically,
+
+98
+00:03:35,170 --> 00:03:37,330
+that Beans stringing
+the arrows are chaining
+
+99
+00:03:37,330 --> 00:03:38,740
+them together and to
+
+100
+00:03:38,740 --> 00:03:40,105
+seeing where they add up.
+
+101
+00:03:40,105 --> 00:03:41,445
+So we can see, ie,
+
+102
+00:03:41,445 --> 00:03:42,760
+the vector u plus
+
+103
+00:03:42,760 --> 00:03:44,755
+the vector v ends
+up over here.
+
+104
+00:03:44,755 --> 00:03:47,320
+And we call that
+total vector u plus
+
+105
+00:03:47,320 --> 00:03:48,880
+v. And that turns
+
+106
+00:03:48,880 --> 00:03:51,220
+out to be the
+same as v plus u.
+
+107
+00:03:51,220 --> 00:03:53,994
+This is actually a
+property of vectors.
+
+108
+00:03:53,994 --> 00:03:56,605
+>> Addition takes
+place by just
+
+109
+00:03:56,605 --> 00:03:58,854
+adding up each component.
+
+110
+00:03:58,854 --> 00:04:00,310
+>> So that's very
+convenient. So if you have
+
+111
+00:04:00,310 --> 00:04:01,990
+the vector with
+three components,
+
+112
+00:04:01,990 --> 00:04:04,570
+U1, U2, U3, and V1, V2, V3.
+
+113
+00:04:04,570 --> 00:04:06,130
+You just add them
+together by adding
+
+114
+00:04:06,130 --> 00:04:07,450
+each component and then
+
+115
+00:04:07,450 --> 00:04:09,300
+scaling a vector
+is very similar.
+
+116
+00:04:09,300 --> 00:04:11,765
+When you multiply a
+vector times a number,
+
+117
+00:04:11,765 --> 00:04:13,100
+that number just gets
+
+118
+00:04:13,100 --> 00:04:15,080
+multiplied on each part.
+
+119
+00:04:15,080 --> 00:04:18,050
+Not the geometric
+interpretation of scaling.
+
+120
+00:04:18,050 --> 00:04:19,955
+So if you multiply
+a vector times two,
+
+121
+00:04:19,955 --> 00:04:21,634
+that actually
+doubles the length.
+
+122
+00:04:21,634 --> 00:04:22,730
+>> And that means
+the length of
+
+123
+00:04:22,730 --> 00:04:25,890
+each component is
+twice the size.
+
+124
+00:04:26,319 --> 00:04:27,500
+>> Here's
+
+125
+00:04:27,500 --> 00:04:29,405
+some important
+properties of vectors.
+
+126
+00:04:29,405 --> 00:04:31,280
+Just keep in mind, when
+
+127
+00:04:31,280 --> 00:04:32,330
+you add vectors together,
+
+128
+00:04:32,330 --> 00:04:33,950
+you can add them
+in any order.
+
+129
+00:04:33,950 --> 00:04:35,930
+They have the
+associative property,
+
+130
+00:04:35,930 --> 00:04:37,580
+just like real numbers do.
+
+131
+00:04:37,580 --> 00:04:39,320
+There's a special vector,
+
+132
+00:04:39,320 --> 00:04:40,580
+sort of the arrow,
+
+133
+00:04:40,580 --> 00:04:43,115
+the invisible arrow
+that's size 0.
+
+134
+00:04:43,115 --> 00:04:44,480
+And you can add it to
+
+135
+00:04:44,480 --> 00:04:46,580
+any vector and you just
+get the vector back.
+
+136
+00:04:46,580 --> 00:04:48,815
+When you scale vectors,
+
+137
+00:04:48,815 --> 00:04:50,060
+you have the nice property
+
+138
+00:04:50,060 --> 00:04:51,755
+where you can just
+multiply times,
+
+139
+00:04:51,755 --> 00:04:55,069
+multiply first or
+scale one at a time.
+
+140
+00:04:55,069 --> 00:04:56,810
+>> You can
+distribute scalars
+
+141
+00:04:56,810 --> 00:04:57,874
+across two vectors.
+
+142
+00:04:57,874 --> 00:04:59,390
+>> You can add two scalars
+
+143
+00:04:59,390 --> 00:05:01,700
+together in a distributed
+across the vector.
+
+144
+00:05:01,700 --> 00:05:03,620
+As we would normally think,
+
+145
+00:05:03,620 --> 00:05:05,570
+the scalar 0 times
+
+146
+00:05:05,570 --> 00:05:07,700
+any vector is the 0 vector.
+
+147
+00:05:07,700 --> 00:05:09,740
+And the magnitude of
+
+148
+00:05:09,740 --> 00:05:11,510
+a vector behaves this way.
+
+149
+00:05:11,510 --> 00:05:13,580
+When you scale it,
+you can just pull out
+
+150
+00:05:13,580 --> 00:05:14,450
+the absolute value of
+
+151
+00:05:14,450 --> 00:05:16,189
+the scalar and you'll
+get the same thing.
+
+152
+00:05:16,189 --> 00:05:16,820
+>> And then
+
+153
+00:05:16,820 --> 00:05:18,350
+the last property is
+pretty important.
+
+154
+00:05:18,350 --> 00:05:19,790
+>> It says that the
+only vector that has
+
+155
+00:05:19,790 --> 00:05:22,835
+length 0 is the
+0 vector itself.
+
+156
+00:05:22,835 --> 00:05:26,465
+A special kind of vector
+is the unit vector.
+
+157
+00:05:26,465 --> 00:05:29,555
+Unit vector is a
+vector of length one.
+
+158
+00:05:29,555 --> 00:05:31,955
+Given any vector v,
+
+159
+00:05:31,955 --> 00:05:34,355
+you can always find the
+unit vector by just
+
+160
+00:05:34,355 --> 00:05:36,935
+multiplying times
+one over the length.
+
+161
+00:05:36,935 --> 00:05:38,360
+This just takes
+the length of
+
+162
+00:05:38,360 --> 00:05:41,285
+the vector and scales
+it to have length one.
+
+163
+00:05:41,285 --> 00:05:44,465
+Once you've scaled
+vectors have length one,
+
+164
+00:05:44,465 --> 00:05:45,920
+then you can ask if
+
+165
+00:05:45,920 --> 00:05:47,420
+they're pointing in
+the same direction.
+
+166
+00:05:47,420 --> 00:05:50,795
+So any two vectors
+are parallel,
+
+167
+00:05:50,795 --> 00:05:52,264
+if they're pointing in
+the same direction.
+
+168
+00:05:52,264 --> 00:05:53,795
+>> And you can check
+if they're parallel,
+
+169
+00:05:53,795 --> 00:05:55,745
+is if you scale
+them to length one,
+
+170
+00:05:55,745 --> 00:05:57,155
+then say if they
+are the same,
+
+171
+00:05:57,155 --> 00:05:57,560
+if they have
+
+172
+00:05:57,560 --> 00:05:59,704
+the same unit vector
+or the opposite.
+
+173
+00:05:59,704 --> 00:06:00,530
+>> So parallel is
+
+174
+00:06:00,530 --> 00:06:01,550
+pointing in the
+same direction
+
+175
+00:06:01,550 --> 00:06:03,660
+or opposite directions.
+
+176
+00:06:03,910 --> 00:06:06,530
+An important thing
+about unit vectors
+
+177
+00:06:06,530 --> 00:06:08,480
+in two dimensions is
+
+178
+00:06:08,480 --> 00:06:09,980
+every unit vector is
+
+179
+00:06:09,980 --> 00:06:11,630
+identified with
+
+180
+00:06:11,630 --> 00:06:13,790
+a specific point on
+the unit circle.
+
+181
+00:06:13,790 --> 00:06:15,470
+So that's a good
+way to think about
+
+182
+00:06:15,470 --> 00:06:16,910
+the direction of vectors
+
+183
+00:06:16,910 --> 00:06:18,065
+in two dimensional space
+
+184
+00:06:18,065 --> 00:06:20,180
+is at every point
+on the unit circle
+
+185
+00:06:20,180 --> 00:06:22,970
+is actually the
+direction of a vector.
+
+186
+00:06:22,970 --> 00:06:25,235
+So that means in
+component form,
+
+187
+00:06:25,235 --> 00:06:26,930
+we can write unit vectors
+
+188
+00:06:26,930 --> 00:06:28,940
+just like we
+would in Trig as
+
+189
+00:06:28,940 --> 00:06:30,920
+the cosine of
+the angle comma
+
+190
+00:06:30,920 --> 00:06:33,635
+the sine of the
+angle in threes,
+
+191
+00:06:33,635 --> 00:06:34,430
+in three-dimensions,
+
+192
+00:06:34,430 --> 00:06:36,230
+the situation's a little
+more complicated.
+
+193
+00:06:36,230 --> 00:06:38,210
+You have the angle with
+
+194
+00:06:38,210 --> 00:06:40,084
+the positive x axis
+
+195
+00:06:40,084 --> 00:06:41,390
+and then you have
+the angle with
+
+196
+00:06:41,390 --> 00:06:43,130
+the positive z axis.
+
+197
+00:06:43,130 --> 00:06:46,565
+So you can write
+the component form
+
+198
+00:06:46,565 --> 00:06:47,480
+of a unit vector in
+
+199
+00:06:47,480 --> 00:06:49,550
+three dimensions like this.
+
+200
+00:06:49,550 --> 00:06:50,900
+And every, every
+
+201
+00:06:50,900 --> 00:06:53,045
+direction in
+three-dimensional space,
+
+202
+00:06:53,045 --> 00:06:54,650
+every unit vectors
+associated
+
+203
+00:06:54,650 --> 00:06:56,389
+with a point on
+the unit sphere.
+
+204
+00:06:56,389 --> 00:06:58,010
+>> And later on in
+the class we'll,
+
+205
+00:06:58,010 --> 00:06:59,015
+we'll call these
+coordinates
+
+206
+00:06:59,015 --> 00:07:01,140
+spherical coordinates.
+
+207
+00:07:01,449 --> 00:07:04,010
+>> There's a couple
+important vectors
+
+208
+00:07:04,010 --> 00:07:05,630
+to be aware of.
+
+209
+00:07:05,630 --> 00:07:09,590
+I and j are the
+unit normal vectors
+
+210
+00:07:09,590 --> 00:07:10,940
+are standard nor stand at
+
+211
+00:07:10,940 --> 00:07:13,220
+unit vectors in two
+dimensional space.
+
+212
+00:07:13,220 --> 00:07:15,170
+And they're just the
+vectors that 0.1
+
+213
+00:07:15,170 --> 00:07:16,400
+in the x-direction for i,
+
+214
+00:07:16,400 --> 00:07:18,260
+in one in the
+y-direction for j,
+
+215
+00:07:18,260 --> 00:07:20,344
+and the same in R3.
+
+216
+00:07:20,344 --> 00:07:22,804
+>> We have the
+vectors i, j, and k.
+
+217
+00:07:22,804 --> 00:07:24,920
+>> These are really
+popular vectors
+
+218
+00:07:24,920 --> 00:07:26,240
+and they're used to
+
+219
+00:07:26,240 --> 00:07:31,710
+describe any kind of
+direction in the,
+
+220
+00:07:31,710 --> 00:07:33,695
+the normal standard
+unit directions,
+
+221
+00:07:33,695 --> 00:07:34,760
+one in the x direction,
+
+222
+00:07:34,760 --> 00:07:35,960
+one in the y direction,
+
+223
+00:07:35,960 --> 00:07:38,010
+and one in the z direction.
+
+224
+00:07:38,560 --> 00:07:40,730
+So we can always write
+
+225
+00:07:40,730 --> 00:07:42,469
+factors in these
+two different ways.
+
+226
+00:07:42,469 --> 00:07:44,345
+>> We have the
+component form,
+
+227
+00:07:44,345 --> 00:07:45,500
+which we just learned as
+
+228
+00:07:45,500 --> 00:07:46,850
+three comma four
+comma five.
+
+229
+00:07:46,850 --> 00:07:48,800
+>> So lets just the
+vector that points
+
+230
+00:07:48,800 --> 00:07:50,210
+three in the x direction
+
+231
+00:07:50,210 --> 00:07:51,380
+and four in the
+y direction,
+
+232
+00:07:51,380 --> 00:07:53,610
+and five in the
+z direction.
+
+233
+00:07:53,829 --> 00:07:56,824
+>> But we can pull
+out those scalars.
+
+234
+00:07:56,824 --> 00:07:58,310
+>> And what we have
+kind of behind
+
+235
+00:07:58,310 --> 00:08:01,115
+the scenes are these
+standard unit vectors.
+
+236
+00:08:01,115 --> 00:08:03,830
+That means that we
+can write the vector
+
+237
+00:08:03,830 --> 00:08:08,790
+345 is just 3i
+plus 4j plus 5K.

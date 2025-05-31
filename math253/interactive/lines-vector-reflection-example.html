@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lines Deep Dive: Vector Reflection</title>
+    
+    <!-- MathJax Configuration -->
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      },
+      startup: {
+        ready: function() {
+          setTimeout(() => MathJax.startup.defaultReady(), 1000);
+        }
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Aurora Borealis Theme Styles -->
+    <style>
+    /* ---------- Aurora Core ---------- */
+    :root{
+      --night:#001B33;--green:#00C853;--magenta:#D500F9;
+      --ice:#00E5FF;--pale:#F6FCFE;--gray:#EFF2F4;
+    }
+
+    body{
+      font-family:system-ui,Arial,sans-serif;
+      line-height:1.6;color:var(--night);
+      background:var(--pale);
+      margin:0;padding:20px;
+      max-width:900px;
+      margin:0 auto;
+    }
+    
+    h1,h2,h3,h4{margin:1.2em 0 .4em;}
+    a{color:var(--magenta);}
+    a:hover,a:focus{color:var(--green);text-decoration:underline;}
+
+    /* Header banner */
+    .aurora-header{
+      background:linear-gradient(135deg,var(--night) 0%,var(--green) 45%,var(--magenta) 100%);
+      color:#fff;padding:24px;border-radius:12px;margin-bottom:32px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+    }
+
+    .aurora-header h1 {
+      margin:0;font-size:28px;font-weight:600;
+    }
+
+    .aurora-header p {
+      margin:8px 0 0;font-size:16px;opacity:0.9;
+    }
+
+    /* Call‑out box */
+    .aurora-callout{
+      border-left:6px solid var(--ice);
+      background:rgba(0,229,255,.08);
+      padding:18px;margin:24px 0;border-radius:0 8px 8px 0;
+    }
+
+    /* Problem section */
+    .problem-section {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 24px 0;
+      overflow: hidden;
+      border: 1px solid var(--gray);
+    }
+
+    .problem-header {
+      background: var(--night);
+      color: white;
+      padding: 16px 24px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .problem-content {
+      padding: 24px;
+    }
+
+    /* Image containers */
+    .image-container {
+      text-align: center;
+      margin: 24px 0;
+      background: var(--gray);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .image-caption {
+      margin-top: 12px;
+      font-style: italic;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Math display */
+    .math-display {
+      background: var(--gray);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      overflow-x: auto;
+      border-left: 4px solid var(--green);
+    }
+
+    /* Solution steps */
+    .solution-step {
+      background: white;
+      border: 1px solid var(--ice);
+      border-radius: 8px;
+      margin: 16px 0;
+      overflow: hidden;
+    }
+
+    .step-header {
+      background: rgba(0,229,255,0.1);
+      padding: 12px 20px;
+      font-weight: 600;
+      color: var(--night);
+    }
+
+    .step-content {
+      padding: 20px;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: rgba(0,200,83,0.08);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 24px 0;
+      border-left: 4px solid var(--green);
+    }
+
+    /* Key insight */
+    .key-insight {
+      background: rgba(213,0,249,0.08);
+      border-radius: 8px;
+      padding: 18px;
+      margin: 24px 0;
+      border-left: 4px solid var(--magenta);
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      .aurora-header { padding: 16px; }
+      .problem-content { padding: 16px; }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="aurora-header">
+        <h1>Lines Deep Dive: Vector Reflection</h1>
+        <p>Exploring line geometry and vector projections through step-by-step problem solving</p>
+    </div>
+
+    <div class="aurora-callout">
+        <strong>Aurora Connection ✨</strong> — Just as the aurora creates symmetric patterns when charged particles reflect off Earth's magnetic field layers, this problem explores how vectors can be reflected across lines using vector projections and dot products. We'll discover the elegant geometric relationships that govern reflections in three-dimensional space.
+    </div>
+
+    <div class="problem-section">
+        <div class="problem-header">
+            Section 11.5 Application: Vector Reflection Across a Line
+        </div>
+        <div class="problem-content">
+            <div class="image-container">
+                <img src="https://raw.githubusercontent.com/jjohnson-47/course-assets/main/math253/images/week2/cross-product/reflection-problem-setup.jpg" 
+                     alt="Vector reflection problem setup showing vector x and line L">
+                <div class="image-caption">Problem Setup: Find the reflection of vector <strong>x</strong> across line L</div>
+            </div>
+            
+            <p>Given vector $\vec{x} = \langle 5, 9, 2 \rangle$ and line $L$ with direction vector $\vec{w} = \langle 2, -1, -2 \rangle$, find the vector $\vec{v}$ that is the reflection of $\vec{x}$ across line $L$.</p>
+        </div>
+    </div>
+
+    <div class="solution-step">
+        <div class="step-header">
+            Step 1: Understanding the Geometric Setup
+        </div>
+        <div class="step-content">
+            <p>To find the reflection of $\vec{x}$ across line $L$, we need to understand the geometric relationship. The reflected vector $\vec{v}$ will be positioned such that the line $L$ acts as a "mirror."</p>
+            
+            <div class="image-container">
+                <img src="https://raw.githubusercontent.com/jjohnson-47/course-assets/main/math253/images/week2/cross-product/reflection-geometric-insight.jpg" 
+                     alt="Geometric insight showing the reflection relationship">
+                <div class="image-caption">Geometric Insight: The line L acts as a mirror between vectors x and v</div>
+            </div>
+            
+            <div class="key-insight">
+                <strong>Key Geometric Insight:</strong> The reflection process involves the projection of $\vec{x}$ onto the direction vector $\vec{w}$ of line $L$. The reflected vector is positioned symmetrically on the opposite side of this projection.
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-step">
+        <div class="step-header">
+            Step 2: Developing the Reflection Formula
+        </div>
+        <div class="step-content">
+            <p>By placing vector $\vec{v}$ at the end of vector $\vec{x}$, we can visualize the relationship more clearly:</p>
+            
+            <div class="image-container">
+                <img src="https://raw.githubusercontent.com/jjohnson-47/course-assets/main/math253/images/week2/cross-product/reflection-vector-diagram.jpg" 
+                     alt="Vector diagram showing the reflection relationship">
+                <div class="image-caption">Vector Diagram: Visualization of the reflection relationship</div>
+            </div>
+            
+            <p>From the geometric relationship, we can see that:</p>
+            
+            <div class="math-display">
+                $$\vec{x} + \vec{v} = 2 \cdot \text{proj}_{\vec{w}} \vec{x}$$
+            </div>
+            
+            <p>This gives us the formula for finding the reflected vector $\vec{v}$:</p>
+            
+            <div class="math-display">
+                $$\vec{v} = 2 \cdot \text{proj}_{\vec{w}} \vec{x} - \vec{x}$$
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-step">
+        <div class="step-header">
+            Step 3: Computing the Projection
+        </div>
+        <div class="step-content">
+            <p>Now we need to calculate the projection of $\vec{x}$ onto $\vec{w}$:</p>
+            
+            <div class="math-display">
+                $$\text{proj}_{\vec{w}} \vec{x} = \frac{\vec{x} \cdot \vec{w}}{\vec{w} \cdot \vec{w}} \cdot \vec{w}$$
+            </div>
+            
+            <p>Let's compute the required dot products:</p>
+            
+            <div class="highlight-box">
+                <strong>Dot Product Calculations:</strong>
+                <ul>
+                    <li>$\vec{x} \cdot \vec{w} = (5)(2) + (9)(-1) + (2)(-2) = 10 - 9 - 4 = -3$</li>
+                    <li>$\vec{w} \cdot \vec{w} = (2)^2 + (-1)^2 + (-2)^2 = 4 + 1 + 4 = 9$</li>
+                </ul>
+            </div>
+            
+            <p>Therefore:</p>
+            
+            <div class="math-display">
+                $$\frac{\vec{x} \cdot \vec{w}}{\vec{w} \cdot \vec{w}} = \frac{-3}{9} = -\frac{1}{3}$$
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-step">
+        <div class="step-header">
+            Step 4: Finding the Reflected Vector
+        </div>
+        <div class="step-content">
+            <p>Now we can substitute our values into the reflection formula:</p>
+            
+            <div class="math-display">
+                \begin{align}
+                \vec{v} &= 2 \cdot \text{proj}_{\vec{w}} \vec{x} - \vec{x} \\
+                &= 2 \cdot \left(-\frac{1}{3}\right) \langle 2, -1, -2 \rangle - \langle 5, 9, 2 \rangle \\
+                &= -\frac{2}{3} \langle 2, -1, -2 \rangle - \langle 5, 9, 2 \rangle \\
+                &= \left\langle -\frac{4}{3}, \frac{2}{3}, \frac{4}{3} \right\rangle - \langle 5, 9, 2 \rangle \\
+                &= \left\langle -\frac{4}{3} - 5, \frac{2}{3} - 9, \frac{4}{3} - 2 \right\rangle \\
+                &= \left\langle -\frac{19}{3}, -\frac{25}{3}, -\frac{2}{3} \right\rangle
+                \end{align}
+            </div>
+            
+            <div class="key-insight">
+                <strong>Final Answer:</strong> The vector that is the reflection of $\vec{x}$ across line $L$ is:
+                $$\vec{v} = \left\langle -\frac{19}{3}, -\frac{25}{3}, -\frac{2}{3} \right\rangle$$
+            </div>
+        </div>
+    </div>
+
+    <div class="aurora-callout">
+        <strong>Mathematical Insight ✨</strong> — This problem beautifully demonstrates how vector projections and dot products combine to solve complex spatial problems involving lines. The reflection formula $\vec{v} = 2 \cdot \text{proj}_{\vec{w}} \vec{x} - \vec{x}$ is a powerful tool that extends beyond this problem to applications in computer graphics, physics simulations, and geometric modeling.
+    </div>
+
+    <div class="highlight-box">
+        <h4>Key Takeaways</h4>
+        <ul>
+            <li><strong>Geometric Visualization:</strong> Drawing diagrams helps understand the reflection relationship</li>
+            <li><strong>Projection Formula:</strong> The projection $\text{proj}_{\vec{w}} \vec{x}$ is central to the reflection process</li>
+            <li><strong>Systematic Approach:</strong> Breaking down complex problems into manageable steps</li>
+            <li><strong>Verification:</strong> Always check that your answer makes geometric sense</li>
+        </ul>
+    </div>
+
+    <div class="aurora-callout">
+        <strong>Extension Challenge:</strong> Try verifying that the distance from $\vec{x}$ to line $L$ equals the distance from $\vec{v}$ to line $L$. This confirms that we have indeed found the correct reflection!
+    </div>
+
+</body>
+</html>

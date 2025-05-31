@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Double Integrals
+2:01  Properties of Double Integrals
+4:02  Evaluating Iterated Integrals
+6:03  Changing Order of Integration
+8:06  Average Value of a Function
+```

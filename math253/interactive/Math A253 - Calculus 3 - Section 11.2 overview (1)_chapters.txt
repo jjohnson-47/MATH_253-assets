@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Vector Valued Functions
+2:15  Limits of Vector Valued Functions
+4:30  Derivatives of Vector Valued Functions
+6:45  Tangent Lines and Velocity Vectors
+8:50  Integration of Vector Valued Functions
+```

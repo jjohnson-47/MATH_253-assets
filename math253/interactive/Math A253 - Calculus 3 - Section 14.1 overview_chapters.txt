@@ -1,0 +1,6 @@
+```
+0:00  Introduction to Line Integrals
+2:00  Definition of Line Integrals
+4:00  Arc Length Parameterization
+5:30  Example: Line Integral Calculation
+```

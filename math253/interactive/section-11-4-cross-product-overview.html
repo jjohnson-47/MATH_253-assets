@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 11.4: The Cross Product</title>
+    
+    <!-- MathJax Configuration -->
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      },
+      startup: {
+        ready: function() {
+          setTimeout(() => MathJax.startup.defaultReady(), 1000);
+        }
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Aurora Borealis Theme Styles -->
+    <style>
+    /* ---------- Aurora Core ---------- */
+    :root{
+      --night:#001B33;--green:#00C853;--magenta:#D500F9;
+      --ice:#00E5FF;--pale:#F6FCFE;--gray:#EFF2F4;
+      --warning:#FF9800;--success:#4CAF50;
+    }
+
+    body{
+      font-family:system-ui,Arial,sans-serif;
+      line-height:1.6;color:var(--night);
+      background:var(--pale);
+      margin:0;padding:20px;
+      max-width:1100px;
+      margin:0 auto;
+    }
+    
+    h1,h2,h3,h4{margin:1.2em 0 .4em;}
+    a{color:var(--magenta);text-decoration:none;}
+    a:hover,a:focus{color:var(--green);text-decoration:underline;}
+
+    /* Header banner */
+    .aurora-header{
+      background:linear-gradient(135deg,var(--night) 0%,var(--green) 45%,var(--magenta) 100%);
+      color:#fff;padding:32px;border-radius:16px;margin-bottom:32px;
+      box-shadow:0 8px 24px rgba(0,0,0,.3);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .aurora-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.03) 10px,
+        rgba(255,255,255,0.03) 20px
+      );
+      animation: aurora-shimmer 20s linear infinite;
+    }
+
+    @keyframes aurora-shimmer {
+      0% { transform: translateX(-100%) translateY(-100%); }
+      100% { transform: translateX(100%) translateY(100%); }
+    }
+
+    .aurora-header h1 {
+      margin:0;font-size:32px;font-weight:700;
+      position:relative;z-index:1;
+    }
+
+    .aurora-header .subtitle {
+      margin:12px 0 0;font-size:18px;opacity:0.95;
+      position:relative;z-index:1;
+    }
+
+    .section-badge {
+      position:absolute;top:20px;right:20px;
+      background:rgba(255,255,255,0.2);
+      padding:8px 16px;border-radius:20px;
+      font-weight:600;font-size:14px;
+      backdrop-filter:blur(10px);
+      z-index:1;
+    }
+
+    /* Call‑out box */
+    .aurora-callout{
+      border-left:6px solid var(--ice);
+      background:rgba(0,229,255,.08);
+      padding:20px;margin:24px 0;border-radius:0 12px 12px 0;
+      position:relative;
+    }
+
+    .aurora-callout::before {
+      content: '✨';
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      background: var(--ice);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    /* Video containers */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 24px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: var(--gray);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    .video-title {
+      background: var(--night);
+      color: white;
+      padding: 12px 20px;
+      margin: 24px 0 0 0;
+      border-radius: 8px 8px 0 0;
+      font-weight: 600;
+    }
+
+    /* Interactive tool */
+    .interactive-container {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 32px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 1px solid var(--gray);
+    }
+
+    .interactive-header {
+      background: linear-gradient(135deg, var(--green), var(--ice));
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .interactive-header h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .interactive-description {
+      margin: 8px 0 0;
+      opacity: 0.95;
+      font-size: 14px;
+    }
+
+    .interactive-embed {
+      width: 100%;
+      height: 600px;
+      border: none;
+      display: block;
+    }
+
+    .interactive-instructions {
+      background: var(--gray);
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
+
+    /* Concept cards */
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .concept-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid var(--gray);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .concept-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green), var(--ice));
+    }
+
+    .concept-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .concept-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--night);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .concept-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--night);
+      margin-bottom: 12px;
+    }
+
+    .concept-description {
+      color: #666;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .concept-link {
+      display: inline-block;
+      background: var(--magenta);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .concept-link:hover {
+      background: var(--green);
+      color: white;
+      transform: translateY(-1px);
+    }
+
+    /* Math formula display */
+    .formula-box {
+      background: white;
+      border: 2px solid var(--ice);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .formula-title {
+      background: var(--ice);
+      color: var(--night);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .formula-content {
+      font-size: 18px;
+      color: var(--night);
+    }
+
+    .formula-explanation {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #666;
+      text-align: left;
+    }
+
+    /* Applications section */
+    .applications-container {
+      background: linear-gradient(135deg, var(--night), var(--green));
+      color: white;
+      padding: 32px;
+      border-radius: 16px;
+      margin: 32px 0;
+    }
+
+    .applications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .application-item {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .application-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--ice);
+    }
+
+    .application-description {
+      font-size: 14px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    /* Resources section */
+    .resources-container {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 32px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 1px solid var(--gray);
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .resource-category h4 {
+      color: var(--night);
+      margin: 0 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--ice);
+    }
+
+    .resource-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .resource-list li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .resource-list li::before {
+      content: '🔗';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+    }
+
+    .resource-list a {
+      color: var(--magenta);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .resource-list a:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      body { padding: 16px; }
+      .aurora-header { padding: 24px 20px; }
+      .aurora-header h1 { font-size: 24px; }
+      .concepts-grid { grid-template-columns: 1fr; }
+      .interactive-embed { height: 400px; }
+    }
+
+    /* Special highlight */
+    .highlight-box {
+      background: rgba(0,200,83,0.08);
+      border-left: 4px solid var(--green);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .highlight-box h4 {
+      margin-top: 0;
+      color: var(--night);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="aurora-header">
+        <div class="section-badge">Section 11.4</div>
+        <h1>The Cross Product</h1>
+        <div class="subtitle">Discovering perpendicular vectors in three-dimensional space</div>
+    </div>
+    
+    <div class="aurora-callout">
+        <h3 style="margin: 0 0 15px 0; color: var(--night);">📋 Learning Objectives</h3>
+        <p>By the end of this section, you will be able to:</p>
+        <ul style="margin-top: 10px; padding-left: 20px; color: var(--night);">
+            <li>Define the cross product of two vectors and understand its geometric interpretation</li>
+            <li>Compute cross products using both determinant and component methods</li>
+            <li>Apply the right-hand rule to determine cross product direction</li>
+            <li>Use cross products to find areas of parallelograms and volumes of parallelepipeds</li>
+            <li>Solve real-world problems involving torque, angular momentum, and geometric applications</li>
+        </ul>
+    </div>
+
+    <div class="aurora-callout">
+        <strong>Aurora Connection</strong> — Just as the aurora borealis creates luminous curtains perpendicular to Earth's magnetic field lines, the cross product operation generates vectors that stand perpendicular to two given vectors. This perpendicularity is the key to understanding torque, finding plane normal vectors, and calculating areas in three-dimensional space.
+    </div>
+
+    <h2>🎥 Section Overview Video</h2>
+    
+    <div class="video-title">Section 11.4: Cross Product Fundamentals</div>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3KPbaInm2B4?si=yoXMC57oB1LRU6SW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <h2>🎯 Interactive Cross Product Explorer</h2>
+
+    <div class="interactive-container">
+        <div class="interactive-header">
+            <h3>Cross Product Visualization</h3>
+            <div class="interactive-description">
+                Explore how the cross product changes as you move points B and C
+            </div>
+        </div>
+        <iframe src="https://www.geogebra.org/classic/ktqxqcg2?embed" 
+                class="interactive-embed"
+                allowfullscreen 
+                title="Cross Product Interactive Tool"></iframe>
+        <div class="interactive-instructions">
+            <strong>Interactive Instructions:</strong> Move points B and C around to see how the cross product vector (shown in red) changes direction and magnitude. Notice how it remains perpendicular to both original vectors and how its length relates to the angle between them.
+        </div>
+    </div>
+
+    <h2>🔬 Core Concepts</h2>
+
+    <div class="concepts-grid">
+        <div class="concept-card">
+            <div class="concept-icon">⊗</div>
+            <div class="concept-title">Cross Product Definition</div>
+            <div class="concept-description">
+                Unlike the dot product which produces a scalar, the cross product of two vectors creates a third vector that is perpendicular to both originals. This operation is unique to three-dimensional space.
+            </div>
+            <a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#def_cross_product" 
+               class="concept-link">📖 Cross Product Definition</a>
+        </div>
+
+        <div class="concept-card">
+            <div class="concept-icon">🧮</div>
+            <div class="concept-title">Computation Methods</div>
+            <div class="concept-description">
+                Master both the determinant method and the "diagonal method" for computing cross products. Both approaches give the same result but offer different insights into the geometric meaning.
+            </div>
+            <a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-3" 
+               class="concept-link">📖 Example 11.4.3: Computing Cross Products</a>
+        </div>
+
+        <div class="concept-card">
+            <div class="concept-icon">👋</div>
+            <div class="concept-title">Right-Hand Rule</div>
+            <div class="concept-description">
+                The direction of the cross product follows the right-hand rule: point fingers along the first vector, curl toward the second, and your thumb points in the cross product direction.
+            </div>
+            <a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-4" 
+               class="concept-link">📖 Right Hand Rule Explanation</a>
+            <a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#thm_cross_product" 
+               class="concept-link" style="margin-left: 10px;">📖 Theorem 11.4.4: Properties</a>
+        </div>
+
+        <div class="concept-card">
+            <div class="concept-icon">📐</div>
+            <div class="concept-title">Geometric Interpretation</div>
+            <div class="concept-description">
+                The magnitude of the cross product equals the area of the parallelogram formed by the two vectors. When vectors are parallel, the cross product is zero.
+            </div>
+            <a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-3-12" 
+               class="concept-link">📖 Example 11.4.6: Cross Product & Angles</a>
+            <a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-4-4" 
+               class="concept-link" style="margin-left: 10px;">📖 Area of Parallelogram</a>
+        </div>
+    </div>
+
+    <h2>🧮 Essential Formula</h2>
+
+    <div class="formula-box">
+        <div class="formula-title">Cross Product Formula</div>
+        <div class="formula-content">
+            For vectors $\mathbf{u} = \langle u_1, u_2, u_3 \rangle$ and $\mathbf{v} = \langle v_1, v_2, v_3 \rangle$:
+            $$\mathbf{u} \times \mathbf{v} = \langle u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2 - u_2v_1 \rangle$$
+        </div>
+        <div class="formula-explanation">
+            <strong>Determinant Form:</strong> This can also be computed as the determinant:
+            $$\mathbf{u} \times \mathbf{v} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{vmatrix}$$
+            
+            <strong>Magnitude:</strong> $|\mathbf{u} \times \mathbf{v}| = |\mathbf{u}||\mathbf{v}|\sin\theta$ where $\theta$ is the angle between the vectors.
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h4>🔑 Key Properties</h4>
+        <ul>
+            <li><strong>Anti-commutative:</strong> $\mathbf{u} \times \mathbf{v} = -(\mathbf{v} \times \mathbf{u})$</li>
+            <li><strong>Distributive:</strong> $\mathbf{u} \times (\mathbf{v} + \mathbf{w}) = \mathbf{u} \times \mathbf{v} + \mathbf{u} \times \mathbf{w}$</li>
+            <li><strong>Zero when parallel:</strong> If $\mathbf{u} \parallel \mathbf{v}$, then $\mathbf{u} \times \mathbf{v} = \mathbf{0}$</li>
+            <li><strong>Perpendicular result:</strong> $\mathbf{u} \times \mathbf{v}$ is perpendicular to both $\mathbf{u}$ and $\mathbf{v}$</li>
+        </ul>
+    </div>
+
+    <h2>🌟 Real-World Applications</h2>
+
+    <div class="applications-container">
+        <h3 style="margin: 0 0 8px 0; color: white;">Where Cross Products Matter</h3>
+        <p style="margin: 0; opacity: 0.9;">The cross product isn't just mathematical abstraction—it's essential in physics, engineering, and computer science.</p>
+        
+        <div class="applications-grid">
+            <div class="application-item">
+                <div class="application-title">⚙️ Physics: Torque</div>
+                <div class="application-description">
+                    When a force is applied to a lever arm, the torque vector $\boldsymbol{\tau} = \mathbf{r} \times \mathbf{F}$ determines the rotational effect. The direction follows the right-hand rule.
+                    <br><br><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-5" style="color: var(--ice); text-decoration: underline;">📖 Read Torque Example in Textbook</a>
+                </div>
+            </div>
+
+            <div class="application-item">
+                <div class="application-title">📐 Geometry: Area Calculations</div>
+                <div class="application-description">
+                    The magnitude $|\mathbf{u} \times \mathbf{v}|$ gives the area of the parallelogram formed by vectors $\mathbf{u}$ and $\mathbf{v}$. Half this value is the triangle area.
+                    <br><br><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-4-4" style="color: var(--ice); text-decoration: underline;">📖 See Area Formula Details</a>
+                </div>
+            </div>
+
+            <div class="application-item">
+                <div class="application-title">🎮 Computer Graphics</div>
+                <div class="application-description">
+                    Cross products find normal vectors for surfaces, enabling proper lighting calculations and determining which faces of 3D objects are visible.
+                </div>
+            </div>
+
+            <div class="application-item">
+                <div class="application-title">🔬 Engineering: Magnetic Forces</div>
+                <div class="application-description">
+                    The magnetic force on a moving charge is $\mathbf{F} = q\mathbf{v} \times \mathbf{B}$, where $\mathbf{v}$ is velocity and $\mathbf{B}$ is the magnetic field.
+                </div>
+            </div>
+
+            <div class="application-item">
+                <div class="application-title">✈️ Navigation: Angular Velocity</div>
+                <div class="application-description">
+                    In robotics and aerospace, cross products describe rotational motion and help calculate angular velocities and accelerations.
+                </div>
+            </div>
+
+            <div class="application-item">
+                <div class="application-title">🏗️ Structural Engineering</div>
+                <div class="application-description">
+                    Finding normal vectors to surfaces is crucial for stress analysis, load distribution, and determining structural orientations.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>📚 Learning Resources</h2>
+
+    <div class="resources-container">
+        <h3 style="margin: 0 0 16px 0; color: var(--night);">Essential Study Materials</h3>
+        
+        <div class="resources-grid">
+            <div class="resource-category">
+                <h4>📖 Textbook Sections</h4>
+                <ul class="resource-list">
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html">Complete Section 11.4 - The Cross Product</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#def_cross_product">Definition of Cross Product (Section 11.4 start)</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#thm_cross_prod_prop">Properties of Cross Product (Subsection 11.4.1)</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-4-3">Applications of Cross Product (Subsection 11.4.2)</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-4-6">Volume of Parallelepiped (Advanced Application)</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-category">
+                <h4>🎥 Video Resources</h4>
+                <ul class="resource-list">
+                    <li><a href="https://youtu.be/63syRlBjyh0">Introduction to Cross Product</a></li>
+                    <li><a href="https://youtu.be/geWK0Qpl6_Y">Computing Cross Products</a></li>
+                    <li><a href="https://youtu.be/QOCSD4qA_Wg">Cross Product Properties</a></li>
+                    <li><a href="https://youtu.be/eu6i7WJeinw?si=-XQkR9rbnKZt2Hmc">3Blue1Brown: Geometric Intuition</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-category">
+                <h4>🎯 Practice & Examples</h4>
+                <ul class="resource-list">
+                    <li>Vector Reflection Deep Dive (Available in Course Files)</li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-3">Textbook Examples</a></li>
+                    <li>Edfinity Homework Problems (Available in Course Platform)</li>
+                    <li>Weekly Quiz Questions (Available in Course Platform)</li>
+                </ul>
+            </div>
+
+            <div class="resource-category">
+                <h4>🔧 Interactive Tools</h4>
+                <ul class="resource-list">
+                    <li><a href="https://www.geogebra.org/classic/ktqxqcg2">Cross Product Visualizer</a></li>
+                    <li><a href="https://www.desmos.com/3d">Desmos 3D Calculator</a></li>
+                    <li><a href="https://www.geogebra.org/3d">GeoGebra 3D</a></li>
+                    <li><a href="https://www.symbolab.com/solver/vector-cross-product-calculator" target="_blank">Cross Product Calculator (Symbolab)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="aurora-callout">
+        <strong>Study Strategy</strong> — Start with the conceptual understanding using the interactive tool above, then practice the computational methods. Focus on building geometric intuition: visualize the perpendicular relationship and understand when cross products are large (perpendicular vectors) versus small (nearly parallel vectors). The applications will make more sense once you grasp this fundamental geometric meaning.
+    </div>
+
+    <div style="background: linear-gradient(135deg, var(--green), var(--ice)); color: white; padding: 24px; border-radius: 12px; margin: 32px 0; text-align: center;">
+        <h3 style="margin: 0 0 12px 0;">🚀 Ready to Master Cross Products?</h3>
+        <p style="margin: 0; font-size: 16px;">Begin with the interactive tool above, then work through the textbook examples. Remember: the cross product is your key to understanding perpendicular relationships in 3D space—a foundation for everything from planes to surface integrals!</p>
+    </div>
+
+</body>
+</html>

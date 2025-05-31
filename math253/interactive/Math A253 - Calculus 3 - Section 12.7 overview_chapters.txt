@@ -1,0 +1,7 @@
+```
+0:00  Tangent Lines and Planes
+2:30  Directional Derivatives
+4:00  Normal Vectors and Cross Product
+5:30  Distance from Point to Surface
+7:00  Gradient and Level Curves
+```

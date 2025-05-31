@@ -1,0 +1,6 @@
+```
+0:00  Double Integration Overview
+1:30  Area of Polar Rectangles
+2:45  Volume Underneath a Plane
+3:50  Iterated Integral in Polar Coordinates
+```

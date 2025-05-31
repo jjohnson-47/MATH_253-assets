@@ -1,0 +1,7 @@
+```
+0:00  Divergence Theorem Overview
+1:30  Total Flux Calculation
+2:45  Stokes Theorem Introduction
+3:50  Parameterization of Surfaces
+5:10  Surface Integral Calculation
+```

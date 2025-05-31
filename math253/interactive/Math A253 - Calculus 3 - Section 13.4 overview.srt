@@ -1,0 +1,483 @@
+1
+00:00:00,000 --> 00:00:02,010
+Let's look at mass
+and center of
+
+2
+00:00:02,010 --> 00:00:04,720
+mass and Section 13.4.
+
+3
+00:00:05,540 --> 00:00:07,980
+Sometimes we want to
+
+4
+00:00:07,980 --> 00:00:10,170
+describe something
+called a lamina,
+
+5
+00:00:10,170 --> 00:00:13,470
+which is a planar
+region here as
+
+6
+00:00:13,470 --> 00:00:17,250
+R with a constant
+thickness and finite area.
+
+7
+00:00:17,250 --> 00:00:19,125
+We'll remember
+from physics that
+
+8
+00:00:19,125 --> 00:00:21,000
+the mass of something
+
+9
+00:00:21,000 --> 00:00:23,700
+is its density
+times its area.
+
+10
+00:00:23,700 --> 00:00:28,830
+Now if we take a small
+piece of area here,
+
+11
+00:00:28,830 --> 00:00:31,455
+multiply it times
+its density,
+
+12
+00:00:31,455 --> 00:00:33,855
+we will get that
+small piece of mass.
+
+13
+00:00:33,855 --> 00:00:35,220
+And as we do that for tiny
+
+14
+00:00:35,220 --> 00:00:36,960
+little pieces
+of the region,
+
+15
+00:00:36,960 --> 00:00:38,400
+add them all up,
+and that can
+
+16
+00:00:38,400 --> 00:00:40,900
+approximate our total mass.
+
+17
+00:00:40,900 --> 00:00:42,590
+And then as we allow
+those pieces to
+
+18
+00:00:42,590 --> 00:00:44,135
+get smaller and
+smaller and smaller,
+
+19
+00:00:44,135 --> 00:00:47,465
+smaller, then we'll
+defied the integral.
+
+20
+00:00:47,465 --> 00:00:50,150
+So to find the mass over
+
+21
+00:00:50,150 --> 00:00:51,260
+a planar region R with
+
+22
+00:00:51,260 --> 00:00:52,670
+the density function here.
+
+23
+00:00:52,670 --> 00:00:54,365
+Delta is our
+density function
+
+24
+00:00:54,365 --> 00:00:56,540
+is just the double
+integral of
+
+25
+00:00:56,540 --> 00:00:58,790
+the density function
+over the region
+
+26
+00:00:58,790 --> 00:01:02,630
+R. So let's find
+
+27
+00:01:02,630 --> 00:01:04,280
+the mass of a square lamina
+
+28
+00:01:04,280 --> 00:01:06,230
+with variable density here.
+
+29
+00:01:06,230 --> 00:01:07,910
+Sometimes it's
+convenient to
+
+30
+00:01:07,910 --> 00:01:09,830
+graph the lamina,
+
+31
+00:01:09,830 --> 00:01:13,040
+the planar region with
+the density function.
+
+32
+00:01:13,040 --> 00:01:14,450
+And here we can
+
+33
+00:01:14,450 --> 00:01:15,740
+actually guess
+what our answer
+
+34
+00:01:15,740 --> 00:01:16,220
+is going to be.
+
+35
+00:01:16,220 --> 00:01:18,320
+Because the density,
+
+36
+00:01:18,320 --> 00:01:19,460
+although it's different on
+
+37
+00:01:19,460 --> 00:01:20,720
+different parts
+of the lamina,
+
+38
+00:01:20,720 --> 00:01:22,070
+we can see that
+it's the same
+
+39
+00:01:22,070 --> 00:01:23,675
+as to the right
+and to the left.
+
+40
+00:01:23,675 --> 00:01:26,180
+And it's going to be three
+
+41
+00:01:26,180 --> 00:01:27,680
+on average the route.
+
+42
+00:01:27,680 --> 00:01:29,540
+>> So the answer here
+is going to be three,
+
+43
+00:01:29,540 --> 00:01:31,219
+and we can see that
+just from the picture.
+
+44
+00:01:31,219 --> 00:01:32,600
+>> But we can
+also set up the
+
+45
+00:01:32,600 --> 00:01:33,860
+integral of the density
+
+46
+00:01:33,860 --> 00:01:35,405
+function over the region.
+
+47
+00:01:35,405 --> 00:01:38,030
+And if we do that, so
+we set up the double
+
+48
+00:01:38,030 --> 00:01:40,295
+integral over R of
+the density function.
+
+49
+00:01:40,295 --> 00:01:42,050
+It's an iterated
+integral first with
+
+50
+00:01:42,050 --> 00:01:43,970
+respect to x, then
+with respect to y.
+
+51
+00:01:43,970 --> 00:01:45,815
+And we see that the
+answer is indeed three,
+
+52
+00:01:45,815 --> 00:01:48,900
+and that is the
+mass of the lamina.
+
+53
+00:01:49,360 --> 00:01:52,160
+You can also find
+this center of mass.
+
+54
+00:01:52,160 --> 00:01:53,360
+So first of all,
+look at centre of
+
+55
+00:01:53,360 --> 00:01:55,400
+mass of a discrete system.
+
+56
+00:01:55,400 --> 00:01:56,960
+And this is the
+simplest kind
+
+57
+00:01:56,960 --> 00:01:58,040
+where we have masses
+
+58
+00:01:58,040 --> 00:02:02,899
+all a line and located
+at various X values.
+
+59
+00:02:02,899 --> 00:02:04,580
+>> Notice the
+notation here.
+
+60
+00:02:04,580 --> 00:02:06,845
+>> The center of
+mass is x bar.
+
+61
+00:02:06,845 --> 00:02:08,510
+That's the same
+as in statistics
+
+62
+00:02:08,510 --> 00:02:09,769
+where we use the average.
+
+63
+00:02:09,769 --> 00:02:13,290
+>> This is really just
+the weighted average.
+
+64
+00:02:14,079 --> 00:02:17,795
+>> So now if we have
+three masses here,
+
+65
+00:02:17,795 --> 00:02:20,960
+1021, located at
+these x values,
+
+66
+00:02:20,960 --> 00:02:23,960
+we can find the center
+of mass by looking at
+
+67
+00:02:23,960 --> 00:02:29,225
+the ratio of the product,
+
+68
+00:02:29,225 --> 00:02:30,260
+the sums of the products
+
+69
+00:02:30,260 --> 00:02:31,250
+of the masses with the x
+
+70
+00:02:31,250 --> 00:02:34,470
+coordinates all divided
+by the total mass.
+
+71
+00:02:34,809 --> 00:02:37,880
+>> The top of the
+expression here is
+
+72
+00:02:37,880 --> 00:02:41,130
+often what we call the
+moment of the system.
+
+73
+00:02:41,279 --> 00:02:43,270
+>> And that's
+helpful because
+
+74
+00:02:43,270 --> 00:02:44,380
+we're going to look at
+
+75
+00:02:44,380 --> 00:02:47,289
+masses located in
+two dimensions.
+
+76
+00:02:47,289 --> 00:02:49,690
+We will have the
+moment across about
+
+77
+00:02:49,690 --> 00:02:52,345
+the y-axis in a moment
+about the x axis.
+
+78
+00:02:52,345 --> 00:02:53,680
+And that allows
+us to define
+
+79
+00:02:53,680 --> 00:02:56,530
+the center of mass with,
+
+80
+00:02:56,530 --> 00:02:57,850
+with n masses
+
+81
+00:02:57,850 --> 00:03:00,560
+located in
+two-dimensional space.
+
+82
+00:03:00,569 --> 00:03:03,820
+>> Note that here
+the moment about
+
+83
+00:03:03,820 --> 00:03:07,300
+the y axis is just
+summing up the,
+
+84
+00:03:07,300 --> 00:03:10,404
+the parts with the
+x coordinates.
+
+85
+00:03:10,404 --> 00:03:13,330
+>> And the moment
+about the x-axis is a
+
+86
+00:03:13,330 --> 00:03:16,520
+summing up the parts
+with the y coordinates.
+
+87
+00:03:18,510 --> 00:03:21,130
+So this is a summary
+of how we can
+
+88
+00:03:21,130 --> 00:03:22,870
+find the mass and
+the center of
+
+89
+00:03:22,870 --> 00:03:27,700
+mass of an object in
+two-dimensional space.
+
+90
+00:03:27,700 --> 00:03:29,965
+In this case, a
+planar lamina.
+
+91
+00:03:29,965 --> 00:03:31,780
+The only difference
+is now we
+
+92
+00:03:31,780 --> 00:03:34,340
+integrate instead of sum,
+
+93
+00:03:36,330 --> 00:03:38,110
+so it's find the center of
+
+94
+00:03:38,110 --> 00:03:40,104
+mass of a square lamina.
+
+95
+00:03:40,104 --> 00:03:42,535
+>> Similar as before,
+
+96
+00:03:42,535 --> 00:03:43,795
+except now we're try
+
+97
+00:03:43,795 --> 00:03:44,920
+before we found the mass.
+
+98
+00:03:44,920 --> 00:03:47,420
+>> Now let's find
+the center of mass.
+
+99
+00:03:47,520 --> 00:03:50,365
+The mass we found
+to be three.
+
+100
+00:03:50,365 --> 00:03:53,380
+The moment about
+the x axis and
+
+101
+00:03:53,380 --> 00:03:57,020
+y axis are found with
+the integrals here.
+
+102
+00:03:57,960 --> 00:04:00,730
+And so the center
+of mass is
+
+103
+00:04:00,730 --> 00:04:01,990
+just the coordinates
+
+104
+00:04:01,990 --> 00:04:04,640
+of the following
+expressions.

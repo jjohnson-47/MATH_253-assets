@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Determinants - Math 253</title>
+    
+    <!-- MathJax Configuration -->
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          assistiveMml: [155, (doc) => {
+            for (const math of document.querySelectorAll('mjx-math')) {
+              const mml = math.querySelector('mjx-assistive-mml mml\\:math, mjx-assistive-mml math');
+              if (mml) {
+                mml.setAttribute('display', math.style.display === 'block' ? 'block' : 'inline');
+              }
+            }
+          }, (math, doc) => assistiveMml(math, doc)]
+        }
+      },
+      startup: {
+        ready: function() {
+          setTimeout(() => MathJax.startup.defaultReady(), 1000);
+        }
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Aurora Borealis Theme Styles -->
+    <style>
+    :root{
+      --night:#001B33;--green:#00C853;--magenta:#D500F9;
+      --ice:#00E5FF;--pale:#F6FCFE;--gray:#EFF2F4;
+      --warning:#FF9800;--success:#4CAF50;
+    }
+
+    body{
+      font-family:system-ui,Arial,sans-serif;
+      line-height:1.6;color:var(--night);
+      background:var(--pale);
+      margin:0;padding:20px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    
+    h1,h2,h3,h4{margin:1.2em 0 .4em;}
+    a{color:var(--magenta);text-decoration:none;}
+    a:hover,a:focus{color:var(--green);text-decoration:underline;}
+
+    /* Header banner */
+    .aurora-header{
+      background:linear-gradient(135deg,var(--night) 0%,var(--green) 45%,var(--magenta) 100%);
+      color:#fff;padding:32px;border-radius:16px;margin-bottom:32px;
+      box-shadow:0 8px 24px rgba(0,0,0,.3);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .aurora-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.03) 10px,
+        rgba(255,255,255,0.03) 20px
+      );
+      animation: aurora-shimmer 20s linear infinite;
+    }
+
+    @keyframes aurora-shimmer {
+      0% { transform: translateX(-100%) translateY(-100%); }
+      100% { transform: translateX(100%) translateY(100%); }
+    }
+
+    .aurora-header h1 {
+      margin:0;font-size:32px;font-weight:700;
+      position:relative;z-index:1;
+    }
+
+    .aurora-header .subtitle {
+      margin:12px 0 0;font-size:18px;opacity:0.95;
+      position:relative;z-index:1;
+    }
+
+    .guide-badge {
+      position:absolute;top:20px;right:20px;
+      background:rgba(255,255,255,0.2);
+      padding:8px 16px;border-radius:20px;
+      font-weight:600;font-size:14px;
+      backdrop-filter:blur(10px);
+      z-index:1;
+    }
+
+    /* Navigation */
+    .nav-container {
+      background: var(--gray);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .nav-button {
+      background: var(--magenta);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .nav-button:hover {
+      background: var(--green);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Goal callout */
+    .goal-callout {
+      border-left:6px solid var(--green);
+      background:rgba(0,200,83,.08);
+      padding:20px;margin:24px 0;border-radius:0 12px 12px 0;
+      position:relative;
+    }
+
+    .goal-callout::before {
+      content: '🎯';
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      background: var(--green);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    /* Content sections */
+    .content-section {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      margin: 32px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      border: 1px solid var(--gray);
+    }
+
+    .content-section h2 {
+      color: var(--night);
+      margin-top: 0;
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--ice);
+    }
+
+    /* Video containers */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 24px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: var(--gray);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    .video-caption {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    /* Interactive elements */
+    .interactive-container {
+      background: rgba(0,229,255,0.05);
+      border: 2px solid var(--ice);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .interactive-link {
+      display: inline-block;
+      background: var(--ice);
+      color: var(--night);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .interactive-link:hover {
+      background: var(--green);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Formula boxes */
+    .formula-box {
+      background: linear-gradient(135deg, rgba(0,229,255,0.05), rgba(0,200,83,0.05));
+      border: 2px solid var(--ice);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .formula-box::before {
+      content: '📐';
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: var(--pale);
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 16px;
+    }
+
+    .formula-title {
+      font-weight: 600;
+      color: var(--night);
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    .formula-content {
+      font-size: 16px;
+      color: var(--night);
+      margin: 16px 0;
+    }
+
+    /* Key concepts grid */
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 32px 0;
+    }
+
+    .concept-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 4px solid var(--green);
+      transition: all 0.3s ease;
+    }
+
+    .concept-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .concept-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--green);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .concept-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--night);
+      margin-bottom: 12px;
+    }
+
+    .concept-description {
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Dimension comparison */
+    .dimension-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin: 24px 0;
+    }
+
+    .dimension-card {
+      background: linear-gradient(135deg, rgba(213,0,249,0.05), rgba(0,229,255,0.05));
+      border: 1px solid rgba(213,0,249,0.3);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .dimension-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--magenta);
+    }
+
+    .dimension-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--magenta);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    /* Applications section */
+    .applications-container {
+      background: linear-gradient(135deg, var(--night), var(--magenta));
+      color: white;
+      padding: 32px;
+      border-radius: 16px;
+      margin: 32px 0;
+    }
+
+    .applications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .application-item {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .application-title {
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--ice);
+      font-size: 18px;
+    }
+
+    .application-description {
+      font-size: 14px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    /* Example section */
+    .example-container {
+      background: rgba(255,152,0,0.05);
+      border-left: 4px solid var(--warning);
+      border-radius: 0 12px 12px 0;
+      padding: 24px;
+      margin: 24px 0;
+    }
+
+    .example-title {
+      font-weight: 600;
+      color: var(--warning);
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    /* Code styling */
+    .code-container {
+      background: rgba(0,27,51,0.05);
+      border: 1px solid rgba(0,27,51,0.2);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+    }
+
+    .pseudocode {
+      background: rgba(0,200,83,0.05);
+      border-left: 4px solid var(--green);
+      padding: 16px;
+      margin: 16px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .python-code {
+      background: rgba(213,0,249,0.05);
+      border-left: 4px solid var(--magenta);
+      padding: 16px;
+      margin: 16px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Expandable details */
+    details {
+      background: rgba(0,229,255,0.05);
+      border: 1px solid rgba(0,229,255,0.2);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    summary {
+      font-weight: 600;
+      color: var(--ice);
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+
+    summary:hover {
+      color: var(--green);
+    }
+
+    /* Takeaways */
+    .takeaways-container {
+      background: rgba(76,175,80,0.05);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 32px 0;
+      border: 1px solid rgba(76,175,80,0.3);
+    }
+
+    .takeaways-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--success);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .takeaways-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .takeaways-list li {
+      margin-bottom: 12px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .takeaways-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      body { padding: 16px; }
+      .aurora-header { padding: 24px 20px; }
+      .aurora-header h1 { font-size: 24px; }
+      .concepts-grid { grid-template-columns: 1fr; }
+      .dimension-grid { grid-template-columns: 1fr; }
+      .content-section { padding: 24px 20px; }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="aurora-header">
+        <div class="guide-badge">Introduction Guide</div>
+        <h1>Introduction to Determinants</h1>
+        <div class="subtitle">From 2D areas to 3D volumes, cross products, and multivariable integration</div>
+    </div>
+
+    <div class="goal-callout">
+        <strong>Learning Goal:</strong> Understand how a simple formula like $ad - bc$ in 2D grows into powerful tools for 3D geometry, the cross product, and multivariable calculus. See determinants as geometric transformations that measure how space gets stretched and rotated.
+    </div>
+
+    <div class="nav-container">
+        <h3 style="margin: 0 0 16px 0; color: var(--night);">🧭 Quick Navigation</h3>
+        <div class="nav-grid">
+            <a href="#two-by-two" class="nav-button">2×2 Determinants</a>
+            <a href="#three-by-three" class="nav-button">3×3 Determinants</a>
+            <a href="#cofactor" class="nav-button">Cofactor Expansion</a>
+            <a href="#cross-product" class="nav-button">Cross Product Connection</a>
+            <a href="#jacobian" class="nav-button">Jacobian Applications</a>
+            <a href="#takeaways" class="nav-button">Key Takeaways</a>
+        </div>
+    </div>
+
+    <section id="two-by-two" class="content-section">
+        <h2>📏 2×2 Determinant = Signed Area Scale Factor</h2>
+        
+        <div class="formula-box">
+            <div class="formula-title">2×2 Determinant Formula</div>
+            <div class="formula-content">
+                Given matrix $A = \begin{bmatrix}a & b\\ c & d\end{bmatrix}$, its determinant is:
+                $$\det A = ad - bc$$
+            </div>
+        </div>
+
+        <div class="concepts-grid">
+            <div class="concept-card">
+                <div class="concept-icon">📐</div>
+                <div class="concept-title">Geometric Interpretation</div>
+                <div class="concept-description">
+                    The columns of $A$ represent vectors $\vec{u}$ and $\vec{v}$. The parallelogram they span has area $|ad - bc|$. The sign tells us about orientation!
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-icon">🔄</div>
+                <div class="concept-title">Transformation Effect</div>
+                <div class="concept-description">
+                    Multiplying any vector by $A$ scales and shears the plane. $\det A$ is the area scale factor. If $\det A < 0$, orientation flips.
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-icon">⚖️</div>
+                <div class="concept-title">Sign Significance</div>
+                <div class="concept-description">
+                    Positive determinant preserves orientation (counterclockwise). Negative determinant flips orientation (clockwise). Zero means the transformation is not invertible.
+                </div>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Ip3X9LOh2dk?si=ilsH7LlqSfRTF-6D" 
+                    title="Why ad-bc? (3Blue1Brown)" 
+                    allowfullscreen></iframe>
+        </div>
+        <div class="video-caption">
+            Watch 3Blue1Brown's intuitive explanation for why the 2×2 determinant formula is $ad - bc$
+        </div>
+    </section>
+
+    <section id="three-by-three" class="content-section">
+        <h2>📦 3×3 Determinant = Signed Volume</h2>
+        
+        <div class="formula-box">
+            <div class="formula-title">3×3 Determinant and Volume</div>
+            <div class="formula-content">
+                For matrix $B = \begin{bmatrix}a_1 & b_1 & c_1\\ a_2 & b_2 & c_2\\ a_3 & b_3 & c_3\end{bmatrix}$:
+                <br><br>
+                $\det B$ = signed volume of the parallelepiped spanned by the column vectors
+            </div>
+        </div>
+
+        <div class="dimension-grid">
+            <div class="dimension-card">
+                <div class="dimension-title">2D: Area</div>
+                <div class="formula-content">
+                    $$\det \begin{bmatrix}a & b\\ c & d\end{bmatrix} = ad - bc$$
+                </div>
+                <p>Measures area of parallelogram formed by two vectors</p>
+            </div>
+
+            <div class="dimension-card">
+                <div class="dimension-title">3D: Volume</div>
+                <div class="formula-content">
+                    $$\det \begin{bmatrix}a_1 & b_1 & c_1\\ a_2 & b_2 & c_2\\ a_3 & b_3 & c_3\end{bmatrix}$$
+                </div>
+                <p>Measures volume of parallelepiped formed by three vectors</p>
+            </div>
+        </div>
+
+        <div class="interactive-container">
+            <h4 style="margin-top: 0; color: var(--ice);">🎯 Interactive 3D Visualization</h4>
+            <p>Explore how three vectors form a parallelepiped and see how the determinant measures its volume:</p>
+            <a href="https://www.geogebra.org/3d/hxq8ycpu" target="_blank" class="interactive-link">
+                🔗 GeoGebra 3D Parallelepiped Tool
+            </a>
+            <p style="margin-top: 12px; font-size: 14px; color: #666;">
+                Adjust the vectors and watch how the volume (determinant) changes in real-time!
+            </p>
+        </div>
+
+        <h3>📊 Numerical Example: Volume of a Parallelepiped</h3>
+        <div class="example-container">
+            <div class="example-title">💡 Concrete Calculation</div>
+            <p>Let's find the volume of the parallelepiped spanned by these three vectors:</p>
+            <div class="formula-content">
+                $$\vec{v_1} = \langle 2, 1, 3 \rangle, \quad \vec{v_2} = \langle 1, -1, 2 \rangle, \quad \vec{v_3} = \langle 0, 4, -2 \rangle$$
+            </div>
+            <p>Arrange them as columns of matrix $B$:</p>
+            <div class="formula-content">
+                $$B = \begin{bmatrix}2 & 1 & 0\\ 1 & -1 & 4\\ 3 & 2 & -2\end{bmatrix}$$
+            </div>
+            <p>The scalar triple product $\vec{v_1} \cdot (\vec{v_2} \times \vec{v_3}) = \det B$</p>
+            
+            <details>
+                <summary>👆 Click to see step-by-step calculation</summary>
+                <p><strong>Step 1:</strong> Compute $\vec{v_2} \times \vec{v_3}$ using the determinant mnemonic:</p>
+                <div class="formula-content">
+                    $$\vec{v_2} \times \vec{v_3} = \begin{vmatrix} \hat{\imath} & \hat{\jmath} & \hat{k}\\ 1 & -1 & 2\\ 0 & 4 & -2 \end{vmatrix}$$
+                </div>
+                <div class="formula-content">
+                    $$= \langle (-1)(-2) - (2)(4), -(1 \cdot (-2) - 2 \cdot 0), 1 \cdot 4 - (-1) \cdot 0 \rangle$$
+                </div>
+                <div class="formula-content">
+                    $$= \langle 2 - 8, -(-2 - 0), 4 - 0 \rangle = \langle -6, 2, 4 \rangle$$
+                </div>
+                
+                <p><strong>Step 2:</strong> Dot with $\vec{v_1}$:</p>
+                <div class="formula-content">
+                    $$\det B = \vec{v_1} \cdot (\vec{v_2} \times \vec{v_3}) = \langle 2, 1, 3 \rangle \cdot \langle -6, 2, 4 \rangle$$
+                </div>
+                <div class="formula-content">
+                    $$= 2(-6) + 1(2) + 3(4) = -12 + 2 + 12 = 2$$
+                </div>
+                
+                <p><strong>Result:</strong> The signed volume is 2. The actual volume is $|\det B| = 2$ cubic units.</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="cross-product" class="content-section">
+        <h2>⊗ Cross Product Connection</h2>
+        
+        <p>The cross product formula is elegantly expressed as a determinant with unit vectors in the top row:</p>
+
+        <div class="formula-box">
+            <div class="formula-title">Cross Product as Determinant</div>
+            <div class="formula-content">
+                $$\vec{u} \times \vec{v} = \begin{vmatrix} \hat{\imath} & \hat{\jmath} & \hat{k} \\ u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{vmatrix}$$
+            </div>
+        </div>
+
+        <div class="concepts-grid">
+            <div class="concept-card">
+                <div class="concept-icon">🧮</div>
+                <div class="concept-title">Mnemonic Device</div>
+                <div class="concept-description">
+                    This determinant form is a handy way to remember the cross product formula. Expand along the first row to get the familiar component form.
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-icon">📐</div>
+                <div class="concept-title">Geometric Meaning</div>
+                <div class="concept-description">
+                    The magnitude $|\vec{u} \times \vec{v}|$ equals the area of the parallelogram formed by $\vec{u}$ and $\vec{v}$, which connects to the 2D determinant concept.
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-icon">🎯</div>
+                <div class="concept-title">Direction Rule</div>
+                <div class="concept-description">
+                    The right-hand rule for cross product direction comes from the orientation properties of the 3×3 determinant.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cofactor" class="content-section">
+        <h2>🔍 Cofactor Expansion (Laplace Expansion)</h2>
+        
+        <p>To compute larger determinants systematically, we use cofactor expansion along any row or column:</p>
+
+        <div class="formula-box">
+            <div class="formula-title">Cofactor Expansion Formula</div>
+            <div class="formula-content">
+                $$\det B = \sum_{j=1}^{3} (-1)^{i+j}\, b_{ij}\,M_{ij}$$
+                <br><br>
+                where $M_{ij}$ is the minor (2×2 determinant after deleting row $i$ and column $j$)
+            </div>
+        </div>
+
+        <div class="concepts-grid">
+            <div class="concept-card">
+                <div class="concept-icon">⚡</div>
+                <div class="concept-title">Strategic Expansion</div>
+                <div class="concept-description">
+                    Choose a row or column with the most zeros to minimize calculations. Each zero eliminates a 2×2 determinant computation.
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-icon">🔢</div>
+                <div class="concept-title">Sign Pattern</div>
+                <div class="concept-description">
+                    The $(-1)^{i+j}$ factor creates a checkerboard pattern of signs:
+                    $\begin{bmatrix}+ & - & +\\ - & + & -\\ + & - & +\end{bmatrix}$
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-icon">📈</div>
+                <div class="concept-title">Scalability</div>
+                <div class="concept-description">
+                    This method generalizes to any size matrix, making it possible to compute determinants of 4×4, 5×5, and larger matrices.
+                </div>
+            </div>
+        </div>
+
+        <h3>🖥️ Computational Implementation</h3>
+        <div class="example-container">
+            <div class="example-title">💻 Algorithm & Verification</div>
+            <p>Here's the recursive cofactor expansion algorithm and a Python check of our 3×3 example:</p>
+            
+            <div class="pseudocode">
+                <h4 style="color: var(--green); margin-top: 0;">Recursive Cofactor Expansion (Pseudocode)</h4>
+                <div class="code-container">
+                    <pre>function det(M):
+    if size(M) == 1: return M[0][0]
+    result = 0
+    for j from 0 to n-1:
+        minor = M without row 0 and column j
+        result += (-1)^j * M[0][j] * det(minor)
+    return result</pre>
+                </div>
+            </div>
+
+            <div class="python-code">
+                <h4 style="color: var(--magenta); margin-top: 0;">Python Verification</h4>
+                <div class="code-container">
+                    <pre># NumPy confirmation of our example
+import numpy as np
+B = np.array([[2, 1, 0],
+              [1,-1, 4],
+              [3, 2,-2]])
+print(np.linalg.det(B))        # → 2.0
+print(abs(np.linalg.det(B)))   # volume = 2</pre>
+                </div>
+            </div>
+            
+            <p style="margin-top: 16px;">
+                <strong>💡 Pro Tip:</strong> A quick numerical check with Python, MATLAB, or any computer algebra system is an excellent way to verify hand calculations!
+            </p>
+        </div>
+    </section>
+
+    <section id="jacobian" class="content-section">
+        <h2>🔄 Jacobian Applications in Integration</h2>
+        
+        <p>In multivariable calculus, the Jacobian determinant measures how coordinate transformations stretch volume elements.</p>
+
+        <div class="example-container">
+            <div class="example-title">💡 Polar Coordinates Example</div>
+            <p>For the transformation $x = r\cos\theta$, $y = r\sin\theta$, the Jacobian is:</p>
+            
+            <div class="formula-content">
+                $$J = \begin{vmatrix}\frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta}\\ \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta}\end{vmatrix} = \begin{vmatrix} \cos\theta & -r\sin\theta \\ \sin\theta & r\cos\theta \end{vmatrix} = r$$
+            </div>
+            
+            <p><strong>Result:</strong> An infinitesimal area $dA$ becomes $J\,dr\,d\theta = r\,dr\,d\theta$</p>
+            
+            <p><strong>Application:</strong> Area of unit disk $x^2 + y^2 \leq 1$:</p>
+            <div class="formula-content">
+                $$A = \iint_{\text{Disk}} dA = \int_{0}^{2\pi}\int_{0}^{1} r\,dr\,d\theta = \int_{0}^{2\pi}\frac{1}{2}d\theta = \pi$$
+            </div>
+        </div>
+
+        <h3>📊 Numerical Example: Polar Double Integral</h3>
+        <div class="example-container">
+            <div class="example-title">💡 Step-by-Step Integration</div>
+            <p>Evaluate $I = \iint_R (x^2 + y^2)\,dA$ over the quarter-circle of radius 2 in the first quadrant.</p>
+            <p><strong>Region:</strong> $0 \leq \theta \leq \frac{\pi}{2}$, $0 \leq r \leq 2$</p>
+            
+            <details>
+                <summary>👆 Click to see complete solution</summary>
+                <p><strong>Step 1:</strong> Convert the integrand to polar coordinates:</p>
+                <div class="formula-content">
+                    $$x^2 + y^2 = r^2$$
+                </div>
+                
+                <p><strong>Step 2:</strong> Include the Jacobian determinant $r$:</p>
+                <div class="formula-content">
+                    $$I = \int_{0}^{\pi/2}\int_{0}^{2} r^2 \cdot r\,dr\,d\theta = \int_{0}^{\pi/2}\int_{0}^{2} r^3\,dr\,d\theta$$
+                </div>
+                
+                <p><strong>Step 3:</strong> Evaluate the inner integral:</p>
+                <div class="formula-content">
+                    $$\int_{0}^{2} r^3\,dr = \left[\frac{1}{4}r^4\right]_0^2 = \frac{1}{4}(16) = 4$$
+                </div>
+                
+                <p><strong>Step 4:</strong> Evaluate the outer integral:</p>
+                <div class="formula-content">
+                    $$I = \int_{0}^{\pi/2} 4\,d\theta = 4\left[\theta\right]_0^{\pi/2} = 4 \cdot \frac{\pi}{2} = 2\pi$$
+                </div>
+                
+                <p><strong>Result:</strong> $I = 2\pi$</p>
+                <p><strong>Key Insight:</strong> The Jacobian determinant $r$ transforms the integral from Cartesian to polar coordinates, making the calculation much simpler!</p>
+            </details>
+        </div>
+
+        <div class="applications-container">
+            <h3 style="margin: 0 0 8px 0; color: white;">🌟 Where Jacobian Determinants Appear</h3>
+            <p style="margin: 0; opacity: 0.9;">The Jacobian determinant is essential for coordinate transformations in multivariable integration.</p>
+            
+            <div class="applications-grid">
+                <div class="application-item">
+                    <div class="application-title">🌀 Cylindrical Coordinates</div>
+                    <div class="application-description">
+                        $x = r\cos\theta$, $y = r\sin\theta$, $z = z$
+                        <br>Jacobian determinant: $r$
+                        <br>Used for: circular symmetry problems
+                    </div>
+                </div>
+
+                <div class="application-item">
+                    <div class="application-title">🌍 Spherical Coordinates</div>
+                    <div class="application-description">
+                        $x = \rho\sin\phi\cos\theta$, $y = \rho\sin\phi\sin\theta$, $z = \rho\cos\phi$
+                        <br>Jacobian determinant: $\rho^2\sin\phi$
+                        <br>Used for: spherical symmetry problems
+                    </div>
+                </div>
+
+                <div class="application-item">
+                    <div class="application-title">🔄 General Transformations</div>
+                    <div class="application-description">
+                        Any coordinate transformation $(u,v) \to (x,y)$
+                        <br>Jacobian determinant: $\frac{\partial(x,y)}{\partial(u,v)}$
+                        <br>Used for: complex region mappings
+                    </div>
+                </div>
+
+                <div class="application-item">
+                    <div class="application-title">📊 Probability Theory</div>
+                    <div class="application-description">
+                        Transformation of random variables
+                        <br>Jacobian determinant: probability density scaling
+                        <br>Used for: change of variables in distributions
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="takeaways" class="takeaways-container">
+        <div class="takeaways-title">🔑 Key Takeaways</div>
+        <ul class="takeaways-list">
+            <li><strong>Geometry First:</strong> Determinants measure signed area/volume scaling factors in linear transformations</li>
+            <li><strong>Systematic Computation:</strong> Cofactor expansion provides a methodical way to compute determinants of any size</li>
+            <li><strong>Cross Product Connection:</strong> The 3×3 determinant with unit vectors gives us the elegant cross product formula</li>
+            <li><strong>Integration Applications:</strong> Jacobian determinants are essential for coordinate transformations in multivariable calculus</li>
+            <li><strong>Sign Matters:</strong> The sign of a determinant tells us about orientation changes in transformations</li>
+            <li><strong>Dimensional Pattern:</strong> 2×2 determinants measure areas, 3×3 determinants measure volumes, and this pattern continues</li>
+            <li><strong>Computational Verification:</strong> Always verify hand calculations with Python, MATLAB, or computer algebra systems for complex problems</li>
+        </ul>
+    </section>
+
+    <div style="background: linear-gradient(135deg, var(--green), var(--ice)); color: white; padding: 24px; border-radius: 12px; margin: 32px 0; text-align: center;">
+        <h3 style="margin: 0 0 12px 0;">🚀 Ready to Use Determinants?</h3>
+        <p style="margin: 0; font-size: 16px;">Start with the geometric intuition of area and volume scaling, then master the computational techniques. Remember: determinants connect linear algebra, geometry, and calculus in beautiful ways!</p>
+    </div>
+
+    <noscript>
+        <div style="padding: 20px; background: #ffe6e6; border: 1px solid #ff9999; margin: 20px; border-radius: 5px;">
+            <strong>JavaScript Required:</strong> This page uses MathJax to display mathematical notation. 
+            Please enable JavaScript to view the formulas properly.
+        </div>
+    </noscript>
+</body>
+</html>

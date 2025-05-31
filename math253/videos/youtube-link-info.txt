@@ -1,0 +1,23 @@
+Section 11.1
+link: https://youtu.be/4fr83gf6liI?si=4c-KTwBRT7mgb_6L
+embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/4fr83gf6liI?si=4c-KTwBRT7mgb_6L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Section 11.2
+link: https://youtu.be/BLTMSST5OkQ?si=j95xTtZ5sAzMylbY
+embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/BLTMSST5OkQ?si=j95xTtZ5sAzMylbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Section 11.3
+link: https://youtu.be/-h1vRx9UaFU?si=17_vxnxqNyrv0zT1
+embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/-h1vRx9UaFU?si=17_vxnxqNyrv0zT1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Section 11.4
+link: https://youtu.be/3KPbaInm2B4?si=U5HCATSPZ6QCWeKf
+embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/3KPbaInm2B4?si=U5HCATSPZ6QCWeKf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Section 11.5
+link: https://youtu.be/H65i1DJCe4Y?si=Lz0DJz_X3lKR_kVY
+embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/H65i1DJCe4Y?si=Lz0DJz_X3lKR_kVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Section 11.6
+link: https://youtu.be/yWX573KjfGw?si=OHTyrvW2OUx_mawq
+embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/yWX573KjfGw?si=OHTyrvW2OUx_mawq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -1,0 +1,843 @@
+1
+00:00:00,000 --> 00:00:01,320
+Hi, class.
+
+2
+00:00:01,320 --> 00:00:01,950
+>> Let's take a look at
+
+3
+00:00:01,950 --> 00:00:04,780
+a quick overview
+of section 12.1.
+
+4
+00:00:06,170 --> 00:00:09,240
+Now we're going to be
+looking at functions of
+
+5
+00:00:09,240 --> 00:00:12,390
+two real variables before.
+
+6
+00:00:12,390 --> 00:00:13,440
+And calculus,
+we've been looking
+
+7
+00:00:13,440 --> 00:00:15,195
+functions of a single
+real variable.
+
+8
+00:00:15,195 --> 00:00:17,580
+Now our inputs to
+our functions are
+
+9
+00:00:17,580 --> 00:00:20,220
+going to be
+points x comma y.
+
+10
+00:00:20,220 --> 00:00:21,390
+Or in the case
+of a function of
+
+11
+00:00:21,390 --> 00:00:24,420
+three variables points
+x comma, y comma z.
+
+12
+00:00:24,420 --> 00:00:27,570
+We can graph a function
+of two variables with
+
+13
+00:00:27,570 --> 00:00:30,624
+a single output like this.
+
+14
+00:00:30,624 --> 00:00:32,720
+>> Every input is
+
+15
+00:00:32,720 --> 00:00:36,094
+some x comma y in
+the x, y plane.
+
+16
+00:00:36,094 --> 00:00:37,190
+>> We put that point
+
+17
+00:00:37,190 --> 00:00:38,210
+into the function
+that gives
+
+18
+00:00:38,210 --> 00:00:40,460
+us a z value as an output.
+
+19
+00:00:40,460 --> 00:00:43,430
+So that describes
+a surface.
+
+20
+00:00:43,430 --> 00:00:45,020
+If we have a nice
+continuous function like
+
+21
+00:00:45,020 --> 00:00:47,850
+this in
+three-dimensional space,
+
+22
+00:00:49,690 --> 00:00:52,160
+you can be asked a lot
+of the same types of
+
+23
+00:00:52,160 --> 00:00:53,690
+questions that we
+had in calculus.
+
+24
+00:00:53,690 --> 00:00:56,060
+One, about finding
+domains and
+
+25
+00:00:56,060 --> 00:00:58,895
+ranges of functions of
+two or more variables.
+
+26
+00:00:58,895 --> 00:01:00,770
+In this case, let's
+find the domain of
+
+27
+00:01:00,770 --> 00:01:03,829
+a function given here.
+
+28
+00:01:03,829 --> 00:01:06,020
+>> To find the
+domain, remember it's
+
+29
+00:01:06,020 --> 00:01:08,300
+all points x comma y where
+
+30
+00:01:08,300 --> 00:01:12,959
+the functions has
+a valid output.
+
+31
+00:01:12,959 --> 00:01:14,620
+>> So we can't
+
+32
+00:01:14,620 --> 00:01:16,375
+take the square
+root of a negative,
+
+33
+00:01:16,375 --> 00:01:17,710
+but we can take
+the square root
+
+34
+00:01:17,710 --> 00:01:19,780
+of any non-negative number.
+
+35
+00:01:19,780 --> 00:01:21,580
+So that is the constraint
+
+36
+00:01:21,580 --> 00:01:23,394
+that we're going to
+use to find this.
+
+37
+00:01:23,394 --> 00:01:24,760
+>> First we can
+find the function's
+
+38
+00:01:24,760 --> 00:01:26,559
+value at 0 comma 0.
+
+39
+00:01:26,559 --> 00:01:28,900
+>> That's just
+sticking 0 comma
+
+40
+00:01:28,900 --> 00:01:31,570
+0 into the function
+x is 0, y is 0.
+
+41
+00:01:31,570 --> 00:01:32,859
+Solve, we get one.
+
+42
+00:01:32,859 --> 00:01:34,120
+>> So a point on
+
+43
+00:01:34,120 --> 00:01:36,040
+the graph of this function
+
+44
+00:01:36,040 --> 00:01:38,420
+is 0 comma 0 comma one.
+
+45
+00:01:39,329 --> 00:01:40,480
+>> Good.
+
+46
+00:01:40,480 --> 00:01:42,535
+>> Now the domain
+is determined
+
+47
+00:01:42,535 --> 00:01:43,960
+by the collection of
+
+48
+00:01:43,960 --> 00:01:45,729
+points where the
+function is defined.
+
+49
+00:01:45,729 --> 00:01:46,780
+>> And this function is
+
+50
+00:01:46,780 --> 00:01:48,010
+defined as long as the part
+
+51
+00:01:48,010 --> 00:01:49,060
+underneath the square root
+
+52
+00:01:49,060 --> 00:01:50,770
+is greater than
+or equal to 0.
+
+53
+00:01:50,770 --> 00:01:51,610
+So that gives us
+
+54
+00:01:51,610 --> 00:01:53,410
+the following
+inequality here.
+
+55
+00:01:53,410 --> 00:01:54,940
+We could shuffle
+things around
+
+56
+00:01:54,940 --> 00:01:57,110
+a bit and notice that
+
+57
+00:01:57,110 --> 00:01:59,780
+our inequality
+is very similar
+
+58
+00:01:59,780 --> 00:02:03,275
+to the standard
+form of an ellipse.
+
+59
+00:02:03,275 --> 00:02:05,120
+In fact, if this
+was x squared over
+
+60
+00:02:05,120 --> 00:02:07,490
+nine plus y squared over
+four equals to one.
+
+61
+00:02:07,490 --> 00:02:10,685
+It would just be an
+ellipse in standard form.
+
+62
+00:02:10,685 --> 00:02:12,260
+But the less
+than or equal to
+
+63
+00:02:12,260 --> 00:02:13,640
+one means that the x
+
+64
+00:02:13,640 --> 00:02:16,339
+and y values are
+allowed to be smaller.
+
+65
+00:02:16,339 --> 00:02:17,690
+>> So it's actually
+describing
+
+66
+00:02:17,690 --> 00:02:20,280
+the interior of an ellipse.
+
+67
+00:02:21,069 --> 00:02:23,630
+>> So the set of
+points where x squared
+
+68
+00:02:23,630 --> 00:02:25,220
+over nine plus y
+squared over four
+
+69
+00:02:25,220 --> 00:02:26,450
+is less than or
+equal to one is
+
+70
+00:02:26,450 --> 00:02:28,504
+the inside of this ellipse.
+
+71
+00:02:28,504 --> 00:02:29,960
+>> So that's going
+to be the domain of
+
+72
+00:02:29,960 --> 00:02:33,814
+the function for the range.
+
+73
+00:02:33,814 --> 00:02:34,625
+>> We want to look at
+
+74
+00:02:34,625 --> 00:02:36,875
+all possible
+z-values achieved
+
+75
+00:02:36,875 --> 00:02:40,444
+by putting in those x
+values in the domain.
+
+76
+00:02:40,444 --> 00:02:41,900
+>> And for that it's
+
+77
+00:02:41,900 --> 00:02:43,579
+maybe a little bit
+trickier to see.
+
+78
+00:02:43,579 --> 00:02:46,550
+>> But if we put
+the 0 comma 0,
+
+79
+00:02:46,550 --> 00:02:48,589
+in which we did,
+we got one.
+
+80
+00:02:48,589 --> 00:02:49,820
+>> And that's actually the
+
+81
+00:02:49,820 --> 00:02:51,199
+biggest that
+we'll ever get.
+
+82
+00:02:51,199 --> 00:02:52,490
+>> Because you can
+
+83
+00:02:52,490 --> 00:02:53,900
+see underneath
+the function f,
+
+84
+00:02:53,900 --> 00:02:55,190
+we have 12x minus
+
+85
+00:02:55,190 --> 00:02:57,769
+positive number.
+Positive number.
+
+86
+00:02:57,769 --> 00:03:01,115
+>> So any value of x
+and y that's not 0,
+
+87
+00:03:01,115 --> 00:03:02,060
+you're gonna be subtracting
+
+88
+00:03:02,060 --> 00:03:03,569
+a positive quantity here.
+
+89
+00:03:03,569 --> 00:03:05,305
+>> And which is gonna
+be less than one.
+
+90
+00:03:05,305 --> 00:03:07,240
+So one's the biggest
+that we can get
+
+91
+00:03:07,240 --> 00:03:10,760
+and 0 is the
+smallest we can get.
+
+92
+00:03:11,220 --> 00:03:13,750
+So that gives us a range of
+
+93
+00:03:13,750 --> 00:03:16,225
+all of the numbers
+from 0 to one.
+
+94
+00:03:16,225 --> 00:03:18,040
+We can graph the function.
+
+95
+00:03:18,040 --> 00:03:20,545
+And a 3D graphing utility
+
+96
+00:03:20,545 --> 00:03:21,970
+that's just kind of
+
+97
+00:03:21,970 --> 00:03:23,590
+satisfying to be
+able to do to,
+
+98
+00:03:23,590 --> 00:03:27,050
+to see that all of our
+analysis is working.
+
+99
+00:03:28,560 --> 00:03:31,375
+Oftentimes we want to look
+
+100
+00:03:31,375 --> 00:03:33,520
+at our three-dimensional
+surfaces or
+
+101
+00:03:33,520 --> 00:03:35,110
+graphs of are functions of
+
+102
+00:03:35,110 --> 00:03:36,670
+two variables by looking at
+
+103
+00:03:36,670 --> 00:03:38,514
+are what are called
+level curves.
+
+104
+00:03:38,514 --> 00:03:40,750
+>> And these are the
+cross sections for
+
+105
+00:03:40,750 --> 00:03:45,144
+various constant
+slices of z.
+
+106
+00:03:45,144 --> 00:03:46,700
+>> So the idea of
+
+107
+00:03:46,700 --> 00:03:48,350
+a level curve or
+
+108
+00:03:48,350 --> 00:03:50,210
+a contour map is
+actually quite
+
+109
+00:03:50,210 --> 00:03:51,380
+familiar to anyone who's
+
+110
+00:03:51,380 --> 00:03:53,720
+looked at a map
+
+111
+00:03:53,720 --> 00:03:55,534
+for hiking, like
+a mountain map.
+
+112
+00:03:55,534 --> 00:03:57,680
+>> So you have a map
+that looks like this,
+
+113
+00:03:57,680 --> 00:03:59,810
+and we have these,
+these lines in it.
+
+114
+00:03:59,810 --> 00:04:02,030
+>> And the lines
+correspond to
+
+115
+00:04:02,030 --> 00:04:04,730
+places where the altitude
+is not changing.
+
+116
+00:04:04,730 --> 00:04:06,980
+So if you were to walk
+along these lines,
+
+117
+00:04:06,980 --> 00:04:09,665
+you will have the
+same z value.
+
+118
+00:04:09,665 --> 00:04:12,755
+And when the lines are
+very close together,
+
+119
+00:04:12,755 --> 00:04:15,170
+that means that if
+you were to walk
+
+120
+00:04:15,170 --> 00:04:17,329
+perpendicular to the
+lines are orthogonal,
+
+121
+00:04:17,329 --> 00:04:18,619
+it will be very steep.
+
+122
+00:04:18,619 --> 00:04:20,990
+>> If the lines
+are far apart,
+
+123
+00:04:20,990 --> 00:04:22,790
+that means you
+will be walking
+
+124
+00:04:22,790 --> 00:04:24,260
+a great distance in
+
+125
+00:04:24,260 --> 00:04:27,200
+order to achieve
+that same level
+
+126
+00:04:27,200 --> 00:04:29,930
+of altitude that
+you would be
+
+127
+00:04:29,930 --> 00:04:30,770
+over here if you were to
+
+128
+00:04:30,770 --> 00:04:31,670
+walk a short distance
+
+129
+00:04:31,670 --> 00:04:33,050
+to gain that level
+of altitude,
+
+130
+00:04:33,050 --> 00:04:34,670
+which means it's
+relatively flat,
+
+131
+00:04:34,670 --> 00:04:36,185
+relatively flat down here,
+
+132
+00:04:36,185 --> 00:04:38,479
+relatively steep over here.
+
+133
+00:04:38,479 --> 00:04:42,199
+>> So the way we talk
+about kind of analyze
+
+134
+00:04:42,199 --> 00:04:44,960
+three-dimensional surfaces
+is very much like
+
+135
+00:04:44,960 --> 00:04:46,700
+how we look at Level curves
+
+136
+00:04:46,700 --> 00:04:48,515
+and topographical map.
+
+137
+00:04:48,515 --> 00:04:50,780
+So we can take a look
+at the same function
+
+138
+00:04:50,780 --> 00:04:53,854
+again and look at
+its level curves.
+
+139
+00:04:53,854 --> 00:04:57,380
+>> That means taking
+various zi values,
+
+140
+00:04:57,380 --> 00:04:59,780
+and we'll call them C at
+
+141
+00:04:59,780 --> 00:05:02,690
+a constant level,
+constant steps.
+
+142
+00:05:02,690 --> 00:05:05,240
+So in our case,
+our RZ steps
+
+143
+00:05:05,240 --> 00:05:09,690
+are at length of 0.2 each.
+
+144
+00:05:10,569 --> 00:05:12,740
+>> And we just
+set our output
+
+145
+00:05:12,740 --> 00:05:15,380
+equal to those values.
+
+146
+00:05:15,380 --> 00:05:16,580
+And that gives us all
+
+147
+00:05:16,580 --> 00:05:18,320
+of these different curves
+
+148
+00:05:18,320 --> 00:05:19,550
+in the XY plane.
+
+149
+00:05:19,550 --> 00:05:21,140
+But remember the curve,
+curves in the x,
+
+150
+00:05:21,140 --> 00:05:23,000
+y plane correspond to
+
+151
+00:05:23,000 --> 00:05:24,110
+the cross-sections
+
+152
+00:05:24,110 --> 00:05:26,520
+at these different
+z values.
+
+153
+00:05:26,709 --> 00:05:29,090
+>> We can shuffle things
+around a little bit
+
+154
+00:05:29,090 --> 00:05:30,410
+and see that
+these are really
+
+155
+00:05:30,410 --> 00:05:32,850
+just ellipses
+
+156
+00:05:33,520 --> 00:05:37,140
+and they are
+concentric ellipses.
+
+157
+00:05:37,959 --> 00:05:40,670
+>> If we graph
+each of these,
+
+158
+00:05:40,670 --> 00:05:42,410
+what we see is
+what's called a
+
+159
+00:05:42,410 --> 00:05:44,779
+contour plot of
+the function.
+
+160
+00:05:44,779 --> 00:05:46,820
+>> And this is
+a visualization
+
+161
+00:05:46,820 --> 00:05:48,770
+of that three-dimensional
+graph, right, as F,
+
+162
+00:05:48,770 --> 00:05:52,985
+as we sliced cross-sections
+
+163
+00:05:52,985 --> 00:05:56,150
+with planes parallel
+to the xy axis,
+
+164
+00:05:56,150 --> 00:05:58,265
+we can see towards the edge
+
+165
+00:05:58,265 --> 00:06:00,200
+that the graph is
+rather steep in
+
+166
+00:06:00,200 --> 00:06:02,300
+the z direction
+and then toward
+
+167
+00:06:02,300 --> 00:06:03,650
+the middle graph is
+
+168
+00:06:03,650 --> 00:06:06,150
+rather flat in
+the z direction.
+
+169
+00:06:07,000 --> 00:06:09,245
+Can also discuss functions
+
+170
+00:06:09,245 --> 00:06:10,835
+of three variables.
+
+171
+00:06:10,835 --> 00:06:12,410
+We can, of course graph
+
+172
+00:06:12,410 --> 00:06:13,610
+a function of
+three variables.
+
+173
+00:06:13,610 --> 00:06:15,139
+>> We need four
+dimensions for that.
+
+174
+00:06:15,139 --> 00:06:17,990
+>> But if we look at
+its level curves,
+
+175
+00:06:17,990 --> 00:06:21,950
+we can set the
+function z values to
+
+176
+00:06:21,950 --> 00:06:25,130
+certain constant values and
+
+177
+00:06:25,130 --> 00:06:26,480
+then graph those surfaces
+
+178
+00:06:26,480 --> 00:06:28,520
+in three-dimensional space.
+
+179
+00:06:28,520 --> 00:06:30,620
+So here we're
+looking at the level
+
+180
+00:06:30,620 --> 00:06:31,820
+curves of this function.
+
+181
+00:06:31,820 --> 00:06:32,840
+X squared over nine plus
+
+182
+00:06:32,840 --> 00:06:34,040
+y squared over four plus x
+
+183
+00:06:34,040 --> 00:06:36,635
+squared over
+four equals to,
+
+184
+00:06:36,635 --> 00:06:40,140
+I think in this case, 123

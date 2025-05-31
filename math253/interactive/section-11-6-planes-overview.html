@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 11.6: Planes - Math 253</title>
+    
+    <style>
+        :root {
+            --night: #001B33;
+            --green: #00C853;
+            --magenta: #D500F9;
+            --ice: #00E5FF;
+            --pale: #F6FCFE;
+            --silver: #B0BEC5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--night) 0%, #002B4D 50%, var(--night) 100%);
+            color: var(--pale);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .aurora-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .aurora-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .aurora-section-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--magenta), var(--ice));
+            color: var(--night);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .aurora-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--magenta), var(--ice));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .aurora-subtitle {
+            font-size: 1.2em;
+            color: var(--silver);
+            margin-bottom: 20px;
+        }
+        
+        .aurora-learning-objectives {
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .aurora-video-section {
+            background: rgba(0, 27, 51, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(213, 0, 249, 0.3);
+        }
+
+        .aurora-video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .aurora-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .aurora-interactive-section {
+            background: rgba(0, 27, 51, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+
+        .aurora-geogebra-container {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .aurora-concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .aurora-concept-card {
+            background: rgba(0, 27, 51, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(213, 0, 249, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .aurora-concept-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--magenta);
+            box-shadow: 0 10px 30px rgba(213, 0, 249, 0.2);
+        }
+
+        .aurora-concept-title {
+            font-size: 1.3em;
+            color: var(--magenta);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .aurora-concept-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: var(--magenta);
+        }
+
+        .aurora-formulas-section {
+            background: rgba(0, 27, 51, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 200, 83, 0.3);
+        }
+
+        .aurora-formula-box {
+            background: rgba(0, 200, 83, 0.1);
+            border: 1px solid rgba(0, 200, 83, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .aurora-applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .aurora-application-card {
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .aurora-application-card:hover {
+            background: rgba(0, 229, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .aurora-resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .aurora-resource-category {
+            background: rgba(0, 27, 51, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(176, 190, 197, 0.3);
+        }
+
+        .aurora-resource-title {
+            color: var(--ice);
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .aurora-resource-list {
+            list-style: none;
+        }
+
+        .aurora-resource-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .aurora-resource-list li:before {
+            content: "→";
+            color: var(--ice);
+            position: absolute;
+            left: 0;
+        }
+
+        .aurora-resource-list a {
+            color: var(--pale);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .aurora-resource-list a:hover {
+            color: var(--magenta);
+        }
+
+        .aurora-section-title {
+            font-size: 1.8em;
+            color: var(--ice);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .aurora-comparison-section {
+            background: rgba(0, 27, 51, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+
+        .aurora-comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .aurora-comparison-card {
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .aurora-title {
+                font-size: 2em;
+            }
+            
+            .aurora-container {
+                padding: 15px;
+            }
+            
+            .aurora-concepts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                tags: 'ams'
+            },
+            options: {
+                renderActions: {
+                    assistiveMml: [155, (doc) => {
+                        for (const math of document.querySelectorAll('mjx-math')) {
+                            const mml = math.querySelector('mjx-assistive-mml mml\\:math, mjx-assistive-mml math');
+                            if (mml) {
+                                mml.setAttribute('display', math.style.display === 'block' ? 'block' : 'inline');
+                            }
+                        }
+                    }, (math, doc) => assistiveMml(math, doc)]
+                }
+            },
+            startup: {
+                ready: function() {
+                    setTimeout(() => MathJax.startup.defaultReady(), 1000);
+                }
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="aurora-container">
+        <header class="aurora-header">
+            <div class="aurora-section-badge">Section 11.6</div>
+            <h1 class="aurora-title">Planes</h1>
+            <p class="aurora-subtitle">Equations of Planes and Their Geometric Properties in 3D Space</p>
+            
+            <div class="aurora-learning-objectives">
+                <h3 style="color: var(--ice); margin-bottom: 15px;">📋 Learning Objectives</h3>
+                <p style="color: var(--night);">By the end of this section, you will be able to:</p>
+                <ul style="margin-top: 10px; padding-left: 20px; color: var(--night);">
+                    <li>Write equations of planes using normal vector and point forms</li>
+                    <li>Find plane equations given three non-collinear points</li>
+                    <li>Determine relationships between planes (parallel, perpendicular, intersecting)</li>
+                    <li>Calculate distances from points to planes and between parallel planes</li>
+                    <li>Find angles between planes and lines of intersection</li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="aurora-video-section">
+            <h2 class="aurora-section-title">📹 Section Overview Video</h2>
+            <div class="aurora-video-container">
+                <iframe src="https://www.youtube.com/embed/1AJp10zkYPQ" 
+                        title="Planes in 3D Space - Math 253" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <p><strong>Video Summary:</strong> This video introduces plane equations in 3D space, covering how to find plane equations given various information and understanding the geometric relationships between planes.</p>
+        </section>
+
+        <section class="aurora-interactive-section">
+            <h2 class="aurora-section-title">🎯 Interactive 3D Plane Visualizer</h2>
+            <div class="aurora-geogebra-container">
+                <iframe src="https://www.geogebra.org/3d/qfcywm4e" 
+                        width="100%" 
+                        height="500" 
+                        style="border: 1px solid #ccc" 
+                        frameborder="0">
+                </iframe>
+            </div>
+            <p><strong>Interactive Instructions:</strong> Use the 3D visualizer above to explore plane equations. Adjust the normal vector components and see how they affect the plane's orientation. Experiment with different points to understand how planes are determined.</p>
+        </section>
+
+        <section class="aurora-concepts-grid">
+            <div class="aurora-concept-card">
+                <h3 class="aurora-concept-title">
+                    <svg class="aurora-concept-icon" viewBox="0 0 24 24">
+                        <path d="M3 3h18v18H3z"/>
+                    </svg>
+                    Standard Form Equation
+                </h3>
+                <p>A plane can be described by a linear equation involving all three variables:</p>
+                <div class="aurora-formula-box">
+                    $$ax + by + cz = d$$
+                </div>
+                <p>Where $\langle a, b, c \rangle$ is the normal vector to the plane, perpendicular to every vector that lies in the plane.</p>
+            </div>
+
+            <div class="aurora-concept-card">
+                <h3 class="aurora-concept-title">
+                    <svg class="aurora-concept-icon" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Normal Vector Form
+                </h3>
+                <p>Given a normal vector $\vec{n} = \langle a, b, c \rangle$ and a point $P_0(x_0, y_0, z_0)$ on the plane:</p>
+                <div class="aurora-formula-box">
+                    $$a(x - x_0) + b(y - y_0) + c(z - z_0) = 0$$
+                </div>
+                <p>This form directly shows how the normal vector determines the plane's orientation.</p>
+            </div>
+
+            <div class="aurora-concept-card">
+                <h3 class="aurora-concept-title">
+                    <svg class="aurora-concept-icon" viewBox="0 0 24 24">
+                        <path d="M2 12h20M12 2v20"/>
+                    </svg>
+                    Three-Point Form
+                </h3>
+                <p>Given three non-collinear points $P_1$, $P_2$, and $P_3$, the normal vector is:</p>
+                <div class="aurora-formula-box">
+                    $$\vec{n} = \overrightarrow{P_1P_2} \times \overrightarrow{P_1P_3}$$
+                </div>
+                <p>The cross product of two vectors in the plane gives a vector perpendicular to the plane.</p>
+            </div>
+
+            <div class="aurora-concept-card">
+                <h3 class="aurora-concept-title">
+                    <svg class="aurora-concept-icon" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Parallel and Perpendicular Planes
+                </h3>
+                <p>Two planes are:</p>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li><strong>Parallel</strong> if their normal vectors are parallel: $\vec{n_1} = k\vec{n_2}$</li>
+                    <li><strong>Perpendicular</strong> if their normal vectors are perpendicular: $\vec{n_1} \cdot \vec{n_2} = 0$</li>
+                </ul>
+                <p style="margin-top: 10px;">The angle between planes equals the angle between their normal vectors.</p>
+            </div>
+        </section>
+
+        <section class="aurora-formulas-section">
+            <h2 class="aurora-section-title">📐 Essential Formulas</h2>
+            
+            <div class="aurora-formula-box">
+                <h4 style="color: var(--green); margin-bottom: 10px;">Distance from Point to Plane</h4>
+                $$d = \frac{|ax_0 + by_0 + cz_0 + d|}{\sqrt{a^2 + b^2 + c^2}}$$
+                <p style="margin-top: 10px; font-size: 0.9em;">Where $(x_0, y_0, z_0)$ is the external point and $ax + by + cz + d = 0$ is the plane equation.</p>
+                <p style="margin-top: 10px;"><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#sec_planes-4" style="color: var(--green); text-decoration: underline;">📖 Example 11.6.15: Distance Between Point and Plane</a></p>
+            </div>
+
+            <div class="aurora-formula-box">
+                <h4 style="color: var(--green); margin-bottom: 10px;">Distance between Parallel Planes</h4>
+                $$d = \frac{|d_1 - d_2|}{\sqrt{a^2 + b^2 + c^2}}$$
+                <p style="margin-top: 10px; font-size: 0.9em;">For parallel planes $ax + by + cz + d_1 = 0$ and $ax + by + cz + d_2 = 0$.</p>
+                <p style="margin-top: 10px;"><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#idea_planes_dist" style="color: var(--green); text-decoration: underline;">📖 Subsection 11.6.1: Distances</a></p>
+            </div>
+
+            <div class="aurora-formula-box">
+                <h4 style="color: var(--green); margin-bottom: 10px;">Angle between Planes</h4>
+                $$\cos \theta = \frac{|\vec{n_1} \cdot \vec{n_2}|}{|\vec{n_1}||\vec{n_2}|}$$
+                <p style="margin-top: 10px; font-size: 0.9em;">The acute angle between two planes with normal vectors $\vec{n_1}$ and $\vec{n_2}$.</p>
+            </div>
+        </section>
+
+        <section class="aurora-comparison-section">
+            <h2 class="aurora-section-title">🔄 Lines vs Planes Comparison</h2>
+            <div class="aurora-comparison-grid">
+                <div class="aurora-comparison-card">
+                    <h4 style="color: var(--ice); margin-bottom: 15px;">Lines in 3D Space</h4>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Dimension:</strong> 1D objects in 3D space</li>
+                        <li><strong>Direction:</strong> Defined by direction vector</li>
+                        <li><strong>Equation:</strong> Parametric form $\vec{r}(t) = \vec{r_0} + t\vec{v}$</li>
+                        <li><strong>Degrees of Freedom:</strong> 1 parameter</li>
+                        <li><strong>Intersection:</strong> Point, line, or empty</li>
+                    </ul>
+                </div>
+                
+                <div class="aurora-comparison-card">
+                    <h4 style="color: var(--ice); margin-bottom: 15px;">Planes in 3D Space</h4>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Dimension:</strong> 2D surfaces in 3D space</li>
+                        <li><strong>Orientation:</strong> Defined by normal vector</li>
+                        <li><strong>Equation:</strong> Linear form $ax + by + cz = d$</li>
+                        <li><strong>Degrees of Freedom:</strong> 2 parameters</li>
+                        <li><strong>Intersection:</strong> Point, line, plane, or empty</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="aurora-section-title">🌍 Real-World Applications</h2>
+            <div class="aurora-applications-grid">
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Architecture & Construction</h4>
+                    <p>Building floors, walls, and roofs are modeled as planes. Engineers calculate intersections for structural joints and determine optimal angles for stability.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Computer Graphics</h4>
+                    <p>3D rendering engines use plane equations for surface normal calculations, lighting effects, and collision detection in virtual environments.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Geology & Mining</h4>
+                    <p>Rock layers and fault planes are modeled mathematically to predict mineral deposits and assess geological stability for construction projects.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Crystallography</h4>
+                    <p>Crystal faces are described by plane equations, helping scientists understand molecular structures and predict material properties.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Aerospace Engineering</h4>
+                    <p>Wing surfaces, control surfaces, and fuselage panels are modeled as planes for aerodynamic analysis and stress calculations.</p>
+                    <p style="margin-top: 10px;"><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#subsec_planes_distances" style="color: var(--ice); text-decoration: underline;">📖 Example 11.6.11: Plane-Line Intersection</a></p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Medical Imaging</h4>
+                    <p>CT and MRI scans create cross-sectional images by intersecting the body with mathematical planes at different angles and positions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="aurora-section-title">📚 Learning Resources</h2>
+            <div class="aurora-resources-grid">
+                <div class="aurora-resource-category">
+                    <h3 class="aurora-resource-title">
+                        📖 Textbook Resources
+                    </h3>
+                    <ul class="aurora-resource-list">
+                        <li><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html" target="_blank">Complete Section 11.6: Planes</a></li>
+                        <li><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#def_planes" target="_blank">Planes Definition (Section start)</a></li>
+                        <li><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#idea_planes_dist" target="_blank">Distances (Subsection 11.6.1)</a></li>
+                        <li><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#subsec_planes_distances" target="_blank">Example: Plane and Line Intersection</a></li>
+                    </ul>
+                </div>
+
+                <div class="aurora-resource-category">
+                    <h3 class="aurora-resource-title">
+                        🎥 Video Tutorials
+                    </h3>
+                    <ul class="aurora-resource-list">
+                        <li><a href="https://youtu.be/1AJp10zkYPQ" target="_blank">Section 11.6 Overview</a></li>
+                        <li><a href="https://youtu.be/BQTOTOx3xMs" target="_blank">Finding Plane Equations</a></li>
+                        <li><a href="https://youtu.be/ZYMfyOOLrgs" target="_blank">Distance from Point to Plane</a></li>
+                        <li><a href="https://youtu.be/cKJGnQyhx7E" target="_blank">Parallel and Perpendicular Planes</a></li>
+                    </ul>
+                </div>
+
+                <div class="aurora-resource-category">
+                    <h3 class="aurora-resource-title">
+                        📝 Practice Materials
+                    </h3>
+                    <ul class="aurora-resource-list">
+                        <li>Section 11.6 Problem Set (Available in Course Files)</li>
+                        <li>Plane Equation Worksheet (Available in Course Files)</li>
+                        <li>Three-Point Plane Practice (Available in Course Files)</li>
+                        <li>Distance and Angle Problems (Available in Course Files)</li>
+                    </ul>
+                </div>
+
+                <div class="aurora-resource-category">
+                    <h3 class="aurora-resource-title">
+                        🎯 Interactive Tools
+                    </h3>
+                    <ul class="aurora-resource-list">
+                        <li><a href="https://www.geogebra.org/3d/qfcywm4e" target="_blank">3D Plane Visualizer</a></li>
+                        <li><a href="https://www.desmos.com/3d" target="_blank">Desmos 3D Calculator</a></li>
+                        <li><a href="https://www.symbolab.com/solver/plane-intersection-calculator" target="_blank">Plane Intersection Calculator (Symbolab)</a></li>
+                        <li><a href="https://www.mathway.com/Calculator/algebra-calculator" target="_blank">Normal Vector Calculator (Mathway)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <noscript>
+        <div style="padding: 20px; background: #ffe6e6; border: 1px solid #ff9999; margin: 20px; border-radius: 5px;">
+            <strong>JavaScript Required:</strong> This page uses MathJax to display mathematical notation. 
+            Please enable JavaScript to view the formulas properly.
+        </div>
+    </noscript>
+</body>
+</html>

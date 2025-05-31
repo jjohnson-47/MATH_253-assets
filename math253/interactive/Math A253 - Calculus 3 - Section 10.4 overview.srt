@@ -1,0 +1,1726 @@
+1
+00:00:00,110 --> 00:00:02,745
+Let's take a look at
+the cross product.
+
+2
+00:00:02,745 --> 00:00:05,340
+This is an overview
+of section 10.4.
+
+3
+00:00:05,340 --> 00:00:07,710
+The cross-product
+is an operation
+
+4
+00:00:07,710 --> 00:00:09,090
+between two vectors
+
+5
+00:00:09,090 --> 00:00:10,770
+in three-dimensional space.
+
+6
+00:00:10,770 --> 00:00:12,495
+You should note
+that we can't
+
+7
+00:00:12,495 --> 00:00:13,530
+take the cross product of
+
+8
+00:00:13,530 --> 00:00:15,000
+two vectors in
+two dimensional
+
+9
+00:00:15,000 --> 00:00:17,175
+space that doesn't exist.
+
+10
+00:00:17,175 --> 00:00:19,770
+So the way that you find
+the cross product of
+
+11
+00:00:19,770 --> 00:00:20,820
+two vectors is with
+
+12
+00:00:20,820 --> 00:00:23,175
+this somewhat complicated
+formula here.
+
+13
+00:00:23,175 --> 00:00:24,660
+So one way to find the
+
+14
+00:00:24,660 --> 00:00:25,770
+cross product is just to
+
+15
+00:00:25,770 --> 00:00:27,450
+memorize this formula or
+
+16
+00:00:27,450 --> 00:00:28,920
+put it into a computer.
+
+17
+00:00:28,920 --> 00:00:30,990
+But there is actually
+a handy procedure
+
+18
+00:00:30,990 --> 00:00:32,625
+for calculating
+the cross-product
+
+19
+00:00:32,625 --> 00:00:34,380
+that involves the
+same procedure as
+
+20
+00:00:34,380 --> 00:00:36,835
+finding the determinant
+of a matrix.
+
+21
+00:00:36,835 --> 00:00:38,600
+So let's take
+a short detour
+
+22
+00:00:38,600 --> 00:00:41,074
+into matrices and
+determinants.
+
+23
+00:00:41,074 --> 00:00:43,250
+>> A matrix is just an,
+
+24
+00:00:43,250 --> 00:00:45,725
+a rectangular
+array of values,
+
+25
+00:00:45,725 --> 00:00:47,374
+a rectangular
+array of numbers.
+
+26
+00:00:47,374 --> 00:00:51,035
+>> And the determinant
+of a matrix is a way
+
+27
+00:00:51,035 --> 00:00:52,805
+of kind of measuring how
+
+28
+00:00:52,805 --> 00:00:55,700
+large the matrix
+size in some way.
+
+29
+00:00:55,700 --> 00:00:57,950
+Now, in order to
+take the determinant
+
+30
+00:00:57,950 --> 00:00:59,570
+of a three-by-three matrix,
+
+31
+00:00:59,570 --> 00:01:00,800
+we need to know
+how to take the
+
+32
+00:01:00,800 --> 00:01:02,165
+determinant a two by two.
+
+33
+00:01:02,165 --> 00:01:04,460
+And the determinant
+of a 2-by-2 matrix
+
+34
+00:01:04,460 --> 00:01:05,600
+is you multiply across
+
+35
+00:01:05,600 --> 00:01:07,310
+the diagonal AD and then
+
+36
+00:01:07,310 --> 00:01:09,995
+subtract the
+off-diagonal BC.
+
+37
+00:01:09,995 --> 00:01:11,920
+Now for the determinant
+
+38
+00:01:11,920 --> 00:01:13,805
+of a three-by-three matrix,
+
+39
+00:01:13,805 --> 00:01:15,739
+the way that the
+book describes
+
+40
+00:01:15,739 --> 00:01:17,720
+is this diagonal trick,
+
+41
+00:01:17,720 --> 00:01:19,190
+which is nice and
+it works great
+
+42
+00:01:19,190 --> 00:01:20,764
+for three by
+three matrices.
+
+43
+00:01:20,764 --> 00:01:22,250
+>> But what I'm
+showing you here is
+
+44
+00:01:22,250 --> 00:01:24,890
+the method for
+co-factor expansion,
+
+45
+00:01:24,890 --> 00:01:26,585
+which is actually a way to
+
+46
+00:01:26,585 --> 00:01:28,579
+calculate determinants
+of any size.
+
+47
+00:01:28,579 --> 00:01:31,970
+>> Add some more relatable
+to linear algebra.
+
+48
+00:01:31,970 --> 00:01:33,200
+Now that determined
+
+49
+00:01:33,200 --> 00:01:34,355
+the three by three matrix,
+
+50
+00:01:34,355 --> 00:01:35,300
+you typically do this.
+
+51
+00:01:35,300 --> 00:01:38,285
+You pick a row or a
+column to expand across.
+
+52
+00:01:38,285 --> 00:01:41,509
+In this case, we're
+going to go a, B, and C.
+
+53
+00:01:41,509 --> 00:01:43,655
+>> So first we
+start with a,
+
+54
+00:01:43,655 --> 00:01:45,724
+and we see that a is here.
+
+55
+00:01:45,724 --> 00:01:47,225
+>> And we cross out the row
+
+56
+00:01:47,225 --> 00:01:49,370
+and the column where a is,
+
+57
+00:01:49,370 --> 00:01:50,990
+and then the numbers that
+
+58
+00:01:50,990 --> 00:01:52,460
+are left in the matrix,
+
+59
+00:01:52,460 --> 00:01:54,425
+we take the
+determinant of that.
+
+60
+00:01:54,425 --> 00:01:56,090
+So we take a times
+
+61
+00:01:56,090 --> 00:01:59,855
+the determinant of the
+sub-matrix E F H I.
+
+62
+00:01:59,855 --> 00:02:01,610
+Now we go over to B and we
+
+63
+00:02:01,610 --> 00:02:03,485
+alternate sign,
+so it's minus.
+
+64
+00:02:03,485 --> 00:02:04,760
+We cross out the row and
+
+65
+00:02:04,760 --> 00:02:06,230
+the column where there's B.
+
+66
+00:02:06,230 --> 00:02:06,980
+And then we take
+
+67
+00:02:06,980 --> 00:02:08,165
+the determinant
+of the matrix.
+
+68
+00:02:08,165 --> 00:02:09,200
+That's laughed
+when we cross
+
+69
+00:02:09,200 --> 00:02:11,794
+those out, df, GI.
+
+70
+00:02:11,794 --> 00:02:13,504
+>> And then finally C.
+
+71
+00:02:13,504 --> 00:02:14,990
+>> Cross out the
+row and column and
+
+72
+00:02:14,990 --> 00:02:15,770
+take the determinant of
+
+73
+00:02:15,770 --> 00:02:17,060
+the matrix that's left.
+
+74
+00:02:17,060 --> 00:02:19,760
+Then finally, we just
+have the numbers a, b,
+
+75
+00:02:19,760 --> 00:02:20,840
+and c multiplied times
+
+76
+00:02:20,840 --> 00:02:22,564
+determiner of
+2-by-2 matrices,
+
+77
+00:02:22,564 --> 00:02:24,440
+which we can find that
+the formula above.
+
+78
+00:02:24,440 --> 00:02:26,180
+And that's how we can get
+
+79
+00:02:26,180 --> 00:02:28,355
+the determinant of a
+three-by-three matrix.
+
+80
+00:02:28,355 --> 00:02:30,079
+It seems very complicated,
+
+81
+00:02:30,079 --> 00:02:31,580
+but you just
+hold off and see
+
+82
+00:02:31,580 --> 00:02:34,100
+how much easier it is
+once we have numbers.
+
+83
+00:02:34,100 --> 00:02:36,575
+So here's an example here.
+
+84
+00:02:36,575 --> 00:02:37,160
+Here we're going to take
+
+85
+00:02:37,160 --> 00:02:38,660
+the determinant of a
+three-by-three matrix.
+
+86
+00:02:38,660 --> 00:02:42,080
+Two, negative 3120,
+negative 11 for five.
+
+87
+00:02:42,080 --> 00:02:45,350
+So we start with the
+matrix and we want to do
+
+88
+00:02:45,350 --> 00:02:46,640
+co-factor expansion
+along the
+
+89
+00:02:46,640 --> 00:02:49,280
+top two, negative 31.
+
+90
+00:02:49,280 --> 00:02:50,780
+So you cross
+out the row and
+
+91
+00:02:50,780 --> 00:02:52,100
+column with the
+two and we see
+
+92
+00:02:52,100 --> 00:02:54,890
+of the following matrix 0,
+
+93
+00:02:54,890 --> 00:02:56,210
+negative 14 or five,
+
+94
+00:02:56,210 --> 00:02:57,170
+same with their negative
+
+95
+00:02:57,170 --> 00:03:00,980
+three and the same
+with the one.
+
+96
+00:03:00,980 --> 00:03:03,275
+And we alternate signs.
+
+97
+00:03:03,275 --> 00:03:04,730
+So it's a positive two,
+
+98
+00:03:04,730 --> 00:03:08,374
+it's a minus negative
+three and plus one.
+
+99
+00:03:08,374 --> 00:03:11,254
+>> And then here
+we keep the two.
+
+100
+00:03:11,254 --> 00:03:13,445
+>> And the negative
+three and the one
+
+101
+00:03:13,445 --> 00:03:14,750
+here I combined minus
+
+102
+00:03:14,750 --> 00:03:16,190
+negative three
+is plus three.
+
+103
+00:03:16,190 --> 00:03:17,480
+And then we take
+the determinant
+
+104
+00:03:17,480 --> 00:03:18,665
+of this 2-by-2 matrix,
+
+105
+00:03:18,665 --> 00:03:20,630
+0 times five
+minus four times
+
+106
+00:03:20,630 --> 00:03:22,655
+negative one and so on.
+
+107
+00:03:22,655 --> 00:03:24,950
+So at this point, we are
+just multiplying and
+
+108
+00:03:24,950 --> 00:03:26,330
+subtracting numbers
+
+109
+00:03:26,330 --> 00:03:28,340
+and we get our value of 49.
+
+110
+00:03:28,340 --> 00:03:30,785
+So the determinant of
+this matrix is 49.
+
+111
+00:03:30,785 --> 00:03:32,870
+So now we will
+learn to do is
+
+112
+00:03:32,870 --> 00:03:35,150
+find the cross product
+of two vectors.
+
+113
+00:03:35,150 --> 00:03:37,130
+So as advertised,
+
+114
+00:03:37,130 --> 00:03:38,630
+the cross product
+of two vectors is
+
+115
+00:03:38,630 --> 00:03:41,600
+found with this
+determinant formula.
+
+116
+00:03:41,600 --> 00:03:44,240
+So what you do is you
+put the vectors i,
+
+117
+00:03:44,240 --> 00:03:45,920
+j, and k on the top.
+
+118
+00:03:45,920 --> 00:03:48,740
+And then you put
+your first vector u,
+
+119
+00:03:48,740 --> 00:03:50,885
+its coordinates
+along the first row,
+
+120
+00:03:50,885 --> 00:03:53,285
+the second row, and then
+the, the third row.
+
+121
+00:03:53,285 --> 00:03:55,550
+And so once you
+have this matrix,
+
+122
+00:03:55,550 --> 00:03:56,900
+we want to take the
+determinant with
+
+123
+00:03:56,900 --> 00:03:59,990
+this same method that
+we already did, i, j,
+
+124
+00:03:59,990 --> 00:04:01,400
+and k. So we
+expand it along
+
+125
+00:04:01,400 --> 00:04:03,980
+the top I times
+the determinant of
+
+126
+00:04:03,980 --> 00:04:06,590
+the 2-by-2 sub-matrix
+and then minus
+
+127
+00:04:06,590 --> 00:04:08,450
+j times the determinant
+
+128
+00:04:08,450 --> 00:04:10,595
+of its sub matrix
+and so on.
+
+129
+00:04:10,595 --> 00:04:13,610
+And what you end
+up getting is
+
+130
+00:04:13,610 --> 00:04:15,230
+four i minus 11 j
+
+131
+00:04:15,230 --> 00:04:17,330
+plus eight k. And we
+
+132
+00:04:17,330 --> 00:04:19,700
+can write that in our
+bracket form like this.
+
+133
+00:04:19,700 --> 00:04:23,030
+So the cross product
+of the vectors 20,
+
+134
+00:04:23,030 --> 00:04:29,089
+negative 1145 is the
+vector for negative 118.
+
+135
+00:04:29,089 --> 00:04:30,170
+>> Ok?
+
+136
+00:04:30,170 --> 00:04:32,840
+>> So since this is a
+technical procedure,
+
+137
+00:04:32,840 --> 00:04:34,580
+numbers are happen
+to be nice here.
+
+138
+00:04:34,580 --> 00:04:35,270
+>> We were able to
+
+139
+00:04:35,270 --> 00:04:36,889
+calculate it fairly easily.
+
+140
+00:04:36,889 --> 00:04:38,420
+>> What if the
+numbers are not nice?
+
+141
+00:04:38,420 --> 00:04:40,130
+Or you need to calculate
+a whole bunch of
+
+142
+00:04:40,130 --> 00:04:41,060
+cross-products and you want
+
+143
+00:04:41,060 --> 00:04:43,410
+to use a computer.
+
+144
+00:04:45,489 --> 00:04:47,660
+>> So what I have here
+
+145
+00:04:47,660 --> 00:04:50,150
+is a Jupyter Notebooks,
+
+146
+00:04:50,150 --> 00:04:51,620
+which is a web-based way
+
+147
+00:04:51,620 --> 00:04:53,824
+of using Python code.
+
+148
+00:04:53,824 --> 00:04:57,050
+>> And I have several
+examples of this,
+
+149
+00:04:57,050 --> 00:04:58,535
+and I'll be using
+a throw the class,
+
+150
+00:04:58,535 --> 00:04:59,600
+so please feel free
+
+151
+00:04:59,600 --> 00:05:01,010
+to ask questions about it.
+
+152
+00:05:01,010 --> 00:05:03,290
+So if we want to find
+the cross product with
+
+153
+00:05:03,290 --> 00:05:05,825
+Python and the
+package Numpy.
+
+154
+00:05:05,825 --> 00:05:06,980
+You can, you can run
+
+155
+00:05:06,980 --> 00:05:08,645
+a piece of code like this.
+
+156
+00:05:08,645 --> 00:05:11,435
+We import the
+NumPy package.
+
+157
+00:05:11,435 --> 00:05:14,150
+The vector u, I'm
+putting in as to 0,
+
+158
+00:05:14,150 --> 00:05:16,240
+negative one, the vector V,
+
+159
+00:05:16,240 --> 00:05:17,890
+and putting in as 145.
+
+160
+00:05:17,890 --> 00:05:19,180
+And then we can simply run
+
+161
+00:05:19,180 --> 00:05:21,985
+the cross method
+on the bag.
+
+162
+00:05:21,985 --> 00:05:23,530
+And the vectors u and v to
+
+163
+00:05:23,530 --> 00:05:25,299
+find with W is printed out.
+
+164
+00:05:25,299 --> 00:05:27,040
+>> And we see
+that for negative
+
+165
+00:05:27,040 --> 00:05:29,274
+118 is the answer.
+
+166
+00:05:29,274 --> 00:05:30,430
+>> The nice thing
+about this is
+
+167
+00:05:30,430 --> 00:05:31,990
+that no matter what
+the numbers are,
+
+168
+00:05:31,990 --> 00:05:33,700
+you can just put
+them in here.
+
+169
+00:05:33,700 --> 00:05:35,320
+Hit Enter, bam,
+and then you
+
+170
+00:05:35,320 --> 00:05:36,820
+have your crossbar quickly.
+
+171
+00:05:36,820 --> 00:05:38,890
+And there's all,
+you can do many,
+
+172
+00:05:38,890 --> 00:05:41,095
+many things with
+this software
+
+173
+00:05:41,095 --> 00:05:43,000
+and it's good if you,
+
+174
+00:05:43,000 --> 00:05:44,515
+even if you're
+not using this,
+
+175
+00:05:44,515 --> 00:05:46,090
+it's good to have some kind
+
+176
+00:05:46,090 --> 00:05:49,480
+of computer software that
+
+177
+00:05:49,480 --> 00:05:50,770
+you're using to help
+
+178
+00:05:50,770 --> 00:05:52,120
+you with the calculations
+
+179
+00:05:52,120 --> 00:05:53,560
+after you've done
+it by hand to
+
+180
+00:05:53,560 --> 00:05:54,880
+verify that they're correct
+
+181
+00:05:54,880 --> 00:05:56,560
+and to sort of learn
+how to do this
+
+182
+00:05:56,560 --> 00:05:58,520
+because eventually
+you'll be
+
+183
+00:05:58,520 --> 00:06:00,020
+using some kind of
+
+184
+00:06:00,020 --> 00:06:02,390
+calculator
+calculating software.
+
+185
+00:06:02,390 --> 00:06:04,580
+If you're gonna do
+mass calculations
+
+186
+00:06:04,580 --> 00:06:05,390
+like cross product or
+
+187
+00:06:05,390 --> 00:06:07,590
+dot product and
+things like that.
+
+188
+00:06:09,309 --> 00:06:11,420
+>> Okay, so what are the
+
+189
+00:06:11,420 --> 00:06:12,979
+properties of the
+cross product?
+
+190
+00:06:12,979 --> 00:06:14,645
+>> Here we have,
+
+191
+00:06:14,645 --> 00:06:16,520
+we see that the
+cross-product of
+
+192
+00:06:16,520 --> 00:06:18,830
+u cross v is not the
+same as E cross you.
+
+193
+00:06:18,830 --> 00:06:20,600
+It's actually the
+negative of it.
+
+194
+00:06:20,600 --> 00:06:22,670
+This is called antique
+communitivity.
+
+195
+00:06:22,670 --> 00:06:24,170
+And it's just
+important to remember
+
+196
+00:06:24,170 --> 00:06:25,940
+that cross-product
+
+197
+00:06:25,940 --> 00:06:27,470
+isn't like multiplication
+in the sense
+
+198
+00:06:27,470 --> 00:06:29,135
+that two times three
+is three times two.
+
+199
+00:06:29,135 --> 00:06:30,605
+It's actually you get
+
+200
+00:06:30,605 --> 00:06:32,795
+the negative when
+you flip them.
+
+201
+00:06:32,795 --> 00:06:35,105
+The distributive
+property works
+
+202
+00:06:35,105 --> 00:06:36,664
+like we usually would.
+
+203
+00:06:36,664 --> 00:06:37,940
+>> The, you can pull in
+
+204
+00:06:37,940 --> 00:06:39,810
+scalars to either vector.
+
+205
+00:06:39,810 --> 00:06:41,230
+Number four is saying
+
+206
+00:06:41,230 --> 00:06:42,189
+something quite important.
+
+207
+00:06:42,189 --> 00:06:43,540
+>> That when you
+take the cross
+
+208
+00:06:43,540 --> 00:06:45,220
+product with a vector is
+
+209
+00:06:45,220 --> 00:06:48,879
+always orthogonal to
+any of the vectors.
+
+210
+00:06:48,879 --> 00:06:51,610
+>> So the cross
+product of u and v is
+
+211
+00:06:51,610 --> 00:06:52,810
+orthogonal to u because
+
+212
+00:06:52,810 --> 00:06:54,969
+the dot product of that
+vector with you is 0.
+
+213
+00:06:54,969 --> 00:06:56,080
+>> The cross product of u
+
+214
+00:06:56,080 --> 00:06:57,070
+and v is orthogonal to
+
+215
+00:06:57,070 --> 00:07:00,370
+V because the dot
+product with v is 0.
+
+216
+00:07:00,370 --> 00:07:01,810
+The cross product of
+
+217
+00:07:01,810 --> 00:07:03,220
+a vector with itself is 0,
+
+218
+00:07:03,220 --> 00:07:05,110
+the cross-product
+with the 00.
+
+219
+00:07:05,110 --> 00:07:07,030
+And then number seven
+
+220
+00:07:07,030 --> 00:07:07,660
+is something called
+
+221
+00:07:07,660 --> 00:07:08,980
+the triple scalar product,
+
+222
+00:07:08,980 --> 00:07:11,090
+which we'll see
+in another slide.
+
+223
+00:07:12,419 --> 00:07:14,950
+>> So here we have
+the cross-product and
+
+224
+00:07:14,950 --> 00:07:17,904
+its relationship
+to the angle.
+
+225
+00:07:17,904 --> 00:07:20,140
+>> And this
+formula here says
+
+226
+00:07:20,140 --> 00:07:22,470
+that the magnitude of
+the cross-product,
+
+227
+00:07:22,470 --> 00:07:25,460
+we can find that by
+taking the magnitude of
+
+228
+00:07:25,460 --> 00:07:26,854
+the two vectors themselves
+
+229
+00:07:26,854 --> 00:07:29,404
+times the sine of the
+angle between them.
+
+230
+00:07:29,404 --> 00:07:32,960
+>> And this picture
+here shows two vectors,
+
+231
+00:07:32,960 --> 00:07:37,144
+u and v, and the angle
+between them is theta.
+
+232
+00:07:37,144 --> 00:07:39,020
+>> And we can use
+trigonometry to
+
+233
+00:07:39,020 --> 00:07:41,165
+see that the height of
+this parallelogram,
+
+234
+00:07:41,165 --> 00:07:42,680
+actually the magnitude of
+
+235
+00:07:42,680 --> 00:07:44,555
+u times the sine of theta.
+
+236
+00:07:44,555 --> 00:07:46,340
+We can find the areas.
+
+237
+00:07:46,340 --> 00:07:47,165
+Since we have the height
+
+238
+00:07:47,165 --> 00:07:48,185
+and we have the base,
+
+239
+00:07:48,185 --> 00:07:49,220
+we can find the area
+
+240
+00:07:49,220 --> 00:07:50,690
+of this parallelogram and
+
+241
+00:07:50,690 --> 00:07:51,740
+it actually turns out to be
+
+242
+00:07:51,740 --> 00:07:53,390
+the magnitude of
+the cross-product.
+
+243
+00:07:53,390 --> 00:07:55,730
+So this is a really
+important idea,
+
+244
+00:07:55,730 --> 00:07:57,890
+is that the magnitude
+of the cross product is
+
+245
+00:07:57,890 --> 00:07:59,885
+the area of the
+parallelogram
+
+246
+00:07:59,885 --> 00:08:01,700
+formed by the two vectors.
+
+247
+00:08:01,700 --> 00:08:05,210
+So anytime you're trying
+to find area of, of,
+
+248
+00:08:05,210 --> 00:08:07,490
+let's say a parallelogram
+or a triangle,
+
+249
+00:08:07,490 --> 00:08:09,080
+which is half of
+a parallelogram
+
+250
+00:08:09,080 --> 00:08:11,970
+in you can use the
+cross-product.
+
+251
+00:08:12,640 --> 00:08:15,560
+There's something called
+the right hand rule,
+
+252
+00:08:15,560 --> 00:08:17,255
+which talks about
+the direction
+
+253
+00:08:17,255 --> 00:08:18,365
+of the cross product.
+
+254
+00:08:18,365 --> 00:08:19,910
+In the previous
+slide, we are talking
+
+255
+00:08:19,910 --> 00:08:22,054
+about the magnitude
+of the cross-product.
+
+256
+00:08:22,054 --> 00:08:23,644
+>> What about
+its direction?
+
+257
+00:08:23,644 --> 00:08:25,370
+>> So what you do,
+
+258
+00:08:25,370 --> 00:08:26,660
+the right hand
+rule says that
+
+259
+00:08:26,660 --> 00:08:27,920
+if you take your hand or
+
+260
+00:08:27,920 --> 00:08:29,120
+your right hand and you
+
+261
+00:08:29,120 --> 00:08:31,220
+pointed in the direction
+of the first vector,
+
+262
+00:08:31,220 --> 00:08:32,750
+and then you move it to
+
+263
+00:08:32,750 --> 00:08:34,430
+the direction of
+the second factor.
+
+264
+00:08:34,430 --> 00:08:35,750
+The cross-product is in
+
+265
+00:08:35,750 --> 00:08:38,015
+the direction that your
+thumb is pointing.
+
+266
+00:08:38,015 --> 00:08:40,010
+And we can see that if
+
+267
+00:08:40,010 --> 00:08:41,810
+you do that with
+this picture,
+
+268
+00:08:41,810 --> 00:08:44,240
+that your thumb
+should be pointing in
+
+269
+00:08:44,240 --> 00:08:47,330
+a direction orthogonal
+to both u and
+
+270
+00:08:47,330 --> 00:08:52,010
+v. So here is
+
+271
+00:08:52,010 --> 00:08:53,510
+an important example using
+
+272
+00:08:53,510 --> 00:08:55,415
+the cross product
+to find an area.
+
+273
+00:08:55,415 --> 00:08:57,500
+So you're giving a triangle
+
+274
+00:08:57,500 --> 00:08:59,360
+in space like this,
+
+275
+00:08:59,360 --> 00:09:01,310
+and we'll put points on
+
+276
+00:09:01,310 --> 00:09:03,440
+them so you can
+find the points.
+
+277
+00:09:03,440 --> 00:09:05,735
+Now if we're going to use
+
+278
+00:09:05,735 --> 00:09:07,670
+the idea of the
+cross product,
+
+279
+00:09:07,670 --> 00:09:10,400
+which would be to find
+the parallelogram
+
+280
+00:09:10,400 --> 00:09:11,450
+formed by the sides of
+
+281
+00:09:11,450 --> 00:09:13,265
+these two sides
+of the triangle.
+
+282
+00:09:13,265 --> 00:09:14,300
+And then just take half of
+
+283
+00:09:14,300 --> 00:09:15,860
+that to find the area,
+
+284
+00:09:15,860 --> 00:09:16,790
+we need to have
+
+285
+00:09:16,790 --> 00:09:18,080
+it in three-dimensional
+space.
+
+286
+00:09:18,080 --> 00:09:18,560
+Because remember,
+
+287
+00:09:18,560 --> 00:09:19,790
+the cross-product
+is something you
+
+288
+00:09:19,790 --> 00:09:20,270
+can only do with
+
+289
+00:09:20,270 --> 00:09:21,995
+vectors in
+three-dimensional space.
+
+290
+00:09:21,995 --> 00:09:23,480
+So you can just do is
+
+291
+00:09:23,480 --> 00:09:26,180
+imagine the triangle
+and this example
+
+292
+00:09:26,180 --> 00:09:27,890
+sitting in three-dimensional
+space with
+
+293
+00:09:27,890 --> 00:09:32,059
+the z-axis with z
+values being 0.
+
+294
+00:09:32,059 --> 00:09:32,840
+>> Okay?
+
+295
+00:09:32,840 --> 00:09:34,070
+>> So that's just the
+same thing as adding
+
+296
+00:09:34,070 --> 00:09:36,840
+zeros to the end of
+the coordinates.
+
+297
+00:09:37,119 --> 00:09:41,029
+>> Then we can find the
+vectors a b and a c.
+
+298
+00:09:41,029 --> 00:09:43,010
+>> So a b would be
+
+299
+00:09:43,010 --> 00:09:45,530
+the vector that
+goes from a to b.
+
+300
+00:09:45,530 --> 00:09:47,420
+A c would be the
+vector from a to
+
+301
+00:09:47,420 --> 00:09:50,290
+C. And then we find
+those two vectors,
+
+302
+00:09:50,290 --> 00:09:53,605
+and 1-1-0 and
+two negative 10,
+
+303
+00:09:53,605 --> 00:09:55,630
+we can find the
+cross product
+
+304
+00:09:55,630 --> 00:09:56,590
+of those two vectors.
+
+305
+00:09:56,590 --> 00:09:57,670
+And we see that
+turns out to be
+
+306
+00:09:57,670 --> 00:09:59,275
+00 and negative three,
+
+307
+00:09:59,275 --> 00:10:01,150
+which is actually
+not surprising
+
+308
+00:10:01,150 --> 00:10:02,755
+because since the vector
+
+309
+00:10:02,755 --> 00:10:07,090
+AB and AC both lie
+in the xy plane,
+
+310
+00:10:07,090 --> 00:10:09,040
+parallel to the xy plane.
+
+311
+00:10:09,040 --> 00:10:10,450
+We know that the
+cross-product is
+
+312
+00:10:10,450 --> 00:10:11,950
+going to be
+orthogonal to that.
+
+313
+00:10:11,950 --> 00:10:13,360
+So it points actually
+
+314
+00:10:13,360 --> 00:10:15,340
+purely in the z direction,
+
+315
+00:10:15,340 --> 00:10:17,785
+in this case in the
+negative z direction.
+
+316
+00:10:17,785 --> 00:10:20,110
+So then the magnitude of
+
+317
+00:10:20,110 --> 00:10:21,610
+the cross-product is
+just the magnitude
+
+318
+00:10:21,610 --> 00:10:22,840
+of this vector 00,
+
+319
+00:10:22,840 --> 00:10:24,505
+negative three,
+which is three.
+
+320
+00:10:24,505 --> 00:10:27,220
+And then we remember
+that the magnitude of
+
+321
+00:10:27,220 --> 00:10:29,260
+this cross product
+is the area of
+
+322
+00:10:29,260 --> 00:10:31,685
+the parallelogram formed
+these two vectors,
+
+323
+00:10:31,685 --> 00:10:34,459
+which is just two copies
+of this triangle.
+
+324
+00:10:34,459 --> 00:10:36,320
+>> And so the area
+of the triangle is
+
+325
+00:10:36,320 --> 00:10:40,640
+just three has ok,
+
+326
+00:10:40,640 --> 00:10:41,930
+so the a parallel pipe,
+
+327
+00:10:41,930 --> 00:10:43,760
+it, a parallel pipe,
+
+328
+00:10:43,760 --> 00:10:45,275
+it is a
+three-dimensional shape
+
+329
+00:10:45,275 --> 00:10:47,059
+that's formed by
+three vectors.
+
+330
+00:10:47,059 --> 00:10:48,680
+>> And it's really
+just like a box
+
+331
+00:10:48,680 --> 00:10:50,465
+that's been squished
+a little bit.
+
+332
+00:10:50,465 --> 00:10:53,300
+And there's a really
+convenient way to find
+
+333
+00:10:53,300 --> 00:10:54,380
+the volume of
+
+334
+00:10:54,380 --> 00:10:56,660
+such a shape with
+cross products.
+
+335
+00:10:56,660 --> 00:10:58,340
+And that involves
+this thing called
+
+336
+00:10:58,340 --> 00:11:00,095
+the triple scalar product.
+
+337
+00:11:00,095 --> 00:11:02,120
+So if you take any one of
+
+338
+00:11:02,120 --> 00:11:04,190
+these three vectors and
+
+339
+00:11:04,190 --> 00:11:05,600
+then take the dot product
+
+340
+00:11:05,600 --> 00:11:09,124
+with the cross product
+of the other two.
+
+341
+00:11:09,124 --> 00:11:13,774
+>> What that gives is
+the volume of that box.
+
+342
+00:11:13,774 --> 00:11:14,930
+>> And that actually
+
+343
+00:11:14,930 --> 00:11:17,390
+has important
+consequences for
+
+344
+00:11:17,390 --> 00:11:21,140
+finding the
+distance between
+
+345
+00:11:21,140 --> 00:11:21,680
+two lines in
+
+346
+00:11:21,680 --> 00:11:23,450
+three-dimensional
+space and so on.
+
+347
+00:11:23,450 --> 00:11:24,920
+So this is an
+important idea,
+
+348
+00:11:24,920 --> 00:11:26,779
+the triple scalar product.
+
+349
+00:11:26,779 --> 00:11:28,370
+>> Another application is
+
+350
+00:11:28,370 --> 00:11:29,840
+torque from physics,
+
+351
+00:11:29,840 --> 00:11:31,760
+torque is roughly a measure
+
+352
+00:11:31,760 --> 00:11:33,529
+of turning force
+applied to an object.
+
+353
+00:11:33,529 --> 00:11:35,390
+>> So you, we have
+a force vector
+
+354
+00:11:35,390 --> 00:11:36,410
+F and then we have
+
+355
+00:11:36,410 --> 00:11:38,614
+some kind of
+lever vector l.
+
+356
+00:11:38,614 --> 00:11:39,410
+>> Okay?
+
+357
+00:11:39,410 --> 00:11:40,790
+>> And so the force is
+
+358
+00:11:40,790 --> 00:11:42,260
+what you get, I'm sorry,
+
+359
+00:11:42,260 --> 00:11:43,970
+the torque is what
+we get when we take
+
+360
+00:11:43,970 --> 00:11:45,410
+the cross product of
+
+361
+00:11:45,410 --> 00:11:47,900
+the force with the lever.
+
+362
+00:11:47,900 --> 00:11:50,360
+Now if we think about
+
+363
+00:11:50,360 --> 00:11:52,760
+the equations
+that we just had
+
+364
+00:11:52,760 --> 00:11:55,580
+in the previous slides,
+
+365
+00:11:55,580 --> 00:11:57,905
+the cross product has
+
+366
+00:11:57,905 --> 00:12:01,790
+the most magnitude when
+
+367
+00:12:01,790 --> 00:12:03,530
+the angle is 90 degrees,
+
+368
+00:12:03,530 --> 00:12:06,260
+because the sine of
+90 degrees is one.
+
+369
+00:12:06,260 --> 00:12:08,585
+So that means that
+the parallelogram
+
+370
+00:12:08,585 --> 00:12:10,310
+is really a rectangle.
+
+371
+00:12:10,310 --> 00:12:13,730
+So you're going to have
+the most torque when
+
+372
+00:12:13,730 --> 00:12:15,290
+the force is applied
+
+373
+00:12:15,290 --> 00:12:17,240
+perpendicular to the lever,
+
+374
+00:12:17,240 --> 00:12:19,790
+which actually
+aligns with what we
+
+375
+00:12:19,790 --> 00:12:21,230
+would normally think as
+
+376
+00:12:21,230 --> 00:12:22,459
+having the mouse torque.
+
+377
+00:12:22,459 --> 00:12:23,780
+>> So this is
+the formula that
+
+378
+00:12:23,780 --> 00:12:25,040
+we use in physics
+for torque.
+
+379
+00:12:25,040 --> 00:12:27,065
+>> And usually we take
+the magnitude of this
+
+380
+00:12:27,065 --> 00:12:31,710
+defined how large
+the torque is

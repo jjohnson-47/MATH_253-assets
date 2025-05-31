@@ -1,0 +1,534 @@
+1
+00:00:00,000 --> 00:00:02,370
+Let's look at a short
+overview of section
+
+2
+00:00:02,370 --> 00:00:03,750
+12.4 on
+
+3
+00:00:03,750 --> 00:00:06,850
+differentiability and
+the total derivative.
+
+4
+00:00:07,010 --> 00:00:10,680
+Recall from calculus
+one that a differential
+
+5
+00:00:10,680 --> 00:00:11,970
+is an expression
+that helps us
+
+6
+00:00:11,970 --> 00:00:14,595
+discuss small changes
+in a variable.
+
+7
+00:00:14,595 --> 00:00:17,025
+We saw that if y is f of x,
+
+8
+00:00:17,025 --> 00:00:20,505
+we can write d y is
+f prime of x, dx.
+
+9
+00:00:20,505 --> 00:00:23,460
+And then we interpret
+dx as a small change in
+
+10
+00:00:23,460 --> 00:00:25,890
+x and d y
+
+11
+00:00:25,890 --> 00:00:28,349
+as the corresponding
+small change in y.
+
+12
+00:00:28,349 --> 00:00:30,670
+>> For small changes in x.
+
+13
+00:00:31,159 --> 00:00:33,720
+>> The same kind of
+situation is true
+
+14
+00:00:33,720 --> 00:00:35,740
+for functions of
+two variables,
+
+15
+00:00:35,740 --> 00:00:37,760
+but now we have
+a new function,
+
+16
+00:00:37,760 --> 00:00:39,635
+a new variable z,
+
+17
+00:00:39,635 --> 00:00:44,010
+that changes with small
+changes and x and y.
+
+18
+00:00:44,080 --> 00:00:46,655
+And we find the
+total differential
+
+19
+00:00:46,655 --> 00:00:49,760
+by adding up
+these two parts.
+
+20
+00:00:49,760 --> 00:00:51,770
+So let's find the two, the
+
+21
+00:00:51,770 --> 00:00:54,019
+total differentiable
+dysfunction.
+
+22
+00:00:54,019 --> 00:00:56,600
+>> We can find the
+partial derivatives
+
+23
+00:00:56,600 --> 00:00:58,939
+with respect to x
+and respect to y.
+
+24
+00:00:58,939 --> 00:01:00,260
+>> And then it's
+just a matter
+
+25
+00:01:00,260 --> 00:01:01,400
+of simply writing down
+
+26
+00:01:01,400 --> 00:01:03,590
+those partial
+derivatives attached to
+
+27
+00:01:03,590 --> 00:01:07,380
+the corresponding
+differentials dx and dy y.
+
+28
+00:01:08,469 --> 00:01:12,935
+>> What is DZ?
+Anyways? Remember that
+
+29
+00:01:12,935 --> 00:01:15,710
+we really want
+to know if a,
+
+30
+00:01:15,710 --> 00:01:18,365
+if x and y change
+a little bit,
+
+31
+00:01:18,365 --> 00:01:22,115
+how much does d, how
+much does z change?
+
+32
+00:01:22,115 --> 00:01:25,070
+Well, d z tells
+us how much it
+
+33
+00:01:25,070 --> 00:01:26,900
+changes if the function
+
+34
+00:01:26,900 --> 00:01:29,329
+is perfectly flat
+at that point.
+
+35
+00:01:29,329 --> 00:01:31,535
+>> So it's like a
+linear estimate
+
+36
+00:01:31,535 --> 00:01:34,549
+of what the change
+in x and y s.
+
+37
+00:01:34,549 --> 00:01:37,220
+>> So we want to use DZ
+
+38
+00:01:37,220 --> 00:01:39,720
+to estimate changes in Z.
+
+39
+00:01:40,300 --> 00:01:44,120
+Just to be clear,
+the actual change
+
+40
+00:01:44,120 --> 00:01:48,155
+in the z value we usually
+write as delta z,
+
+41
+00:01:48,155 --> 00:01:52,655
+but we want to estimate
+delta z with TZ,
+
+42
+00:01:52,655 --> 00:01:54,529
+which is the
+estimated change.
+
+43
+00:01:54,529 --> 00:01:56,850
+>> Using the total
+differential,
+
+44
+00:01:59,740 --> 00:02:05,854
+we can write the actual
+change delta z as DZ.
+
+45
+00:02:05,854 --> 00:02:06,500
+>> There's sort of
+
+46
+00:02:06,500 --> 00:02:08,795
+a local approximated change
+
+47
+00:02:08,795 --> 00:02:14,105
+plus some error in the
+x and y directions.
+
+48
+00:02:14,105 --> 00:02:16,850
+So a function is
+differentiable
+
+49
+00:02:16,850 --> 00:02:20,675
+is as DX and DY
+get really small.
+
+50
+00:02:20,675 --> 00:02:22,700
+Also, these
+errors get really
+
+51
+00:02:22,700 --> 00:02:27,590
+small and the technical
+description is here.
+
+52
+00:02:27,590 --> 00:02:30,110
+But that's essentially
+what's happening is
+
+53
+00:02:30,110 --> 00:02:31,790
+that the function
+can be a locally
+
+54
+00:02:31,790 --> 00:02:34,050
+approximated by
+
+55
+00:02:34,050 --> 00:02:37,175
+a tangent plane
+by flat surface.
+
+56
+00:02:37,175 --> 00:02:39,305
+And that flat
+surface means that
+
+57
+00:02:39,305 --> 00:02:43,530
+DZ is a good approximation
+for delta Z.
+
+58
+00:02:46,420 --> 00:02:49,070
+We want to keep
+the logic of
+
+59
+00:02:49,070 --> 00:02:52,145
+continuity and
+differentiability straight.
+
+60
+00:02:52,145 --> 00:02:53,840
+And we want to
+remember that if
+
+61
+00:02:53,840 --> 00:02:56,840
+a function is
+differentiable,
+
+62
+00:02:56,840 --> 00:03:00,230
+then it indeed has
+to be continuous,
+
+63
+00:03:00,230 --> 00:03:03,814
+but it's not true the
+other way around.
+
+64
+00:03:03,814 --> 00:03:05,779
+>> A function
+is continuous.
+
+65
+00:03:05,779 --> 00:03:07,775
+>> It may not be
+differentiable.
+
+66
+00:03:07,775 --> 00:03:11,750
+A function can have
+jagged parts on
+
+67
+00:03:11,750 --> 00:03:13,370
+the surface where
+the derivative
+
+68
+00:03:13,370 --> 00:03:15,920
+doesn't exist but
+still be continuous,
+
+69
+00:03:15,920 --> 00:03:17,840
+we can show that
+
+70
+00:03:17,840 --> 00:03:19,790
+something is
+differentiable, however,
+
+71
+00:03:19,790 --> 00:03:22,580
+by looking at the
+partial derivatives
+
+72
+00:03:22,580 --> 00:03:25,200
+and showing that
+they are continuous.
+
+73
+00:03:27,009 --> 00:03:29,420
+>> So let's find, let's use
+
+74
+00:03:29,420 --> 00:03:32,149
+the differential to
+make an approximation.
+
+75
+00:03:32,149 --> 00:03:33,980
+>> So here we're given
+a function z equals
+
+76
+00:03:33,980 --> 00:03:36,080
+the square root of
+x times sine of y.
+
+77
+00:03:36,080 --> 00:03:38,060
+And we want to
+approximate at
+
+78
+00:03:38,060 --> 00:03:41,645
+the function at four
+comma one comma 0.8.
+
+79
+00:03:41,645 --> 00:03:46,625
+Now 4.10.8 aren't
+particularly nice numbers,
+
+80
+00:03:46,625 --> 00:03:48,620
+but they are very
+close to the
+
+81
+00:03:48,620 --> 00:03:52,729
+0.4 comma pi over four.
+
+82
+00:03:52,729 --> 00:03:55,685
+>> And if we had four
+comma pi over four,
+
+83
+00:03:55,685 --> 00:03:57,770
+that's actually
+an easy point
+
+84
+00:03:57,770 --> 00:04:00,185
+to evaluate a dysfunction.
+
+85
+00:04:00,185 --> 00:04:02,930
+So we would like
+to, since we can
+
+86
+00:04:02,930 --> 00:04:05,765
+find the functions value
+at a nearby point,
+
+87
+00:04:05,765 --> 00:04:07,280
+we would like to use
+
+88
+00:04:07,280 --> 00:04:08,870
+the differential to find
+
+89
+00:04:08,870 --> 00:04:10,040
+with that change must
+
+90
+00:04:10,040 --> 00:04:11,525
+be in the function
+
+91
+00:04:11,525 --> 00:04:16,170
+between four pi
+over 44.10.8.
+
+92
+00:04:19,959 --> 00:04:22,070
+>> Okay? So we can find
+
+93
+00:04:22,070 --> 00:04:23,465
+the differential
+
+94
+00:04:23,465 --> 00:04:25,190
+by taking the
+partial derivatives
+
+95
+00:04:25,190 --> 00:04:30,080
+of the function here.
+
+96
+00:04:30,080 --> 00:04:31,864
+>> We can find the
+partial derivatives
+
+97
+00:04:31,864 --> 00:04:33,994
+with respect to x
+and respect to y.
+
+98
+00:04:33,994 --> 00:04:36,080
+>> And then we
+evaluate at the point
+
+99
+00:04:36,080 --> 00:04:38,750
+that we can easily find,
+
+100
+00:04:38,750 --> 00:04:40,969
+which is four comma
+pi over four.
+
+101
+00:04:40,969 --> 00:04:43,860
+>> And that gives us
+these values here.
+
+102
+00:04:44,110 --> 00:04:47,300
+And then we have the
+changes in the function.
+
+103
+00:04:47,300 --> 00:04:50,300
+We know that to go
+from four to 4.1,
+
+104
+00:04:50,300 --> 00:04:53,870
+we have a delta of 0.10.8
+
+105
+00:04:53,870 --> 00:04:57,110
+pi over four is about 0.05.
+
+106
+00:04:57,110 --> 00:04:59,570
+Therefore, the
+approximate value
+
+107
+00:04:59,570 --> 00:05:01,010
+of the function is
+
+108
+00:05:01,010 --> 00:05:02,990
+the functions value at
+
+109
+00:05:02,990 --> 00:05:05,690
+the nearby point plus
+this small change.
+
+110
+00:05:05,690 --> 00:05:07,940
+In the small change
+we're measuring with
+
+111
+00:05:07,940 --> 00:05:09,740
+the total
+differential that we
+
+112
+00:05:09,740 --> 00:05:12,350
+found above at this point.
+
+113
+00:05:12,350 --> 00:05:16,470
+So we get our estimation
+to be about 1.4531

@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Dot Product
+2:00  Properties of Dot Product
+4:00  Angle Between Vectors
+6:00  Vector Projection and Decomposition
+8:00  Work Calculation Using Dot Product
+```

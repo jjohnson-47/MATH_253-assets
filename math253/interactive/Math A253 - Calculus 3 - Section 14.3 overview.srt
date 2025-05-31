@@ -1,0 +1,1230 @@
+1
+00:00:00,000 --> 00:00:01,410
+Let's take a look at
+
+2
+00:00:01,410 --> 00:00:03,150
+line integrals over
+vector fields.
+
+3
+00:00:03,150 --> 00:00:05,475
+In section 14.3.
+
+4
+00:00:05,475 --> 00:00:07,530
+We'll start by looking at
+
+5
+00:00:07,530 --> 00:00:08,820
+work in vector fields as
+
+6
+00:00:08,820 --> 00:00:10,890
+a motivation for the model
+
+7
+00:00:10,890 --> 00:00:13,305
+of line integrals
+in vector fields.
+
+8
+00:00:13,305 --> 00:00:15,390
+If we have a vector field
+
+9
+00:00:15,390 --> 00:00:17,190
+and a curve inside of it,
+
+10
+00:00:17,190 --> 00:00:18,900
+it's natural to
+think about how much
+
+11
+00:00:18,900 --> 00:00:20,340
+work is the vector field
+
+12
+00:00:20,340 --> 00:00:22,050
+doing for a particle to
+
+13
+00:00:22,050 --> 00:00:24,780
+move along that curve?
+
+14
+00:00:24,780 --> 00:00:27,210
+Strategy is to take
+a look a small
+
+15
+00:00:27,210 --> 00:00:29,580
+piece along the curve
+that's going to be
+
+16
+00:00:29,580 --> 00:00:32,355
+the distance and
+the direction
+
+17
+00:00:32,355 --> 00:00:34,950
+with the unit tangent
+t. Unit tangent T.
+
+18
+00:00:34,950 --> 00:00:36,240
+And then remember that work
+
+19
+00:00:36,240 --> 00:00:37,665
+is the dot product of
+
+20
+00:00:37,665 --> 00:00:39,255
+the force applied with
+
+21
+00:00:39,255 --> 00:00:41,875
+the direction that
+the work is done.
+
+22
+00:00:41,875 --> 00:00:43,700
+So the direction
+the work is
+
+23
+00:00:43,700 --> 00:00:46,100
+done here is the
+unit tangent T,
+
+24
+00:00:46,100 --> 00:00:49,340
+and the distance
+is delta s. And
+
+25
+00:00:49,340 --> 00:00:50,450
+the force being
+applied to at
+
+26
+00:00:50,450 --> 00:00:51,740
+any particular point comes
+
+27
+00:00:51,740 --> 00:00:53,150
+from the vector field.
+
+28
+00:00:53,150 --> 00:00:55,695
+So to find the
+work, we find
+
+29
+00:00:55,695 --> 00:00:58,940
+the work in each smaller
+and smaller piece.
+
+30
+00:00:58,940 --> 00:01:00,620
+And then we sum
+
+31
+00:01:00,620 --> 00:01:02,210
+that all up with
+a, an integral.
+
+32
+00:01:02,210 --> 00:01:03,800
+And since the work
+
+33
+00:01:03,800 --> 00:01:05,675
+is being done
+over the curve C,
+
+34
+00:01:05,675 --> 00:01:10,010
+we're going to
+integrate over c. Okay?
+
+35
+00:01:10,010 --> 00:01:11,450
+Then if we have a
+parametrization
+
+36
+00:01:11,450 --> 00:01:13,400
+of the curve r,
+
+37
+00:01:13,400 --> 00:01:16,460
+we can find these two
+values in terms of
+
+38
+00:01:16,460 --> 00:01:18,110
+the parametrization
+and update
+
+39
+00:01:18,110 --> 00:01:19,475
+our, our work integral.
+
+40
+00:01:19,475 --> 00:01:21,350
+And we see that
+the work integral
+
+41
+00:01:21,350 --> 00:01:23,090
+really is just the line
+
+42
+00:01:23,090 --> 00:01:27,900
+integral of the vector
+field over the curve.
+
+43
+00:01:31,000 --> 00:01:34,160
+So this gives us a
+handy way to find
+
+44
+00:01:34,160 --> 00:01:36,830
+work of a line integral
+in a vector field.
+
+45
+00:01:36,830 --> 00:01:39,140
+We just parameterize
+the curve,
+
+46
+00:01:39,140 --> 00:01:42,260
+put the curve into the
+vector field function,
+
+47
+00:01:42,260 --> 00:01:43,940
+find the derivative of
+
+48
+00:01:43,940 --> 00:01:45,140
+the parameterization and
+
+49
+00:01:45,140 --> 00:01:47,330
+calculate the
+corresponding integral.
+
+50
+00:01:47,330 --> 00:01:49,580
+For properties
+of, properties
+
+51
+00:01:49,580 --> 00:01:52,250
+of line integrals
+over vector fields.
+
+52
+00:01:52,250 --> 00:01:54,140
+The first two are
+very, very familiar.
+
+53
+00:01:54,140 --> 00:01:55,250
+We can pull out constants
+
+54
+00:01:55,250 --> 00:01:56,825
+and some the functions.
+
+55
+00:01:56,825 --> 00:01:59,330
+The last one
+says that if we
+
+56
+00:01:59,330 --> 00:02:02,510
+parameterize
+the curve in a,
+
+57
+00:02:02,510 --> 00:02:06,245
+in a vector field and
+find its work integral,
+
+58
+00:02:06,245 --> 00:02:08,810
+It's going to be the
+opposite or the negative
+
+59
+00:02:08,810 --> 00:02:12,030
+of if we parameterize
+it the other way.
+
+60
+00:02:14,230 --> 00:02:16,835
+So let's look at
+this vector field
+
+61
+00:02:16,835 --> 00:02:18,575
+defined capital F here.
+
+62
+00:02:18,575 --> 00:02:21,140
+And the path c
+that starts at
+
+63
+00:02:21,140 --> 00:02:22,910
+the origin goes along
+
+64
+00:02:22,910 --> 00:02:24,830
+the blue curve to
+the 0.1 comma one,
+
+65
+00:02:24,830 --> 00:02:26,240
+and then goes back
+to the origin
+
+66
+00:02:26,240 --> 00:02:27,620
+along a straight line.
+
+67
+00:02:27,620 --> 00:02:29,180
+And we want to find what's
+
+68
+00:02:29,180 --> 00:02:31,190
+the total work
+that's done by
+
+69
+00:02:31,190 --> 00:02:32,900
+the vector field
+as a particle
+
+70
+00:02:32,900 --> 00:02:35,900
+moves along that path.
+
+71
+00:02:35,900 --> 00:02:38,630
+Since the path,
+which we'll call c1,
+
+72
+00:02:38,630 --> 00:02:40,970
+the blue NC2,
+
+73
+00:02:40,970 --> 00:02:43,190
+do not have a
+smooth connection.
+
+74
+00:02:43,190 --> 00:02:44,869
+Here we have to separate
+
+75
+00:02:44,869 --> 00:02:48,005
+the curve c into two
+pieces, c1 and c2.
+
+76
+00:02:48,005 --> 00:02:50,450
+We can parameterize
+C1 and C2.
+
+77
+00:02:50,450 --> 00:02:53,420
+So C1 is just
+parameterized by t,
+
+78
+00:02:53,420 --> 00:02:55,595
+t cubed as t goes
+from 0 to one,
+
+79
+00:02:55,595 --> 00:02:57,410
+and c2 is
+parameterized by t,
+
+80
+00:02:57,410 --> 00:02:59,870
+t. Note that the
+parametrization for c2
+
+81
+00:02:59,870 --> 00:03:01,265
+here that we've given
+
+82
+00:03:01,265 --> 00:03:03,680
+actually starts
+at 0 comma 0,
+
+83
+00:03:03,680 --> 00:03:06,110
+and then moves to
+one comma one.
+
+84
+00:03:06,110 --> 00:03:08,555
+So it's going in the
+opposite direction
+
+85
+00:03:08,555 --> 00:03:11,060
+that we want C2 to move in.
+
+86
+00:03:11,060 --> 00:03:13,940
+That's okay, because
+all we have to
+
+87
+00:03:13,940 --> 00:03:16,835
+do is negate the
+line integral.
+
+88
+00:03:16,835 --> 00:03:17,930
+And that will give us
+
+89
+00:03:17,930 --> 00:03:19,670
+the orientation
+that we want.
+
+90
+00:03:19,670 --> 00:03:21,530
+So this gives
+us some freedom
+
+91
+00:03:21,530 --> 00:03:22,880
+to define a sort of
+
+92
+00:03:22,880 --> 00:03:25,610
+easier parameterization
+and then
+
+93
+00:03:25,610 --> 00:03:26,810
+allows us to just flip
+
+94
+00:03:26,810 --> 00:03:29,765
+the orientation by
+negating the integral.
+
+95
+00:03:29,765 --> 00:03:31,730
+The total work being
+
+96
+00:03:31,730 --> 00:03:33,830
+done over the
+entire curve is
+
+97
+00:03:33,830 --> 00:03:35,780
+just the difference here of
+
+98
+00:03:35,780 --> 00:03:38,570
+the line integral of the
+vector field over c,
+
+99
+00:03:38,570 --> 00:03:42,150
+one minus of the
+vector field over C2.
+
+100
+00:03:43,330 --> 00:03:46,715
+So we do is we put our
+parameterizations,
+
+101
+00:03:46,715 --> 00:03:48,890
+R1 into f and R2 into
+
+102
+00:03:48,890 --> 00:03:50,780
+f. Here we take
+the derivative of
+
+103
+00:03:50,780 --> 00:03:52,910
+the parameterizations
+that gives
+
+104
+00:03:52,910 --> 00:03:54,680
+us a dot product
+of two vectors in
+
+105
+00:03:54,680 --> 00:03:56,810
+terms of the
+variable t. And we
+
+106
+00:03:56,810 --> 00:03:57,860
+get some nice polynomial
+
+107
+00:03:57,860 --> 00:03:59,405
+functions to integrate.
+
+108
+00:03:59,405 --> 00:04:00,860
+And we get that
+the total work
+
+109
+00:04:00,860 --> 00:04:02,940
+is negative three-fourths.
+
+110
+00:04:03,100 --> 00:04:05,210
+To do more with
+line integrals,
+
+111
+00:04:05,210 --> 00:04:06,740
+we need to understand
+
+112
+00:04:06,740 --> 00:04:08,525
+a little bit more of the,
+
+113
+00:04:08,525 --> 00:04:10,790
+how sets are, are built in
+
+114
+00:04:10,790 --> 00:04:12,110
+different properties
+or different kinds of
+
+115
+00:04:12,110 --> 00:04:13,820
+sets in two
+dimensional space.
+
+116
+00:04:13,820 --> 00:04:15,725
+In three-dimensional space,
+
+117
+00:04:15,725 --> 00:04:17,990
+we can see that
+what we mean by
+
+118
+00:04:17,990 --> 00:04:21,830
+connected is that a
+connected set is that any
+
+119
+00:04:21,830 --> 00:04:23,870
+two points that we can find
+
+120
+00:04:23,870 --> 00:04:25,010
+a path from one to the
+
+121
+00:04:25,010 --> 00:04:26,615
+other that stays
+inside the set.
+
+122
+00:04:26,615 --> 00:04:27,800
+We can see that for the two
+
+123
+00:04:27,800 --> 00:04:29,180
+dimensional example
+here on the left,
+
+124
+00:04:29,180 --> 00:04:31,010
+these, this set
+is not connected.
+
+125
+00:04:31,010 --> 00:04:31,760
+You can get from
+
+126
+00:04:31,760 --> 00:04:33,260
+the left piece to
+the right piece.
+
+127
+00:04:33,260 --> 00:04:35,420
+Same with a2 surfaces
+
+128
+00:04:35,420 --> 00:04:37,775
+here in
+three-dimensional space,
+
+129
+00:04:37,775 --> 00:04:39,830
+the two in the middle are
+
+130
+00:04:39,830 --> 00:04:43,700
+connected from any point
+to any other point,
+
+131
+00:04:43,700 --> 00:04:45,170
+we can find a
+path that remains
+
+132
+00:04:45,170 --> 00:04:46,490
+inside the set.
+
+133
+00:04:46,490 --> 00:04:47,900
+The same with the
+doughnut here,
+
+134
+00:04:47,900 --> 00:04:49,235
+often called the tourists.
+
+135
+00:04:49,235 --> 00:04:52,910
+But they can, if
+you can't retract
+
+136
+00:04:52,910 --> 00:04:56,360
+the path without passing
+
+137
+00:04:56,360 --> 00:04:58,445
+through a part that
+is not in the set.
+
+138
+00:04:58,445 --> 00:05:00,860
+So if you think of
+it like a string,
+
+139
+00:05:00,860 --> 00:05:03,755
+if you start at a point
+and you loop back,
+
+140
+00:05:03,755 --> 00:05:05,840
+you can create
+a loop where if
+
+141
+00:05:05,840 --> 00:05:08,000
+you try to deform that
+string to a point,
+
+142
+00:05:08,000 --> 00:05:10,730
+that loop would pass
+through parts of
+
+143
+00:05:10,730 --> 00:05:13,910
+the past to things that
+are not in the set.
+
+144
+00:05:13,910 --> 00:05:15,920
+So this is just a
+way of describing
+
+145
+00:05:15,920 --> 00:05:18,560
+holes in some
+sense an estimate.
+
+146
+00:05:18,560 --> 00:05:20,300
+It's not simply connected.
+
+147
+00:05:20,300 --> 00:05:24,140
+The donuts not simply
+connected because any,
+
+148
+00:05:24,140 --> 00:05:26,434
+any loop that goes along
+
+149
+00:05:26,434 --> 00:05:29,525
+these holes around
+the outside
+
+150
+00:05:29,525 --> 00:05:30,950
+can't be retracted without
+
+151
+00:05:30,950 --> 00:05:32,465
+passing through the hole.
+
+152
+00:05:32,465 --> 00:05:34,460
+And then we see two simply
+
+153
+00:05:34,460 --> 00:05:36,575
+connected sets
+on the right,
+
+154
+00:05:36,575 --> 00:05:38,720
+the just plain region here.
+
+155
+00:05:38,720 --> 00:05:40,400
+And then we have
+a globe with
+
+156
+00:05:40,400 --> 00:05:41,960
+our piece missing
+on the inside.
+
+157
+00:05:41,960 --> 00:05:45,005
+Any loop inside can be
+deformed to appoint,
+
+158
+00:05:45,005 --> 00:05:47,790
+even, even with the
+hollow part missing.
+
+159
+00:05:49,480 --> 00:05:52,055
+If we have a vector field
+
+160
+00:05:52,055 --> 00:05:57,260
+who comes from a
+potential function,
+
+161
+00:05:57,260 --> 00:05:58,685
+which we'll describe
+in a minute.
+
+162
+00:05:58,685 --> 00:05:59,870
+We call conservative.
+
+163
+00:05:59,870 --> 00:06:01,190
+And this is the
+definition of
+
+164
+00:06:01,190 --> 00:06:02,645
+a conservative
+vector field.
+
+165
+00:06:02,645 --> 00:06:04,430
+A conservative
+vector field is
+
+166
+00:06:04,430 --> 00:06:06,635
+a vector field
+where if you have
+
+167
+00:06:06,635 --> 00:06:08,480
+any path in
+
+168
+00:06:08,480 --> 00:06:10,970
+the vector field
+between two points,
+
+169
+00:06:10,970 --> 00:06:13,190
+that the work
+integral remains the
+
+170
+00:06:13,190 --> 00:06:17,345
+same no matter what
+path that you choose.
+
+171
+00:06:17,345 --> 00:06:18,995
+So you start at point a,
+
+172
+00:06:18,995 --> 00:06:21,230
+you end at point
+B in you go
+
+173
+00:06:21,230 --> 00:06:23,360
+from point a to point
+B along one path,
+
+174
+00:06:23,360 --> 00:06:24,530
+you calculate the end,
+
+175
+00:06:24,530 --> 00:06:26,360
+the work integral
+and you get a value.
+
+176
+00:06:26,360 --> 00:06:28,580
+And it's a conservative
+vector field
+
+177
+00:06:28,580 --> 00:06:30,980
+if any other path
+
+178
+00:06:30,980 --> 00:06:33,185
+gives you that
+exact same value.
+
+179
+00:06:33,185 --> 00:06:36,005
+This property is called
+path independence,
+
+180
+00:06:36,005 --> 00:06:38,520
+and it's pretty
+important in physics.
+
+181
+00:06:43,180 --> 00:06:46,010
+There's an important
+theorem that says that
+
+182
+00:06:46,010 --> 00:06:48,725
+the work integral census
+path independent.
+
+183
+00:06:48,725 --> 00:06:50,765
+If we have a function
+
+184
+00:06:50,765 --> 00:06:51,980
+whose gradient is
+
+185
+00:06:51,980 --> 00:06:53,990
+the vector field,
+that grid, that,
+
+186
+00:06:53,990 --> 00:06:56,030
+that function is called
+a potential function,
+
+187
+00:06:56,030 --> 00:06:58,490
+actually acts like
+an antiderivative
+
+188
+00:06:58,490 --> 00:07:00,365
+in the fundamental
+theorem of calculus.
+
+189
+00:07:00,365 --> 00:07:01,790
+So the work integral
+
+190
+00:07:01,790 --> 00:07:03,335
+is very easy to calculate.
+
+191
+00:07:03,335 --> 00:07:04,850
+You find the
+potential function
+
+192
+00:07:04,850 --> 00:07:06,545
+whose gradient is
+the vector field.
+
+193
+00:07:06,545 --> 00:07:08,120
+And then just evaluate at
+
+194
+00:07:08,120 --> 00:07:10,650
+the two points and
+take the difference.
+
+195
+00:07:11,380 --> 00:07:13,715
+Let's take a look
+at an example.
+
+196
+00:07:13,715 --> 00:07:15,620
+So here we have the
+following vector field
+
+197
+00:07:15,620 --> 00:07:17,930
+and points a and B.
+
+198
+00:07:17,930 --> 00:07:19,505
+We want to show that
+
+199
+00:07:19,505 --> 00:07:20,485
+this vector fields
+
+200
+00:07:20,485 --> 00:07:22,070
+a conservative
+vector field.
+
+201
+00:07:22,070 --> 00:07:23,480
+And then we'll
+calculate the
+
+202
+00:07:23,480 --> 00:07:24,875
+work from a to B,
+
+203
+00:07:24,875 --> 00:07:28,235
+Hopefully easily using
+path independence
+
+204
+00:07:28,235 --> 00:07:30,290
+to show that it's
+
+205
+00:07:30,290 --> 00:07:31,370
+a conservative
+vector field.
+
+206
+00:07:31,370 --> 00:07:33,154
+We're trying to
+find a function
+
+207
+00:07:33,154 --> 00:07:35,300
+whose gradient is F.
+So we're trying to
+
+208
+00:07:35,300 --> 00:07:35,960
+find a function
+
+209
+00:07:35,960 --> 00:07:37,415
+whose partial derivative
+with respect to
+
+210
+00:07:37,415 --> 00:07:40,460
+x is 3x squared y plus 2x.
+
+211
+00:07:40,460 --> 00:07:41,750
+And whose partial
+derivative with respect to
+
+212
+00:07:41,750 --> 00:07:43,835
+y is x cubed plus one.
+
+213
+00:07:43,835 --> 00:07:46,024
+So we can do is integrate
+
+214
+00:07:46,024 --> 00:07:47,330
+the left hand function
+
+215
+00:07:47,330 --> 00:07:48,680
+here with respect to x,
+
+216
+00:07:48,680 --> 00:07:49,985
+integrate the right hand
+
+217
+00:07:49,985 --> 00:07:51,965
+function with respect to y.
+
+218
+00:07:51,965 --> 00:07:53,930
+And that will
+produce hopefully
+
+219
+00:07:53,930 --> 00:07:55,700
+a function whose derivative
+
+220
+00:07:55,700 --> 00:07:58,040
+with respect to x is this
+
+221
+00:07:58,040 --> 00:07:59,240
+on the left and
+whose derivative is
+
+222
+00:07:59,240 --> 00:08:01,280
+like the wisest
+one on the right.
+
+223
+00:08:01,280 --> 00:08:03,380
+So we go through
+that process.
+
+224
+00:08:03,380 --> 00:08:04,205
+But remember when we
+
+225
+00:08:04,205 --> 00:08:06,605
+integrate with
+respect to x,
+
+226
+00:08:06,605 --> 00:08:07,940
+the constant of integration
+
+227
+00:08:07,940 --> 00:08:09,440
+could be any function of y,
+
+228
+00:08:09,440 --> 00:08:10,670
+because when we take
+
+229
+00:08:10,670 --> 00:08:11,900
+the derivative
+with respect to x,
+
+230
+00:08:11,900 --> 00:08:13,940
+y is considered a constant.
+
+231
+00:08:13,940 --> 00:08:15,980
+So you integrate
+with respect to x,
+
+232
+00:08:15,980 --> 00:08:17,495
+you integrate with
+respect to y,
+
+233
+00:08:17,495 --> 00:08:18,905
+and we get these two
+
+234
+00:08:18,905 --> 00:08:20,925
+constants of integration.
+
+235
+00:08:20,925 --> 00:08:23,260
+But we know that
+these two functions
+
+236
+00:08:23,260 --> 00:08:24,985
+must be the same.
+
+237
+00:08:24,985 --> 00:08:27,055
+So by saying them equal,
+
+238
+00:08:27,055 --> 00:08:28,990
+that gives us a clear
+choice for what to
+
+239
+00:08:28,990 --> 00:08:31,060
+choose for the constant
+
+240
+00:08:31,060 --> 00:08:32,380
+of integration with
+respect to y and
+
+241
+00:08:32,380 --> 00:08:35,140
+the constant
+integration of x here.
+
+242
+00:08:35,140 --> 00:08:36,520
+If we choose the
+constant mitigation
+
+243
+00:08:36,520 --> 00:08:38,155
+director y to just be Y,
+
+244
+00:08:38,155 --> 00:08:39,280
+then that will match up
+
+245
+00:08:39,280 --> 00:08:40,240
+with the right hand side.
+
+246
+00:08:40,240 --> 00:08:40,720
+If we choose the
+
+247
+00:08:40,720 --> 00:08:41,815
+constant here with
+wrecked acts,
+
+248
+00:08:41,815 --> 00:08:43,030
+make it be x squared,
+it'll matter.
+
+249
+00:08:43,030 --> 00:08:44,740
+But the left hand
+side, and that gives
+
+250
+00:08:44,740 --> 00:08:47,230
+us a function with the
+desired properties.
+
+251
+00:08:47,230 --> 00:08:49,540
+So that's a
+potential function
+
+252
+00:08:49,540 --> 00:08:50,755
+for the vector field.
+
+253
+00:08:50,755 --> 00:08:52,090
+We've engineered it, so
+
+254
+00:08:52,090 --> 00:08:53,965
+its gradient is
+the vector field.
+
+255
+00:08:53,965 --> 00:08:55,660
+We know that path
+independence
+
+256
+00:08:55,660 --> 00:08:57,955
+holds based on the
+previous theorem.
+
+257
+00:08:57,955 --> 00:08:59,530
+So if we want to
+find the work
+
+258
+00:08:59,530 --> 00:09:01,525
+done from point
+a to point B,
+
+259
+00:09:01,525 --> 00:09:04,790
+we simply evaluate
+the end points,
+
+260
+00:09:04,790 --> 00:09:06,890
+in this case 011, for
+
+261
+00:09:06,890 --> 00:09:09,470
+at the end points of
+our potential function.
+
+262
+00:09:09,470 --> 00:09:11,930
+To find the work done
+much easier than
+
+263
+00:09:11,930 --> 00:09:13,700
+parameterizing
+the curve and
+
+264
+00:09:13,700 --> 00:09:16,170
+using the formulas
+we saw earlier.
+
+265
+00:09:16,720 --> 00:09:20,060
+Another way to test
+whether a vector field is
+
+266
+00:09:20,060 --> 00:09:22,025
+a conservative
+field is that
+
+267
+00:09:22,025 --> 00:09:25,890
+its curl is 0
+throughout the field.

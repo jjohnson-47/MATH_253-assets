@@ -1,0 +1,710 @@
+1
+00:00:00,000 --> 00:00:02,130
+Hello. Let's take a look at
+
+2
+00:00:02,130 --> 00:00:03,495
+the calculus of motion.
+
+3
+00:00:03,495 --> 00:00:04,710
+This is an overview
+of Section
+
+4
+00:00:04,710 --> 00:00:10,320
+11.3 when you talk
+
+5
+00:00:10,320 --> 00:00:13,300
+about velocity, speed
+and acceleration.
+
+6
+00:00:13,300 --> 00:00:15,290
+We've already been
+using this language
+
+7
+00:00:15,290 --> 00:00:16,640
+in the previous video,
+
+8
+00:00:16,640 --> 00:00:18,530
+but if we think of
+our vector valued
+
+9
+00:00:18,530 --> 00:00:21,140
+function r as position,
+
+10
+00:00:21,140 --> 00:00:24,020
+then its derivative
+is given by
+
+11
+00:00:24,020 --> 00:00:25,280
+velocity or
+
+12
+00:00:25,280 --> 00:00:27,665
+the instantaneous
+rate of the position.
+
+13
+00:00:27,665 --> 00:00:29,840
+The magnitude
+of the velocity
+
+14
+00:00:29,840 --> 00:00:31,985
+is what we think
+of as speed.
+
+15
+00:00:31,985 --> 00:00:36,120
+Andy, acceleration is
+the second derivative.
+
+16
+00:00:37,660 --> 00:00:39,770
+Here's an example
+where we have
+
+17
+00:00:39,770 --> 00:00:41,450
+a young boy whirling
+a ball attached to
+
+18
+00:00:41,450 --> 00:00:42,800
+a string above his head
+
+19
+00:00:42,800 --> 00:00:45,125
+in a counterclockwise way.
+
+20
+00:00:45,125 --> 00:00:46,820
+In this example, the,
+
+21
+00:00:46,820 --> 00:00:48,440
+it's making one revolution
+
+22
+00:00:48,440 --> 00:00:50,824
+every two pi seconds.
+
+23
+00:00:50,824 --> 00:00:52,970
+>> And this string has
+a length of two feet.
+
+24
+00:00:52,970 --> 00:00:54,965
+So you should notice
+immediately that this is
+
+25
+00:00:54,965 --> 00:00:57,530
+pretty much impossible
+on our planet.
+
+26
+00:00:57,530 --> 00:01:00,845
+>> Two pi seconds
+is too long
+
+27
+00:01:00,845 --> 00:01:02,960
+for us to go
+
+28
+00:01:02,960 --> 00:01:05,210
+around for with a
+length of two feet.
+
+29
+00:01:05,210 --> 00:01:06,605
+But it makes the math
+
+30
+00:01:06,605 --> 00:01:08,375
+easier for this problem.
+
+31
+00:01:08,375 --> 00:01:10,565
+And so the math
+will be the same
+
+32
+00:01:10,565 --> 00:01:12,800
+if the rotated faster.
+
+33
+00:01:12,800 --> 00:01:14,030
+It would just change
+
+34
+00:01:14,030 --> 00:01:15,379
+the equations a little bit.
+
+35
+00:01:15,379 --> 00:01:19,190
+>> But let's play
+along. First, let's
+
+36
+00:01:19,190 --> 00:01:20,960
+find the position
+vector that
+
+37
+00:01:20,960 --> 00:01:23,240
+describes a situation
+while the ball
+
+38
+00:01:23,240 --> 00:01:27,349
+is spinning around
+counterclockwise.
+
+39
+00:01:27,349 --> 00:01:29,090
+>> So that's given
+by the vector
+
+40
+00:01:29,090 --> 00:01:31,220
+valued function cosine t,
+
+41
+00:01:31,220 --> 00:01:34,115
+sine t, but the
+radius is two,
+
+42
+00:01:34,115 --> 00:01:37,230
+so we multiply two
+in each component.
+
+43
+00:01:37,660 --> 00:01:40,040
+Then the velocity
+of the ball then
+
+44
+00:01:40,040 --> 00:01:42,125
+is the derivative
+of that position.
+
+45
+00:01:42,125 --> 00:01:44,285
+So you take the derivative
+of each component
+
+46
+00:01:44,285 --> 00:01:46,054
+and you get the
+velocity vector.
+
+47
+00:01:46,054 --> 00:01:48,020
+>> And then the
+acceleration
+
+48
+00:01:48,020 --> 00:01:50,434
+is the derivative
+of the velocity.
+
+49
+00:01:50,434 --> 00:01:52,400
+>> So again,
+simple derivatives
+
+50
+00:01:52,400 --> 00:01:54,630
+taken in each component.
+
+51
+00:01:56,500 --> 00:01:59,060
+The acceleration
+is the rate at
+
+52
+00:01:59,060 --> 00:02:01,415
+which the velocity
+is changing.
+
+53
+00:02:01,415 --> 00:02:02,870
+It helps to understand
+
+54
+00:02:02,870 --> 00:02:04,295
+acceleration by looking at
+
+55
+00:02:04,295 --> 00:02:07,489
+a plot of the
+acceleration vector.
+
+56
+00:02:07,489 --> 00:02:11,105
+>> So as T stands for time
+
+57
+00:02:11,105 --> 00:02:15,545
+moves from t equals
+to 0 and increases,
+
+58
+00:02:15,545 --> 00:02:16,820
+we can see what happens to
+
+59
+00:02:16,820 --> 00:02:19,670
+the position
+vector in blue,
+
+60
+00:02:19,670 --> 00:02:22,055
+the velocity vector in red,
+
+61
+00:02:22,055 --> 00:02:25,249
+and then the acceleration
+vector in green.
+
+62
+00:02:25,249 --> 00:02:26,870
+>> Immediately, we
+can already see
+
+63
+00:02:26,870 --> 00:02:28,610
+the acceleration vector is
+
+64
+00:02:28,610 --> 00:02:31,830
+pointing back away
+from the circle.
+
+65
+00:02:35,740 --> 00:02:38,360
+So maybe it's
+not surprising
+
+66
+00:02:38,360 --> 00:02:40,580
+that the acceleration
+as you traverse
+
+67
+00:02:40,580 --> 00:02:42,290
+around a circle is
+
+68
+00:02:42,290 --> 00:02:44,660
+always constant
+inwards towards
+
+69
+00:02:44,660 --> 00:02:51,500
+the middle to determine
+
+70
+00:02:51,500 --> 00:02:53,240
+the point at which the
+released the ball.
+
+71
+00:02:53,240 --> 00:02:55,220
+So they hits a tree.
+
+72
+00:02:55,220 --> 00:02:56,570
+That was question number
+
+73
+00:02:56,570 --> 00:02:58,429
+three in the
+original problem.
+
+74
+00:02:58,429 --> 00:02:59,840
+>> The tree stands
+
+75
+00:02:59,840 --> 00:03:01,339
+ten feet in front
+of the boy.
+
+76
+00:03:01,339 --> 00:03:03,110
+>> Value of t
+should the boy
+
+77
+00:03:03,110 --> 00:03:03,920
+released the string so
+
+78
+00:03:03,920 --> 00:03:05,820
+the ball hits the tree.
+
+79
+00:03:06,519 --> 00:03:09,185
+>> We can model
+the situation
+
+80
+00:03:09,185 --> 00:03:11,540
+with a circle with the ball
+
+81
+00:03:11,540 --> 00:03:13,400
+spinning around
+and then putting
+
+82
+00:03:13,400 --> 00:03:16,864
+a point at 0 comma ten
+dedicate the tree.
+
+83
+00:03:16,864 --> 00:03:18,710
+>> So mathematically, what
+
+84
+00:03:18,710 --> 00:03:19,670
+we're really trying to do
+
+85
+00:03:19,670 --> 00:03:22,055
+is find the tangent line.
+
+86
+00:03:22,055 --> 00:03:23,270
+Whereas the ball is at
+
+87
+00:03:23,270 --> 00:03:24,740
+any point around
+the circle,
+
+88
+00:03:24,740 --> 00:03:26,690
+the tangent line that goes
+
+89
+00:03:26,690 --> 00:03:29,880
+through the 0 comma ten.
+
+90
+00:03:30,850 --> 00:03:33,380
+So we can write
+the equation of
+
+91
+00:03:33,380 --> 00:03:35,000
+the tangent line where
+
+92
+00:03:35,000 --> 00:03:37,070
+t naught is the time that
+
+93
+00:03:37,070 --> 00:03:40,069
+we will release the ball.
+
+94
+00:03:40,069 --> 00:03:43,560
+>> And that gives us
+these two equations.
+
+95
+00:03:45,150 --> 00:03:47,200
+These two equations give us
+
+96
+00:03:47,200 --> 00:03:50,755
+parametric equations
+where we know that
+
+97
+00:03:50,755 --> 00:03:52,795
+if indeed the point
+
+98
+00:03:52,795 --> 00:03:56,380
+is 0 comma ten
+is on the line,
+
+99
+00:03:56,380 --> 00:03:59,350
+then this will equal 0.
+
+100
+00:03:59,350 --> 00:04:01,180
+>> At some point,
+the x value equals
+
+101
+00:04:01,180 --> 00:04:04,120
+0 and the y value
+equal, equal ten.
+
+102
+00:04:04,120 --> 00:04:05,980
+No, I don't show
+the details here,
+
+103
+00:04:05,980 --> 00:04:07,855
+but you can solve
+
+104
+00:04:07,855 --> 00:04:10,630
+both of these equations
+simultaneously.
+
+105
+00:04:10,630 --> 00:04:13,210
+One way to do it here
+is to solve for t.
+
+106
+00:04:13,210 --> 00:04:15,400
+>> In the top equation
+software t and
+
+107
+00:04:15,400 --> 00:04:17,350
+the bottom equation set
+
+108
+00:04:17,350 --> 00:04:19,435
+those two equations
+equal to each other,
+
+109
+00:04:19,435 --> 00:04:21,340
+and that eliminates
+the variable t.
+
+110
+00:04:21,340 --> 00:04:23,785
+>> And then you just
+solve for t sub 0,
+
+111
+00:04:23,785 --> 00:04:25,555
+which is a trig equation.
+
+112
+00:04:25,555 --> 00:04:27,710
+And when you do that,
+you get sine inverse
+
+113
+00:04:27,710 --> 00:04:29,944
+of 1 fifth, which is 0.2.
+
+114
+00:04:29,944 --> 00:04:31,745
+>> And after graphing it,
+
+115
+00:04:31,745 --> 00:04:32,855
+we can see that
+that's correct,
+
+116
+00:04:32,855 --> 00:04:37,790
+that when you put
+0.2 into T sub 0,
+
+117
+00:04:37,790 --> 00:04:40,520
+that gives us
+exactly the tangent
+
+118
+00:04:40,520 --> 00:04:43,054
+line that goes
+through the point.
+
+119
+00:04:43,054 --> 00:04:45,350
+>> So that is the angle for
+
+120
+00:04:45,350 --> 00:04:46,775
+which the ball
+should be released
+
+121
+00:04:46,775 --> 00:04:48,810
+to hitters hit the tree.
+
+122
+00:04:49,870 --> 00:04:51,830
+Vector-valued functions
+
+123
+00:04:51,830 --> 00:04:52,700
+allow us to talk about
+
+124
+00:04:52,700 --> 00:04:54,965
+project to
+projectile motion.
+
+125
+00:04:54,965 --> 00:04:56,555
+And when we're on planet,
+
+126
+00:04:56,555 --> 00:04:58,310
+like a planet
+Earth, for example,
+
+127
+00:04:58,310 --> 00:05:00,140
+you have a
+gravitational constant,
+
+128
+00:05:00,140 --> 00:05:03,184
+which is a force
+being pushed down.
+
+129
+00:05:03,184 --> 00:05:05,750
+>> And we can use the
+gravitational constant
+
+130
+00:05:05,750 --> 00:05:08,420
+here to give the X and Y
+
+131
+00:05:08,420 --> 00:05:11,750
+coordinates of
+position given
+
+132
+00:05:11,750 --> 00:05:16,620
+an initial speed and
+an angle of elevation.
+
+133
+00:05:20,619 --> 00:05:22,940
+>> We also have
+nice formulas
+
+134
+00:05:22,940 --> 00:05:24,050
+for the distance traveled.
+
+135
+00:05:24,050 --> 00:05:25,250
+>> We can talk about
+
+136
+00:05:25,250 --> 00:05:27,200
+the total distance traveled
+
+137
+00:05:27,200 --> 00:05:29,150
+by integrating the
+velocity vector,
+
+138
+00:05:29,150 --> 00:05:31,160
+the magnitude of the
+velocity vector.
+
+139
+00:05:31,160 --> 00:05:32,840
+Notice that's the
+total distance
+
+140
+00:05:32,840 --> 00:05:35,359
+traveled over
+that interval.
+
+141
+00:05:35,359 --> 00:05:37,040
+>> And we don't really know
+
+142
+00:05:37,040 --> 00:05:38,570
+the direction where we're
+
+143
+00:05:38,570 --> 00:05:40,324
+integrating the speed,
+
+144
+00:05:40,324 --> 00:05:42,080
+the magnitude of the
+velocity vector.
+
+145
+00:05:42,080 --> 00:05:44,840
+>> Here we can find
+
+146
+00:05:44,840 --> 00:05:48,170
+the average speed by
+taking the speed over
+
+147
+00:05:48,170 --> 00:05:49,520
+the interval and then
+
+148
+00:05:49,520 --> 00:05:50,540
+divided by the length of
+
+149
+00:05:50,540 --> 00:05:52,970
+the interval and
+
+150
+00:05:52,970 --> 00:05:55,880
+then the average velocity
+in the same way.
+
+151
+00:05:55,880 --> 00:05:58,355
+Note that the average speed
+
+152
+00:05:58,355 --> 00:06:00,919
+doesn't give us
+a direction.
+
+153
+00:06:00,919 --> 00:06:02,735
+>> And the average
+speed here
+
+154
+00:06:02,735 --> 00:06:05,225
+is actually going to
+be just a number.
+
+155
+00:06:05,225 --> 00:06:06,650
+The average velocity is
+
+156
+00:06:06,650 --> 00:06:08,520
+going to give us a vector.

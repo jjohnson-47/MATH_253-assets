@@ -1,0 +1,1268 @@
+1
+00:00:00,000 --> 00:00:01,454
+Hi, class.
+
+2
+00:00:01,454 --> 00:00:02,040
+>> Let's take a look at
+
+3
+00:00:02,040 --> 00:00:03,000
+an overview of Section
+
+4
+00:00:03,000 --> 00:00:06,660
+13.1 on iterated
+integrals and area.
+
+5
+00:00:06,660 --> 00:00:08,520
+This is the introduction of
+
+6
+00:00:08,520 --> 00:00:10,710
+integrals of functions
+of more than one.
+
+7
+00:00:10,710 --> 00:00:14,759
+>> Brave to motivate
+what's going on here.
+
+8
+00:00:14,759 --> 00:00:17,040
+>> If we have a function f
+
+9
+00:00:17,040 --> 00:00:18,960
+of x and y and its
+
+10
+00:00:18,960 --> 00:00:21,269
+partial derivative
+with respect to X.
+
+11
+00:00:21,269 --> 00:00:23,864
+>> How do we get the
+function f back?
+
+12
+00:00:23,864 --> 00:00:25,680
+>> Well, in calculus one,
+
+13
+00:00:25,680 --> 00:00:26,550
+if we were just
+talking about
+
+14
+00:00:26,550 --> 00:00:27,720
+a function of a
+single variable,
+
+15
+00:00:27,720 --> 00:00:28,875
+you would take its
+
+16
+00:00:28,875 --> 00:00:31,920
+antiderivative and
+you would have
+
+17
+00:00:31,920 --> 00:00:33,570
+the function f back plus
+
+18
+00:00:33,570 --> 00:00:36,510
+some constant
+integration here.
+
+19
+00:00:36,510 --> 00:00:37,530
+We can integrate
+
+20
+00:00:37,530 --> 00:00:38,700
+the derivative
+with respect to
+
+21
+00:00:38,700 --> 00:00:41,585
+x, with respect to x.
+
+22
+00:00:41,585 --> 00:00:43,190
+And then we do
+get the function
+
+23
+00:00:43,190 --> 00:00:45,470
+back plus some
+constant integration.
+
+24
+00:00:45,470 --> 00:00:46,880
+But since we
+integrated with
+
+25
+00:00:46,880 --> 00:00:48,260
+respect to x here,
+
+26
+00:00:48,260 --> 00:00:49,685
+the constant of integration
+
+27
+00:00:49,685 --> 00:00:51,905
+might be any function of y.
+
+28
+00:00:51,905 --> 00:00:54,950
+And that makes sense
+if we were to look at
+
+29
+00:00:54,950 --> 00:00:56,300
+both sides of this
+equation here and
+
+30
+00:00:56,300 --> 00:00:58,355
+take the derivative
+with respect to x.
+
+31
+00:00:58,355 --> 00:01:00,170
+If we take the
+derivative respect to
+
+32
+00:01:00,170 --> 00:01:03,170
+x of the right
+hand side here,
+
+33
+00:01:03,170 --> 00:01:05,120
+we get the derivative
+of f with respect to x.
+
+34
+00:01:05,120 --> 00:01:07,520
+And then the
+derivative respect
+
+35
+00:01:07,520 --> 00:01:10,380
+to x of a function of
+y would just be 0.
+
+36
+00:01:11,950 --> 00:01:14,870
+So let's integrate the
+following function.
+
+37
+00:01:14,870 --> 00:01:17,000
+Since we're integrating
+with respect to x,
+
+38
+00:01:17,000 --> 00:01:19,055
+the limits of integration
+
+39
+00:01:19,055 --> 00:01:21,485
+can be with respect to
+any other variable.
+
+40
+00:01:21,485 --> 00:01:22,880
+So you find the
+
+41
+00:01:22,880 --> 00:01:24,950
+anti-derivative
+with respect to x,
+
+42
+00:01:24,950 --> 00:01:26,525
+thinking of y
+as a constant,
+
+43
+00:01:26,525 --> 00:01:28,295
+and apply the
+fundamental theorem of
+
+44
+00:01:28,295 --> 00:01:30,350
+calculus as we usually
+would put again,
+
+45
+00:01:30,350 --> 00:01:31,820
+the values of
+two i and one is
+
+46
+00:01:31,820 --> 00:01:32,750
+the limits of integration,
+
+47
+00:01:32,750 --> 00:01:34,650
+taking the difference.
+
+48
+00:01:36,520 --> 00:01:39,470
+Now this is another common
+
+49
+00:01:39,470 --> 00:01:40,760
+situation where
+we're trying to
+
+50
+00:01:40,760 --> 00:01:44,480
+find the integral of a
+function of x and y,
+
+51
+00:01:44,480 --> 00:01:46,490
+first with respect
+to y, then
+
+52
+00:01:46,490 --> 00:01:48,305
+with respect to x.
+
+53
+00:01:48,305 --> 00:01:51,270
+This is called an
+iterated integral.
+
+54
+00:01:51,280 --> 00:01:54,200
+Sometimes it's
+understood that you're
+
+55
+00:01:54,200 --> 00:01:55,250
+taking and take the
+derivative with
+
+56
+00:01:55,250 --> 00:01:56,735
+respect to y first,
+
+57
+00:01:56,735 --> 00:02:00,035
+Thus the d y appearing
+before the dx.
+
+58
+00:02:00,035 --> 00:02:02,700
+And will you just
+drop the parentheses?
+
+59
+00:02:03,040 --> 00:02:06,125
+So we would just do this
+one step at a time.
+
+60
+00:02:06,125 --> 00:02:08,390
+So working on the
+inside integral,
+
+61
+00:02:08,390 --> 00:02:10,339
+you would take the
+antiderivative
+
+62
+00:02:10,339 --> 00:02:12,860
+of this time with
+respect to y and
+
+63
+00:02:12,860 --> 00:02:13,970
+evaluate at the limits of
+
+64
+00:02:13,970 --> 00:02:15,200
+integration here at X
+
+65
+00:02:15,200 --> 00:02:16,520
+and X and one and take
+
+66
+00:02:16,520 --> 00:02:18,455
+the difference,
+simplify a bit.
+
+67
+00:02:18,455 --> 00:02:19,400
+And then what you have
+
+68
+00:02:19,400 --> 00:02:20,450
+is just a function of x,
+
+69
+00:02:20,450 --> 00:02:21,890
+and that's just a normal
+
+70
+00:02:21,890 --> 00:02:24,240
+Calc Two type integral.
+
+71
+00:02:26,109 --> 00:02:28,340
+>> What does the 89 over
+
+72
+00:02:28,340 --> 00:02:29,539
+eight even mean though?
+
+73
+00:02:29,539 --> 00:02:32,210
+>> So we are given this
+original expression,
+
+74
+00:02:32,210 --> 00:02:34,055
+which is a double integral.
+
+75
+00:02:34,055 --> 00:02:37,189
+And we got the answer
+which is just a number.
+
+76
+00:02:37,189 --> 00:02:39,755
+>> So we're going to see
+
+77
+00:02:39,755 --> 00:02:42,290
+that this function
+of two variables,
+
+78
+00:02:42,290 --> 00:02:43,925
+x and y, that we're given
+
+79
+00:02:43,925 --> 00:02:46,100
+its graph writers in
+three-dimensional space.
+
+80
+00:02:46,100 --> 00:02:48,199
+>> And its graph
+is a surface
+
+81
+00:02:48,199 --> 00:02:52,459
+that is above and
+below the XY plane.
+
+82
+00:02:52,459 --> 00:02:54,440
+>> And the double
+
+83
+00:02:54,440 --> 00:02:56,660
+integral here is
+actually finding
+
+84
+00:02:56,660 --> 00:02:59,180
+the volume underneath
+the graph of
+
+85
+00:02:59,180 --> 00:03:01,610
+that function
+between bounded
+
+86
+00:03:01,610 --> 00:03:02,390
+between the graph of
+
+87
+00:03:02,390 --> 00:03:03,785
+the function in
+the x, y plane.
+
+88
+00:03:03,785 --> 00:03:05,030
+So that's what this number
+
+89
+00:03:05,030 --> 00:03:07,410
+89 over eight refers to.
+
+90
+00:03:07,719 --> 00:03:11,630
+>> So if we were to
+sketch the region of
+
+91
+00:03:11,630 --> 00:03:12,980
+integration for
+
+92
+00:03:12,980 --> 00:03:15,290
+this example, and
+what does that mean?
+
+93
+00:03:15,290 --> 00:03:18,410
+>> That means finding
+the region in
+
+94
+00:03:18,410 --> 00:03:20,315
+the domain of the function
+
+95
+00:03:20,315 --> 00:03:23,460
+for which we're
+finding the integral.
+
+96
+00:03:24,460 --> 00:03:28,100
+So here for any fixed x
+
+97
+00:03:28,100 --> 00:03:31,445
+looking on the
+outside between 12.
+
+98
+00:03:31,445 --> 00:03:35,130
+So for any x between 12,
+
+99
+00:03:35,290 --> 00:03:38,720
+we are going to
+integrate a y from
+
+100
+00:03:38,720 --> 00:03:42,604
+one up to y equals to x.
+
+101
+00:03:42,604 --> 00:03:44,750
+>> So this
+particular integral
+
+102
+00:03:44,750 --> 00:03:46,160
+is integrating over
+
+103
+00:03:46,160 --> 00:03:50,014
+the region R in
+the picture here.
+
+104
+00:03:50,014 --> 00:03:53,300
+>> And it's doing
+it by integrating
+
+105
+00:03:53,300 --> 00:03:57,350
+vertical strips one
+acts at a time and
+
+106
+00:03:57,350 --> 00:03:58,790
+then accumulating all of
+
+107
+00:03:58,790 --> 00:04:02,490
+those vertical strips
+to get the volume.
+
+108
+00:04:04,509 --> 00:04:07,250
+>> Sometimes once we know
+
+109
+00:04:07,250 --> 00:04:09,215
+the region on which
+we're integrating over,
+
+110
+00:04:09,215 --> 00:04:10,460
+it's common to write
+
+111
+00:04:10,460 --> 00:04:12,185
+the two integral signs with
+
+112
+00:04:12,185 --> 00:04:14,945
+just the region
+name underneath it.
+
+113
+00:04:14,945 --> 00:04:19,115
+Now this expression here
+
+114
+00:04:19,115 --> 00:04:21,440
+is the double integral of
+
+115
+00:04:21,440 --> 00:04:23,090
+the function over
+that region.
+
+116
+00:04:23,090 --> 00:04:25,430
+But to actually find
+it and calculate it,
+
+117
+00:04:25,430 --> 00:04:26,855
+we need to write it as an
+
+118
+00:04:26,855 --> 00:04:28,789
+iterated integral
+as it was given.
+
+119
+00:04:28,789 --> 00:04:31,070
+>> So a lot of
+problems start
+
+120
+00:04:31,070 --> 00:04:32,480
+by providing an integral
+
+121
+00:04:32,480 --> 00:04:34,009
+that looks like this.
+
+122
+00:04:34,009 --> 00:04:35,900
+>> And we have
+
+123
+00:04:35,900 --> 00:04:38,420
+to use the limits
+of integration,
+
+124
+00:04:38,420 --> 00:04:40,850
+find the sort of nature
+and character of
+
+125
+00:04:40,850 --> 00:04:41,960
+the region in order to
+
+126
+00:04:41,960 --> 00:04:44,045
+write it as an
+iterated integral.
+
+127
+00:04:44,045 --> 00:04:46,310
+Here, DA is sort of
+
+128
+00:04:46,310 --> 00:04:49,950
+referring to
+either dx or dy y.
+
+129
+00:04:51,130 --> 00:04:53,330
+So it's convenient
+to be able to,
+
+130
+00:04:53,330 --> 00:04:55,580
+to integrate functions of
+
+131
+00:04:55,580 --> 00:04:56,945
+two variables that are
+
+132
+00:04:56,945 --> 00:04:59,810
+bounded by two functions
+
+133
+00:04:59,810 --> 00:05:01,189
+on the top and the bottom.
+
+134
+00:05:01,189 --> 00:05:02,600
+>> And we can integrate
+
+135
+00:05:02,600 --> 00:05:05,550
+them the way that we
+would normally want to.
+
+136
+00:05:06,039 --> 00:05:08,585
+>> One easy application for
+
+137
+00:05:08,585 --> 00:05:10,100
+these double
+integrals is just
+
+138
+00:05:10,100 --> 00:05:12,374
+finding areas in the plane.
+
+139
+00:05:12,374 --> 00:05:16,165
+>> So if we have an area
+bounded between the,
+
+140
+00:05:16,165 --> 00:05:18,220
+this region R here,
+but bounded between
+
+141
+00:05:18,220 --> 00:05:20,740
+these red lines and these
+two blue functions.
+
+142
+00:05:20,740 --> 00:05:23,770
+How could we find
+the volume of our,
+
+143
+00:05:23,770 --> 00:05:25,810
+well, you could do
+this in a calculus
+
+144
+00:05:25,810 --> 00:05:26,904
+to sense, right?
+
+145
+00:05:26,904 --> 00:05:29,450
+>> You could
+just accumulate
+
+146
+00:05:29,490 --> 00:05:34,280
+the area in between.
+
+147
+00:05:35,729 --> 00:05:37,300
+>> But one, right?
+
+148
+00:05:37,300 --> 00:05:38,410
+Now we want to
+think about it
+
+149
+00:05:38,410 --> 00:05:40,210
+as this area is
+
+150
+00:05:40,210 --> 00:05:42,595
+the same thing
+as the volume
+
+151
+00:05:42,595 --> 00:05:45,669
+of this area with
+a height of one.
+
+152
+00:05:45,669 --> 00:05:47,560
+>> And that allows
+us to write
+
+153
+00:05:47,560 --> 00:05:49,719
+it as a double integral.
+
+154
+00:05:49,719 --> 00:05:53,890
+>> So the volume
+of this region is
+
+155
+00:05:53,890 --> 00:05:58,060
+the area of each of
+
+156
+00:05:58,060 --> 00:06:03,670
+these vertical strips
+between g2 and g1.
+
+157
+00:06:03,670 --> 00:06:06,650
+>> So this is G2 minus g1.
+
+158
+00:06:07,620 --> 00:06:10,570
+And we can write it as
+this integral here.
+
+159
+00:06:10,570 --> 00:06:12,040
+So this is a common way of
+
+160
+00:06:12,040 --> 00:06:14,690
+finding areas in the plane.
+
+161
+00:06:15,600 --> 00:06:18,580
+And this is the
+contents of theorem
+
+162
+00:06:18,580 --> 00:06:21,800
+three to 13.1.1
+in our text.
+
+163
+00:06:22,559 --> 00:06:24,880
+>> Another really
+common example
+
+164
+00:06:24,880 --> 00:06:26,154
+with iterated integrals.
+
+165
+00:06:26,154 --> 00:06:27,400
+>> And this we'll see
+
+166
+00:06:27,400 --> 00:06:29,620
+later that many integrals,
+
+167
+00:06:29,620 --> 00:06:31,420
+perhaps we can't
+do it because
+
+168
+00:06:31,420 --> 00:06:33,685
+the function here has
+no anti-derivative.
+
+169
+00:06:33,685 --> 00:06:35,980
+But if we change
+the order of
+
+170
+00:06:35,980 --> 00:06:38,594
+integration or do a
+change of coordinates
+
+171
+00:06:38,594 --> 00:06:40,430
+>> Maybe the new
+function that we end
+
+172
+00:06:40,430 --> 00:06:42,544
+up with does have
+an anti-derivative.
+
+173
+00:06:42,544 --> 00:06:44,390
+>> So changing the
+order of integration
+
+174
+00:06:44,390 --> 00:06:46,610
+given an integral is
+a common thing to do,
+
+175
+00:06:46,610 --> 00:06:49,820
+but the meat of the
+matter really has to
+
+176
+00:06:49,820 --> 00:06:51,050
+do with understanding of
+
+177
+00:06:51,050 --> 00:06:53,210
+the region that we're
+integrating over.
+
+178
+00:06:53,210 --> 00:06:56,210
+And that allows us to
+change the limits of
+
+179
+00:06:56,210 --> 00:06:57,800
+integration to make sure
+
+180
+00:06:57,800 --> 00:06:59,494
+that we're integrating
+over the same region.
+
+181
+00:06:59,494 --> 00:07:01,744
+>> So let's take a look
+at this example here.
+
+182
+00:07:01,744 --> 00:07:04,220
+>> The first thing to
+do is to understand
+
+183
+00:07:04,220 --> 00:07:06,950
+the region that we're
+integrating over here.
+
+184
+00:07:06,950 --> 00:07:08,420
+We're integrating from y,
+
+185
+00:07:08,420 --> 00:07:10,145
+going from 0 to four,
+
+186
+00:07:10,145 --> 00:07:11,720
+but where x goes
+
+187
+00:07:11,720 --> 00:07:14,930
+between these two
+functions of y,
+
+188
+00:07:14,930 --> 00:07:17,300
+so this is this
+picture here.
+
+189
+00:07:17,300 --> 00:07:20,735
+So y goes between 04,
+
+190
+00:07:20,735 --> 00:07:22,670
+x is going to go between
+
+191
+00:07:22,670 --> 00:07:24,800
+y plus four over two,
+
+192
+00:07:24,800 --> 00:07:26,570
+which is this line
+
+193
+00:07:26,570 --> 00:07:30,740
+2x y squared over
+four, which is here.
+
+194
+00:07:30,740 --> 00:07:32,990
+So the region that
+we're integrating over
+
+195
+00:07:32,990 --> 00:07:35,659
+here is this
+purple region R.
+
+196
+00:07:35,659 --> 00:07:37,475
+>> And we're integrating it
+
+197
+00:07:37,475 --> 00:07:41,750
+by accumulating the
+horizontal strips, right?
+
+198
+00:07:41,750 --> 00:07:47,510
+>> For if, for each
+y we get region,
+
+199
+00:07:47,510 --> 00:07:49,580
+we get x going
+
+200
+00:07:49,580 --> 00:07:51,935
+between these two
+functions of y.
+
+201
+00:07:51,935 --> 00:07:54,485
+And then the
+integral accumulates
+
+202
+00:07:54,485 --> 00:07:56,330
+those horizontal strips.
+
+203
+00:07:56,330 --> 00:07:59,135
+And then finally,
+we accumulate that,
+
+204
+00:07:59,135 --> 00:08:01,070
+we accumulate those
+horizontal strips
+
+205
+00:08:01,070 --> 00:08:02,734
+by integrating
+with respect to y.
+
+206
+00:08:02,734 --> 00:08:05,959
+>> So how do we change
+it to be an integral?
+
+207
+00:08:05,959 --> 00:08:07,970
+>> First with respect to y,
+
+208
+00:08:07,970 --> 00:08:10,564
+then with respect to X.
+
+209
+00:08:10,564 --> 00:08:13,265
+>> Well now we have to
+
+210
+00:08:13,265 --> 00:08:15,320
+sort of cut the volume.
+
+211
+00:08:15,320 --> 00:08:16,100
+>> So the, think about it.
+
+212
+00:08:16,100 --> 00:08:17,255
+The graph is
+relating sitting
+
+213
+00:08:17,255 --> 00:08:19,955
+above this picture
+of the region.
+
+214
+00:08:19,955 --> 00:08:21,680
+So we're really
+finding a volume and
+
+215
+00:08:21,680 --> 00:08:24,215
+risk finding that
+volume by cutting it,
+
+216
+00:08:24,215 --> 00:08:25,820
+by cutting its
+cross sections
+
+217
+00:08:25,820 --> 00:08:27,350
+in a certain,
+certain directions.
+
+218
+00:08:27,350 --> 00:08:28,730
+So now we want to cut
+
+219
+00:08:28,730 --> 00:08:31,619
+those cross sections
+vertically up and down.
+
+220
+00:08:31,619 --> 00:08:33,470
+>> But if we do that,
+
+221
+00:08:33,470 --> 00:08:36,620
+we see that our region
+are the nature of
+
+222
+00:08:36,620 --> 00:08:38,660
+its bounds actually changes
+
+223
+00:08:38,660 --> 00:08:40,444
+here at x equal to two.
+
+224
+00:08:40,444 --> 00:08:42,095
+>> Because when
+x is equal to,
+
+225
+00:08:42,095 --> 00:08:44,270
+when x is between 02,
+
+226
+00:08:44,270 --> 00:08:48,110
+we can see the two
+functions y equals to
+
+227
+00:08:48,110 --> 00:08:51,950
+0 and this line here,
+
+228
+00:08:51,950 --> 00:08:53,120
+which is y equals
+
+229
+00:08:53,120 --> 00:08:59,000
+two to x when
+
+230
+00:08:59,000 --> 00:09:02,220
+you solve for y
+in this equation.
+
+231
+00:09:02,560 --> 00:09:04,700
+So it's going to bound,
+
+232
+00:09:04,700 --> 00:09:05,900
+the bounds are
+going to be between
+
+233
+00:09:05,900 --> 00:09:07,040
+y equals 0 and
+
+234
+00:09:07,040 --> 00:09:10,099
+y equals two to x in
+this first region, R1.
+
+235
+00:09:10,099 --> 00:09:11,450
+>> And then the bounds
+are going to be
+
+236
+00:09:11,450 --> 00:09:12,800
+between here.
+
+237
+00:09:12,800 --> 00:09:13,940
+>> When you
+solve for y, you
+
+238
+00:09:13,940 --> 00:09:16,910
+get y equals 2x,
+2x minus four.
+
+239
+00:09:16,910 --> 00:09:18,170
+So the bounds
+are going to be
+
+240
+00:09:18,170 --> 00:09:19,850
+between equals to
+
+241
+00:09:19,850 --> 00:09:21,245
+two root x and y equals
+
+242
+00:09:21,245 --> 00:09:23,959
+2x minus four
+in this region.
+
+243
+00:09:23,959 --> 00:09:26,750
+>> But it's important
+that we see this as
+
+244
+00:09:26,750 --> 00:09:28,820
+two separate pieces
+because the limits
+
+245
+00:09:28,820 --> 00:09:29,840
+of integration
+are going to be
+
+246
+00:09:29,840 --> 00:09:31,189
+different on
+these two pieces.
+
+247
+00:09:31,189 --> 00:09:32,810
+>> So we have to
+actually split up the
+
+248
+00:09:32,810 --> 00:09:34,760
+integral into the sum of
+
+249
+00:09:34,760 --> 00:09:36,770
+two integrals in order to
+
+250
+00:09:36,770 --> 00:09:41,010
+write the integral
+in terms of dy, dx.
+
+251
+00:09:42,759 --> 00:09:44,134
+>> Okay?
+
+252
+00:09:44,134 --> 00:09:47,030
+>> So we take the
+original integral,
+
+253
+00:09:47,030 --> 00:09:48,800
+we write it as the sum of
+
+254
+00:09:48,800 --> 00:09:50,330
+the integrals of
+the same function.
+
+255
+00:09:50,330 --> 00:09:51,380
+We're just integrating
+the function
+
+256
+00:09:51,380 --> 00:09:52,550
+one here because
+we're finding
+
+257
+00:09:52,550 --> 00:09:54,860
+the area over
+these two regions.
+
+258
+00:09:54,860 --> 00:09:56,704
+But over these two regions,
+
+259
+00:09:56,704 --> 00:10:00,030
+we need to find these
+two new boundaries.
+
+260
+00:10:01,540 --> 00:10:04,565
+And that allows
+us to rewrite
+
+261
+00:10:04,565 --> 00:10:06,950
+the limits of integration.
+
+262
+00:10:06,950 --> 00:10:10,355
+Now with respect to
+the dy by dx integral,
+
+263
+00:10:10,355 --> 00:10:13,730
+notice how we can't just
+swap roles x and y.
+
+264
+00:10:13,730 --> 00:10:15,815
+That's a very
+common mistake.
+
+265
+00:10:15,815 --> 00:10:17,735
+If these problems, we
+can't just switches,
+
+266
+00:10:17,735 --> 00:10:19,250
+switch x and y's and
+
+267
+00:10:19,250 --> 00:10:20,480
+expect to be integrating
+
+268
+00:10:20,480 --> 00:10:22,100
+over the exact same region.
+
+269
+00:10:22,100 --> 00:10:23,990
+We really do have to draw
+
+270
+00:10:23,990 --> 00:10:25,400
+the region and think about
+
+271
+00:10:25,400 --> 00:10:26,660
+how the limits of
+
+272
+00:10:26,660 --> 00:10:27,530
+integration are going
+
+273
+00:10:27,530 --> 00:10:29,550
+to describe that region.
+
+274
+00:10:29,830 --> 00:10:31,640
+But now we're given
+
+275
+00:10:31,640 --> 00:10:33,230
+two iterated
+integral separately.
+
+276
+00:10:33,230 --> 00:10:34,670
+So we can use
+
+277
+00:10:34,670 --> 00:10:35,750
+our normal techniques of
+
+278
+00:10:35,750 --> 00:10:38,490
+integration to find
+these integrals.

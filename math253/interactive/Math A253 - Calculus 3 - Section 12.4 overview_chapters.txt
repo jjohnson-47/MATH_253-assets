@@ -1,0 +1,6 @@
+```
+0:00  Total Derivative Overview
+2:05  Partial Derivatives and Differentiability
+3:07  Continuity vs. Differentiability
+4:08  Function Approximation Using Differentials
+```

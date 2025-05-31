@@ -1,0 +1,6 @@
+```
+0:00  Overview of Velocity and Acceleration
+2:01  Derivatives of Position Vector
+3:03  Tangent Line and Release Point
+5:05  Projectile Motion and Gravity
+```

@@ -1,0 +1,6 @@
+```
+0:00  Unit Tangent and Normal Vectors
+1:45  Deriving the Unit Tangent Vector
+2:45  Finding the Unit Normal Vector
+4:00  Acceleration Decomposition in Space
+```

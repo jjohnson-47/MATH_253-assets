@@ -1,0 +1,6 @@
+```
+0:00  Introduction to Vector Fields
+2:04  Del Operator and Gradient
+3:05  Divergence in Vector Fields
+4:05  Curl in Vector Fields
+```

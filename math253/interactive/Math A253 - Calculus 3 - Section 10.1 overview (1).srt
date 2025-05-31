@@ -1,0 +1,803 @@
+1
+00:00:00,410 --> 00:00:02,460
+Let's talk a
+little Cartesian
+
+2
+00:00:02,460 --> 00:00:03,885
+coordinates in 3D space.
+
+3
+00:00:03,885 --> 00:00:05,250
+This is an overview
+of section
+
+4
+00:00:05,250 --> 00:00:07,570
+10.1 from our book,
+
+5
+00:00:10,190 --> 00:00:12,780
+Cartesian coordinates
+in 3D space,
+
+6
+00:00:12,780 --> 00:00:13,890
+or a way of describing
+
+7
+00:00:13,890 --> 00:00:15,390
+the location of a point
+
+8
+00:00:15,390 --> 00:00:18,435
+in 3D space with
+respect to some origin.
+
+9
+00:00:18,435 --> 00:00:19,980
+The origin is
+usually denoted
+
+10
+00:00:19,980 --> 00:00:21,870
+0 comma 0, comma 0.
+
+11
+00:00:21,870 --> 00:00:23,760
+It's very similar
+to the way
+
+12
+00:00:23,760 --> 00:00:25,350
+you describe points
+in 2D space,
+
+13
+00:00:25,350 --> 00:00:27,240
+except we have an
+extra coordinate.
+
+14
+00:00:27,240 --> 00:00:29,385
+The 0.2 comma
+three comma five
+
+15
+00:00:29,385 --> 00:00:31,410
+is two units in
+the X direction,
+
+16
+00:00:31,410 --> 00:00:32,490
+three units in the Y, and
+
+17
+00:00:32,490 --> 00:00:34,155
+five units in
+the z-direction.
+
+18
+00:00:34,155 --> 00:00:35,370
+And we can have lots of
+
+19
+00:00:35,370 --> 00:00:36,570
+points and we can have
+
+20
+00:00:36,570 --> 00:00:40,450
+equations that
+describe many points.
+
+21
+00:00:43,980 --> 00:00:47,680
+We can also talk about
+distance in 3D space.
+
+22
+00:00:47,680 --> 00:00:49,255
+If you have two points,
+
+23
+00:00:49,255 --> 00:00:50,545
+the distance between them
+
+24
+00:00:50,545 --> 00:00:52,300
+is given by this formula,
+
+25
+00:00:52,300 --> 00:00:54,130
+which is the square
+root of the sum of
+
+26
+00:00:54,130 --> 00:00:56,200
+the squares of
+the differences
+
+27
+00:00:56,200 --> 00:00:57,745
+of the respective
+coordinates.
+
+28
+00:00:57,745 --> 00:00:59,665
+It's very similar to
+the distance formula
+
+29
+00:00:59,665 --> 00:01:00,940
+in two dimensions.
+
+30
+00:01:00,940 --> 00:01:02,740
+In fact, it's just
+another application
+
+31
+00:01:02,740 --> 00:01:04,510
+of the Pythagorean theorem.
+
+32
+00:01:04,510 --> 00:01:06,790
+Here I show that we
+have two points,
+
+33
+00:01:06,790 --> 00:01:08,545
+1-2-3, 4-5-6.
+
+34
+00:01:08,545 --> 00:01:10,285
+How can you, how do
+you find the distance?
+
+35
+00:01:10,285 --> 00:01:11,710
+You put them
+into the formula
+
+36
+00:01:11,710 --> 00:01:14,270
+and calculate like this.
+
+37
+00:01:17,100 --> 00:01:19,390
+And a natural object
+
+38
+00:01:19,390 --> 00:01:21,550
+in three-dimensional
+space as a sphere,
+
+39
+00:01:21,550 --> 00:01:24,310
+which is the set
+of points that are
+
+40
+00:01:24,310 --> 00:01:25,465
+all the same distance
+
+41
+00:01:25,465 --> 00:01:27,450
+from some point
+called a center.
+
+42
+00:01:27,450 --> 00:01:29,315
+If you have the
+center being
+
+43
+00:01:29,315 --> 00:01:32,000
+abc and a radius being r,
+
+44
+00:01:32,000 --> 00:01:35,330
+then you can describe
+the distance from
+
+45
+00:01:35,330 --> 00:01:38,629
+the point XYZ to the
+point a BC equal to r.
+
+46
+00:01:38,629 --> 00:01:39,964
+>> That's the
+distance formula.
+
+47
+00:01:39,964 --> 00:01:41,210
+>> And if you
+square both sides,
+
+48
+00:01:41,210 --> 00:01:43,550
+you get exactly this
+standard equation
+
+49
+00:01:43,550 --> 00:01:45,260
+of the sphere.
+
+50
+00:01:45,260 --> 00:01:46,460
+Oftentimes,
+
+51
+00:01:46,460 --> 00:01:48,275
+you're given an
+equation that doesn't
+
+52
+00:01:48,275 --> 00:01:50,840
+look exactly like
+a sphere per se.
+
+53
+00:01:50,840 --> 00:01:52,520
+But if you group the x, y,
+
+54
+00:01:52,520 --> 00:01:53,810
+and z terms together,
+
+55
+00:01:53,810 --> 00:01:55,400
+like we did in
+this example,
+
+56
+00:01:55,400 --> 00:01:57,260
+you can see that
+you can complete
+
+57
+00:01:57,260 --> 00:01:59,540
+the square and
+then gather the x,
+
+58
+00:01:59,540 --> 00:02:00,725
+y, and z squared's.
+
+59
+00:02:00,725 --> 00:02:02,930
+And then it is
+just a sphere.
+
+60
+00:02:02,930 --> 00:02:04,055
+And this sphere
+is centered at
+
+61
+00:02:04,055 --> 00:02:05,510
+negative one comma two,
+
+62
+00:02:05,510 --> 00:02:07,830
+comma three, With
+radius four.
+
+63
+00:02:09,580 --> 00:02:11,720
+We can also have planes
+
+64
+00:02:11,720 --> 00:02:13,865
+in three-dimensional space.
+
+65
+00:02:13,865 --> 00:02:17,480
+Here we have three
+coordinate planes,
+
+66
+00:02:17,480 --> 00:02:19,745
+and these are
+the most common.
+
+67
+00:02:19,745 --> 00:02:22,130
+The XY plane,
+which is the set
+
+68
+00:02:22,130 --> 00:02:24,845
+of points with
+a Z value of 0.
+
+69
+00:02:24,845 --> 00:02:27,050
+The YZ plane, which is
+
+70
+00:02:27,050 --> 00:02:29,465
+the set of points
+with an x value of 0.
+
+71
+00:02:29,465 --> 00:02:31,235
+And the X Z plane,
+
+72
+00:02:31,235 --> 00:02:32,510
+which is a set of points.
+
+73
+00:02:32,510 --> 00:02:34,610
+What the y value of 0.
+
+74
+00:02:34,610 --> 00:02:37,760
+These planes help
+us describe what's
+
+75
+00:02:37,760 --> 00:02:41,660
+happening in these
+three cross-sections.
+
+76
+00:02:41,660 --> 00:02:44,060
+So no matter what kind
+of graph we have,
+
+77
+00:02:44,060 --> 00:02:44,810
+no matter what kind of
+
+78
+00:02:44,810 --> 00:02:46,085
+function that we're given,
+
+79
+00:02:46,085 --> 00:02:48,320
+we often like to simplify
+
+80
+00:02:48,320 --> 00:02:50,360
+the situation by
+looking at what's
+
+81
+00:02:50,360 --> 00:02:51,320
+happening in one of
+
+82
+00:02:51,320 --> 00:02:52,775
+these three
+coordinate planes.
+
+83
+00:02:52,775 --> 00:02:54,980
+Because then the
+three-dimensional graph
+
+84
+00:02:54,980 --> 00:02:56,510
+just becomes a
+two-dimensional graph.
+
+85
+00:02:56,510 --> 00:02:58,220
+And we can use all
+the results that we
+
+86
+00:02:58,220 --> 00:03:02,405
+know from one-dimensional
+calculus.
+
+87
+00:03:02,405 --> 00:03:04,520
+So the equations
+for these planes
+
+88
+00:03:04,520 --> 00:03:06,230
+are z equals to 0,
+
+89
+00:03:06,230 --> 00:03:07,940
+x equals to 0, and
+
+90
+00:03:07,940 --> 00:03:10,350
+y equals to 0 respectively.
+
+91
+00:03:12,490 --> 00:03:15,545
+A cylinder in
+three-dimensional space
+
+92
+00:03:15,545 --> 00:03:17,000
+is a bit more general
+
+93
+00:03:17,000 --> 00:03:18,920
+than what we usually
+think of as a cylinder.
+
+94
+00:03:18,920 --> 00:03:20,510
+A cylinder we
+usually think of
+
+95
+00:03:20,510 --> 00:03:22,175
+as sort of like a tin can,
+
+96
+00:03:22,175 --> 00:03:23,510
+like we see here in the
+
+97
+00:03:23,510 --> 00:03:25,145
+picture on the bottom left.
+
+98
+00:03:25,145 --> 00:03:28,250
+In calculus, a cylinder is
+
+99
+00:03:28,250 --> 00:03:32,269
+A set of parallel lines
+grouped together.
+
+100
+00:03:32,269 --> 00:03:35,285
+>> Essentially, these
+are called the rulings.
+
+101
+00:03:35,285 --> 00:03:36,830
+And we can see that
+
+102
+00:03:36,830 --> 00:03:38,570
+the picture on
+the bottom right,
+
+103
+00:03:38,570 --> 00:03:41,555
+If you have a curve
+like a parabola there,
+
+104
+00:03:41,555 --> 00:03:43,430
+and then you have
+all of the lines
+
+105
+00:03:43,430 --> 00:03:46,159
+that go through
+that parabola.
+
+106
+00:03:46,159 --> 00:03:47,990
+>> And that surface
+that's formed by
+
+107
+00:03:47,990 --> 00:03:50,150
+all those lines
+is a cylinder.
+
+108
+00:03:50,150 --> 00:03:51,530
+So it's the cylinder
+
+109
+00:03:51,530 --> 00:03:52,730
+is the surface that you get
+
+110
+00:03:52,730 --> 00:03:54,440
+by connecting together all
+
+111
+00:03:54,440 --> 00:03:56,850
+of these parallel lines.
+
+112
+00:03:59,590 --> 00:04:01,790
+We also describe
+
+113
+00:04:01,790 --> 00:04:04,010
+the many services in
+three-dimensional space
+
+114
+00:04:04,010 --> 00:04:06,110
+by revolving
+
+115
+00:04:06,110 --> 00:04:08,645
+other surfaces that
+we already know.
+
+116
+00:04:08,645 --> 00:04:11,000
+So in this case,
+
+117
+00:04:11,000 --> 00:04:13,850
+we have y equals
+the sine of z.
+
+118
+00:04:13,850 --> 00:04:16,700
+So if you kind of tilt
+your head and you
+
+119
+00:04:16,700 --> 00:04:18,380
+can see that our z
+
+120
+00:04:18,380 --> 00:04:19,490
+as the independent
+variable,
+
+121
+00:04:19,490 --> 00:04:21,440
+we just have a
+normal sine function
+
+122
+00:04:21,440 --> 00:04:24,275
+there from 0 to pi.
+
+123
+00:04:24,275 --> 00:04:26,900
+And in the y z plane,
+
+124
+00:04:26,900 --> 00:04:27,740
+that is what it looks like.
+
+125
+00:04:27,740 --> 00:04:29,390
+Y equals the sine of z.
+
+126
+00:04:29,390 --> 00:04:32,795
+And you can rotate that
+around the z-axis.
+
+127
+00:04:32,795 --> 00:04:34,460
+And then you get
+nice, you get
+
+128
+00:04:34,460 --> 00:04:37,950
+this nice TOP
+looking surface.
+
+129
+00:04:41,530 --> 00:04:43,640
+Some important kinds of
+
+130
+00:04:43,640 --> 00:04:45,845
+surfaces are
+quadratic surfaces.
+
+131
+00:04:45,845 --> 00:04:47,270
+A quadric services are
+
+132
+00:04:47,270 --> 00:04:49,025
+an extension of the idea of
+
+133
+00:04:49,025 --> 00:04:53,630
+conic sections from
+precalculus and calculus.
+
+134
+00:04:53,630 --> 00:04:55,040
+And if you see
+
+135
+00:04:55,040 --> 00:04:57,050
+the equation here for
+a quadratic surface,
+
+136
+00:04:57,050 --> 00:04:59,630
+it's very similar to
+the general equation of
+
+137
+00:04:59,630 --> 00:05:07,970
+a conic section when
+
+138
+00:05:07,970 --> 00:05:09,964
+we sketch quadratic
+surfaces,
+
+139
+00:05:09,964 --> 00:05:11,450
+we have modern software
+
+140
+00:05:11,450 --> 00:05:12,290
+that helps us quite a bit
+
+141
+00:05:12,290 --> 00:05:14,420
+these days, but oftentimes,
+
+142
+00:05:14,420 --> 00:05:17,000
+a simple sketch on
+your own can help you
+
+143
+00:05:17,000 --> 00:05:18,380
+solve a seemingly
+
+144
+00:05:18,380 --> 00:05:20,360
+intractable problem
+in seconds.
+
+145
+00:05:20,360 --> 00:05:23,300
+Just by helping you
+simplify the situation,
+
+146
+00:05:23,300 --> 00:05:25,070
+by understanding what kind
+
+147
+00:05:25,070 --> 00:05:26,479
+of object we're
+dealing with.
+
+148
+00:05:26,479 --> 00:05:28,130
+>> The typical way
+that you sketch
+
+149
+00:05:28,130 --> 00:05:29,435
+a quarter x surface
+
+150
+00:05:29,435 --> 00:05:31,160
+or most surfaces is just to
+
+151
+00:05:31,160 --> 00:05:32,974
+sketch some cross sections.
+
+152
+00:05:32,974 --> 00:05:35,165
+>> So in a surface
+like this,
+
+153
+00:05:35,165 --> 00:05:38,135
+if this is a hyperbola
+or hyperboloid,
+
+154
+00:05:38,135 --> 00:05:39,260
+and the equation of
+
+155
+00:05:39,260 --> 00:05:41,090
+a hyperboloid
+here is given.
+
+156
+00:05:41,090 --> 00:05:44,570
+And if you want to
+graphic yourself,
+
+157
+00:05:44,570 --> 00:05:46,190
+what you could
+do is just let
+
+158
+00:05:46,190 --> 00:05:48,455
+x be 0, let's say.
+
+159
+00:05:48,455 --> 00:05:51,305
+And if you put x
+equals to 0 in,
+
+160
+00:05:51,305 --> 00:05:53,690
+what you're left
+with is just a y
+
+161
+00:05:53,690 --> 00:05:55,400
+squared over b squared
+
+162
+00:05:55,400 --> 00:05:56,960
+minus z squared over
+c squared equal one,
+
+163
+00:05:56,960 --> 00:05:58,550
+which is a hyperbola.
+
+164
+00:05:58,550 --> 00:06:00,620
+So when x is equal to 0,
+
+165
+00:06:00,620 --> 00:06:03,155
+remember that's
+the y z plane.
+
+166
+00:06:03,155 --> 00:06:05,645
+So by setting x equal to 0,
+
+167
+00:06:05,645 --> 00:06:07,220
+you're looking
+at the curve in
+
+168
+00:06:07,220 --> 00:06:11,480
+the YZ plane of that
+part of the surface.
+
+169
+00:06:11,480 --> 00:06:14,135
+So this is taking
+cross sections
+
+170
+00:06:14,135 --> 00:06:17,120
+of the surface in
+a systematic way.
+
+171
+00:06:17,120 --> 00:06:18,650
+And if the years,
+
+172
+00:06:18,650 --> 00:06:21,080
+if your graph is
+centered at the origin,
+
+173
+00:06:21,080 --> 00:06:22,535
+which this one is,
+
+174
+00:06:22,535 --> 00:06:24,230
+the typical cross
+sections to
+
+175
+00:06:24,230 --> 00:06:25,715
+take would be the
+coordinate axes,
+
+176
+00:06:25,715 --> 00:06:29,610
+x equal to 0, y equal
+to 0, and z equal to 0

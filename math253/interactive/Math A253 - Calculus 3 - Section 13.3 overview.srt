@@ -1,0 +1,448 @@
+1
+00:00:00,000 --> 00:00:01,260
+Let's take a look at
+
+2
+00:00:01,260 --> 00:00:03,149
+double integration with
+polar coordinates.
+
+3
+00:00:03,149 --> 00:00:06,239
+>> Doesn't overview
+of Section 13.3.
+
+4
+00:00:06,239 --> 00:00:08,340
+>> To talk about
+double integrals
+
+5
+00:00:08,340 --> 00:00:09,540
+in polar coordinates,
+
+6
+00:00:09,540 --> 00:00:12,210
+we need to construct
+the integral,
+
+7
+00:00:12,210 --> 00:00:13,740
+the double integral, in
+
+8
+00:00:13,740 --> 00:00:16,544
+terms of polar
+coordinate regions.
+
+9
+00:00:16,544 --> 00:00:18,840
+>> In order to do that,
+we need to understand
+
+10
+00:00:18,840 --> 00:00:21,150
+what is the area of
+
+11
+00:00:21,150 --> 00:00:23,370
+a rect and for
+rectangular region
+
+12
+00:00:23,370 --> 00:00:25,964
+subdivided into
+polar rectangles.
+
+13
+00:00:25,964 --> 00:00:28,740
+Now polar rectangle
+is a rectangle that's
+
+14
+00:00:28,740 --> 00:00:30,990
+bounded by two
+different R values
+
+15
+00:00:30,990 --> 00:00:33,370
+and two different
+theta values.
+
+16
+00:00:33,770 --> 00:00:36,450
+We can try to
+find the area of
+
+17
+00:00:36,450 --> 00:00:38,220
+one of these pieces
+by just using
+
+18
+00:00:38,220 --> 00:00:40,565
+some basic geometry where
+
+19
+00:00:40,565 --> 00:00:41,930
+we have the proportion of
+
+20
+00:00:41,930 --> 00:00:43,355
+all the way around
+the circle,
+
+21
+00:00:43,355 --> 00:00:45,380
+which is the delta theta is
+
+22
+00:00:45,380 --> 00:00:47,779
+the angle here
+divided by two pi.
+
+23
+00:00:47,779 --> 00:00:50,644
+>> So that's the
+proportion of the circle.
+
+24
+00:00:50,644 --> 00:00:52,100
+>> And then we have the
+
+25
+00:00:52,100 --> 00:00:54,095
+circle with the radius R2,
+
+26
+00:00:54,095 --> 00:00:56,795
+R2, R2 squared pi,
+
+27
+00:00:56,795 --> 00:00:58,910
+and then the circle with
+the smaller radius,
+
+28
+00:00:58,910 --> 00:01:00,560
+R1 squared pi,
+
+29
+00:01:00,560 --> 00:01:02,870
+the area that actually
+
+30
+00:01:02,870 --> 00:01:04,610
+this formula
+describes the area
+
+31
+00:01:04,610 --> 00:01:06,485
+of this piece
+of the sector.
+
+32
+00:01:06,485 --> 00:01:09,635
+Now we can simplify a
+bit, cancel the pies,
+
+33
+00:01:09,635 --> 00:01:11,870
+and then write
+the difference
+
+34
+00:01:11,870 --> 00:01:14,284
+of squares and factor it.
+
+35
+00:01:14,284 --> 00:01:16,895
+>> And what we see
+is when we let
+
+36
+00:01:16,895 --> 00:01:19,940
+R one and R2
+become very close,
+
+37
+00:01:19,940 --> 00:01:22,969
+and we let delta
+theta becomes 0.
+
+38
+00:01:22,969 --> 00:01:25,805
+>> We can use some
+notation here to write
+
+39
+00:01:25,805 --> 00:01:29,285
+delta r is the difference
+between R1 and R2.
+
+40
+00:01:29,285 --> 00:01:31,490
+And then R1 plus
+R2 over two is
+
+41
+00:01:31,490 --> 00:01:34,325
+just the average of
+these two values.
+
+42
+00:01:34,325 --> 00:01:36,740
+So we get a
+convenient formula
+
+43
+00:01:36,740 --> 00:01:40,100
+for how the change of
+the area of one of
+
+44
+00:01:40,100 --> 00:01:43,085
+these little
+rectangles behaves
+
+45
+00:01:43,085 --> 00:01:46,535
+as our changes and
+delta changes,
+
+46
+00:01:46,535 --> 00:01:48,845
+I'm sorry, theta changes.
+
+47
+00:01:48,845 --> 00:01:51,860
+So now we're going to
+take the limit and
+
+48
+00:01:51,860 --> 00:01:52,790
+then we actually get
+
+49
+00:01:52,790 --> 00:01:54,230
+this convenient formula for
+
+50
+00:01:54,230 --> 00:01:55,970
+the differentials that tell
+
+51
+00:01:55,970 --> 00:01:57,440
+us how to approximate
+
+52
+00:01:57,440 --> 00:01:58,580
+change in area for
+
+53
+00:01:58,580 --> 00:02:01,910
+small nudges in the
+radius and the angle.
+
+54
+00:02:01,910 --> 00:02:04,715
+Note here that how to,
+
+55
+00:02:04,715 --> 00:02:06,695
+when we write the
+iterated integral,
+
+56
+00:02:06,695 --> 00:02:09,320
+it's not just the
+function with x
+
+57
+00:02:09,320 --> 00:02:10,400
+and y replaced with r
+
+58
+00:02:10,400 --> 00:02:12,005
+cosine theta, r sine theta.
+
+59
+00:02:12,005 --> 00:02:15,570
+But we also have
+an r d r d theta.
+
+60
+00:02:16,660 --> 00:02:18,770
+So let's use this technique
+
+61
+00:02:18,770 --> 00:02:19,520
+to find the volume
+
+62
+00:02:19,520 --> 00:02:22,820
+underneath the plane
+over the unit disk.
+
+63
+00:02:22,820 --> 00:02:26,620
+So in this plane,
+I'm sorry,
+
+64
+00:02:26,620 --> 00:02:27,670
+in this example,
+we're going to
+
+65
+00:02:27,670 --> 00:02:30,130
+find the volume
+over the unit disc.
+
+66
+00:02:30,130 --> 00:02:32,635
+And the unit disk is
+just defined as the,
+
+67
+00:02:32,635 --> 00:02:34,180
+the points where
+x squared plus
+
+68
+00:02:34,180 --> 00:02:36,145
+y squared is less
+than or equal to one.
+
+69
+00:02:36,145 --> 00:02:38,860
+And then we can write
+the double integral in
+
+70
+00:02:38,860 --> 00:02:40,810
+its general form of
+
+71
+00:02:40,810 --> 00:02:41,950
+the function that describes
+
+72
+00:02:41,950 --> 00:02:44,270
+the plane over
+the region R.
+
+73
+00:02:44,460 --> 00:02:47,140
+Now to write it as an
+
+74
+00:02:47,140 --> 00:02:48,760
+integral in polar
+coordinates,
+
+75
+00:02:48,760 --> 00:02:50,380
+we want to make
+the appropriate
+
+76
+00:02:50,380 --> 00:02:52,570
+substitutions where x is r,
+
+77
+00:02:52,570 --> 00:02:54,160
+cosine theta y is r,
+
+78
+00:02:54,160 --> 00:02:58,510
+sine theta r goes
+
+79
+00:02:58,510 --> 00:03:01,405
+from 0 to one and
+the unit disc.
+
+80
+00:03:01,405 --> 00:03:02,590
+And then we're going all
+
+81
+00:03:02,590 --> 00:03:03,535
+the way around the circle.
+
+82
+00:03:03,535 --> 00:03:05,785
+Theta goes from
+0 to two pi.
+
+83
+00:03:05,785 --> 00:03:07,870
+Now we have an
+iterated integral,
+
+84
+00:03:07,870 --> 00:03:09,590
+two variables and we
+
+85
+00:03:09,590 --> 00:03:11,850
+can compute it like usual.
+
+86
+00:03:13,240 --> 00:03:17,390
+So here we fact we
+multiply through by r,
+
+87
+00:03:17,390 --> 00:03:19,970
+find the derivative
+with respect
+
+88
+00:03:19,970 --> 00:03:21,080
+the antiderivative
+with respect
+
+89
+00:03:21,080 --> 00:03:22,265
+to r of the inside,
+
+90
+00:03:22,265 --> 00:03:24,440
+evaluate at the end points.
+
+91
+00:03:24,440 --> 00:03:26,570
+And now we just
+have a regular
+
+92
+00:03:26,570 --> 00:03:28,760
+integral with
+respect to theta.
+
+93
+00:03:28,760 --> 00:03:31,579
+And we get our
+answer is four pi.
+
+94
+00:03:31,579 --> 00:03:33,109
+>> And what are
+we finding here?
+
+95
+00:03:33,109 --> 00:03:35,420
+>> We are finding the
+volume underneath
+
+96
+00:03:35,420 --> 00:03:38,765
+the surface of the plane
+above the unit disk.
+
+97
+00:03:38,765 --> 00:03:42,840
+So it's this piece
+underneath the plane here.

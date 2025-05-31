@@ -1,0 +1,7 @@
+```
+0:00  Directional Derivatives Overview
+2:01  Gradient and Directional Derivative
+4:02  Direction of Steepest Descent
+6:05  Water Flow and Gradient Paths
+8:30  Gradient in Three Dimensions
+```

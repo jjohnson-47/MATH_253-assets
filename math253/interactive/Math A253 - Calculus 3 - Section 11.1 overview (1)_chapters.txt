@@ -1,0 +1,6 @@
+```
+0:00  Introduction to Vector Valued Functions
+2:00  Parameterization of Curves
+4:00  Cycloid Vector Valued Function
+6:12  Displacement in Vector Functions
+```

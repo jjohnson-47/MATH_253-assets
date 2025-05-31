@@ -1,0 +1,768 @@
+1
+00:00:00,000 --> 00:00:02,550
+Let's take a look at
+a quick overview of
+
+2
+00:00:02,550 --> 00:00:05,235
+section 12.3 on
+partial derivatives.
+
+3
+00:00:05,235 --> 00:00:07,170
+Partial derivatives of
+
+4
+00:00:07,170 --> 00:00:08,910
+a function of
+two variables,
+
+5
+00:00:08,910 --> 00:00:11,070
+then the function
+must be continuous,
+
+6
+00:00:11,070 --> 00:00:13,035
+are defined as the limit of
+
+7
+00:00:13,035 --> 00:00:15,195
+the difference
+quotient, where the,
+
+8
+00:00:15,195 --> 00:00:18,165
+the limit is taken
+as h goes to 0,
+
+9
+00:00:18,165 --> 00:00:21,750
+where h is added to
+the X component before
+
+10
+00:00:21,750 --> 00:00:23,505
+the derivative with
+respect to x and
+
+11
+00:00:23,505 --> 00:00:24,690
+the y component for the
+
+12
+00:00:24,690 --> 00:00:26,400
+derivative with
+respect to Y.
+
+13
+00:00:26,400 --> 00:00:28,440
+If you're taking the
+partial derivative
+
+14
+00:00:28,440 --> 00:00:30,000
+of a function of
+two variables,
+
+15
+00:00:30,000 --> 00:00:31,710
+then it's partial
+derivatives
+
+16
+00:00:31,710 --> 00:00:34,125
+are also functions
+of two variables.
+
+17
+00:00:34,125 --> 00:00:37,155
+Let's take a look
+at an example.
+
+18
+00:00:37,155 --> 00:00:38,700
+Here we're asked to
+
+19
+00:00:38,700 --> 00:00:39,930
+find the partial
+derivative with
+
+20
+00:00:39,930 --> 00:00:42,325
+respect to x using
+the limit definition.
+
+21
+00:00:42,325 --> 00:00:43,820
+But since we looked at
+
+22
+00:00:43,820 --> 00:00:45,500
+the definition and why
+
+23
+00:00:45,500 --> 00:00:46,670
+was acting as a constant,
+
+24
+00:00:46,670 --> 00:00:48,110
+we can take the
+derivative of
+
+25
+00:00:48,110 --> 00:00:49,850
+this function
+with respect to
+
+26
+00:00:49,850 --> 00:00:51,920
+x by thinking of
+y as a constant.
+
+27
+00:00:51,920 --> 00:00:53,135
+So if y is a constant,
+
+28
+00:00:53,135 --> 00:00:55,790
+the derivative x
+squared y is 2x y,
+
+29
+00:00:55,790 --> 00:00:58,820
+the derivative of
+2x is just two.
+
+30
+00:00:58,820 --> 00:00:59,990
+And the derivative
+of y cubed,
+
+31
+00:00:59,990 --> 00:01:00,950
+if y was acting
+
+32
+00:01:00,950 --> 00:01:02,660
+of the continent
+would just be 0.
+
+33
+00:01:02,660 --> 00:01:04,595
+So that's the easy way
+
+34
+00:01:04,595 --> 00:01:06,350
+to find the partial
+derivatives.
+
+35
+00:01:06,350 --> 00:01:09,004
+Now using the
+limit definition,
+
+36
+00:01:09,004 --> 00:01:12,019
+we have to apply the
+definition in the limit.
+
+37
+00:01:12,019 --> 00:01:15,050
+>> And then we put
+an x plus h for
+
+38
+00:01:15,050 --> 00:01:17,030
+everywhere we see x for
+
+39
+00:01:17,030 --> 00:01:19,470
+the first part of
+the expression.
+
+40
+00:01:19,569 --> 00:01:22,385
+>> Then we subtract
+the function.
+
+41
+00:01:22,385 --> 00:01:24,440
+We need to expand all,
+
+42
+00:01:24,440 --> 00:01:28,500
+all that out,
+gather our terms,
+
+43
+00:01:29,380 --> 00:01:31,400
+and some magic
+
+44
+00:01:31,400 --> 00:01:32,630
+happens where
+everything that's left
+
+45
+00:01:32,630 --> 00:01:33,890
+over that doesn't
+get cancelled
+
+46
+00:01:33,890 --> 00:01:35,600
+out has an H and the top,
+
+47
+00:01:35,600 --> 00:01:36,620
+the H on the top
+
+48
+00:01:36,620 --> 00:01:37,910
+cancels with h
+on the bottom.
+
+49
+00:01:37,910 --> 00:01:38,510
+And then when you take
+
+50
+00:01:38,510 --> 00:01:40,085
+the limit as h goes to 0,
+
+51
+00:01:40,085 --> 00:01:42,005
+you are left with 2x,
+
+52
+00:01:42,005 --> 00:01:43,550
+2x y plus 2x,
+
+53
+00:01:43,550 --> 00:01:44,990
+which exactly the way that
+
+54
+00:01:44,990 --> 00:01:47,460
+we thought about it
+in the first place.
+
+55
+00:01:48,850 --> 00:01:50,300
+Now we want to
+
+56
+00:01:50,300 --> 00:01:52,010
+interpret some
+partial derivatives.
+
+57
+00:01:52,010 --> 00:01:53,000
+So find the partial
+
+58
+00:01:53,000 --> 00:01:54,020
+derivative with
+respect to x
+
+59
+00:01:54,020 --> 00:01:56,270
+and y at the 0.2 comma one.
+
+60
+00:01:56,270 --> 00:01:59,120
+So first we find the
+partial derivatives.
+
+61
+00:01:59,120 --> 00:02:00,935
+Then we put in the points.
+
+62
+00:02:00,935 --> 00:02:02,120
+Here we see the
+partial with
+
+63
+00:02:02,120 --> 00:02:03,680
+respect to x is
+negative three,
+
+64
+00:02:03,680 --> 00:02:06,180
+with respect to y is one.
+
+65
+00:02:06,190 --> 00:02:09,140
+What does the
+negative three mean?
+
+66
+00:02:09,140 --> 00:02:11,030
+Well, it's the
+instantaneous rate of
+
+67
+00:02:11,030 --> 00:02:13,970
+the function with respect
+
+68
+00:02:13,970 --> 00:02:15,125
+to the first variable.
+
+69
+00:02:15,125 --> 00:02:17,359
+That's one interpretation,
+interpretation.
+
+70
+00:02:17,359 --> 00:02:19,640
+>> It's also the slope
+
+71
+00:02:19,640 --> 00:02:21,529
+or the steepness
+of the function.
+
+72
+00:02:21,529 --> 00:02:22,670
+>> If you were to face in
+
+73
+00:02:22,670 --> 00:02:24,650
+the positive
+x-direction and take
+
+74
+00:02:24,650 --> 00:02:27,230
+a one unit step forward.
+
+75
+00:02:27,230 --> 00:02:29,720
+So is talking about
+how that function is
+
+76
+00:02:29,720 --> 00:02:32,000
+changing in the
+positive x direction.
+
+77
+00:02:32,000 --> 00:02:32,840
+So in this case,
+
+78
+00:02:32,840 --> 00:02:34,220
+if you were to take
+one step forward,
+
+79
+00:02:34,220 --> 00:02:36,590
+you would take
+three steps down.
+
+80
+00:02:36,590 --> 00:02:38,450
+Sort of describes
+the steepness
+
+81
+00:02:38,450 --> 00:02:40,355
+of the function in
+that direction.
+
+82
+00:02:40,355 --> 00:02:43,200
+And similar for
+the variable y.
+
+83
+00:02:43,930 --> 00:02:47,015
+So it's the slope of
+the tangent line,
+
+84
+00:02:47,015 --> 00:02:48,935
+although we're talking
+about a surface now,
+
+85
+00:02:48,935 --> 00:02:50,900
+it's the slope of
+the tangent line
+
+86
+00:02:50,900 --> 00:02:53,795
+that's tangent in
+that direction.
+
+87
+00:02:53,795 --> 00:02:56,525
+Here we see a couple
+of pictures of
+
+88
+00:02:56,525 --> 00:02:58,700
+the tangent line in
+
+89
+00:02:58,700 --> 00:03:01,490
+the positive x direction
+on the left and
+
+90
+00:03:01,490 --> 00:03:02,600
+the slope of the
+tangent line in
+
+91
+00:03:02,600 --> 00:03:05,280
+the positive y
+direction on the right,
+
+92
+00:03:07,210 --> 00:03:10,984
+we also have second
+partial derivatives.
+
+93
+00:03:10,984 --> 00:03:12,950
+And if we take
+
+94
+00:03:12,950 --> 00:03:15,500
+the derivative respect
+to x and then x again,
+
+95
+00:03:15,500 --> 00:03:18,665
+we use this del notation,
+
+96
+00:03:18,665 --> 00:03:21,485
+which was kind of
+a funny-looking D.
+
+97
+00:03:21,485 --> 00:03:23,540
+And sometimes we write it
+
+98
+00:03:23,540 --> 00:03:25,579
+with the little acts
+as a subscript.
+
+99
+00:03:25,579 --> 00:03:27,170
+The thing to notice with
+
+100
+00:03:27,170 --> 00:03:29,330
+the partial
+derivative notation
+
+101
+00:03:29,330 --> 00:03:31,100
+here is that if
+you're using
+
+102
+00:03:31,100 --> 00:03:33,020
+the, the fraction notation,
+
+103
+00:03:33,020 --> 00:03:35,150
+Leibniz's notation
+sometimes called
+
+104
+00:03:35,150 --> 00:03:36,470
+the derivatives that work
+
+105
+00:03:36,470 --> 00:03:38,480
+from right to left
+
+106
+00:03:38,480 --> 00:03:39,560
+in terms of the order
+
+107
+00:03:39,560 --> 00:03:40,880
+in which you are
+taking them.
+
+108
+00:03:40,880 --> 00:03:42,830
+So if we look at
+number two here,
+
+109
+00:03:42,830 --> 00:03:44,255
+this function here,
+
+110
+00:03:44,255 --> 00:03:46,370
+we took the derivative
+with respect to x,
+
+111
+00:03:46,370 --> 00:03:47,720
+then we took the derivative
+
+112
+00:03:47,720 --> 00:03:48,995
+with respect to y.
+
+113
+00:03:48,995 --> 00:03:51,380
+So when you see
+this fraction
+
+114
+00:03:51,380 --> 00:03:54,035
+here was first x, then y.
+
+115
+00:03:54,035 --> 00:03:56,420
+But if you're going
+to use the notation
+
+116
+00:03:56,420 --> 00:03:57,935
+on the right with
+the subscripts.
+
+117
+00:03:57,935 --> 00:03:59,495
+It reads from
+left to right,
+
+118
+00:03:59,495 --> 00:04:01,980
+first x, then y.
+
+119
+00:04:04,650 --> 00:04:06,925
+We want to be
+able to interpret
+
+120
+00:04:06,925 --> 00:04:08,785
+second derivatives of
+
+121
+00:04:08,785 --> 00:04:10,420
+functions of two
+variables in the same way
+
+122
+00:04:10,420 --> 00:04:12,805
+that we do it for
+functions of one variable.
+
+123
+00:04:12,805 --> 00:04:15,670
+If you're looking in
+only one direction,
+
+124
+00:04:15,670 --> 00:04:17,365
+the positive x direction.
+
+125
+00:04:17,365 --> 00:04:19,120
+And in fact, if
+you just take
+
+126
+00:04:19,120 --> 00:04:20,200
+the cross section of
+
+127
+00:04:20,200 --> 00:04:22,330
+the graph in
+that direction,
+
+128
+00:04:22,330 --> 00:04:24,715
+in the positive
+x direction,
+
+129
+00:04:24,715 --> 00:04:26,110
+then you would
+interpret the
+
+130
+00:04:26,110 --> 00:04:27,429
+second derivative
+
+131
+00:04:27,429 --> 00:04:29,830
+nearly the same as you
+would in calculus one.
+
+132
+00:04:29,830 --> 00:04:32,665
+It's the rate at which
+the slope is changing.
+
+133
+00:04:32,665 --> 00:04:33,550
+And it measures
+
+134
+00:04:33,550 --> 00:04:36,140
+the concavity in
+that direction.
+
+135
+00:04:36,870 --> 00:04:38,920
+In the same thing for
+
+136
+00:04:38,920 --> 00:04:41,305
+the second derivative
+with respect to y.
+
+137
+00:04:41,305 --> 00:04:44,750
+The mixed partial
+derivatives R a little
+
+138
+00:04:44,750 --> 00:04:48,200
+bit more, more interesting.
+
+139
+00:04:48,200 --> 00:04:50,540
+So you want to
+measure if you're
+
+140
+00:04:50,540 --> 00:04:51,620
+taking the derivative
+with respect to
+
+141
+00:04:51,620 --> 00:04:53,690
+x and then y,
+
+142
+00:04:53,690 --> 00:04:55,910
+that's measuring how much
+
+143
+00:04:55,910 --> 00:04:57,290
+the function is
+changing with
+
+144
+00:04:57,290 --> 00:04:59,780
+the function f of
+x is changing with
+
+145
+00:04:59,780 --> 00:05:01,220
+respect to y as
+
+146
+00:05:01,220 --> 00:05:03,275
+x derivative with
+respect to y.
+
+147
+00:05:03,275 --> 00:05:05,060
+The author in our book has
+
+148
+00:05:05,060 --> 00:05:06,605
+a really good analogy.
+
+149
+00:05:06,605 --> 00:05:09,260
+And I encourage you to
+look at on page 706 on
+
+150
+00:05:09,260 --> 00:05:14,450
+the rolling
+meadow functions
+
+151
+00:05:14,450 --> 00:05:17,450
+of three variables
+are very similar.
+
+152
+00:05:17,450 --> 00:05:20,720
+It's the partial
+derivative with respect
+
+153
+00:05:20,720 --> 00:05:23,840
+to any variable
+x or y or z is
+
+154
+00:05:23,840 --> 00:05:26,480
+this limit of the
+difference quotient where
+
+155
+00:05:26,480 --> 00:05:27,620
+the H is added to
+
+156
+00:05:27,620 --> 00:05:28,730
+the component in which
+
+157
+00:05:28,730 --> 00:05:30,845
+you're taking the
+derivative of.
+
+158
+00:05:30,845 --> 00:05:33,110
+Interpretive
+interpretations of
+
+159
+00:05:33,110 --> 00:05:34,790
+the derivative
+are the same,
+
+160
+00:05:34,790 --> 00:05:35,810
+although the geometry is
+
+161
+00:05:35,810 --> 00:05:37,430
+slightly different
+because the graph of
+
+162
+00:05:37,430 --> 00:05:39,080
+the function and here
+
+163
+00:05:39,080 --> 00:05:40,580
+is in four-dimensional
+space.
+
+164
+00:05:40,580 --> 00:05:43,340
+But in terms of
+rates of change in
+
+165
+00:05:43,340 --> 00:05:45,500
+that particular
+direction than
+
+166
+00:05:45,500 --> 00:05:47,700
+the interpretations
+are the same.

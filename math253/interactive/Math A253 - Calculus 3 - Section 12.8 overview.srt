@@ -1,0 +1,1633 @@
+1
+00:00:00,080 --> 00:00:03,150
+Let's take a look
+at Section 12.8,
+
+2
+00:00:03,150 --> 00:00:05,175
+which is on extreme values.
+
+3
+00:00:05,175 --> 00:00:06,510
+Now this slide has
+
+4
+00:00:06,510 --> 00:00:07,815
+a lot of information on it,
+
+5
+00:00:07,815 --> 00:00:11,025
+but let's try to
+keep it simple.
+
+6
+00:00:11,025 --> 00:00:15,165
+A function has an
+absolute maximum, right?
+
+7
+00:00:15,165 --> 00:00:17,060
+If it's point
+x-naught, y-naught,
+
+8
+00:00:17,060 --> 00:00:18,530
+if it's bigger than
+everywhere else in
+
+9
+00:00:18,530 --> 00:00:20,840
+the function has an
+absolute minimum.
+
+10
+00:00:20,840 --> 00:00:22,460
+If it's less than
+everywhere else.
+
+11
+00:00:22,460 --> 00:00:26,015
+And the function, it's
+a relative maximum
+
+12
+00:00:26,015 --> 00:00:27,680
+if it's bigger
+than everywhere
+
+13
+00:00:27,680 --> 00:00:28,790
+else in some
+
+14
+00:00:28,790 --> 00:00:30,320
+little neighborhood
+of the point.
+
+15
+00:00:30,320 --> 00:00:33,180
+And similarly for
+relative minimum,
+
+16
+00:00:33,640 --> 00:00:35,660
+the maximums and
+
+17
+00:00:35,660 --> 00:00:37,565
+minimums are
+called extremis,
+
+18
+00:00:37,565 --> 00:00:39,140
+the point at which
+
+19
+00:00:39,140 --> 00:00:41,900
+the partial derivatives
+are equal to 0,
+
+20
+00:00:41,900 --> 00:00:43,970
+which means those
+tangent slopes
+
+21
+00:00:43,970 --> 00:00:45,875
+of those tangent
+lines are 0,
+
+22
+00:00:45,875 --> 00:00:47,240
+which means the
+function is sort
+
+23
+00:00:47,240 --> 00:00:49,685
+of locally flat
+at that point,
+
+24
+00:00:49,685 --> 00:00:51,439
+are called critical points.
+
+25
+00:00:51,439 --> 00:00:53,900
+>> Or if, or if those
+derivatives are
+
+26
+00:00:53,900 --> 00:00:59,680
+not defined in calculus.
+
+27
+00:00:59,680 --> 00:01:02,410
+>> One, if I point,
+
+28
+00:01:02,410 --> 00:01:04,180
+was a critical point,
+
+29
+00:01:04,180 --> 00:01:05,860
+if the derivative
+was equal to,
+
+30
+00:01:05,860 --> 00:01:09,310
+the derivative was
+equal to u equal to 0.
+
+31
+00:01:09,310 --> 00:01:11,530
+>> Or if it didn't exist in
+
+32
+00:01:11,530 --> 00:01:13,900
+calculus 3, x nought,
+
+33
+00:01:13,900 --> 00:01:16,210
+y nought is a
+critical point
+
+34
+00:01:16,210 --> 00:01:18,880
+if its gradient is
+equal to the 0 vector,
+
+35
+00:01:18,880 --> 00:01:20,890
+or it's gradient
+does not exist.
+
+36
+00:01:20,890 --> 00:01:24,640
+Notice that the gradient
+of the function has
+
+37
+00:01:24,640 --> 00:01:25,930
+really taken the place
+
+38
+00:01:25,930 --> 00:01:28,720
+of f prime from
+calculus one.
+
+39
+00:01:28,720 --> 00:01:30,910
+And if we really
+think about it,
+
+40
+00:01:30,910 --> 00:01:33,535
+f prime for a
+single variable
+
+41
+00:01:33,535 --> 00:01:35,365
+really is just a
+gradient as well.
+
+42
+00:01:35,365 --> 00:01:38,840
+Just a gradient of
+a single dimension.
+
+43
+00:01:40,360 --> 00:01:42,935
+Let's find the
+relative extrema
+
+44
+00:01:42,935 --> 00:01:44,615
+of a function.
+
+45
+00:01:44,615 --> 00:01:46,730
+So we can find the
+partial derivatives,
+
+46
+00:01:46,730 --> 00:01:48,755
+set them equal to 0,
+
+47
+00:01:48,755 --> 00:01:53,090
+and then solve in
+this case we get
+
+48
+00:01:53,090 --> 00:01:54,560
+the point two-thirds come
+
+49
+00:01:54,560 --> 00:01:57,949
+a 1 third and it's
+a critical point.
+
+50
+00:01:57,949 --> 00:02:00,410
+>> Okay, so we found
+the critical point
+
+51
+00:02:00,410 --> 00:02:02,104
+at two-thirds, 1 third.
+
+52
+00:02:02,104 --> 00:02:03,680
+>> But how do we
+know that it's a
+
+53
+00:02:03,680 --> 00:02:05,899
+maximum or a
+minimum or neither?
+
+54
+00:02:05,899 --> 00:02:07,789
+>> That's the tricky part.
+
+55
+00:02:07,789 --> 00:02:11,419
+>> We can just graph
+it like I did here.
+
+56
+00:02:11,419 --> 00:02:13,610
+>> I put in the
+value two-thirds,
+
+57
+00:02:13,610 --> 00:02:15,349
+1 third for x and y.
+
+58
+00:02:15,349 --> 00:02:16,820
+>> And then you can see
+
+59
+00:02:16,820 --> 00:02:17,990
+that it's the point on
+
+60
+00:02:17,990 --> 00:02:21,260
+the bottom of the graph
+of the function here.
+
+61
+00:02:21,260 --> 00:02:23,310
+So it must be a minimum.
+
+62
+00:02:23,970 --> 00:02:27,010
+In general, you can
+find whether or not
+
+63
+00:02:27,010 --> 00:02:28,060
+a critical point
+is a maximum
+
+64
+00:02:28,060 --> 00:02:29,440
+or minimum by graphing it,
+
+65
+00:02:29,440 --> 00:02:31,180
+not always possible,
+especially if
+
+66
+00:02:31,180 --> 00:02:33,145
+it's a function of more
+than two variables.
+
+67
+00:02:33,145 --> 00:02:35,710
+We can use numerical
+approximations,
+
+68
+00:02:35,710 --> 00:02:39,640
+which means just put
+end points nearby into
+
+69
+00:02:39,640 --> 00:02:40,750
+the function and find what
+
+70
+00:02:40,750 --> 00:02:41,950
+its values are and see if
+
+71
+00:02:41,950 --> 00:02:43,300
+those values are above
+
+72
+00:02:43,300 --> 00:02:45,280
+or below your
+critical value.
+
+73
+00:02:45,280 --> 00:02:46,420
+Or we can use
+
+74
+00:02:46,420 --> 00:02:48,835
+some more sophisticated
+kind of factoring
+
+75
+00:02:48,835 --> 00:02:53,230
+or analysis to determine
+that it's a minimum.
+
+76
+00:02:53,230 --> 00:02:56,065
+Now if you don't
+have technology,
+
+77
+00:02:56,065 --> 00:02:57,760
+usually what we need to do
+
+78
+00:02:57,760 --> 00:02:59,635
+is some kind of analysis.
+
+79
+00:02:59,635 --> 00:03:01,900
+So with this
+particular function,
+
+80
+00:03:01,900 --> 00:03:03,700
+we can notice that
+the given function is
+
+81
+00:03:03,700 --> 00:03:05,935
+actually in the
+form of a conic.
+
+82
+00:03:05,935 --> 00:03:08,080
+And you might recall
+from precalculus that
+
+83
+00:03:08,080 --> 00:03:12,280
+iconic is an equation
+of the following form.
+
+84
+00:03:12,280 --> 00:03:15,250
+And when you have a b term,
+
+85
+00:03:15,250 --> 00:03:17,530
+in our case, negative
+one is the B term.
+
+86
+00:03:17,530 --> 00:03:18,790
+>> It's the, the part in
+
+87
+00:03:18,790 --> 00:03:20,754
+front of the next x, y.
+
+88
+00:03:20,754 --> 00:03:23,050
+>> That means it's
+a rotated conic.
+
+89
+00:03:23,050 --> 00:03:25,720
+And you may not remember
+this from pre calc,
+
+90
+00:03:25,720 --> 00:03:29,095
+but I'm just kinda
+bringing it up as a way to
+
+91
+00:03:29,095 --> 00:03:31,630
+use some skills
+from calculus
+
+92
+00:03:31,630 --> 00:03:34,885
+to determine whether
+this might be a minimum.
+
+93
+00:03:34,885 --> 00:03:38,770
+So we identified as
+iconic rotated conic.
+
+94
+00:03:38,770 --> 00:03:40,300
+And then there's this
+formula says that
+
+95
+00:03:40,300 --> 00:03:42,535
+the rotation angle
+must be the cotangent
+
+96
+00:03:42,535 --> 00:03:44,545
+of the difference in
+
+97
+00:03:44,545 --> 00:03:48,270
+a minus c divided
+by b. In this case.
+
+98
+00:03:48,270 --> 00:03:50,315
+In this case,
+a's minus C a 0.
+
+99
+00:03:50,315 --> 00:03:51,890
+The cotangent
+theta equals to
+
+100
+00:03:51,890 --> 00:03:53,900
+0 means theta is
+pi over four.
+
+101
+00:03:53,900 --> 00:03:56,060
+Then we have
+rotation equations
+
+102
+00:03:56,060 --> 00:03:57,650
+where we actually change
+
+103
+00:03:57,650 --> 00:03:59,780
+the coordinate
+system to make
+
+104
+00:03:59,780 --> 00:04:02,525
+the a conic that doesn't,
+
+105
+00:04:02,525 --> 00:04:04,670
+no longer has
+the mixed term.
+
+106
+00:04:04,670 --> 00:04:06,560
+And I just went
+ahead and did this.
+
+107
+00:04:06,560 --> 00:04:09,125
+And I see that if we
+make that substitution,
+
+108
+00:04:09,125 --> 00:04:10,580
+our original function
+
+109
+00:04:10,580 --> 00:04:12,380
+becomes this new function,
+
+110
+00:04:12,380 --> 00:04:15,710
+which maybe looks messier
+but actually is in
+
+111
+00:04:15,710 --> 00:04:20,090
+the standard form for any,
+
+112
+00:04:20,090 --> 00:04:21,875
+for every constant
+value of z,
+
+113
+00:04:21,875 --> 00:04:24,350
+it's in the standard
+form of an ellipse.
+
+114
+00:04:24,350 --> 00:04:25,910
+So the level curves of
+
+115
+00:04:25,910 --> 00:04:28,799
+our function are ellipses.
+
+116
+00:04:28,960 --> 00:04:31,370
+And if we, we
+
+117
+00:04:31,370 --> 00:04:32,840
+already saw the graph
+of the function,
+
+118
+00:04:32,840 --> 00:04:34,715
+which is, it's our
+parabola lloyd.
+
+119
+00:04:34,715 --> 00:04:36,650
+So a parabola lloyd
+Is a function
+
+120
+00:04:36,650 --> 00:04:39,080
+whose level curves are
+ellipses going up and
+
+121
+00:04:39,080 --> 00:04:40,430
+whose cross sections
+with respect to
+
+122
+00:04:40,430 --> 00:04:41,960
+the axis z and
+
+123
+00:04:41,960 --> 00:04:45,290
+y-z planes are parabolas,
+
+124
+00:04:45,290 --> 00:04:47,525
+so therefore it
+must be a minimum.
+
+125
+00:04:47,525 --> 00:04:49,670
+So this is a
+way to use some
+
+126
+00:04:49,670 --> 00:04:50,240
+of our knowledge from
+
+127
+00:04:50,240 --> 00:04:52,385
+precalculus to
+determine that,
+
+128
+00:04:52,385 --> 00:04:53,960
+to determine if whether
+
+129
+00:04:53,960 --> 00:04:56,550
+that critical point
+is a minimum or not.
+
+130
+00:04:56,919 --> 00:04:59,180
+>> You can have
+points where
+
+131
+00:04:59,180 --> 00:05:01,124
+the derivatives are both 0.
+
+132
+00:05:01,124 --> 00:05:04,195
+>> So it's, it's locally
+flat at the point.
+
+133
+00:05:04,195 --> 00:05:05,140
+But depending on
+
+134
+00:05:05,140 --> 00:05:06,670
+which direction
+you're facing,
+
+135
+00:05:06,670 --> 00:05:08,140
+it might be at
+the bottom of
+
+136
+00:05:08,140 --> 00:05:10,180
+the well or it might
+be at the top of
+
+137
+00:05:10,180 --> 00:05:12,070
+a hill K. So
+
+138
+00:05:12,070 --> 00:05:14,215
+that point is called
+a saddle point.
+
+139
+00:05:14,215 --> 00:05:16,810
+Saddle point is defined by
+
+140
+00:05:16,810 --> 00:05:18,820
+the partial
+derivatives exist and
+
+141
+00:05:18,820 --> 00:05:20,845
+are both 0, so it's flat.
+
+142
+00:05:20,845 --> 00:05:22,240
+And then in any little disk
+
+143
+00:05:22,240 --> 00:05:23,665
+around that point,
+
+144
+00:05:23,665 --> 00:05:25,000
+you can find values of the
+
+145
+00:05:25,000 --> 00:05:26,080
+function which are greater
+
+146
+00:05:26,080 --> 00:05:27,520
+than and you can
+find values of
+
+147
+00:05:27,520 --> 00:05:29,170
+the function that are
+less than that point.
+
+148
+00:05:29,170 --> 00:05:32,090
+So it's not a
+maximum or minimum.
+
+149
+00:05:33,420 --> 00:05:35,470
+We want something like
+
+150
+00:05:35,470 --> 00:05:36,895
+the second derivative test
+
+151
+00:05:36,895 --> 00:05:38,575
+for functions of
+two variables.
+
+152
+00:05:38,575 --> 00:05:40,960
+We have the second
+derivative test, remember,
+
+153
+00:05:40,960 --> 00:05:41,695
+tells us something about
+
+154
+00:05:41,695 --> 00:05:43,555
+concavity of the function.
+
+155
+00:05:43,555 --> 00:05:46,375
+If it's concave up at
+that critical point,
+
+156
+00:05:46,375 --> 00:05:48,010
+then we know it's
+a minimum, right?
+
+157
+00:05:48,010 --> 00:05:50,395
+If it's concave down,
+then it's a maximum.
+
+158
+00:05:50,395 --> 00:05:51,895
+While the credit,
+the credit,
+
+159
+00:05:51,895 --> 00:05:53,020
+the concavity is determined
+
+160
+00:05:53,020 --> 00:05:54,130
+by the second derivative.
+
+161
+00:05:54,130 --> 00:05:55,870
+But with a function
+of two variables,
+
+162
+00:05:55,870 --> 00:05:57,475
+you have many
+second derivatives.
+
+163
+00:05:57,475 --> 00:05:58,930
+You have the derivatives
+with respect
+
+164
+00:05:58,930 --> 00:06:00,370
+to x and y,
+
+165
+00:06:00,370 --> 00:06:02,860
+and y x, y and y ax.
+
+166
+00:06:02,860 --> 00:06:06,220
+It turns out that if
+we were to approximate
+
+167
+00:06:06,220 --> 00:06:08,875
+our function of
+two variables
+
+168
+00:06:08,875 --> 00:06:10,600
+by a quadratic, sort of.
+
+169
+00:06:10,600 --> 00:06:13,120
+So I'm like a Multivariable
+Taylor series,
+
+170
+00:06:13,120 --> 00:06:16,105
+that this value d here,
+
+171
+00:06:16,105 --> 00:06:19,330
+which is the determinant
+of a Hessian matrix,
+
+172
+00:06:19,330 --> 00:06:21,880
+which we don't, you can
+feel free to look up.
+
+173
+00:06:21,880 --> 00:06:23,890
+But this value d is
+
+174
+00:06:23,890 --> 00:06:26,130
+that coefficient
+in front of those.
+
+175
+00:06:26,130 --> 00:06:28,010
+Quadratic terms. So it's
+
+176
+00:06:28,010 --> 00:06:30,320
+describing concavity of
+
+177
+00:06:30,320 --> 00:06:32,210
+a function of two
+variables in the same way
+
+178
+00:06:32,210 --> 00:06:33,949
+that f double-prime
+
+179
+00:06:33,949 --> 00:06:35,555
+does in a single variable.
+
+180
+00:06:35,555 --> 00:06:38,375
+And we can follow the
+following rules here.
+
+181
+00:06:38,375 --> 00:06:39,830
+If at any point,
+
+182
+00:06:39,830 --> 00:06:41,750
+if d is positive,
+
+183
+00:06:41,750 --> 00:06:42,890
+now it's assuming
+that we're
+
+184
+00:06:42,890 --> 00:06:44,285
+looking at a
+critical point.
+
+185
+00:06:44,285 --> 00:06:45,975
+So you find the critical
+points who put them.
+
+186
+00:06:45,975 --> 00:06:47,375
+And if d is positive,
+
+187
+00:06:47,375 --> 00:06:49,340
+that means it's
+a max or a min.
+
+188
+00:06:49,340 --> 00:06:51,200
+T determines a max or min.
+
+189
+00:06:51,200 --> 00:06:53,195
+You can use the derivative,
+
+190
+00:06:53,195 --> 00:06:55,100
+the secondary
+with respect to x
+
+191
+00:06:55,100 --> 00:06:56,870
+to look at its concavity in
+
+192
+00:06:56,870 --> 00:06:58,460
+the normal sense to
+
+193
+00:06:58,460 --> 00:07:00,590
+determine if it's a
+minimum or positive.
+
+194
+00:07:00,590 --> 00:07:01,820
+Here at the second
+derivative is
+
+195
+00:07:01,820 --> 00:07:03,440
+positive, then
+it's a minimum.
+
+196
+00:07:03,440 --> 00:07:04,580
+If the second
+derivative is negative,
+
+197
+00:07:04,580 --> 00:07:06,260
+it's a maximum.
+
+198
+00:07:06,260 --> 00:07:08,225
+If D is negative,
+
+199
+00:07:08,225 --> 00:07:10,145
+that means at a
+saddle point,
+
+200
+00:07:10,145 --> 00:07:12,500
+if t is 0, we don't know.
+
+201
+00:07:12,500 --> 00:07:14,970
+We have to use some
+other methods.
+
+202
+00:07:15,729 --> 00:07:18,514
+>> So here's an example.
+
+203
+00:07:18,514 --> 00:07:20,269
+>> Liver function.
+
+204
+00:07:20,269 --> 00:07:21,410
+>> We want to
+determine whether it
+
+205
+00:07:21,410 --> 00:07:22,430
+has a relative maximum,
+
+206
+00:07:22,430 --> 00:07:23,360
+minimum, or a saddle point
+
+207
+00:07:23,360 --> 00:07:24,380
+at each of the
+critical points.
+
+208
+00:07:24,380 --> 00:07:25,880
+>> So we can find the
+critical points by
+
+209
+00:07:25,880 --> 00:07:26,930
+finding the gradient and
+
+210
+00:07:26,930 --> 00:07:28,235
+setting it equal to 0.
+
+211
+00:07:28,235 --> 00:07:29,855
+That gives us a
+couple of equations.
+
+212
+00:07:29,855 --> 00:07:31,340
+Here we have a
+critical point at
+
+213
+00:07:31,340 --> 00:07:33,590
+one comma two and
+negative one comma two.
+
+214
+00:07:33,590 --> 00:07:36,800
+We can take the second
+derivatives and plug
+
+215
+00:07:36,800 --> 00:07:40,205
+in the 0.1 comma two.
+
+216
+00:07:40,205 --> 00:07:43,520
+Now d is the
+
+217
+00:07:43,520 --> 00:07:45,080
+secondary with
+respect to x times
+
+218
+00:07:45,080 --> 00:07:46,370
+the secondary with
+respect to y.
+
+219
+00:07:46,370 --> 00:07:49,940
+So six times one
+times negative
+
+220
+00:07:49,940 --> 00:07:53,540
+two then
+
+221
+00:07:53,540 --> 00:07:55,160
+minus the mixed partial
+
+222
+00:07:55,160 --> 00:07:56,810
+derivatives are 0 times 0.
+
+223
+00:07:56,810 --> 00:07:58,700
+That gives us negative
+12, which is negative.
+
+224
+00:07:58,700 --> 00:08:00,455
+Since d is negative
+at that point,
+
+225
+00:08:00,455 --> 00:08:02,374
+we know that it's
+a saddle point.
+
+226
+00:08:02,374 --> 00:08:04,340
+>> Now we try negative
+one comma two.
+
+227
+00:08:04,340 --> 00:08:05,690
+>> So six times
+negative one
+
+228
+00:08:05,690 --> 00:08:07,790
+times negative two,
+which is positive 12.
+
+229
+00:08:07,790 --> 00:08:09,380
+Again, we're
+subtracting 0 with
+
+230
+00:08:09,380 --> 00:08:11,915
+the mixed partials,
+so that's positive.
+
+231
+00:08:11,915 --> 00:08:13,550
+And then when you take
+a look at the sign
+
+232
+00:08:13,550 --> 00:08:14,870
+of the second derivative,
+
+233
+00:08:14,870 --> 00:08:16,324
+select acts,
+that's negative.
+
+234
+00:08:16,324 --> 00:08:17,390
+>> So this must be
+
+235
+00:08:17,390 --> 00:08:22,190
+a maximum from
+calculus one.
+
+236
+00:08:22,190 --> 00:08:23,480
+>> Remember that
+any kind of,
+
+237
+00:08:23,480 --> 00:08:24,620
+any different
+
+238
+00:08:24,620 --> 00:08:26,990
+continuous
+differential function
+
+239
+00:08:26,990 --> 00:08:28,880
+on a closed interval,
+
+240
+00:08:28,880 --> 00:08:31,400
+she does maximum, minimum.
+
+241
+00:08:31,400 --> 00:08:33,350
+The reason why we spend so
+
+242
+00:08:33,350 --> 00:08:34,400
+much time talking about
+
+243
+00:08:34,400 --> 00:08:37,400
+closed bounded sets earlier
+
+244
+00:08:37,400 --> 00:08:38,480
+is that the same thing is
+
+245
+00:08:38,480 --> 00:08:39,560
+true for a function of
+
+246
+00:08:39,560 --> 00:08:41,750
+two variables defined over
+
+247
+00:08:41,750 --> 00:08:43,175
+a closed bounded set.
+
+248
+00:08:43,175 --> 00:08:46,170
+It must also have
+a maximum minimum.
+
+249
+00:08:47,049 --> 00:08:50,400
+>> So let's take a
+look at this example.
+
+250
+00:08:50,619 --> 00:08:53,045
+>> If we have
+this function f,
+
+251
+00:08:53,045 --> 00:08:54,799
+and then we have
+this triangular
+
+252
+00:08:54,799 --> 00:08:56,900
+region in its domain.
+
+253
+00:08:56,900 --> 00:08:59,750
+In this particular
+region is given.
+
+254
+00:08:59,750 --> 00:09:01,850
+But the vertices negative
+one to negative or
+
+255
+00:09:01,850 --> 00:09:04,715
+negative to 012,
+negative two.
+
+256
+00:09:04,715 --> 00:09:06,710
+We'd like to know what
+is the maximum and
+
+257
+00:09:06,710 --> 00:09:07,730
+the minimum values of
+
+258
+00:09:07,730 --> 00:09:11,040
+f over this
+triangular region?
+
+259
+00:09:11,980 --> 00:09:14,840
+The strategy is to find
+
+260
+00:09:14,840 --> 00:09:17,000
+a relative maximum
+or minimum on
+
+261
+00:09:17,000 --> 00:09:19,640
+the inside of the region.
+
+262
+00:09:19,640 --> 00:09:22,400
+And then we have to break
+down the boundaries
+
+263
+00:09:22,400 --> 00:09:25,430
+individually and find
+its relative maximum
+
+264
+00:09:25,430 --> 00:09:27,410
+or minimums on those.
+
+265
+00:09:27,410 --> 00:09:29,570
+And then that gives
+us candidates
+
+266
+00:09:29,570 --> 00:09:31,190
+for what the maximum and
+
+267
+00:09:31,190 --> 00:09:32,390
+minimum of what it might be
+
+268
+00:09:32,390 --> 00:09:35,580
+over the entire region.
+
+269
+00:09:37,930 --> 00:09:40,159
+So on the interior,
+
+270
+00:09:40,159 --> 00:09:42,170
+we take the gradient
+and set it equal to
+
+271
+00:09:42,170 --> 00:09:45,680
+0 and determine what
+points that might be.
+
+272
+00:09:45,680 --> 00:09:47,210
+In this case, 0 comma
+
+273
+00:09:47,210 --> 00:09:48,800
+0 is the point
+
+274
+00:09:48,800 --> 00:09:50,150
+where the gradient
+is equal to 0.
+
+275
+00:09:50,150 --> 00:09:51,470
+So 0 comma 0 is our first
+
+276
+00:09:51,470 --> 00:09:53,384
+candidate for a max or min.
+
+277
+00:09:53,384 --> 00:09:55,300
+>> Now we have
+to break up the,
+
+278
+00:09:55,300 --> 00:09:57,460
+the boundary of
+that triangle
+
+279
+00:09:57,460 --> 00:09:59,529
+into its various pieces.
+
+280
+00:09:59,529 --> 00:10:00,970
+>> There's, I
+broke it up into
+
+281
+00:10:00,970 --> 00:10:03,470
+segment a, B, and C here.
+
+282
+00:10:07,170 --> 00:10:09,820
+So first on segment a,
+
+283
+00:10:09,820 --> 00:10:12,100
+if we substitute y
+equals to negative
+
+284
+00:10:12,100 --> 00:10:14,770
+two into the
+original equation,
+
+285
+00:10:14,770 --> 00:10:16,644
+into the, into the
+original function.
+
+286
+00:10:16,644 --> 00:10:17,994
+>> What we've
+done is review.
+
+287
+00:10:17,994 --> 00:10:19,060
+>> We reduced it to
+
+288
+00:10:19,060 --> 00:10:20,695
+a function of a
+single variable.
+
+289
+00:10:20,695 --> 00:10:22,570
+Now we can find
+its max or mins in
+
+290
+00:10:22,570 --> 00:10:24,340
+the same way that we
+wouldn't calculus one.
+
+291
+00:10:24,340 --> 00:10:26,335
+In this case, this
+is pretty clear.
+
+292
+00:10:26,335 --> 00:10:28,945
+This is a parabola
+shifted up one,
+
+293
+00:10:28,945 --> 00:10:29,470
+so it's going to have
+
+294
+00:10:29,470 --> 00:10:31,315
+a minimum at x equals to 0.
+
+295
+00:10:31,315 --> 00:10:33,670
+But notice that this
+is a line segment over
+
+296
+00:10:33,670 --> 00:10:35,970
+a closed interval,
+negative one to two.
+
+297
+00:10:35,970 --> 00:10:38,420
+We also have to consider
+the endpoints with
+
+298
+00:10:38,420 --> 00:10:40,925
+x equal to negative one
+and x equal to two.
+
+299
+00:10:40,925 --> 00:10:42,830
+And for segment a, y is
+
+300
+00:10:42,830 --> 00:10:45,095
+always equal to
+negative two.
+
+301
+00:10:45,095 --> 00:10:47,330
+So we have x equals to 0.
+
+302
+00:10:47,330 --> 00:10:48,980
+Negative 12 are
+
+303
+00:10:48,980 --> 00:10:51,440
+possible maximum
+admins that gives,
+
+304
+00:10:51,440 --> 00:10:54,410
+it gives rise to
+these three points.
+
+305
+00:10:54,410 --> 00:10:57,215
+So we're keeping track
+of all of the points
+
+306
+00:10:57,215 --> 00:10:58,130
+that are candidates for
+
+307
+00:10:58,130 --> 00:11:00,035
+maximum ends with
+a functions.
+
+308
+00:11:00,035 --> 00:11:04,325
+Now on Segment B, it's
+a similar kind of
+
+309
+00:11:04,325 --> 00:11:07,550
+procedure that
+the segment is
+
+310
+00:11:07,550 --> 00:11:09,170
+described with this line y
+
+311
+00:11:09,170 --> 00:11:11,195
+equals negative three
+halves x plus one.
+
+312
+00:11:11,195 --> 00:11:12,710
+What we do is we
+substitute that
+
+313
+00:11:12,710 --> 00:11:14,210
+back into the function for
+
+314
+00:11:14,210 --> 00:11:18,785
+y that gives us a
+function of only x,
+
+315
+00:11:18,785 --> 00:11:21,065
+which is the following
+quadratic function.
+
+316
+00:11:21,065 --> 00:11:22,340
+We can find its maximum
+
+317
+00:11:22,340 --> 00:11:23,734
+minimums using calculus.
+
+318
+00:11:23,734 --> 00:11:25,714
+>> Take the derivative,
+set it equal to 0.
+
+319
+00:11:25,714 --> 00:11:27,020
+>> Turns out axes six
+
+320
+00:11:27,020 --> 00:11:30,050
+fifths and y is
+negative four-fifths.
+
+321
+00:11:30,050 --> 00:11:31,670
+So now we have,
+
+322
+00:11:31,670 --> 00:11:33,260
+and then we have
+the endpoints with
+
+323
+00:11:33,260 --> 00:11:35,975
+x equals to 0 and
+x equals two.
+
+324
+00:11:35,975 --> 00:11:37,850
+And when x is equal to two,
+
+325
+00:11:37,850 --> 00:11:39,020
+we actually get
+the same point
+
+326
+00:11:39,020 --> 00:11:39,890
+that we got before.
+
+327
+00:11:39,890 --> 00:11:41,495
+So the new candidates
+are the points
+
+328
+00:11:41,495 --> 00:11:43,310
+0 comma, 1 sixth comma,
+
+329
+00:11:43,310 --> 00:11:46,850
+negative four-fifths in
+
+330
+00:11:46,850 --> 00:11:48,050
+segments C, it's done.
+
+331
+00:11:48,050 --> 00:11:50,810
+>> Similarly, you put y
+equal to 3x plus one.
+
+332
+00:11:50,810 --> 00:11:52,460
+>> And for y,
+substitute that in.
+
+333
+00:11:52,460 --> 00:11:55,180
+For f, take the derivatives
+
+334
+00:11:55,180 --> 00:11:56,260
+are equal to 0 and we
+
+335
+00:11:56,260 --> 00:11:57,460
+get the point
+negative three,
+
+336
+00:11:57,460 --> 00:11:59,230
+a negative 1 eighth.
+
+337
+00:11:59,230 --> 00:12:01,720
+Now, all of the
+points that we found,
+
+338
+00:12:01,720 --> 00:12:02,875
+we found seven of them.
+
+339
+00:12:02,875 --> 00:12:05,410
+00, negative one,
+negative 20,
+
+340
+00:12:05,410 --> 00:12:07,735
+negative two to negative
+two, negative three,
+
+341
+00:12:07,735 --> 00:12:10,600
+negative 1016, that's
+negative four-fifths.
+
+342
+00:12:10,600 --> 00:12:11,740
+So Israel candidates for
+
+343
+00:12:11,740 --> 00:12:13,135
+the maximum into
+the function.
+
+344
+00:12:13,135 --> 00:12:14,455
+So how do we determine
+
+345
+00:12:14,455 --> 00:12:16,870
+what is the max
+or min of f?
+
+346
+00:12:16,870 --> 00:12:18,640
+Well, we'd put them
+
+347
+00:12:18,640 --> 00:12:19,720
+all into the
+function c. Well,
+
+348
+00:12:19,720 --> 00:12:21,100
+we get the biggest one is
+
+349
+00:12:21,100 --> 00:12:21,970
+the maximum and the
+
+350
+00:12:21,970 --> 00:12:23,740
+smallest one is
+the minimum.
+
+351
+00:12:23,740 --> 00:12:25,720
+In this case, the
+largest one here
+
+352
+00:12:25,720 --> 00:12:28,584
+is at 29 fifths,
+which is about 5.8.
+
+353
+00:12:28,584 --> 00:12:30,250
+>> And the point
+where that occurs,
+
+354
+00:12:30,250 --> 00:12:32,034
+sixth, negative
+four-fifths.
+
+355
+00:12:32,034 --> 00:12:33,790
+>> And then the
+minimum is one record
+
+356
+00:12:33,790 --> 00:12:36,560
+at the 0 comma negative two

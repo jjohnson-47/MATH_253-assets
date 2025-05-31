@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Overview: Introduction to Vectors II</title>
+    
+    <!-- MathJax Configuration -->
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      },
+      startup: {
+        ready: function() {
+          setTimeout(() => MathJax.startup.defaultReady(), 1000);
+        }
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Aurora Borealis Theme Styles -->
+    <style>
+    /* ---------- Aurora Core ---------- */
+    :root{
+      --night:#001B33;--green:#00C853;--magenta:#D500F9;
+      --ice:#00E5FF;--pale:#F6FCFE;--gray:#EFF2F4;
+      --warning:#FF9800;--success:#4CAF50;
+    }
+
+    body{
+      font-family:system-ui,Arial,sans-serif;
+      line-height:1.6;color:var(--night);
+      background:var(--pale);
+      margin:0;padding:20px;
+      max-width:1000px;
+      margin:0 auto;
+    }
+    
+    h1,h2,h3,h4{margin:1.2em 0 .4em;}
+    a{color:var(--magenta);text-decoration:none;}
+    a:hover,a:focus{color:var(--green);text-decoration:underline;}
+
+    /* Header banner */
+    .aurora-header{
+      background:linear-gradient(135deg,var(--night) 0%,var(--green) 45%,var(--magenta) 100%);
+      color:#fff;padding:32px;border-radius:16px;margin-bottom:32px;
+      box-shadow:0 8px 24px rgba(0,0,0,.3);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .aurora-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.03) 10px,
+        rgba(255,255,255,0.03) 20px
+      );
+      animation: aurora-shimmer 20s linear infinite;
+    }
+
+    @keyframes aurora-shimmer {
+      0% { transform: translateX(-100%) translateY(-100%); }
+      100% { transform: translateX(100%) translateY(100%); }
+    }
+
+    .aurora-header h1 {
+      margin:0;font-size:32px;font-weight:700;
+      position:relative;z-index:1;
+    }
+
+    .aurora-header .subtitle {
+      margin:12px 0 0;font-size:18px;opacity:0.95;
+      position:relative;z-index:1;
+    }
+
+    .week-badge {
+      position:absolute;top:20px;right:20px;
+      background:rgba(255,255,255,0.2);
+      padding:8px 16px;border-radius:20px;
+      font-weight:600;font-size:14px;
+      backdrop-filter:blur(10px);
+      z-index:1;
+    }
+
+    /* Call‑out box */
+    .aurora-callout{
+      border-left:6px solid var(--ice);
+      background:rgba(0,229,255,.08);
+      padding:20px;margin:24px 0;border-radius:0 12px 12px 0;
+      position:relative;
+    }
+
+    .aurora-callout::before {
+      content: '✨';
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      background: var(--ice);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    /* Timeline */
+    .timeline-container {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 1px solid var(--gray);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--green), var(--ice), var(--magenta));
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 32px;
+      background: var(--gray);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-left: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      background: var(--green);
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .timeline-date {
+      font-weight: 700;
+      color: var(--magenta);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-title {
+      font-weight: 600;
+      color: var(--night);
+      margin-bottom: 8px;
+    }
+
+    .timeline-content {
+      color: #555;
+      font-size: 14px;
+    }
+
+    /* Section grid */
+    .sections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .section-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid var(--gray);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green), var(--ice));
+    }
+
+    .section-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .section-number {
+      background: var(--night);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--night);
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: #666;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .section-concepts {
+      background: var(--gray);
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+
+    .section-concepts h4 {
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      color: var(--night);
+    }
+
+    .section-concepts ul {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* Assignment cards */
+    .assignments-container {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 1px solid var(--gray);
+    }
+
+    .assignment-item {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      margin-bottom: 12px;
+      background: var(--gray);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .assignment-item:hover {
+      background: rgba(0,229,255,0.1);
+    }
+
+    .assignment-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+      font-size: 18px;
+      color: white;
+    }
+
+    .assignment-icon.discussion { background: var(--green); }
+    .assignment-icon.quiz { background: var(--magenta); }
+    .assignment-icon.homework { background: var(--ice); color: var(--night); }
+    .assignment-icon.written { background: var(--warning); }
+
+    .assignment-details {
+      flex: 1;
+    }
+
+    .assignment-title {
+      font-weight: 600;
+      color: var(--night);
+      margin-bottom: 4px;
+    }
+
+    .assignment-due {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .assignment-points {
+      background: var(--night);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* Progress indicator */
+    .progress-section {
+      background: linear-gradient(135deg, var(--night), var(--green));
+      color: white;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+
+    .progress-ring {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 16px;
+      position: relative;
+    }
+
+    .progress-ring svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .progress-ring circle {
+      fill: none;
+      stroke-width: 8;
+    }
+
+    .progress-ring .progress-bg {
+      stroke: rgba(255,255,255,0.2);
+    }
+
+    .progress-ring .progress-fill {
+      stroke: var(--ice);
+      stroke-dasharray: 251;
+      stroke-dashoffset: 200; /* 20% progress */
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s ease;
+    }
+
+    .progress-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      body { padding: 16px; }
+      .aurora-header { padding: 24px 20px; }
+      .aurora-header h1 { font-size: 24px; }
+      .sections-grid { grid-template-columns: 1fr; }
+      .assignment-item { flex-direction: column; text-align: center; }
+      .assignment-icon { margin-right: 0; margin-bottom: 8px; }
+    }
+
+    /* Special holiday note */
+    .holiday-notice {
+      background: linear-gradient(135deg, var(--warning), #FF5722);
+      color: white;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 16px 0;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .holiday-notice::before {
+      content: '🎗️';
+      margin-right: 12px;
+      font-size: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="aurora-header">
+        <div class="week-badge">Week 2 of 10</div>
+        <h1>Introduction to Vectors II</h1>
+        <div class="subtitle">Cross Products, Lines, and Planes in Three-Dimensional Space</div>
+        <div style="margin-top: 16px; font-size: 14px; opacity: 0.9;">
+            📅 May 27-30, 2025 • Sections 11.4-11.6 • Memorial Day Week
+        </div>
+    </div>
+
+    <div class="holiday-notice">
+        <strong>Memorial Day Notice:</strong> No classes Monday, May 26th. Week 2 runs Tuesday-Friday with regular due dates.
+    </div>
+
+    <div class="aurora-callout">
+        <strong>Aurora Connection</strong> — Just as the aurora borealis creates intricate three-dimensional light curtains following Earth's magnetic field lines, this week we explore the mathematical tools that describe and analyze geometric relationships in three-dimensional space. Cross products reveal perpendicular directions, lines trace paths through space, and planes organize 3D regions—all fundamental to understanding multivariable calculus.
+    </div>
+
+    <div class="progress-section">
+        <div style="text-align: center;">
+            <div style="font-size: 48px; margin-bottom: 16px;">🧭</div>
+            <h3 style="margin: 0 0 8px 0;">Mathematical Journey</h3>
+            <p style="margin: 0; opacity: 0.9;">Building the geometric foundation for multivariable calculus</p>
+        </div>
+    </div>
+
+    <h2>📚 What You'll Master This Week</h2>
+    
+    <div class="sections-grid">
+        <div class="section-card">
+            <div class="section-number">11.4</div>
+            <div class="section-title">Cross Product</div>
+            <div class="section-description">
+                The cross product is a fundamental operation unique to three-dimensional space. Unlike the dot product which produces a scalar, the cross product of two vectors creates a third vector that is perpendicular to both originals. This perpendicularity property makes it invaluable for finding normal vectors, calculating torque in physics, and determining the area of parallelograms in 3D space.
+            </div>
+            <div class="section-concepts">
+                <h4>Essential Topics:</h4>
+                <ul>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#def_cross_product">Cross Product Definition</a> - Formal mathematical definition</li>
+                    <li>Computational methods using determinants and the "diagonal method"</li>
+                    <li>Right-hand rule for determining direction</li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#thm_cross_product">Properties and geometric interpretation</a></li>
+                    <li>Applications: area calculations, torque, and normal vector finding</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-number">11.5</div>
+            <div class="section-title">Lines in 3D Space</div>
+            <div class="section-description">
+                Moving from 2D to 3D space introduces fascinating new possibilities for line relationships. In 3D, two lines can be parallel, intersecting, or exist as "skew lines"—a relationship impossible in 2D where non-parallel lines must intersect. You'll master vector and parametric forms for describing lines and develop techniques for analyzing spatial relationships and calculating distances.
+            </div>
+            <div class="section-concepts">
+                <h4>Essential Topics:</h4>
+                <ul>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#def_lines">Line equations in vector form</a> - r(t) = p + td</li>
+                    <li>Parametric equations and their geometric meaning</li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#subsec-lines-compare-2">Parallel, intersecting, and skew line relationships</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#idea_line_distance-2-1-1">Distance calculations</a> using cross products</li>
+                    <li>Real-world applications: collision detection, robotics, aviation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-number">11.6</div>
+            <div class="section-title">Planes</div>
+            <div class="section-description">
+                Planes are the fundamental surfaces that organize three-dimensional space. Just as lines can be described by a point and direction, planes require a point and a normal vector (perpendicular to the surface). This connection to normal vectors makes cross products essential—they provide the perpendicular vectors needed to define planes from three points or from intersecting lines.
+            </div>
+            <div class="section-concepts">
+                <h4>Essential Topics:</h4>
+                <ul>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#def_planes">Plane equations in standard and general forms</a></li>
+                    <li>Finding planes from three points using cross products</li>
+                    <li>Normal vectors and their geometric significance</li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#idea_planes_dist">Distance from point to plane</a> calculations</li>
+                    <li>Plane intersections with lines and other planes</li>
+                    <li>Applications: computer graphics, engineering, architecture</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, var(--night), var(--green)); color: white; padding: 32px; border-radius: 16px; margin: 32px 0;">
+        <h2 style="margin: 0 0 16px 0; color: white;">🔗 How These Concepts Connect</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+            <div>
+                <h4 style="color: var(--ice); margin: 0 0 8px 0;">Cross Products → Normal Vectors</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9;">Cross products create perpendicular vectors that become normal vectors for planes. This connection is crucial for finding plane equations from three points.</p>
+            </div>
+            <div>
+                <h4 style="color: var(--ice); margin: 0 0 8px 0;">Lines & Planes → Distance Formulas</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9;">Understanding line and plane equations leads to sophisticated distance calculations that appear throughout multivariable calculus and optimization.</p>
+            </div>
+            <div>
+                <h4 style="color: var(--ice); margin: 0 0 8px 0;">3D Geometry → Vector Calculus</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9;">These geometric foundations directly support vector fields, surface integrals, and theorems like Green's and Stokes' that you'll encounter later in the course.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>📅 Week 2 Schedule & Assignments</h2>
+
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">Tuesday, May 27</div>
+                <div class="timeline-title">Week Begins</div>
+                <div class="timeline-content">Start reading Sections 11.4-11.6. Begin cross product concepts and computations.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Wednesday, May 28</div>
+                <div class="timeline-title">Discussion Due</div>
+                <div class="timeline-content">Complete Discussion Board #2 focusing on cross products, lines, and planes applications.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Friday, May 30</div>
+                <div class="timeline-title">Major Deliverables</div>
+                <div class="timeline-content">Weekly Quiz #2 (completes Chapter 11) and Edfinity Homework for Sections 11.4-11.6 both due.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Monday, June 2</div>
+                <div class="timeline-title">Written Assignment</div>
+                <div class="timeline-content">Written Assignment #1 covering all of Chapter 11 due. Show detailed work and explanations.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="assignments-container">
+        <h3 style="margin-top: 0;">📋 Week 2 Assignments</h3>
+        
+        <div class="assignment-item">
+            <div class="assignment-icon discussion">💬</div>
+            <div class="assignment-details">
+                <div class="assignment-title">Discussion Board #2</div>
+                <div class="assignment-due">Due: Wednesday, May 28 at 11:59 PM AKDT</div>
+            </div>
+            <div class="assignment-points">5% of grade</div>
+        </div>
+
+        <div class="assignment-item">
+            <div class="assignment-icon quiz">🧠</div>
+            <div class="assignment-details">
+                <div class="assignment-title">Weekly Quiz #2 (Completes Chapter 11)</div>
+                <div class="assignment-due">Due: Friday, May 30 at 11:59 PM AKDT</div>
+            </div>
+            <div class="assignment-points">15% of grade</div>
+        </div>
+
+        <div class="assignment-item">
+            <div class="assignment-icon homework">📝</div>
+            <div class="assignment-details">
+                <div class="assignment-title">Edfinity Homework - Sections 11.4-11.6</div>
+                <div class="assignment-due">Due: Friday, May 30 at 11:59 PM AKDT</div>
+            </div>
+            <div class="assignment-points">25% of grade</div>
+        </div>
+
+        <div class="assignment-item">
+            <div class="assignment-icon written">✍️</div>
+            <div class="assignment-details">
+                <div class="assignment-title">Written Assignment #1 - Chapter 11</div>
+                <div class="assignment-due">Due: Monday, June 2 at 11:59 PM AKDT</div>
+            </div>
+            <div class="assignment-points">25% of grade</div>
+        </div>
+    </div>
+
+    <div class="aurora-callout">
+        <strong>Success Strategy:</strong> This week builds the foundation for all spatial calculus topics ahead. Focus on visualizing 3D relationships and understanding geometric interpretations, not just computational techniques. The cross product and plane concepts directly connect to vector fields, surface integrals, and Stokes' theorem later in the course.
+    </div>
+
+    <h2>🎯 Learning Objectives</h2>
+    
+    <div style="background: white; padding: 24px; border-radius: 12px; margin: 24px 0; border: 1px solid var(--gray);">
+        <p><strong>By the end of Week 2, you will be able to:</strong></p>
+        <ul style="line-height: 1.8;">
+            <li>✅ Compute cross products using determinant methods and interpret results geometrically</li>
+            <li>✅ Apply cross products to calculate areas, volumes, and torque in physics problems</li>
+            <li>✅ Write vector and parametric equations for lines in three-dimensional space</li>
+            <li>✅ Analyze relationships between lines (parallel, intersecting, skew) and find intersection points</li>
+            <li>✅ Derive plane equations from points and normal vectors in multiple forms</li>
+            <li>✅ Calculate distances between points, lines, and planes using appropriate formulas</li>
+            <li>✅ Solve real-world problems involving 3D geometry and spatial relationships</li>
+        </ul>
+    </div>
+
+    <h2>📖 Essential Textbook Resources</h2>
+    
+    <div style="background: white; padding: 24px; border-radius: 12px; margin: 24px 0; border: 1px solid var(--gray);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            <div>
+                <h4 style="margin: 0 0 12px 0; color: var(--night);">📚 Main Sections</h4>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html">Section 11.4: The Cross Product</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html">Section 11.5: Lines in Space</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html">Section 11.6: Planes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin: 0 0 12px 0; color: var(--night);">🎯 Key Examples</h4>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_cross_product.html#sec_cross_product-3">Computing Cross Products</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#sec_lines-5">Comparing Lines in 3D</a></li>
+                    <li><a href="https://opentext.uleth.ca/apex-calculus/sec_planes.html#sec_planes-4">Point-to-Plane Distance</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, var(--green), var(--ice)); color: white; padding: 24px; border-radius: 12px; margin: 32px 0; text-align: center;">
+        <h3 style="margin: 0 0 12px 0;">🚀 Ready to Begin Your Geometric Journey?</h3>
+        <p style="margin: 0; font-size: 16px;">Start with Section 11.4 on cross products, then progress through lines and planes. Remember: understanding the geometric meaning is just as important as mastering the calculations! These concepts will illuminate everything that follows in multivariable calculus.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Vectors
+2:01  Component Form of Vectors
+3:01  Vector Addition and Scaling
+5:03  Properties of Vectors
+6:03  Unit Vectors and Directions
+```

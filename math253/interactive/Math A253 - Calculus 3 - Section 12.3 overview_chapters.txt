@@ -1,0 +1,6 @@
+```
+0:00  Introduction to Partial Derivatives
+2:45  Limit Definition of Derivatives
+5:18  Interpretation of Partial Derivatives
+7:30  Second Partial Derivatives
+```

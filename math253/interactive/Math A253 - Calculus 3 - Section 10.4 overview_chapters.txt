@@ -1,0 +1,8 @@
+```
+0:00  Cross Product Overview
+2:00  Determinants of Matrices
+4:00  Calculating Cross Products
+6:00  Properties of the Cross Product
+8:30  Area of Parallelogram with Cross Product
+10:30  Triple Scalar Product and Applications
+```

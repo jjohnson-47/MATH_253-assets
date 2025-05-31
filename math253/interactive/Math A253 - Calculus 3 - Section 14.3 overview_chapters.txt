@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Line Integrals
+2:02  Properties of Line Integrals
+4:05  Connected Sets in Vector Fields
+6:06  Conservative Vector Fields
+8:30  Finding Potential Functions
+```

@@ -1,0 +1,807 @@
+1
+00:00:00,020 --> 00:00:02,070
+Let's take a
+look at Section
+
+2
+00:00:02,070 --> 00:00:04,320
+14.1 on an introduction
+
+3
+00:00:04,320 --> 00:00:06,630
+to line integrals will
+
+4
+00:00:06,630 --> 00:00:07,979
+start with some notation.
+
+5
+00:00:07,979 --> 00:00:09,360
+When were first
+introduced to
+
+6
+00:00:09,360 --> 00:00:10,440
+definite integrals of
+
+7
+00:00:10,440 --> 00:00:12,345
+a function with
+one variable,
+
+8
+00:00:12,345 --> 00:00:14,279
+we often write the
+limits of integration
+
+9
+00:00:14,279 --> 00:00:16,140
+on the bottom
+and the top of
+
+10
+00:00:16,140 --> 00:00:18,180
+the integral
+sign to indicate
+
+11
+00:00:18,180 --> 00:00:19,530
+that we can use
+
+12
+00:00:19,530 --> 00:00:21,525
+the fundamental
+theorem of calculus.
+
+13
+00:00:21,525 --> 00:00:24,270
+That will be an
+anti-derivative evaluated at
+
+14
+00:00:24,270 --> 00:00:27,240
+those two places and
+then subtracted.
+
+15
+00:00:27,240 --> 00:00:28,590
+But when we're
+talking about
+
+16
+00:00:28,590 --> 00:00:29,730
+integrals in general,
+
+17
+00:00:29,730 --> 00:00:32,010
+often the set that
+we're integrating over,
+
+18
+00:00:32,010 --> 00:00:33,360
+in this case the D
+
+19
+00:00:33,360 --> 00:00:34,960
+interval from one to three.
+
+20
+00:00:34,960 --> 00:00:37,175
+Just write the letter that
+
+21
+00:00:37,175 --> 00:00:38,570
+corresponds to
+that interval
+
+22
+00:00:38,570 --> 00:00:39,965
+underneath the
+integral sign.
+
+23
+00:00:39,965 --> 00:00:42,425
+And we've already
+seen this when we
+
+24
+00:00:42,425 --> 00:00:43,400
+first were setting up
+
+25
+00:00:43,400 --> 00:00:44,915
+double and triple
+integrals.
+
+26
+00:00:44,915 --> 00:00:47,540
+Wherever it double
+integral we're integrating
+
+27
+00:00:47,540 --> 00:00:50,645
+over a set in
+the plane are,
+
+28
+00:00:50,645 --> 00:00:52,040
+and in triple integrals,
+
+29
+00:00:52,040 --> 00:00:53,390
+we're integrating
+over a set of
+
+30
+00:00:53,390 --> 00:00:55,860
+points in
+three-dimensional space.
+
+31
+00:00:56,800 --> 00:00:59,360
+When we're talking
+about integrating
+
+32
+00:00:59,360 --> 00:01:01,340
+over more general sets,
+
+33
+00:01:01,340 --> 00:01:03,620
+we do the same
+thing with we have
+
+34
+00:01:03,620 --> 00:01:05,870
+a symbol S that
+corresponds to a set,
+
+35
+00:01:05,870 --> 00:01:08,630
+perhaps a curve in
+three-dimensional space.
+
+36
+00:01:08,630 --> 00:01:10,280
+We will write
+the set below,
+
+37
+00:01:10,280 --> 00:01:12,110
+the integral sign
+and a function
+
+38
+00:01:12,110 --> 00:01:14,795
+defined on those set of
+points we integrate.
+
+39
+00:01:14,795 --> 00:01:17,570
+And then d whatever,
+
+40
+00:01:17,570 --> 00:01:19,340
+where that whatever
+is a symbol
+
+41
+00:01:19,340 --> 00:01:20,795
+that refers to
+
+42
+00:01:20,795 --> 00:01:24,140
+how we measure distance
+or area or volume,
+
+43
+00:01:24,140 --> 00:01:26,880
+et cetera, in that set.
+
+44
+00:01:28,990 --> 00:01:31,685
+Now we are going
+to look at a curve
+
+45
+00:01:31,685 --> 00:01:33,335
+C and try to
+
+46
+00:01:33,335 --> 00:01:35,420
+understand how we can
+integrate a function
+
+47
+00:01:35,420 --> 00:01:38,405
+over a curve rather
+than an interval.
+
+48
+00:01:38,405 --> 00:01:40,745
+The quiet is the same.
+
+49
+00:01:40,745 --> 00:01:42,320
+If we want to look at
+
+50
+00:01:42,320 --> 00:01:45,065
+the area underneath
+the function,
+
+51
+00:01:45,065 --> 00:01:47,450
+above the curve, we chop
+
+52
+00:01:47,450 --> 00:01:50,090
+that curve into
+tiny little pieces.
+
+53
+00:01:50,090 --> 00:01:51,905
+Each has a width, and then
+
+54
+00:01:51,905 --> 00:01:53,930
+the function corresponds
+to a height.
+
+55
+00:01:53,930 --> 00:01:55,220
+And we add all of those,
+
+56
+00:01:55,220 --> 00:01:56,330
+those pieces up to get
+
+57
+00:01:56,330 --> 00:01:59,165
+an approximation
+of the integral.
+
+58
+00:01:59,165 --> 00:02:01,880
+The nice thing
+about intervals is
+
+59
+00:02:01,880 --> 00:02:02,750
+that it's really easy to
+
+60
+00:02:02,750 --> 00:02:03,995
+find distance in them.
+
+61
+00:02:03,995 --> 00:02:05,210
+Alright? The
+interval from one to
+
+62
+00:02:05,210 --> 00:02:07,325
+three is three minus one.
+
+63
+00:02:07,325 --> 00:02:10,430
+And in general, the
+interval from a to B
+
+64
+00:02:10,430 --> 00:02:11,930
+is the distance
+or the length
+
+65
+00:02:11,930 --> 00:02:13,850
+of that integral
+is b minus a.
+
+66
+00:02:13,850 --> 00:02:16,910
+So the math is very easy
+to find distances in
+
+67
+00:02:16,910 --> 00:02:20,120
+intervals when we
+have a curve though,
+
+68
+00:02:20,120 --> 00:02:21,620
+either curve in
+the plane or
+
+69
+00:02:21,620 --> 00:02:23,075
+a curve in
+three-dimensional space,
+
+70
+00:02:23,075 --> 00:02:24,470
+finding those
+little bits of
+
+71
+00:02:24,470 --> 00:02:26,690
+pieces is a bit
+more difficult.
+
+72
+00:02:26,690 --> 00:02:29,010
+And we have to
+use arc length.
+
+73
+00:02:29,770 --> 00:02:32,840
+So the area under
+the curve f
+
+74
+00:02:32,840 --> 00:02:34,670
+is approximated as
+
+75
+00:02:34,670 --> 00:02:36,620
+the sum all of these widths
+
+76
+00:02:36,620 --> 00:02:38,810
+and heights over
+these small pieces.
+
+77
+00:02:38,810 --> 00:02:40,580
+And then we take
+the pieces to
+
+78
+00:02:40,580 --> 00:02:42,305
+be smaller and
+smaller and smaller,
+
+79
+00:02:42,305 --> 00:02:44,645
+which is indicated by this
+
+80
+00:02:44,645 --> 00:02:46,610
+double absolute
+value sign here.
+
+81
+00:02:46,610 --> 00:02:48,740
+As those small arc length
+gets minds smarter,
+
+82
+00:02:48,740 --> 00:02:50,075
+smaller, we ended up,
+
+83
+00:02:50,075 --> 00:02:52,160
+and that is what
+we call the
+
+84
+00:02:52,160 --> 00:02:54,350
+integral over the curve
+C of the function
+
+85
+00:02:54,350 --> 00:02:57,890
+S. So this is
+
+86
+00:02:57,890 --> 00:02:59,240
+the definition of the line
+
+87
+00:02:59,240 --> 00:03:00,815
+integral which we just saw.
+
+88
+00:03:00,815 --> 00:03:04,115
+And it's important to
+understand that this
+
+89
+00:03:04,115 --> 00:03:07,460
+integral is defined in
+
+90
+00:03:07,460 --> 00:03:09,665
+this way as sort of
+an approximation.
+
+91
+00:03:09,665 --> 00:03:12,095
+It's the limit of
+these approximations
+
+92
+00:03:12,095 --> 00:03:13,655
+of the area under the,
+
+93
+00:03:13,655 --> 00:03:15,320
+under the curve f over D,
+
+94
+00:03:15,320 --> 00:03:18,600
+under the function
+f over the curve C
+
+95
+00:03:19,330 --> 00:03:21,950
+Sometimes the curve
+that we want to
+
+96
+00:03:21,950 --> 00:03:24,140
+integrate the function
+over is closed,
+
+97
+00:03:24,140 --> 00:03:25,220
+meaning that it begins and
+
+98
+00:03:25,220 --> 00:03:26,945
+ends at the same point.
+
+99
+00:03:26,945 --> 00:03:29,270
+When that's the case,
+we usually write
+
+100
+00:03:29,270 --> 00:03:31,760
+the integral sign with
+this little circle in
+
+101
+00:03:31,760 --> 00:03:33,950
+it to indicate that
+the curve that we're
+
+102
+00:03:33,950 --> 00:03:37,260
+enter integrating
+over is closed.
+
+103
+00:03:38,500 --> 00:03:40,370
+For the rest of
+the examples.
+
+104
+00:03:40,370 --> 00:03:41,510
+Here, we're going
+to assume that
+
+105
+00:03:41,510 --> 00:03:45,270
+the curve is actually
+in the x, y plane.
+
+106
+00:03:46,750 --> 00:03:49,910
+If we have a curve
+in the x-y plane,
+
+107
+00:03:49,910 --> 00:03:52,520
+we can try to
+
+108
+00:03:52,520 --> 00:03:55,925
+find the arc length
+parameter for the curve.
+
+109
+00:03:55,925 --> 00:03:58,400
+Parameterized the
+parameterize the curve,
+
+110
+00:03:58,400 --> 00:04:00,800
+and then find the arc
+length parameter.
+
+111
+00:04:00,800 --> 00:04:03,380
+Recall that the arc
+length parameter
+
+112
+00:04:03,380 --> 00:04:04,850
+is defined as the
+
+113
+00:04:04,850 --> 00:04:09,050
+integral of the magnitude
+
+114
+00:04:09,050 --> 00:04:09,800
+of the derivative of
+
+115
+00:04:09,800 --> 00:04:11,195
+your parameterization
+function,
+
+116
+00:04:11,195 --> 00:04:14,180
+where any
+parameterization function
+
+117
+00:04:14,180 --> 00:04:15,920
+as it will work.
+
+118
+00:04:15,920 --> 00:04:18,020
+And then if we take
+the derivative with
+
+119
+00:04:18,020 --> 00:04:20,210
+respect to t of both
+sides of this equation,
+
+120
+00:04:20,210 --> 00:04:22,820
+we see that the, that
+S prime is really
+
+121
+00:04:22,820 --> 00:04:25,400
+just the magnitude of
+
+122
+00:04:25,400 --> 00:04:27,095
+the derivative of
+a prioritization.
+
+123
+00:04:27,095 --> 00:04:28,790
+So if we hit the
+refresh button
+
+124
+00:04:28,790 --> 00:04:29,990
+on our integral here,
+
+125
+00:04:29,990 --> 00:04:32,120
+we can replace
+as prime with
+
+126
+00:04:32,120 --> 00:04:35,030
+the magnitude of our
+parameterization.
+
+127
+00:04:35,030 --> 00:04:36,740
+And that's what
+we see here.
+
+128
+00:04:36,740 --> 00:04:38,840
+So we can, this will
+allows us to get
+
+129
+00:04:38,840 --> 00:04:40,310
+a nice formula
+for calculating
+
+130
+00:04:40,310 --> 00:04:42,035
+these line integrals.
+
+131
+00:04:42,035 --> 00:04:43,640
+And what we do is we
+
+132
+00:04:43,640 --> 00:04:45,335
+start with a
+parametrization.
+
+133
+00:04:45,335 --> 00:04:46,970
+We can take its derivative,
+
+134
+00:04:46,970 --> 00:04:49,370
+find the magnitude
+of that derivative,
+
+135
+00:04:49,370 --> 00:04:52,250
+and then we put the
+parameterization pieces,
+
+136
+00:04:52,250 --> 00:04:55,460
+the X and Y pieces into
+the function itself.
+
+137
+00:04:55,460 --> 00:04:57,170
+And then everything
+is in terms
+
+138
+00:04:57,170 --> 00:04:59,150
+of the variable t
+and reintegrate.
+
+139
+00:04:59,150 --> 00:05:02,150
+Let's look at an
+example. Here we have
+
+140
+00:05:02,150 --> 00:05:03,800
+a surface defined
+by the function
+
+141
+00:05:03,800 --> 00:05:06,005
+f over the x, y plane.
+
+142
+00:05:06,005 --> 00:05:07,700
+And we would like to know
+
+143
+00:05:07,700 --> 00:05:11,000
+the line integral
+over the curve C,
+
+144
+00:05:11,000 --> 00:05:13,370
+where C here is described
+
+145
+00:05:13,370 --> 00:05:15,680
+as the line in
+the xy plane,
+
+146
+00:05:15,680 --> 00:05:17,120
+Y equals 2X plus one,
+
+147
+00:05:17,120 --> 00:05:20,490
+where x goes between
+negative 11.
+
+148
+00:05:20,980 --> 00:05:26,105
+So the goal is to
+parameterize that curve.
+
+149
+00:05:26,105 --> 00:05:28,130
+And it's a straight line.
+
+150
+00:05:28,130 --> 00:05:30,125
+So we can parameterize
+the curve
+
+151
+00:05:30,125 --> 00:05:32,930
+with T going from
+negative one to one
+
+152
+00:05:32,930 --> 00:05:35,600
+and just use the function
+with our parameter
+
+153
+00:05:35,600 --> 00:05:38,000
+t. We can take
+
+154
+00:05:38,000 --> 00:05:39,290
+the derivative and then
+
+155
+00:05:39,290 --> 00:05:41,820
+find the magnitude
+of that vector.
+
+156
+00:05:42,160 --> 00:05:45,230
+Then we put our
+values for x and
+
+157
+00:05:45,230 --> 00:05:47,570
+y t and two t
+plus one in for x
+
+158
+00:05:47,570 --> 00:05:49,715
+and y to the function
+
+159
+00:05:49,715 --> 00:05:52,730
+we put an R prime
+and then we just,
+
+160
+00:05:52,730 --> 00:05:54,905
+we have a simple integral.
+
+161
+00:05:54,905 --> 00:05:57,620
+So 14.418 is
+
+162
+00:05:57,620 --> 00:05:59,045
+the answer to this
+line integral.
+
+163
+00:05:59,045 --> 00:06:00,830
+Remember what that
+number means?
+
+164
+00:06:00,830 --> 00:06:02,570
+It actually corresponds to
+
+165
+00:06:02,570 --> 00:06:03,590
+the area below the
+
+166
+00:06:03,590 --> 00:06:05,970
+function and
+above the curve.
+
+167
+00:06:07,960 --> 00:06:11,870
+Properties of line
+integrals are thankfully
+
+168
+00:06:11,870 --> 00:06:13,430
+familiar to the properties
+
+169
+00:06:13,430 --> 00:06:14,945
+of other integrals
+we've been looking at.
+
+170
+00:06:14,945 --> 00:06:18,005
+We can pull constants
+out front and the Lyn,
+
+171
+00:06:18,005 --> 00:06:20,700
+It's separates
+over addition.
+
+172
+00:06:21,940 --> 00:06:26,540
+We can break the curve into
+
+173
+00:06:26,540 --> 00:06:28,685
+pieces and then integrate
+
+174
+00:06:28,685 --> 00:06:32,070
+over those separate
+pieces separately.

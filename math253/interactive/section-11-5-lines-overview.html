@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 11.5: Lines in 3D Space - Math 253</title>
+    
+    <style>
+        :root {
+            --night: #001B33;
+            --green: #00C853;
+            --magenta: #D500F9;
+            --ice: #00E5FF;
+            --pale: #F6FCFE;
+            --silver: #B0BEC5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--night) 0%, #002B4D 50%, var(--night) 100%);
+            color: var(--pale);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .aurora-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .aurora-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .aurora-section-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--green), var(--ice));
+            color: var(--night);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .aurora-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--ice), var(--green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .aurora-subtitle {
+            font-size: 1.2em;
+            color: var(--silver);
+            margin-bottom: 20px;
+        }
+        
+        .aurora-learning-objectives {
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .aurora-video-section {
+            background: rgba(0, 27, 51, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 200, 83, 0.3);
+        }
+
+        .aurora-video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .aurora-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .aurora-interactive-section {
+            background: rgba(0, 27, 51, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+
+        .aurora-geogebra-container {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .aurora-concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .aurora-concept-card {
+            background: rgba(0, 27, 51, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(0, 200, 83, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .aurora-concept-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--green);
+            box-shadow: 0 10px 30px rgba(0, 200, 83, 0.2);
+        }
+
+        .aurora-concept-title {
+            font-size: 1.3em;
+            color: var(--green);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .aurora-concept-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: var(--green);
+        }
+
+        .aurora-formulas-section {
+            background: rgba(0, 27, 51, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(213, 0, 249, 0.3);
+        }
+
+        .aurora-formula-box {
+            background: rgba(213, 0, 249, 0.1);
+            border: 1px solid rgba(213, 0, 249, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .aurora-applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .aurora-application-card {
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .aurora-application-card:hover {
+            background: rgba(0, 229, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .aurora-resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .aurora-resource-category {
+            background: rgba(0, 27, 51, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(176, 190, 197, 0.3);
+        }
+
+        .aurora-resource-title {
+            color: var(--ice);
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .aurora-resource-list {
+            list-style: none;
+        }
+
+        .aurora-resource-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .aurora-resource-list li:before {
+            content: "→";
+            color: var(--ice);
+            position: absolute;
+            left: 0;
+        }
+
+        .aurora-resource-list a {
+            color: var(--pale);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .aurora-resource-list a:hover {
+            color: var(--green);
+        }
+
+        .aurora-section-title {
+            font-size: 1.8em;
+            color: var(--ice);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .aurora-title {
+                font-size: 2em;
+            }
+            
+            .aurora-container {
+                padding: 15px;
+            }
+            
+            .aurora-concepts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                tags: 'ams'
+            },
+            options: {
+                renderActions: {
+                    assistiveMml: [155, (doc) => {
+                        for (const math of document.querySelectorAll('mjx-math')) {
+                            const mml = math.querySelector('mjx-assistive-mml mml\\:math, mjx-assistive-mml math');
+                            if (mml) {
+                                mml.setAttribute('display', math.style.display === 'block' ? 'block' : 'inline');
+                            }
+                        }
+                    }, (math, doc) => assistiveMml(math, doc)]
+                }
+            },
+            startup: {
+                ready: function() {
+                    setTimeout(() => MathJax.startup.defaultReady(), 1000);
+                }
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="aurora-container">
+        <header class="aurora-header">
+            <div class="aurora-section-badge">Section 11.5</div>
+            <h1 class="aurora-title">Lines in 3D Space</h1>
+            <p class="aurora-subtitle">Vector and Parametric Equations of Lines in Three Dimensions</p>
+            
+            <div class="aurora-learning-objectives">
+                <h3 style="color: var(--ice); margin-bottom: 15px;">📋 Learning Objectives</h3>
+                <p style="color: var(--night);">By the end of this section, you will be able to:</p>
+                <ul style="margin-top: 10px; padding-left: 20px; color: var(--night);">
+                    <li>Write vector and parametric equations for lines in 3D space</li>
+                    <li>Find line equations given a point and direction vector</li>
+                    <li>Determine if two lines are parallel, intersecting, or skew</li>
+                    <li>Calculate distances from points to lines and between skew lines</li>
+                    <li>Apply symmetric form equations when appropriate</li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="aurora-video-section">
+            <h2 class="aurora-section-title">📹 Section Overview Video</h2>
+            <div class="aurora-video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/r7rVzIZco9w?si=qClkP2eY2onBAtHX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p><strong>Video Summary:</strong> This video covers the fundamental concepts of representing lines in three-dimensional space using both vector and parametric forms, including how to find equations of lines given various pieces of information.</p>
+        </section>
+
+        <section class="aurora-interactive-section">
+            <h2 class="aurora-section-title">🎯 Interactive 3D Line Visualizer</h2>
+            <div class="aurora-geogebra-container">
+                <iframe src="https://www.geogebra.org/3d/a9k9t3dn?embed" 
+                        width="100%" 
+                        height="500" 
+                        style="border: 1px solid #e4e4e4; border-radius: 4px;" 
+                        frameborder="0"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <p><strong>Interactive Instructions:</strong> Use the 3D visualizer above to explore line equations. Adjust the direction vector and point coordinates to see how they affect the line's position and orientation in 3D space. Toggle between vector and parametric representations.</p>
+        </section>
+
+        <section class="aurora-concepts-grid">
+            <div class="aurora-concept-card">
+                <h3 class="aurora-concept-title">
+                    <svg class="aurora-concept-icon" viewBox="0 0 24 24">
+                        <path d="M2 12h20M12 2v20"/>
+                    </svg>
+                    Vector Form of a Line
+                </h3>
+                <p>A line in 3D space can be expressed using a position vector $\vec{r_0}$ to a point on the line and a direction vector $\vec{v}$:</p>
+                <div class="aurora-formula-box">
+                    $$\vec{r}(t) = \vec{r_0} + t\vec{v}$$
+                </div>
+                <p>Where $t$ is a parameter that ranges over all real numbers, giving every point on the line.</p>
+                <p style="margin-top: 15px;"><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#def_lines" style="color: var(--green); text-decoration: underline;">📖 Read Lines Definition in Textbook</a></p>
+            </div>
+
+            <div class="aurora-concept-card">
+                <h3 class="aurora-concept-title">
+                    <svg class="aurora-concept-icon" viewBox="0 0 24 24">
+                        <path d="M3 3h18v18H3zM9 9h6v6H9z"/>
+                    </svg>
+                    Parametric Equations
+                </h3>
+                <p>The vector form can be expanded into three parametric equations for the coordinates:</p>
+                <div class="aurora-formula-box">
+                    $$x = x_0 + at$$
+                    $$y = y_0 + bt$$  
+                    $$z = z_0 + ct$$
+                </div>
+                <p>Where $(x_0, y_0, z_0)$ is a point on the line and $\langle a, b, c \rangle$ is the direction vector.</p>
+                <p style="margin-top: 15px;"><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#subsec-lines-compare" style="color: var(--green); text-decoration: underline;">📖 Example 11.5.6: Finding Line Through Two Points</a></p>
+            </div>
+
+            <div class="aurora-concept-card">
+                <h3 class="aurora-concept-title">
+                    <svg class="aurora-concept-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.95 9 11 5.16-1.05 9-5.45 9-11V7l-10-5z"/>
+                    </svg>
+                    Symmetric Form
+                </h3>
+                <p>When none of the direction vector components are zero, we can eliminate the parameter:</p>
+                <div class="aurora-formula-box">
+                    $$\frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}$$
+                </div>
+                <p>This symmetric form directly shows the relationship between coordinates without the parameter $t$.</p>
+            </div>
+
+            <div class="aurora-concept-card">
+                <h3 class="aurora-concept-title">
+                    <svg class="aurora-concept-icon" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Finding Line Equations
+                </h3>
+                <p>To find a line equation, you need:</p>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>One point on the line</li>
+                    <li>A direction vector (or two points to find it)</li>
+                    <li>Or two planes that intersect to form the line</li>
+                </ul>
+                <p style="margin-top: 10px;">The direction vector can be found from two points: $\vec{v} = P_2 - P_1$</p>
+                <p style="margin-top: 15px;"><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#sec_lines-5" style="color: var(--green); text-decoration: underline;">📖 Example 11.5.10: Comparing Lines</a></p>
+            </div>
+        </section>
+
+        <section class="aurora-formulas-section">
+            <h2 class="aurora-section-title">📐 Essential Formulas</h2>
+            
+            <div class="aurora-formula-box">
+                <h4 style="color: var(--magenta); margin-bottom: 10px;">Distance from Point to Line</h4>
+                $$d = \frac{|\vec{PQ} \times \vec{v}|}{|\vec{v}|}$$
+                <p style="margin-top: 10px; font-size: 0.9em;">Where $P$ is the external point, $Q$ is any point on the line, and $\vec{v}$ is the direction vector.</p>
+                <p style="margin-top: 10px;"><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#idea_line_distance-2-1-1" style="color: var(--magenta); text-decoration: underline;">📖 Key Idea 11.5.14: Distances to Lines</a></p>
+            </div>
+
+            <div class="aurora-formula-box">
+                <h4 style="color: var(--magenta); margin-bottom: 10px;">Distance between Skew Lines</h4>
+                $$d = \frac{|(\vec{P_1} - \vec{P_2}) \cdot (\vec{v_1} \times \vec{v_2})|}{|\vec{v_1} \times \vec{v_2}|}$$
+                <p style="margin-top: 10px; font-size: 0.9em;">For non-parallel, non-intersecting lines with direction vectors $\vec{v_1}$ and $\vec{v_2}$.</p>
+                <p style="margin-top: 10px;"><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#sec_lines-6" style="color: var(--magenta); text-decoration: underline;">📖 Example 11.5.16: Distance Between Lines</a></p>
+            </div>
+
+            <div class="aurora-formula-box">
+                <h4 style="color: var(--magenta); margin-bottom: 10px;">Angle between Lines</h4>
+                $$\cos \theta = \frac{|\vec{v_1} \cdot \vec{v_2}|}{|\vec{v_1}||\vec{v_2}|}$$
+                <p style="margin-top: 10px; font-size: 0.9em;">The acute angle between two lines with direction vectors $\vec{v_1}$ and $\vec{v_2}$.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="aurora-section-title">🌍 Real-World Applications</h2>
+            <div class="aurora-applications-grid">
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Flight Path Modeling</h4>
+                    <p>Aircraft trajectories are modeled as lines in 3D space, with the direction vector representing velocity and the initial point as takeoff location.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Laser Beam Tracking</h4>
+                    <p>Laser beams travel in straight lines, making line equations essential for optical systems, laser cutting, and measurement devices.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Structural Engineering</h4>
+                    <p>Support beams, cables, and structural elements are modeled as lines to calculate stress, load distribution, and intersection points.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Computer Graphics</h4>
+                    <p>Ray tracing algorithms use line equations to determine how light rays interact with 3D objects in rendering pipelines.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">GPS Navigation</h4>
+                    <p>Satellite signals travel along line paths, and triangulation uses multiple line intersections to determine precise locations.</p>
+                </div>
+
+                <div class="aurora-application-card">
+                    <h4 style="color: var(--ice); margin-bottom: 10px;">Robotics Path Planning</h4>
+                    <p>Robot arm movements and autonomous vehicle navigation use line equations to plan optimal paths in 3D space.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="aurora-section-title">📚 Learning Resources</h2>
+            <div class="aurora-resources-grid">
+                <div class="aurora-resource-category">
+                    <h3 class="aurora-resource-title">
+                        📖 Textbook Resources
+                    </h3>
+                    <ul class="aurora-resource-list">
+                        <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html" target="_blank">Complete Section 11.5: Lines in Space</a></li>
+                        <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#def_lines" target="_blank">Lines in Space Definition (Subsection 11.5.1)</a></li>
+                        <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#subsec-lines-compare-2" target="_blank">Parallel, Intersecting and Skew Lines (Subsection 11.5.2)</a></li>
+                        <li><a href="https://opentext.uleth.ca/apex-calculus/sec_lines.html#idea_line_distance-2-1-1" target="_blank">Key Idea: Distances to Lines</a></li>
+                    </ul>
+                </div>
+
+                <div class="aurora-resource-category">
+                    <h3 class="aurora-resource-title">
+                        🎥 Video Tutorials
+                    </h3>
+                    <ul class="aurora-resource-list">
+                        <li><a href="https://youtu.be/r7rVzIZco9w?si=qClkP2eY2onBAtHX" target="_blank">Section 11.5 Overview</a></li>
+                        <li><a href="https://youtu.be/VLo5g1QJGCA" target="_blank">Parametric Line Equations</a></li>
+                        <li><a href="https://youtu.be/NDy9odh9YNE" target="_blank">Distance from Point to Line</a></li>
+                        <li><a href="https://youtu.be/3ZT_1AS0J2A" target="_blank">Skew Lines and Distance</a></li>
+                    </ul>
+                </div>
+
+                <div class="aurora-resource-category">
+                    <h3 class="aurora-resource-title">
+                        📝 Practice Materials
+                    </h3>
+                    <ul class="aurora-resource-list">
+                        <li>Section 11.5 Problem Set (Available in Course Files)</li>
+                        <li>Line Equation Worksheet (Available in Course Files)</li>
+                        <li>Distance Calculation Practice (Available in Course Files)</li>
+                        <li>Mixed Review Problems (Available in Course Files)</li>
+                    </ul>
+                </div>
+
+                <div class="aurora-resource-category">
+                    <h3 class="aurora-resource-title">
+                        🎯 Interactive Tools
+                    </h3>
+                    <ul class="aurora-resource-list">
+                        <li><a href="https://www.geogebra.org/3d/a9k9t3dn" target="_blank">3D Line Visualizer</a></li>
+                        <li><a href="https://www.desmos.com/3d" target="_blank">Desmos 3D Calculator</a></li>
+                        <li><a href="https://www.symbolab.com/solver/line-intersection-calculator" target="_blank">Line Intersection Calculator (Symbolab)</a></li>
+                        <li><a href="https://www.mathway.com/Calculator/distance-calculator" target="_blank">Distance Calculator Tool (Mathway)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <noscript>
+        <div style="padding: 20px; background: #ffe6e6; border: 1px solid #ff9999; margin: 20px; border-radius: 5px;">
+            <strong>JavaScript Required:</strong> This page uses MathJax to display mathematical notation. 
+            Please enable JavaScript to view the formulas properly.
+        </div>
+    </noscript>
+</body>
+</html>

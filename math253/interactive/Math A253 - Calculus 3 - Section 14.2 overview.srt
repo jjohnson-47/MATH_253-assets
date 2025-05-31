@@ -1,0 +1,593 @@
+1
+00:00:00,000 --> 00:00:02,640
+Let's take a look at
+vector fields in section
+
+2
+00:00:02,640 --> 00:00:08,310
+14 to a vector field
+is a function.
+
+3
+00:00:08,310 --> 00:00:12,270
+And for every point in
+a set in the plane,
+
+4
+00:00:12,270 --> 00:00:13,830
+R2 are in
+three-dimensional space.
+
+5
+00:00:13,830 --> 00:00:18,130
+R3 is associated
+with a vector,
+
+6
+00:00:18,500 --> 00:00:22,440
+usually a capital F
+or a capital letter
+
+7
+00:00:22,440 --> 00:00:24,240
+is what we use to denote
+
+8
+00:00:24,240 --> 00:00:26,655
+the vector field function.
+
+9
+00:00:26,655 --> 00:00:28,110
+And the components of
+
+10
+00:00:28,110 --> 00:00:29,340
+the vector field function
+
+11
+00:00:29,340 --> 00:00:31,470
+are usually used with
+the letters capital M,
+
+12
+00:00:31,470 --> 00:00:33,605
+capital N. But
+
+13
+00:00:33,605 --> 00:00:34,760
+the important
+thing to remember
+
+14
+00:00:34,760 --> 00:00:36,440
+is that a vector field sort
+
+15
+00:00:36,440 --> 00:00:38,540
+of as a collection
+of vectors,
+
+16
+00:00:38,540 --> 00:00:40,265
+but it's a collection
+of vectors
+
+17
+00:00:40,265 --> 00:00:41,810
+that every point in
+
+18
+00:00:41,810 --> 00:00:42,980
+the domain is
+
+19
+00:00:42,980 --> 00:00:45,780
+associated with
+a single vector.
+
+20
+00:00:46,690 --> 00:00:49,790
+Here's a picture of
+a few vector fields.
+
+21
+00:00:49,790 --> 00:00:51,440
+The first one
+here is a vector
+
+22
+00:00:51,440 --> 00:00:52,670
+field on the square
+
+23
+00:00:52,670 --> 00:00:55,865
+from negative one to
+one in the plane.
+
+24
+00:00:55,865 --> 00:00:57,380
+The second one is a
+
+25
+00:00:57,380 --> 00:00:59,510
+vector field over
+the whole plane.
+
+26
+00:00:59,510 --> 00:01:02,165
+And then the third is a
+vector plane over all
+
+27
+00:01:02,165 --> 00:01:05,700
+of R3 in
+three-dimensional space.
+
+28
+00:01:08,770 --> 00:01:11,720
+Each component of
+a vector field is
+
+29
+00:01:11,720 --> 00:01:15,630
+a scalar or a real
+valued function.
+
+30
+00:01:18,700 --> 00:01:20,960
+Oftentimes when
+we're talking about
+
+31
+00:01:20,960 --> 00:01:22,460
+the vector field
+as a whole,
+
+32
+00:01:22,460 --> 00:01:24,260
+we kinda drop the x
+
+33
+00:01:24,260 --> 00:01:25,790
+and y are the X, Y, and Z.
+
+34
+00:01:25,790 --> 00:01:28,625
+And we just write
+the letters of the,
+
+35
+00:01:28,625 --> 00:01:30,950
+of the component functions.
+
+36
+00:01:30,950 --> 00:01:33,350
+An important
+object for talking
+
+37
+00:01:33,350 --> 00:01:35,570
+about things that
+our vector field
+
+38
+00:01:35,570 --> 00:01:37,310
+is the del operator.
+
+39
+00:01:37,310 --> 00:01:40,160
+That's this upside
+down triangle here.
+
+40
+00:01:40,160 --> 00:01:42,455
+If we have, we've
+already seen this
+
+41
+00:01:42,455 --> 00:01:45,050
+in context of the gradient.
+
+42
+00:01:45,050 --> 00:01:47,060
+So if we have a function,
+
+43
+00:01:47,060 --> 00:01:50,870
+the gradient was this
+del of f equals to
+
+44
+00:01:50,870 --> 00:01:52,430
+the vector of partial
+derivatives of
+
+45
+00:01:52,430 --> 00:01:55,190
+f. So in fact,
+
+46
+00:01:55,190 --> 00:01:57,320
+if we have a function
+that's differentiable,
+
+47
+00:01:57,320 --> 00:02:00,020
+then the gradient
+itself defines
+
+48
+00:02:00,020 --> 00:02:02,030
+a vector field
+for every point
+
+49
+00:02:02,030 --> 00:02:04,715
+x comma y in the domain
+of the function,
+
+50
+00:02:04,715 --> 00:02:07,025
+there is a
+corresponding vector,
+
+51
+00:02:07,025 --> 00:02:09,995
+the gradient, and that
+
+52
+00:02:09,995 --> 00:02:12,725
+those vectors correspond
+to a vector field.
+
+53
+00:02:12,725 --> 00:02:15,320
+But let's just focus
+on the operator,
+
+54
+00:02:15,320 --> 00:02:17,255
+the triangle
+operator itself.
+
+55
+00:02:17,255 --> 00:02:19,580
+We like to think of
+that as being a vector,
+
+56
+00:02:19,580 --> 00:02:24,000
+any vector of
+derivative operators.
+
+57
+00:02:25,570 --> 00:02:28,430
+Since F, when we looked
+at the gradient,
+
+58
+00:02:28,430 --> 00:02:30,080
+f is a scalar function.
+
+59
+00:02:30,080 --> 00:02:32,690
+When you write
+the del operator
+
+60
+00:02:32,690 --> 00:02:34,625
+as this vector
+of derivatives,
+
+61
+00:02:34,625 --> 00:02:36,950
+you just follow the
+normal laws of vectors.
+
+62
+00:02:36,950 --> 00:02:38,930
+We bring the F into
+each component,
+
+63
+00:02:38,930 --> 00:02:40,805
+apply the operator to f,
+
+64
+00:02:40,805 --> 00:02:41,420
+and that's how you
+
+65
+00:02:41,420 --> 00:02:42,710
+get the partial
+derivatives.
+
+66
+00:02:42,710 --> 00:02:43,910
+So this is just a new way
+
+67
+00:02:43,910 --> 00:02:45,215
+of looking at the gradient,
+
+68
+00:02:45,215 --> 00:02:47,120
+but with a focus
+on the action
+
+69
+00:02:47,120 --> 00:02:49,440
+of this operator itself.
+
+70
+00:02:52,270 --> 00:02:54,740
+One of the
+important ideas n
+
+71
+00:02:54,740 --> 00:02:56,900
+a vector field
+is divergence,
+
+72
+00:02:56,900 --> 00:02:59,000
+which is a measure of how
+
+73
+00:02:59,000 --> 00:03:01,040
+the movement in
+
+74
+00:03:01,040 --> 00:03:03,530
+the vector field is
+either compressing,
+
+75
+00:03:03,530 --> 00:03:05,420
+things, are
+expanding things.
+
+76
+00:03:05,420 --> 00:03:09,230
+This is really useful
+in fluid situations,
+
+77
+00:03:09,230 --> 00:03:11,900
+gas or liquids,
+that you want
+
+78
+00:03:11,900 --> 00:03:13,340
+to know whether
+there is expansion
+
+79
+00:03:13,340 --> 00:03:15,530
+happening or compression.
+
+80
+00:03:15,530 --> 00:03:18,110
+To measure the divergence,
+
+81
+00:03:18,110 --> 00:03:20,510
+it's convenient to
+use the del operator,
+
+82
+00:03:20,510 --> 00:03:21,680
+and it's actually
+defined as
+
+83
+00:03:21,680 --> 00:03:22,880
+just the dot product
+
+84
+00:03:22,880 --> 00:03:25,500
+of the del operator
+with the vector field.
+
+85
+00:03:28,840 --> 00:03:31,085
+Also with a vector field,
+
+86
+00:03:31,085 --> 00:03:33,530
+a really important
+idea is the curl,
+
+87
+00:03:33,530 --> 00:03:35,090
+which measures the spinning
+
+88
+00:03:35,090 --> 00:03:37,100
+action of the vector field.
+
+89
+00:03:37,100 --> 00:03:39,620
+Oftentimes we want to
+know how are things are
+
+90
+00:03:39,620 --> 00:03:41,985
+rotating inside
+the vector field.
+
+91
+00:03:41,985 --> 00:03:44,050
+And the del operator
+
+92
+00:03:44,050 --> 00:03:45,805
+is also convenient
+to find the curl.
+
+93
+00:03:45,805 --> 00:03:47,485
+It's actually the
+cross product
+
+94
+00:03:47,485 --> 00:03:48,910
+with the vector field.
+
+95
+00:03:48,910 --> 00:03:51,310
+So this gives a
+convenient way to
+
+96
+00:03:51,310 --> 00:03:54,500
+remember the formula for
+divergence and curl.
+
+97
+00:03:55,770 --> 00:03:57,835
+Let's take a look
+at an example.
+
+98
+00:03:57,835 --> 00:03:59,890
+So here's a graph of
+the vector field and
+
+99
+00:03:59,890 --> 00:04:03,100
+let's discuss its
+divergence and curl.
+
+100
+00:04:03,100 --> 00:04:05,755
+The divergence is
+the dot product
+
+101
+00:04:05,755 --> 00:04:08,170
+of the del operator
+with the vector field.
+
+102
+00:04:08,170 --> 00:04:10,660
+So we take the doc
+product, we apply it,
+
+103
+00:04:10,660 --> 00:04:12,265
+and we see that it's 0.
+
+104
+00:04:12,265 --> 00:04:13,300
+And what does that mean?
+
+105
+00:04:13,300 --> 00:04:14,860
+That means that
+any point x comma
+
+106
+00:04:14,860 --> 00:04:16,450
+y in R vector field,
+
+107
+00:04:16,450 --> 00:04:18,670
+picture here, there is
+
+108
+00:04:18,670 --> 00:04:21,505
+no compression or expansion
+
+109
+00:04:21,505 --> 00:04:22,960
+happening at that point.
+
+110
+00:04:22,960 --> 00:04:29,035
+Things are not building
+up the curl though,
+
+111
+00:04:29,035 --> 00:04:30,130
+since the, we see
+
+112
+00:04:30,130 --> 00:04:31,270
+things that are
+kind of spinning
+
+113
+00:04:31,270 --> 00:04:33,730
+around in perhaps
+consorting at places.
+
+114
+00:04:33,730 --> 00:04:35,800
+The curl does change from
+
+115
+00:04:35,800 --> 00:04:38,140
+place to place based
+on this function,
+
+116
+00:04:38,140 --> 00:04:40,610
+cosine x plus sine of y.
+
+117
+00:04:42,930 --> 00:04:45,969
+If the vector field itself
+
+118
+00:04:45,969 --> 00:04:47,530
+can be found by taking
+
+119
+00:04:47,530 --> 00:04:49,074
+the gradient of a function,
+
+120
+00:04:49,074 --> 00:04:50,380
+then that function
+is called
+
+121
+00:04:50,380 --> 00:04:51,925
+a potential function.
+
+122
+00:04:51,925 --> 00:04:54,400
+And that function plays
+an important role
+
+123
+00:04:54,400 --> 00:04:56,080
+in some nice properties
+
+124
+00:04:56,080 --> 00:04:58,150
+of that particular
+vector field.
+
+125
+00:04:58,150 --> 00:05:00,925
+Vector fields that have
+a potential function
+
+126
+00:05:00,925 --> 00:05:01,780
+are often called the
+
+127
+00:05:01,780 --> 00:05:03,265
+conservative vector fields.
+
+128
+00:05:03,265 --> 00:05:04,030
+And how many broken
+
+129
+00:05:04,030 --> 00:05:06,320
+important properties
+in physics.

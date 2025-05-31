@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Extreme Values
+2:45  Critical Points and Gradients
+5:18  Second Derivative Test
+7:06  Analyzing Saddle Points
+9:11  Maximum and Minimum in Regions
+```

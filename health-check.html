@@ -1,0 +1,49 @@
+<\!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 253 Assets Health Check</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; }
+        .status { padding: 10px; border-radius: 4px; margin: 20px 0; }
+        .healthy { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        h1 { color: #007bff; }
+        .asset-count { font-size: 24px; font-weight: bold; color: #28a745; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Math 253 Calculus III - Asset Repository</h1>
+        
+        <div class="status healthy">
+            <strong>Status:</strong> ✅ Healthy - All systems operational
+        </div>
+        
+        <h2>📈 Asset Statistics</h2>
+        <div class="asset-count">202 Assets Available</div>
+        
+        <h3>📁 Asset Categories</h3>
+        <ul>
+            <li><strong>Interactive Content:</strong> Educational HTML widgets and visualizations</li>
+            <li><strong>Images:</strong> Course graphics, diagrams, and illustrations</li>
+            <li><strong>Video Resources:</strong> Thumbnails, captions, and metadata</li>
+            <li><strong>Legacy Content:</strong> Previous semester materials</li>
+        </ul>
+        
+        <h3>🔗 Integration Points</h3>
+        <ul>
+            <li><strong>GitHub Pages:</strong> https://jjohnson-47.github.io/MATH_253-assets/</li>
+            <li><strong>Private Repository:</strong> Linked via git submodule</li>
+            <li><strong>CDN Distribution:</strong> Automated via GitHub Pages</li>
+        </ul>
+        
+        <p><em>Last Updated: <span id="timestamp"></span></em></p>
+        
+        <script>
+            document.getElementById('timestamp').textContent = new Date().toISOString();
+        </script>
+    </div>
+</body>
+</html>

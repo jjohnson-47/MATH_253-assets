@@ -1,0 +1,986 @@
+1
+00:00:00,000 --> 00:00:03,630
+This is a short video
+on Section 13.7,
+
+2
+00:00:03,630 --> 00:00:04,800
+triple integration with
+
+3
+00:00:04,800 --> 00:00:07,395
+cylindrical and
+spherical coordinates.
+
+4
+00:00:07,395 --> 00:00:09,450
+For cylindrical
+coordinates,
+
+5
+00:00:09,450 --> 00:00:11,130
+cylindrical coordinates
+are a way to
+
+6
+00:00:11,130 --> 00:00:13,740
+describe points in
+three-dimensional space.
+
+7
+00:00:13,740 --> 00:00:15,780
+What they really
+are is just
+
+8
+00:00:15,780 --> 00:00:17,310
+a kind of a combination of
+
+9
+00:00:17,310 --> 00:00:19,260
+our polar coordinates in
+
+10
+00:00:19,260 --> 00:00:20,985
+the x and y directions.
+
+11
+00:00:20,985 --> 00:00:23,475
+And then we just
+have a comma z,
+
+12
+00:00:23,475 --> 00:00:24,750
+where z is just the
+
+13
+00:00:24,750 --> 00:00:26,715
+normal rectangular
+coordinate.
+
+14
+00:00:26,715 --> 00:00:28,650
+That means is if
+we have a point
+
+15
+00:00:28,650 --> 00:00:30,345
+x comma y comma z
+
+16
+00:00:30,345 --> 00:00:32,385
+sitting in
+three-dimensional space,
+
+17
+00:00:32,385 --> 00:00:34,124
+it's cylindrical.
+
+18
+00:00:34,124 --> 00:00:36,180
+>> Cylindrical
+coordinates would
+
+19
+00:00:36,180 --> 00:00:38,790
+be an r theta z,
+
+20
+00:00:38,790 --> 00:00:41,980
+where r is again, it's the,
+
+21
+00:00:41,980 --> 00:00:44,030
+the radius in the x,
+
+22
+00:00:44,030 --> 00:00:45,500
+y plane, which is
+the square root
+
+23
+00:00:45,500 --> 00:00:46,954
+of x squared
+plus y squared.
+
+24
+00:00:46,954 --> 00:00:49,130
+>> And then just as
+polar coordinates,
+
+25
+00:00:49,130 --> 00:00:51,230
+it's angle theta is
+
+26
+00:00:51,230 --> 00:00:52,400
+found by taking the tangent
+
+27
+00:00:52,400 --> 00:00:53,840
+of theta is y over x,
+
+28
+00:00:53,840 --> 00:00:56,120
+and then Z is just Z as it
+
+29
+00:00:56,120 --> 00:00:58,895
+would be with
+rectangular coordinates.
+
+30
+00:00:58,895 --> 00:01:01,025
+Again, we can go
+back the other way.
+
+31
+00:01:01,025 --> 00:01:02,210
+If we're given a point
+
+32
+00:01:02,210 --> 00:01:04,130
+in cylindrical coordinates,
+
+33
+00:01:04,130 --> 00:01:06,455
+we can find it is a
+rectangular coordinates.
+
+34
+00:01:06,455 --> 00:01:08,330
+Again, Z is to Z,
+
+35
+00:01:08,330 --> 00:01:11,615
+but where we can
+get back x and y
+
+36
+00:01:11,615 --> 00:01:13,160
+by taking x equal to r
+
+37
+00:01:13,160 --> 00:01:16,260
+cosine theta and y
+equal to r sine theta.
+
+38
+00:01:17,140 --> 00:01:19,580
+So let's describe
+the surfaces
+
+39
+00:01:19,580 --> 00:01:20,780
+given in cylindrical
+coordinates.
+
+40
+00:01:20,780 --> 00:01:22,370
+We have r equal to one,
+
+41
+00:01:22,370 --> 00:01:24,020
+theta equal to
+pi over three,
+
+42
+00:01:24,020 --> 00:01:25,850
+and Z equal to two.
+
+43
+00:01:25,850 --> 00:01:28,160
+R equals to one is
+
+44
+00:01:28,160 --> 00:01:29,480
+just a circle of radius
+
+45
+00:01:29,480 --> 00:01:30,919
+one and the x, y plane.
+
+46
+00:01:30,919 --> 00:01:33,290
+>> But if the
+z value is f3,
+
+47
+00:01:33,290 --> 00:01:34,834
+z is allowed to
+be anything.
+
+48
+00:01:34,834 --> 00:01:36,170
+>> So r equals
+to one gives us
+
+49
+00:01:36,170 --> 00:01:38,255
+the green cylinder here.
+
+50
+00:01:38,255 --> 00:01:42,320
+Theta equals two pi
+over three is normally
+
+51
+00:01:42,320 --> 00:01:44,690
+a ray that's pointing
+
+52
+00:01:44,690 --> 00:01:46,775
+at an angle of 60 degrees.
+
+53
+00:01:46,775 --> 00:01:49,790
+Well, here, because
+we have, again,
+
+54
+00:01:49,790 --> 00:01:51,800
+z is allowed to
+take on any value
+
+55
+00:01:51,800 --> 00:01:54,425
+that actually gives
+us a half-plane.
+
+56
+00:01:54,425 --> 00:01:57,530
+So starting here at the
+z-axis and extending
+
+57
+00:01:57,530 --> 00:02:02,070
+60 degrees out in the,
+in the x, y plane.
+
+58
+00:02:02,349 --> 00:02:05,029
+>> Then z equals to two.
+
+59
+00:02:05,029 --> 00:02:06,500
+>> Z equals to do describes
+
+60
+00:02:06,500 --> 00:02:07,790
+exactly the same plane that
+
+61
+00:02:07,790 --> 00:02:09,350
+we'll describe in
+rectangular coordinates.
+
+62
+00:02:09,350 --> 00:02:10,625
+Here's the horizontal plane
+
+63
+00:02:10,625 --> 00:02:13,230
+that goes through
+the 0.002.
+
+64
+00:02:14,019 --> 00:02:18,665
+>> We can do triple
+integrals where
+
+65
+00:02:18,665 --> 00:02:22,130
+the integration of a
+
+66
+00:02:22,130 --> 00:02:23,735
+triple integral is
+with respect to
+
+67
+00:02:23,735 --> 00:02:25,939
+r d z d r d theta.
+
+68
+00:02:25,939 --> 00:02:27,770
+>> And the reason for
+that is very similar
+
+69
+00:02:27,770 --> 00:02:29,630
+to the same reason
+we have the r d,
+
+70
+00:02:29,630 --> 00:02:32,284
+r d theta for
+polar coordinates.
+
+71
+00:02:32,284 --> 00:02:40,070
+>> Now we just have
+it also a DZ here.
+
+72
+00:02:40,070 --> 00:02:41,615
+>> We're given a solid
+
+73
+00:02:41,615 --> 00:02:43,070
+represented in
+the picture here,
+
+74
+00:02:43,070 --> 00:02:45,620
+which is bounded by the
+plane z equals to 0.
+
+75
+00:02:45,620 --> 00:02:47,810
+And its top is
+
+76
+00:02:47,810 --> 00:02:48,860
+the square root of
+
+77
+00:02:48,860 --> 00:02:49,820
+four minus x squared plus
+
+78
+00:02:49,820 --> 00:02:51,170
+y squared plus three.
+
+79
+00:02:51,170 --> 00:02:52,940
+And then also the cylinder
+
+80
+00:02:52,940 --> 00:02:54,380
+at x squared plus
+y squared equals
+
+81
+00:02:54,380 --> 00:02:57,170
+two for the region has
+
+82
+00:02:57,170 --> 00:03:00,680
+a density function
+given here.
+
+83
+00:03:00,680 --> 00:03:02,300
+And we want to be able to
+
+84
+00:03:02,300 --> 00:03:04,920
+find the mass
+of this region.
+
+85
+00:03:05,110 --> 00:03:07,640
+So we can change things to
+
+86
+00:03:07,640 --> 00:03:09,440
+polar coordinates,
+say some,
+
+87
+00:03:09,440 --> 00:03:13,490
+Sorry, to cylindrical
+coordinates because the
+
+88
+00:03:13,490 --> 00:03:15,650
+Cylindrical coordinates
+are a convenient way
+
+89
+00:03:15,650 --> 00:03:17,720
+to describe what's
+going on here.
+
+90
+00:03:17,720 --> 00:03:19,985
+So in our density function,
+
+91
+00:03:19,985 --> 00:03:22,220
+x squared plus y squared
+becomes r squared.
+
+92
+00:03:22,220 --> 00:03:25,200
+Z is just Z n plus one.
+
+93
+00:03:25,810 --> 00:03:28,670
+The region of
+integration from
+
+94
+00:03:28,670 --> 00:03:31,250
+below here is the
+disc of radius two.
+
+95
+00:03:31,250 --> 00:03:32,705
+And in polar coordinates,
+
+96
+00:03:32,705 --> 00:03:35,479
+let's just given
+as r equal to two.
+
+97
+00:03:35,479 --> 00:03:37,670
+>> So that allows
+us to set up our
+
+98
+00:03:37,670 --> 00:03:39,740
+integral here.
+
+99
+00:03:39,740 --> 00:03:42,200
+>> We're going to
+integrate with respect to
+
+100
+00:03:42,200 --> 00:03:45,814
+z d z from z equals
+to 0 to the top.
+
+101
+00:03:45,814 --> 00:03:47,090
+>> While the top of this is
+
+102
+00:03:47,090 --> 00:03:48,934
+defined by this
+function here.
+
+103
+00:03:48,934 --> 00:03:49,910
+>> Here we can see
+
+104
+00:03:49,910 --> 00:03:51,185
+the limit of
+integration where
+
+105
+00:03:51,185 --> 00:03:52,550
+minus x squared minus y
+
+106
+00:03:52,550 --> 00:03:54,990
+squared becomes
+minus r squared.
+
+107
+00:03:55,000 --> 00:03:59,660
+Then d r, where r is
+going to go from 0 to
+
+108
+00:03:59,660 --> 00:04:01,850
+two and theta is
+
+109
+00:04:01,850 --> 00:04:03,664
+all the way around
+0 to two pi.
+
+110
+00:04:03,664 --> 00:04:05,330
+>> And then this just
+becomes an iterated
+
+111
+00:04:05,330 --> 00:04:06,560
+integral where we
+integrate with
+
+112
+00:04:06,560 --> 00:04:10,399
+respect to each
+variable one at a time.
+
+113
+00:04:10,399 --> 00:04:14,280
+>> So about 276 grams.
+
+114
+00:04:15,879 --> 00:04:18,455
+>> We also have
+spherical coordinates,
+
+115
+00:04:18,455 --> 00:04:19,790
+just another way
+of describing
+
+116
+00:04:19,790 --> 00:04:21,934
+points in
+three-dimensional space.
+
+117
+00:04:21,934 --> 00:04:23,780
+>> Here, a spherical
+coordinate
+
+118
+00:04:23,780 --> 00:04:24,860
+is usually used with
+
+119
+00:04:24,860 --> 00:04:27,845
+these three letters are
+rho, theta and phi.
+
+120
+00:04:27,845 --> 00:04:31,999
+Rho is the distance
+to the origin.
+
+121
+00:04:31,999 --> 00:04:34,250
+>> Okay? If phi is
+
+122
+00:04:34,250 --> 00:04:38,255
+the angle with the
+positive x-axis,
+
+123
+00:04:38,255 --> 00:04:40,250
+I'm sorry, theta is
+
+124
+00:04:40,250 --> 00:04:41,300
+the angle to
+the positive x.
+
+125
+00:04:41,300 --> 00:04:42,590
+>> I just noticed
+that theta would be
+
+126
+00:04:42,590 --> 00:04:44,284
+the same as in
+polar coordinates.
+
+127
+00:04:44,284 --> 00:04:45,710
+>> And then phi is
+
+128
+00:04:45,710 --> 00:04:48,409
+the angle from the
+positive z-axis.
+
+129
+00:04:48,409 --> 00:04:50,480
+>> And every point in
+three-dimensional space
+
+130
+00:04:50,480 --> 00:04:53,520
+can be described
+uniquely this way.
+
+131
+00:04:53,709 --> 00:04:56,120
+>> If we have the
+point given as
+
+132
+00:04:56,120 --> 00:04:57,440
+just a regular x comma y
+
+133
+00:04:57,440 --> 00:04:59,585
+comma z rectangular
+coordinate.
+
+134
+00:04:59,585 --> 00:05:00,950
+We can get the spherical
+
+135
+00:05:00,950 --> 00:05:03,859
+coordinates with the
+following equations.
+
+136
+00:05:03,859 --> 00:05:05,570
+>> You notice that row is
+
+137
+00:05:05,570 --> 00:05:07,355
+just the distance formula.
+
+138
+00:05:07,355 --> 00:05:08,960
+And then since theta is the
+
+139
+00:05:08,960 --> 00:05:10,130
+same as in polar
+coordinates,
+
+140
+00:05:10,130 --> 00:05:11,960
+it's equation
+stays the same.
+
+141
+00:05:11,960 --> 00:05:13,040
+And then the only one that
+
+142
+00:05:13,040 --> 00:05:14,360
+requires a little
+bit more thought
+
+143
+00:05:14,360 --> 00:05:17,404
+here is how we
+can find phi.
+
+144
+00:05:17,404 --> 00:05:19,580
+>> But notice
+that phi here is
+
+145
+00:05:19,580 --> 00:05:24,049
+the vertical distance
+from the x, y plane.
+
+146
+00:05:24,049 --> 00:05:25,790
+>> So it actually forms
+
+147
+00:05:25,790 --> 00:05:27,560
+a triangle here
+with the z axis.
+
+148
+00:05:27,560 --> 00:05:28,940
+And we can do some trig to
+
+149
+00:05:28,940 --> 00:05:31,024
+see that this
+is the formula.
+
+150
+00:05:31,024 --> 00:05:32,090
+>> Now,
+
+151
+00:05:32,090 --> 00:05:34,355
+given a point in
+spherical coordinates,
+
+152
+00:05:34,355 --> 00:05:36,260
+we can recovers x, y,
+
+153
+00:05:36,260 --> 00:05:39,030
+and z with the
+following equations.
+
+154
+00:05:41,079 --> 00:05:43,220
+>> Here's a summary of the
+
+155
+00:05:43,220 --> 00:05:45,260
+different coordinate
+systems and the ways in
+
+156
+00:05:45,260 --> 00:05:46,850
+the formulas to get
+
+157
+00:05:46,850 --> 00:05:48,875
+between one and the other.
+
+158
+00:05:48,875 --> 00:05:50,660
+The main thing here is that
+
+159
+00:05:50,660 --> 00:05:52,670
+it's not trying to
+complicate things,
+
+160
+00:05:52,670 --> 00:05:55,640
+but certain regions and
+
+161
+00:05:55,640 --> 00:05:57,695
+three-dimensional
+space and functions
+
+162
+00:05:57,695 --> 00:05:59,195
+have different symmetries.
+
+163
+00:05:59,195 --> 00:06:01,280
+And the different
+coordinate systems
+
+164
+00:06:01,280 --> 00:06:03,740
+that we might use help us.
+
+165
+00:06:03,740 --> 00:06:04,760
+I'll take advantage of
+
+166
+00:06:04,760 --> 00:06:05,900
+those similar symmetries
+
+167
+00:06:05,900 --> 00:06:08,520
+to make the
+computation easier.
+
+168
+00:06:08,860 --> 00:06:11,300
+So he wanted to
+describe the services
+
+169
+00:06:11,300 --> 00:06:12,440
+given in spherical
+coordinates.
+
+170
+00:06:12,440 --> 00:06:13,610
+Here we have rho
+equal to one,
+
+171
+00:06:13,610 --> 00:06:14,900
+theta is equal to
+pi over three,
+
+172
+00:06:14,900 --> 00:06:15,980
+and v is equal to pi over
+
+173
+00:06:15,980 --> 00:06:18,680
+six fecal to one
+or all the points
+
+174
+00:06:18,680 --> 00:06:20,000
+at distance one
+from the origin.
+
+175
+00:06:20,000 --> 00:06:21,530
+Well, that's just
+a sphere, unit
+
+176
+00:06:21,530 --> 00:06:24,800
+sphere theta equals
+pi over three.
+
+177
+00:06:24,800 --> 00:06:26,000
+That's actually
+identical to
+
+178
+00:06:26,000 --> 00:06:27,620
+the plane that we saw
+
+179
+00:06:27,620 --> 00:06:29,915
+on the cylindrical
+coordinates.
+
+180
+00:06:29,915 --> 00:06:31,820
+And then here we have 5y
+
+181
+00:06:31,820 --> 00:06:33,065
+is equal to pi over six.
+
+182
+00:06:33,065 --> 00:06:34,940
+Well, those are
+all the points
+
+183
+00:06:34,940 --> 00:06:36,680
+whose angle with
+
+184
+00:06:36,680 --> 00:06:38,285
+the positive z-axis is
+
+185
+00:06:38,285 --> 00:06:41,790
+30 degrees, that
+gives us a cone.
+
+186
+00:06:43,059 --> 00:06:46,414
+>> How to buckle under
+integrals are defined.
+
+187
+00:06:46,414 --> 00:06:49,160
+>> We have to understand
+how the volume of
+
+188
+00:06:49,160 --> 00:06:52,895
+a piece with respect
+to changes in rho,
+
+189
+00:06:52,895 --> 00:06:54,935
+theta and fi
+would look like.
+
+190
+00:06:54,935 --> 00:06:56,840
+And here we can use
+
+191
+00:06:56,840 --> 00:07:00,590
+some trig to see that
+any change in volume is
+
+192
+00:07:00,590 --> 00:07:02,930
+going to be the
+change in rho times
+
+193
+00:07:02,930 --> 00:07:04,370
+rho times the change in
+
+194
+00:07:04,370 --> 00:07:06,335
+phi in this direction.
+
+195
+00:07:06,335 --> 00:07:09,380
+And then rho times
+this row times
+
+196
+00:07:09,380 --> 00:07:13,140
+the sine of phi
+times the theta.
+
+197
+00:07:13,390 --> 00:07:16,850
+And that gives us the
+way to talk about how
+
+198
+00:07:16,850 --> 00:07:18,710
+volume changes with respect
+
+199
+00:07:18,710 --> 00:07:20,360
+to its spherical
+coordinates,
+
+200
+00:07:20,360 --> 00:07:22,430
+with respect to
+small changes
+
+201
+00:07:22,430 --> 00:07:25,170
+in rho, theta and phi.
+
+202
+00:07:27,370 --> 00:07:31,175
+Finally, we end with
+the volume of a sphere.
+
+203
+00:07:31,175 --> 00:07:33,620
+We've seen this in
+various other ways,
+
+204
+00:07:33,620 --> 00:07:35,660
+but with spherical
+coordinates it's,
+
+205
+00:07:35,660 --> 00:07:37,100
+it works out in a
+way where the math
+
+206
+00:07:37,100 --> 00:07:38,989
+is as easy as possible.
+
+207
+00:07:38,989 --> 00:07:45,395
+>> So here, if we have
+a sphere of radius r,
+
+208
+00:07:45,395 --> 00:07:49,565
+we can integrate
+rho from 0 to r,
+
+209
+00:07:49,565 --> 00:07:51,980
+then integrate theta
+from 0 to two pi and
+
+210
+00:07:51,980 --> 00:07:54,574
+integrate v from 0 to pi.
+
+211
+00:07:54,574 --> 00:07:56,150
+>> And if we do
+
+212
+00:07:56,150 --> 00:07:57,950
+this integration with
+as iterated integral,
+
+213
+00:07:57,950 --> 00:08:00,425
+we didn't exactly four
+pi over three R cubed,
+
+214
+00:08:00,425 --> 00:08:01,850
+which is what
+we know as the
+
+215
+00:08:01,850 --> 00:08:04,170
+volume of a sphere.

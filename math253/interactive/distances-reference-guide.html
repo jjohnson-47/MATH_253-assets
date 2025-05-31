@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Formulas Reference Guide - Math 253</title>
+    
+    <!-- MathJax Configuration -->
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          assistiveMml: [155, (doc) => {
+            for (const math of document.querySelectorAll('mjx-math')) {
+              const mml = math.querySelector('mjx-assistive-mml mml\\:math, mjx-assistive-mml math');
+              if (mml) {
+                mml.setAttribute('display', math.style.display === 'block' ? 'block' : 'inline');
+              }
+            }
+          }, (math, doc) => assistiveMml(math, doc)]
+        }
+      },
+      startup: {
+        ready: function() {
+          setTimeout(() => MathJax.startup.defaultReady(), 1000);
+        }
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Aurora Borealis Theme Styles -->
+    <style>
+    :root{
+      --night:#001B33;--green:#00C853;--magenta:#D500F9;
+      --ice:#00E5FF;--pale:#F6FCFE;--gray:#EFF2F4;
+      --warning:#FF9800;--success:#4CAF50;
+    }
+
+    body{
+      font-family:system-ui,Arial,sans-serif;
+      line-height:1.6;color:var(--night);
+      background:var(--pale);
+      margin:0;padding:20px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    
+    h1,h2,h3,h4{margin:1.2em 0 .4em;}
+    a{color:var(--magenta);text-decoration:none;}
+    a:hover,a:focus{color:var(--green);text-decoration:underline;}
+
+    /* Header banner */
+    .aurora-header{
+      background:linear-gradient(135deg,var(--night) 0%,var(--magenta) 45%,var(--ice) 100%);
+      color:#fff;padding:32px;border-radius:16px;margin-bottom:32px;
+      box-shadow:0 8px 24px rgba(0,0,0,.3);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .aurora-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.03) 10px,
+        rgba(255,255,255,0.03) 20px
+      );
+      animation: aurora-shimmer 20s linear infinite;
+    }
+
+    @keyframes aurora-shimmer {
+      0% { transform: translateX(-100%) translateY(-100%); }
+      100% { transform: translateX(100%) translateY(100%); }
+    }
+
+    .aurora-header h1 {
+      margin:0;font-size:32px;font-weight:700;
+      position:relative;z-index:1;
+    }
+
+    .aurora-header .subtitle {
+      margin:12px 0 0;font-size:18px;opacity:0.95;
+      position:relative;z-index:1;
+    }
+
+    .guide-badge {
+      position:absolute;top:20px;right:20px;
+      background:rgba(255,255,255,0.2);
+      padding:8px 16px;border-radius:20px;
+      font-weight:600;font-size:14px;
+      backdrop-filter:blur(10px);
+      z-index:1;
+    }
+
+    /* Quick Reference Cards */
+    .quick-ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 32px 0;
+    }
+
+    .quick-ref-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 4px solid var(--ice);
+      transition: all 0.3s ease;
+    }
+
+    .quick-ref-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .quick-ref-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--night);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .quick-ref-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      background: var(--ice);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--night);
+    }
+
+    /* Distance Type Sections */
+    .distance-section {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      margin: 32px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      border: 1px solid var(--gray);
+    }
+
+    .distance-section h2 {
+      color: var(--night);
+      margin-top: 0;
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--ice);
+    }
+
+    /* Formula boxes */
+    .formula-box {
+      background: linear-gradient(135deg, rgba(0,229,255,0.05), rgba(0,200,83,0.05));
+      border: 2px solid var(--ice);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .formula-box::before {
+      content: '📐';
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: var(--pale);
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 16px;
+    }
+
+    .formula-title {
+      font-weight: 600;
+      color: var(--night);
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    .formula-content {
+      font-size: 16px;
+      color: var(--night);
+      margin: 16px 0;
+    }
+
+    /* Step-by-step boxes */
+    .steps-container {
+      background: rgba(0,200,83,0.05);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    .step-item {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px 0;
+      border-left: 4px solid var(--green);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .step-number {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-weight: 600;
+      margin-right: 12px;
+      font-size: 14px;
+    }
+
+    /* Case analysis */
+    .cases-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .case-card {
+      background: rgba(213,0,249,0.05);
+      border: 1px solid rgba(213,0,249,0.2);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .case-title {
+      font-weight: 600;
+      color: var(--magenta);
+      margin-bottom: 8px;
+    }
+
+    /* Warning/tip boxes */
+    .tip-box {
+      background: rgba(255,152,0,0.1);
+      border-left: 4px solid var(--warning);
+      border-radius: 0 8px 8px 0;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .tip-box::before {
+      content: '💡 ';
+      font-weight: 600;
+      color: var(--warning);
+    }
+
+    /* Navigation */
+    .nav-container {
+      background: var(--gray);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .nav-button {
+      background: var(--magenta);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .nav-button:hover {
+      background: var(--green);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      body { padding: 16px; }
+      .aurora-header { padding: 24px 20px; }
+      .aurora-header h1 { font-size: 24px; }
+      .quick-ref-grid { grid-template-columns: 1fr; }
+      .cases-container { grid-template-columns: 1fr; }
+    }
+
+    /* Special highlighting for key formulas */
+    .key-formula {
+      background: linear-gradient(135deg, var(--green), var(--ice));
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .key-formula .formula-content {
+      color: white;
+      font-size: 18px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="aurora-header">
+        <div class="guide-badge">Reference Guide</div>
+        <h1>Distance Formulas in 3D Space</h1>
+        <div class="subtitle">Complete reference for calculating distances between points, lines, and planes</div>
+    </div>
+
+    <div class="nav-container">
+        <h3 style="margin: 0 0 16px 0; color: var(--night);">🧭 Quick Navigation</h3>
+        <div class="nav-grid">
+            <a href="#point-point" class="nav-button">Point to Point</a>
+            <a href="#point-line" class="nav-button">Point to Line</a>
+            <a href="#line-line" class="nav-button">Line to Line</a>
+            <a href="#point-plane" class="nav-button">Point to Plane</a>
+            <a href="#line-plane" class="nav-button">Line to Plane</a>
+            <a href="#plane-plane" class="nav-button">Plane to Plane</a>
+        </div>
+    </div>
+
+    <div class="quick-ref-grid">
+        <div class="quick-ref-card">
+            <div class="quick-ref-title">
+                <div class="quick-ref-icon">📍</div>
+                Most Common: Point to Point
+            </div>
+            <div class="formula-content">
+                $$d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2+(z_2 - z_1)^2}$$
+            </div>
+        </div>
+
+        <div class="quick-ref-card">
+            <div class="quick-ref-title">
+                <div class="quick-ref-icon">📏</div>
+                Point to Line (Cross Product)
+            </div>
+            <div class="formula-content">
+                $$d = \frac{||\overrightarrow{QP} \times \vec{d}||}{||\vec{d}||}$$
+            </div>
+        </div>
+
+        <div class="quick-ref-card">
+            <div class="quick-ref-title">
+                <div class="quick-ref-icon">🔲</div>
+                Point to Plane (Dot Product)
+            </div>
+            <div class="formula-content">
+                $$d = \frac{|ax_1 + by_1 + cz_1 + d|}{\sqrt{a^2 + b^2 + c^2}}$$
+            </div>
+        </div>
+
+        <div class="quick-ref-card">
+            <div class="quick-ref-title">
+                <div class="quick-ref-icon">📐</div>
+                Key Concept: Always Check Cases
+            </div>
+            <p style="margin: 0; font-size: 14px; color: #666;">
+                Before applying formulas, check for special cases: intersection, parallelism, or skew relationships.
+            </p>
+        </div>
+    </div>
+
+    <section id="point-point" class="distance-section">
+        <h2>📍 Distance between Two Points</h2>
+        <p>The fundamental distance formula in three-dimensional space.</p>
+        
+        <div class="key-formula">
+            <div class="formula-title">Point-to-Point Distance</div>
+            <div class="formula-content">
+                Given points $A(x_1,y_1,z_1)$ and $B(x_2,y_2,z_2)$:
+                $$d = \sqrt{(x_2 - x_1)^2+(y_2 - y_1)^2+(z_2 - z_1)^2}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            This is the 3D extension of the Pythagorean theorem and forms the foundation for all other distance calculations.
+        </div>
+    </section>
+
+    <section id="point-line" class="distance-section">
+        <h2>📏 Distance from Point to Line</h2>
+        <p>Uses the cross product to find the perpendicular distance from a point to a line in 3D space.</p>
+        
+        <div class="formula-box">
+            <div class="formula-title">Point-to-Line Distance Formula</div>
+            <div class="formula-content">
+                Given point $P(x_1,y_1,z_1)$ and line $L: \vec{r}(t) = \langle x_0, y_0, z_0 \rangle + t \langle a, b, c \rangle$:
+                $$d = \frac{||\overrightarrow{QP} \times \langle a, b, c \rangle||}{||\langle a, b, c \rangle||} = \frac{||\langle x_1 - x_0, y_1 - y_0, z_1 - z_0 \rangle \times \langle a, b, c \rangle||}{\sqrt{a^2 + b^2 + c^2}}$$
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <h4 style="margin-top: 0; color: var(--green);">Step-by-Step Process</h4>
+            <div class="step-item">
+                <span class="step-number">1</span>
+                <strong>Identify components:</strong> Point $P$, point $Q$ on the line, and direction vector $\vec{d} = \langle a, b, c \rangle$
+            </div>
+            <div class="step-item">
+                <span class="step-number">2</span>
+                <strong>Form vector:</strong> $\overrightarrow{QP} = \langle x_1 - x_0, y_1 - y_0, z_1 - z_0 \rangle$
+            </div>
+            <div class="step-item">
+                <span class="step-number">3</span>
+                <strong>Cross product:</strong> Calculate $\overrightarrow{QP} \times \vec{d}$
+            </div>
+            <div class="step-item">
+                <span class="step-number">4</span>
+                <strong>Apply formula:</strong> $d = \frac{||\overrightarrow{QP} \times \vec{d}||}{||\vec{d}||}$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            The cross product gives a vector perpendicular to both $\overrightarrow{QP}$ and the line direction. Its magnitude represents the "height" of the parallelogram formed by these vectors.
+        </div>
+    </section>
+
+    <section id="line-line" class="distance-section">
+        <h2>📐 Distance between Two Lines</h2>
+        <p>Lines in 3D space can have three different relationships, each requiring a different approach.</p>
+
+        <div class="cases-container">
+            <div class="case-card">
+                <div class="case-title">Case 1: Intersecting Lines</div>
+                <p>Distance = 0</p>
+                <p><em>Lines cross at a point</em></p>
+            </div>
+            <div class="case-card">
+                <div class="case-title">Case 2: Parallel Lines</div>
+                <p>Use point-to-line distance</p>
+                <p><em>Lines never meet, same direction</em></p>
+            </div>
+            <div class="case-card">
+                <div class="case-title">Case 3: Skew Lines</div>
+                <p>Use cross product method</p>
+                <p><em>Lines don't intersect and aren't parallel</em></p>
+            </div>
+        </div>
+
+        <h4>Checking for Intersection</h4>
+        <div class="formula-box">
+            <div class="formula-content">
+                For lines $L_1: \vec{r}_1(t) = \langle x_1, y_1, z_1 \rangle + t \langle a_1, b_1, c_1 \rangle$ and $L_2: \vec{r}_2(s) = \langle x_2, y_2, z_2 \rangle + s \langle a_2, b_2, c_2 \rangle$:
+                $$\begin{bmatrix}
+                a_1 & -a_2 \\
+                b_1 & -b_2 \\
+                c_1 & -c_2
+                \end{bmatrix}
+                \begin{bmatrix}
+                t \\
+                s
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                x_2 - x_1 \\
+                y_2 - y_1 \\
+                z_2 - z_1
+                \end{bmatrix}$$
+            </div>
+        </div>
+
+        <h4>Distance between Skew Lines</h4>
+        <div class="key-formula">
+            <div class="formula-title">Skew Lines Distance</div>
+            <div class="formula-content">
+                $$d = \frac{|(\vec{P_1} - \vec{P_2}) \cdot (\vec{v_1} \times \vec{v_2})|}{||\vec{v_1} \times \vec{v_2}||}$$
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <h4 style="margin-top: 0; color: var(--green);">Method for Skew Lines</h4>
+            <div class="step-item">
+                <span class="step-number">1</span>
+                Find vector $\vec{n} = \vec{v}_1 \times \vec{v}_2$ orthogonal to both direction vectors
+            </div>
+            <div class="step-item">
+                <span class="step-number">2</span>
+                Scale to unit vector: $\vec{u} = \frac{\vec{n}}{||\vec{n}||}$
+            </div>
+            <div class="step-item">
+                <span class="step-number">3</span>
+                Distance = projection of $\overrightarrow{P_1P_2}$ onto $\vec{u}$
+            </div>
+        </div>
+    </section>
+
+    <section id="point-plane" class="distance-section">
+        <h2>🔲 Distance from Point to Plane</h2>
+        <p>Uses the dot product and normal vector to find perpendicular distance.</p>
+
+        <div class="key-formula">
+            <div class="formula-title">Point-to-Plane Distance</div>
+            <div class="formula-content">
+                Given point $P(x_1, y_1, z_1)$ and plane $ax + by + cz + d = 0$:
+                $$d = \frac{|ax_1 + by_1 + cz_1 + d|}{\sqrt{a^2 + b^2 + c^2}}$$
+            </div>
+        </div>
+
+        <div class="formula-box">
+            <div class="formula-title">Alternative Form with Point on Plane</div>
+            <div class="formula-content">
+                If plane is $a(x - x_0) + b(y - y_0) + c(z - z_0) = 0$:
+                $$d = \frac{|\vec{n} \cdot \overrightarrow{QP}|}{||\vec{n}||} = \frac{|a(x_1 - x_0) + b(y_1 - y_0) + c(z_1 - z_0)|}{\sqrt{a^2 + b^2 + c^2}}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            The normal vector $\vec{n} = \langle a, b, c \rangle$ is perpendicular to the plane. The distance is the magnitude of the projection of any vector from the plane to the point onto this normal vector.
+        </div>
+    </section>
+
+    <section id="line-plane" class="distance-section">
+        <h2>📏🔲 Distance between Line and Plane</h2>
+        <p>The relationship between a line and plane determines the distance calculation method.</p>
+
+        <div class="cases-container">
+            <div class="case-card">
+                <div class="case-title">Line Intersects Plane</div>
+                <p>Distance = 0</p>
+                <p><em>Check by substituting line equation into plane equation</em></p>
+            </div>
+            <div class="case-card">
+                <div class="case-title">Line Parallel to Plane</div>
+                <p>Distance = point-to-plane distance</p>
+                <p><em>Use any point on the line</em></p>
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <h4 style="margin-top: 0; color: var(--green);">How to Check Intersection</h4>
+            <div class="step-item">
+                <span class="step-number">1</span>
+                Substitute line equations $x = x_1 + ta_1$, $y = y_1 + tb_1$, $z = z_1 + tc_1$ into plane equation
+            </div>
+            <div class="step-item">
+                <span class="step-number">2</span>
+                If you get a valid solution for $t$, the line intersects the plane
+            </div>
+            <div class="step-item">
+                <span class="step-number">3</span>
+                If you get $0 = \text{constant}$ (contradiction), the line is parallel to the plane
+            </div>
+        </div>
+    </section>
+
+    <section id="plane-plane" class="distance-section">
+        <h2>🔲🔲 Distance between Two Planes</h2>
+        <p>Plane relationships determine the distance calculation approach.</p>
+
+        <div class="cases-container">
+            <div class="case-card">
+                <div class="case-title">Planes Intersect</div>
+                <p>Distance = 0</p>
+                <p><em>Normal vectors not parallel</em></p>
+            </div>
+            <div class="case-card">
+                <div class="case-title">Same Plane</div>
+                <p>Distance = 0</p>
+                <p><em>Identical equations</em></p>
+            </div>
+            <div class="case-card">
+                <div class="case-title">Parallel Distinct Planes</div>
+                <p>Use point-to-plane formula</p>
+                <p><em>Normal vectors parallel, different d values</em></p>
+            </div>
+        </div>
+
+        <div class="formula-box">
+            <div class="formula-title">Distance between Parallel Planes</div>
+            <div class="formula-content">
+                For planes $a_1x + b_1y + c_1z + d_1 = 0$ and $a_2x + b_2y + c_2z + d_2 = 0$ where $\langle a_1, b_1, c_1 \rangle = k\langle a_2, b_2, c_2 \rangle$:
+                $$d = \frac{|d_1 - d_2|}{||\vec{n}||} = \frac{|a_1x_2 + b_1y_2 + c_1z_2 + d_1|}{\sqrt{a_1^2 + b_1^2 + c_1^2}}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            Check if normal vectors are parallel by seeing if $\vec{n}_1 = k\vec{n}_2$ for some scalar $k$. If so, the planes are either identical or parallel.
+        </div>
+    </section>
+
+    <section class="distance-section">
+        <h2>🔑 Key Concepts Summary</h2>
+        
+        <div class="quick-ref-grid">
+            <div class="quick-ref-card">
+                <div class="quick-ref-title">
+                    <div class="quick-ref-icon">⊗</div>
+                    Cross Product Usage
+                </div>
+                <p>Used for point-to-line and skew line distances. Gives perpendicular vector and area information.</p>
+            </div>
+
+            <div class="quick-ref-card">
+                <div class="quick-ref-title">
+                    <div class="quick-ref-icon">•</div>
+                    Dot Product Usage
+                </div>
+                <p>Used for point-to-plane distances. Gives projection and perpendicular distance information.</p>
+            </div>
+
+            <div class="quick-ref-card">
+                <div class="quick-ref-title">
+                    <div class="quick-ref-icon">🔍</div>
+                    Check Special Cases
+                </div>
+                <p>Always check for intersection, parallelism, or identical objects before applying distance formulas.</p>
+            </div>
+
+            <div class="quick-ref-card">
+                <div class="quick-ref-title">
+                    <div class="quick-ref-icon">📐</div>
+                    Unit Vectors
+                </div>
+                <p>Normalize vectors (divide by magnitude) to simplify projection calculations and get unit distances.</p>
+            </div>
+        </div>
+    </section>
+
+    <div style="background: linear-gradient(135deg, var(--magenta), var(--ice)); color: white; padding: 24px; border-radius: 12px; margin: 32px 0; text-align: center;">
+        <h3 style="margin: 0 0 12px 0;">📚 Study Strategy</h3>
+        <p style="margin: 0; font-size: 16px;">Master the point-to-point formula first, then understand how cross products extend this to lines and dot products extend this to planes. Practice identifying the geometric relationship (intersecting, parallel, skew) before applying formulas!</p>
+    </div>
+
+    <noscript>
+        <div style="padding: 20px; background: #ffe6e6; border: 1px solid #ff9999; margin: 20px; border-radius: 5px;">
+            <strong>JavaScript Required:</strong> This page uses MathJax to display mathematical notation. 
+            Please enable JavaScript to view the formulas properly.
+        </div>
+    </noscript>
+</body>
+</html>

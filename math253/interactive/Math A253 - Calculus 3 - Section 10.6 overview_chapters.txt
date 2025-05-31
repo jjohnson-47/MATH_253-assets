@@ -1,0 +1,7 @@
+```
+0:00  Introduction to Planes in 3D
+1:00  Normal Vectors and Planes
+2:03  Equation of a Plane
+3:04  Intersection of Two Planes
+4:05  Distance from Point to Plane
+```

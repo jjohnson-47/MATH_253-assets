@@ -1,0 +1,942 @@
+1
+00:00:00,000 --> 00:00:01,184
+Hi class.
+
+2
+00:00:01,184 --> 00:00:03,284
+>> Let's talk about
+vector valued functions
+
+3
+00:00:03,284 --> 00:00:05,650
+from Section 11.1,
+
+4
+00:00:06,230 --> 00:00:08,610
+vector valued
+functions, or functions
+
+5
+00:00:08,610 --> 00:00:11,085
+whose output is a vector.
+
+6
+00:00:11,085 --> 00:00:13,605
+Here we see some
+examples of
+
+7
+00:00:13,605 --> 00:00:14,820
+vector valued functions in
+
+8
+00:00:14,820 --> 00:00:17,430
+two dimensions and
+in three dimensions.
+
+9
+00:00:17,430 --> 00:00:18,900
+So a vector valued
+
+10
+00:00:18,900 --> 00:00:21,525
+function is
+still a function
+
+11
+00:00:21,525 --> 00:00:23,700
+of a real variable t,
+
+12
+00:00:23,700 --> 00:00:25,620
+but its output is now
+
+13
+00:00:25,620 --> 00:00:27,810
+a vector and has
+two components.
+
+14
+00:00:27,810 --> 00:00:30,570
+And the nice thing is,
+is that the components
+
+15
+00:00:30,570 --> 00:00:33,339
+of the output
+vector R functions,
+
+16
+00:00:33,339 --> 00:00:35,150
+we normally see
+them, they are real,
+
+17
+00:00:35,150 --> 00:00:36,500
+real valued functions as
+
+18
+00:00:36,500 --> 00:00:39,000
+they are in Calculus
+One and Two.
+
+19
+00:00:40,360 --> 00:00:44,165
+Here's a curve y
+equal to x squared.
+
+20
+00:00:44,165 --> 00:00:46,055
+We're pretty familiar
+with this one.
+
+21
+00:00:46,055 --> 00:00:47,809
+We want to describe
+
+22
+00:00:47,809 --> 00:00:51,785
+this curve with a
+vector valued function.
+
+23
+00:00:51,785 --> 00:00:53,870
+One way to do it is to
+
+24
+00:00:53,870 --> 00:00:55,280
+parameterize the curve.
+
+25
+00:00:55,280 --> 00:00:56,330
+This is a concept
+that we'll
+
+26
+00:00:56,330 --> 00:00:57,470
+be seeing over and over
+
+27
+00:00:57,470 --> 00:01:00,320
+again by parameterizing
+the curve.
+
+28
+00:01:00,320 --> 00:01:01,999
+We have something
+called a parameter.
+
+29
+00:01:01,999 --> 00:01:02,704
+>> T.
+
+30
+00:01:02,704 --> 00:01:04,010
+>> T is our new variable.
+
+31
+00:01:04,010 --> 00:01:05,705
+>> You can think
+of it as time.
+
+32
+00:01:05,705 --> 00:01:08,300
+And we want to describe
+the location of
+
+33
+00:01:08,300 --> 00:01:10,520
+the point x comma y for
+
+34
+00:01:10,520 --> 00:01:12,990
+any value of t.
+
+35
+00:01:14,740 --> 00:01:18,050
+Here we can see
+that if we put
+
+36
+00:01:18,050 --> 00:01:21,455
+the x value and the y
+value into a vector,
+
+37
+00:01:21,455 --> 00:01:23,030
+that gives us a
+vector valued
+
+38
+00:01:23,030 --> 00:01:25,654
+function that
+describes the curve.
+
+39
+00:01:25,654 --> 00:01:28,190
+>> So every value
+
+40
+00:01:28,190 --> 00:01:30,094
+of t gives us a
+different vector.
+
+41
+00:01:30,094 --> 00:01:32,420
+>> And that different
+vector corresponds
+
+42
+00:01:32,420 --> 00:01:34,879
+to the blue arrow
+that you see here.
+
+43
+00:01:34,879 --> 00:01:36,844
+>> And notice that
+the curve itself
+
+44
+00:01:36,844 --> 00:01:38,180
+is traced out by the
+
+45
+00:01:38,180 --> 00:01:40,320
+terminal point
+of the arrow.
+
+46
+00:01:41,229 --> 00:01:44,809
+>> So what if we have
+a new parameter s?
+
+47
+00:01:44,809 --> 00:01:47,074
+>> S is equal to two t.
+
+48
+00:01:47,074 --> 00:01:48,979
+>> What does that
+curve look like?
+
+49
+00:01:48,979 --> 00:01:50,960
+>> If we were to
+have the vector
+
+50
+00:01:50,960 --> 00:01:53,480
+valued function r of ask,
+
+51
+00:01:53,480 --> 00:01:55,680
+ask comma S squared.
+
+52
+00:01:56,079 --> 00:01:59,059
+>> The fact is it's
+actually the same.
+
+53
+00:01:59,059 --> 00:02:00,560
+>> So this shows
+that we can have
+
+54
+00:02:00,560 --> 00:02:02,885
+multiple parameterizations
+
+55
+00:02:02,885 --> 00:02:04,655
+for the same curve.
+
+56
+00:02:04,655 --> 00:02:09,150
+You'll notice here, if
+S is equal to two t,
+
+57
+00:02:09,190 --> 00:02:11,930
+the rate at which a point
+
+58
+00:02:11,930 --> 00:02:13,100
+will move along
+the curve will be
+
+59
+00:02:13,100 --> 00:02:16,940
+twice as fast it
+with respect to t,
+
+60
+00:02:16,940 --> 00:02:18,110
+with respect to time,
+
+61
+00:02:18,110 --> 00:02:19,805
+if we're thinking
+of T at time.
+
+62
+00:02:19,805 --> 00:02:21,080
+So that's going to do,
+
+63
+00:02:21,080 --> 00:02:21,890
+we're going to be
+something that's
+
+64
+00:02:21,890 --> 00:02:24,110
+important in
+later chapters is
+
+65
+00:02:24,110 --> 00:02:25,580
+that we can have
+
+66
+00:02:25,580 --> 00:02:26,780
+different parameterizations
+
+67
+00:02:26,780 --> 00:02:27,665
+for the same curve.
+
+68
+00:02:27,665 --> 00:02:28,430
+And that makes sense.
+
+69
+00:02:28,430 --> 00:02:31,310
+If the curve is the
+path of an object,
+
+70
+00:02:31,310 --> 00:02:32,945
+that path can
+be moving fast,
+
+71
+00:02:32,945 --> 00:02:34,430
+that or that object
+can be moving faster,
+
+72
+00:02:34,430 --> 00:02:36,675
+that object can
+be moving slowly.
+
+73
+00:02:36,675 --> 00:02:39,760
+Our curves in
+two-dimensional space can be
+
+74
+00:02:39,760 --> 00:02:41,230
+quite exotic
+and interesting
+
+75
+00:02:41,230 --> 00:02:43,100
+like we have here.
+
+76
+00:02:44,490 --> 00:02:48,340
+So this is an entire
+subject unit of itself,
+
+77
+00:02:48,340 --> 00:02:50,890
+really is just
+studying curves in
+
+78
+00:02:50,890 --> 00:02:52,900
+two-dimensional
+space and describing
+
+79
+00:02:52,900 --> 00:02:54,235
+them with vector equations.
+
+80
+00:02:54,235 --> 00:02:56,170
+The vector equations for
+this one is actually
+
+81
+00:02:56,170 --> 00:02:58,970
+just too complicated,
+even put on the screen.
+
+82
+00:03:00,240 --> 00:03:02,530
+We can also describe curves
+
+83
+00:03:02,530 --> 00:03:03,580
+in three-dimensional space.
+
+84
+00:03:03,580 --> 00:03:05,620
+This way, the
+only difference
+
+85
+00:03:05,620 --> 00:03:07,315
+is there's a
+third component.
+
+86
+00:03:07,315 --> 00:03:09,265
+The picture that
+you see here
+
+87
+00:03:09,265 --> 00:03:11,440
+is the curve of cosine t,
+
+88
+00:03:11,440 --> 00:03:13,810
+sine t comma t. And we'll
+
+89
+00:03:13,810 --> 00:03:16,915
+remember from calculus
+that cosine t,
+
+90
+00:03:16,915 --> 00:03:18,400
+sine t is, are
+
+91
+00:03:18,400 --> 00:03:19,965
+spinning around
+the unit circle.
+
+92
+00:03:19,965 --> 00:03:22,235
+So if you were to look
+at this curve from,
+
+93
+00:03:22,235 --> 00:03:24,050
+from the top and
+look down and
+
+94
+00:03:24,050 --> 00:03:26,540
+just see the x and y axis.
+
+95
+00:03:26,540 --> 00:03:28,595
+Any point as t,
+
+96
+00:03:28,595 --> 00:03:30,350
+as t moves,
+
+97
+00:03:30,350 --> 00:03:32,570
+the vector would
+just be rotor Chang,
+
+98
+00:03:32,570 --> 00:03:34,145
+rooting around in a circle.
+
+99
+00:03:34,145 --> 00:03:36,455
+But now we have a
+third component, t,
+
+100
+00:03:36,455 --> 00:03:37,610
+which corresponds to
+
+101
+00:03:37,610 --> 00:03:41,090
+the z component
+of the curve.
+
+102
+00:03:41,090 --> 00:03:42,950
+So the parametric equations
+
+103
+00:03:42,950 --> 00:03:44,060
+here would be cosine t,
+
+104
+00:03:44,060 --> 00:03:47,165
+sine t t. So for
+any value of t,
+
+105
+00:03:47,165 --> 00:03:51,030
+we get a yellow arrow,
+and that's our vector.
+
+106
+00:03:52,000 --> 00:03:55,205
+And so as the t
+value increases,
+
+107
+00:03:55,205 --> 00:03:56,930
+the vectors that we get
+
+108
+00:03:56,930 --> 00:03:58,220
+correspond to the
+yellow vector
+
+109
+00:03:58,220 --> 00:03:59,074
+that you see here.
+
+110
+00:03:59,074 --> 00:04:00,590
+>> And its terminal
+point is along
+
+111
+00:04:00,590 --> 00:04:08,904
+the curve with vector
+valued functions.
+
+112
+00:04:08,904 --> 00:04:10,795
+>> Since the outputs
+are vectors,
+
+113
+00:04:10,795 --> 00:04:12,370
+we can do all of
+the things that we
+
+114
+00:04:12,370 --> 00:04:14,275
+did in Chapter
+ten with vectors.
+
+115
+00:04:14,275 --> 00:04:16,030
+We can add them, we
+can subtract them,
+
+116
+00:04:16,030 --> 00:04:17,890
+we can take their
+dot products,
+
+117
+00:04:17,890 --> 00:04:20,270
+cross products,
+all those things.
+
+118
+00:04:21,660 --> 00:04:23,890
+Here's a famous example
+
+119
+00:04:23,890 --> 00:04:25,960
+of something
+called a cyclone.
+
+120
+00:04:25,960 --> 00:04:28,570
+So the cycle, it
+is a graph that's
+
+121
+00:04:28,570 --> 00:04:31,165
+traced by a point rolling
+along the circle.
+
+122
+00:04:31,165 --> 00:04:34,750
+And the question asks
+us to find a vector
+
+123
+00:04:34,750 --> 00:04:39,055
+valued function that
+models this curve.
+
+124
+00:04:39,055 --> 00:04:42,100
+Now this can be done
+a number of ways,
+
+125
+00:04:42,100 --> 00:04:42,850
+but I'm going to show you
+
+126
+00:04:42,850 --> 00:04:44,019
+the way I thought about it.
+
+127
+00:04:44,019 --> 00:04:45,789
+>> Wishes to first
+
+128
+00:04:45,789 --> 00:04:47,380
+modeled the point just
+
+129
+00:04:47,380 --> 00:04:48,474
+spinning around a circle.
+
+130
+00:04:48,474 --> 00:04:50,770
+>> So if there's something
+that's hard to do,
+
+131
+00:04:50,770 --> 00:04:51,880
+the best thing to
+do is to think
+
+132
+00:04:51,880 --> 00:04:53,380
+of the easiest case.
+
+133
+00:04:53,380 --> 00:04:55,270
+The easiest case
+that I can think
+
+134
+00:04:55,270 --> 00:04:57,430
+of is if you just have
+
+135
+00:04:57,430 --> 00:05:01,885
+a circle of radius
+1 spinning around,
+
+136
+00:05:01,885 --> 00:05:03,790
+because we're
+gonna have this
+
+137
+00:05:03,790 --> 00:05:04,990
+ball roll to the right.
+
+138
+00:05:04,990 --> 00:05:07,270
+I had the point
+start down here
+
+139
+00:05:07,270 --> 00:05:10,689
+on the bottom angle
+three pi over two.
+
+140
+00:05:10,689 --> 00:05:12,565
+>> And if we were just to
+
+141
+00:05:12,565 --> 00:05:14,365
+add our parameter t,
+
+142
+00:05:14,365 --> 00:05:15,805
+that just adds an angle
+
+143
+00:05:15,805 --> 00:05:17,350
+that would spin
+around the circle,
+
+144
+00:05:17,350 --> 00:05:18,070
+but that would spin
+
+145
+00:05:18,070 --> 00:05:20,154
+around the circle
+counterclockwise.
+
+146
+00:05:20,154 --> 00:05:22,855
+>> And we'll, we want
+this to spin clockwise.
+
+147
+00:05:22,855 --> 00:05:24,280
+So that's why we
+
+148
+00:05:24,280 --> 00:05:26,065
+have minus t in
+the function.
+
+149
+00:05:26,065 --> 00:05:28,495
+So this vector
+valued function here
+
+150
+00:05:28,495 --> 00:05:31,090
+describes movement
+
+151
+00:05:31,090 --> 00:05:33,410
+around the circle
+like this.
+
+152
+00:05:34,320 --> 00:05:37,090
+So now we just need
+to do the next steps
+
+153
+00:05:37,090 --> 00:05:39,610
+of turning it into the
+cycle that we see.
+
+154
+00:05:39,610 --> 00:05:42,550
+We can translate the circle
+
+155
+00:05:42,550 --> 00:05:43,720
+up one unit by just
+
+156
+00:05:43,720 --> 00:05:45,970
+adding one to the
+previous function
+
+157
+00:05:45,970 --> 00:05:48,410
+in the y component.
+
+158
+00:05:48,660 --> 00:05:51,955
+And then to make
+the circle move,
+
+159
+00:05:51,955 --> 00:05:53,860
+to make the whole
+animation move to
+
+160
+00:05:53,860 --> 00:05:58,000
+the right is to add t
+to the x component.
+
+161
+00:05:58,000 --> 00:06:00,639
+So for every t value,
+
+162
+00:06:00,639 --> 00:06:03,279
+that's just horizontally
+translating
+
+163
+00:06:03,279 --> 00:06:05,110
+the entire circle to
+the right by a value
+
+164
+00:06:05,110 --> 00:06:12,310
+of t. And therefore,
+
+165
+00:06:12,310 --> 00:06:14,515
+this is one way to
+describe how to make,
+
+166
+00:06:14,515 --> 00:06:16,480
+how to curve, to
+
+167
+00:06:16,480 --> 00:06:17,770
+describe the curve
+of the cycle
+
+168
+00:06:17,770 --> 00:06:20,000
+it with a vector
+valued function.
+
+169
+00:06:21,090 --> 00:06:23,680
+Another important
+concept, especially in
+
+170
+00:06:23,680 --> 00:06:25,945
+physics, is disc
+displacement.
+
+171
+00:06:25,945 --> 00:06:29,815
+So say you have this
+green curve shown here,
+
+172
+00:06:29,815 --> 00:06:33,430
+and we know it's described
+in a vector valued
+
+173
+00:06:33,430 --> 00:06:35,005
+function and we know
+
+174
+00:06:35,005 --> 00:06:36,790
+its position at
+a certain time,
+
+175
+00:06:36,790 --> 00:06:38,380
+times 0, and then we know
+
+176
+00:06:38,380 --> 00:06:40,150
+its position at
+a later time,
+
+177
+00:06:40,150 --> 00:06:42,190
+let's say time one.
+
+178
+00:06:42,190 --> 00:06:44,950
+So oftentimes we want
+to know where, well,
+
+179
+00:06:44,950 --> 00:06:46,660
+what was the change in
+
+180
+00:06:46,660 --> 00:06:48,955
+the position between
+these two times?
+
+181
+00:06:48,955 --> 00:06:49,750
+And that gives us
+
+182
+00:06:49,750 --> 00:06:51,430
+something called
+displacement,
+
+183
+00:06:51,430 --> 00:06:53,730
+which we can describe
+with a vector
+
+184
+00:06:53,730 --> 00:06:56,390
+as the terminal vector
+
+185
+00:06:56,390 --> 00:06:58,340
+minus the initial vector,
+
+186
+00:06:58,340 --> 00:07:00,095
+and that tells us the
+
+187
+00:07:00,095 --> 00:07:02,730
+total displacement
+over that time.
+
+188
+00:07:03,370 --> 00:07:05,690
+Finally, the fight.
+
+189
+00:07:05,690 --> 00:07:06,980
+Now that we have
+displacement,
+
+190
+00:07:06,980 --> 00:07:07,970
+we can start talking about
+
+191
+00:07:07,970 --> 00:07:09,620
+the average change of
+
+192
+00:07:09,620 --> 00:07:12,695
+a vector valued function
+over an interval.
+
+193
+00:07:12,695 --> 00:07:14,750
+This is an extension
+of average value
+
+194
+00:07:14,750 --> 00:07:16,490
+of change from
+calculus one.
+
+195
+00:07:16,490 --> 00:07:18,590
+When we're talking
+about on average,
+
+196
+00:07:18,590 --> 00:07:19,700
+how much does a function
+
+197
+00:07:19,700 --> 00:07:21,545
+change over an interval?
+
+198
+00:07:21,545 --> 00:07:23,030
+Will usually you look
+at the difference in
+
+199
+00:07:23,030 --> 00:07:24,950
+the function's
+value divided
+
+200
+00:07:24,950 --> 00:07:27,140
+by the total
+amount of time.
+
+201
+00:07:27,140 --> 00:07:29,060
+And it turns out
+that this is exactly
+
+202
+00:07:29,060 --> 00:07:30,950
+the same with vector
+valued functions.
+
+203
+00:07:30,950 --> 00:07:32,540
+Only now our functions are
+
+204
+00:07:32,540 --> 00:07:34,340
+vector valued
+functions rather
+
+205
+00:07:34,340 --> 00:07:36,480
+than real valued functions.

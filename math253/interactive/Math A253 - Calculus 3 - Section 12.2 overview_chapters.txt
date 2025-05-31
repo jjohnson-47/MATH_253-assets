@@ -1,0 +1,7 @@
+```
+0:00  Limits and Continuity Overview
+2:01  Open and Closed Sets in R²
+4:05  Limit Definitions in Multivariable
+6:06  Properties of Limits in R²
+8:30  Continuity of Multivariable Functions
+```

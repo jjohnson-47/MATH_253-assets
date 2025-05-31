@@ -1,0 +1,641 @@
+1
+00:00:00,170 --> 00:00:02,250
+Let's take a look at
+
+2
+00:00:02,250 --> 00:00:03,750
+the multivariable
+chain rule.
+
+3
+00:00:03,750 --> 00:00:08,130
+>> In section 12.51,
+
+4
+00:00:08,130 --> 00:00:09,360
+we want to revisit
+some things we know
+
+5
+00:00:09,360 --> 00:00:11,564
+about the chain rule
+from calculus one.
+
+6
+00:00:11,564 --> 00:00:13,440
+>> If we have a
+single variable
+
+7
+00:00:13,440 --> 00:00:15,285
+function y equals g of x,
+
+8
+00:00:15,285 --> 00:00:17,760
+that gives us the
+mileage of the vehicle,
+
+9
+00:00:17,760 --> 00:00:20,265
+meaning y gives
+us Miles and
+
+10
+00:00:20,265 --> 00:00:23,819
+x is the gallons
+of gasoline.
+
+11
+00:00:23,819 --> 00:00:26,100
+>> And then we also have
+
+12
+00:00:26,100 --> 00:00:29,400
+x being a function of t,
+
+13
+00:00:29,400 --> 00:00:30,989
+which in this
+case is dollar.
+
+14
+00:00:30,989 --> 00:00:32,429
+>> So this is a situation
+
+15
+00:00:32,429 --> 00:00:34,470
+where Y is described as
+
+16
+00:00:34,470 --> 00:00:38,010
+a composition of
+functions g with
+
+17
+00:00:38,010 --> 00:00:43,040
+f. If we want to
+
+18
+00:00:43,040 --> 00:00:46,415
+know how is the
+function wise mileage
+
+19
+00:00:46,415 --> 00:00:48,995
+changing with respect
+to the dollar?
+
+20
+00:00:48,995 --> 00:00:51,870
+Then we can use
+the chain rule.
+
+21
+00:00:52,150 --> 00:00:54,920
+The rate at which the
+miles is changing
+
+22
+00:00:54,920 --> 00:00:56,690
+with respect
+dollar is equal to
+
+23
+00:00:56,690 --> 00:00:57,830
+the rate at which
+the miles is
+
+24
+00:00:57,830 --> 00:00:59,240
+changing with respect
+to gallons of
+
+25
+00:00:59,240 --> 00:01:01,280
+gasoline times
+that the ray which
+
+26
+00:01:01,280 --> 00:01:02,360
+is changing with respect
+
+27
+00:01:02,360 --> 00:01:04,084
+to gasoline with dollars.
+
+28
+00:01:04,084 --> 00:01:05,750
+>> And the chain rule for
+
+29
+00:01:05,750 --> 00:01:08,460
+one variable is usually
+written like this.
+
+30
+00:01:09,610 --> 00:01:12,380
+Now the Chain Rule for, for
+
+31
+00:01:12,380 --> 00:01:13,790
+multivariable functions,
+
+32
+00:01:13,790 --> 00:01:15,635
+we can think of
+the surface of
+
+33
+00:01:15,635 --> 00:01:18,589
+our graph of a function
+of two variables.
+
+34
+00:01:18,589 --> 00:01:21,755
+>> And we want to know
+how is that function
+
+35
+00:01:21,755 --> 00:01:26,480
+changing if we have,
+
+36
+00:01:26,480 --> 00:01:28,850
+if we're traveling
+along that surface as,
+
+37
+00:01:28,850 --> 00:01:32,270
+let's say, a function
+of time t in this case.
+
+38
+00:01:32,270 --> 00:01:34,535
+So in this example, we have
+
+39
+00:01:34,535 --> 00:01:37,490
+a circle in the domain,
+
+40
+00:01:37,490 --> 00:01:39,740
+and we can be
+travelling around
+
+41
+00:01:39,740 --> 00:01:42,935
+that circle as a
+function of time
+
+42
+00:01:42,935 --> 00:01:44,420
+of x and t comma y of
+
+43
+00:01:44,420 --> 00:01:48,875
+t. But that it
+
+44
+00:01:48,875 --> 00:01:49,790
+tells us how fast we're
+
+45
+00:01:49,790 --> 00:01:51,154
+spinning around the circle.
+
+46
+00:01:51,154 --> 00:01:53,030
+>> We need to use
+the information from
+
+47
+00:01:53,030 --> 00:01:54,965
+the terrain of
+the function,
+
+48
+00:01:54,965 --> 00:01:56,930
+or we going up or down
+
+49
+00:01:56,930 --> 00:01:58,250
+to tell us how fast it's
+
+50
+00:01:58,250 --> 00:01:59,840
+moving up or down on
+
+51
+00:01:59,840 --> 00:02:01,984
+the surface of
+the graph itself.
+
+52
+00:02:01,984 --> 00:02:04,010
+>> So this is motivation
+
+53
+00:02:04,010 --> 00:02:05,825
+for the multi-variable
+chain rule,
+
+54
+00:02:05,825 --> 00:02:07,430
+which says that the rate at
+
+55
+00:02:07,430 --> 00:02:08,900
+which the elevation
+is changing with
+
+56
+00:02:08,900 --> 00:02:12,440
+respect to time has to
+do with the rate at
+
+57
+00:02:12,440 --> 00:02:14,510
+which you're changing with
+
+58
+00:02:14,510 --> 00:02:16,625
+respect to x and y axis,
+
+59
+00:02:16,625 --> 00:02:19,370
+your speed or your velocity
+
+60
+00:02:19,370 --> 00:02:21,275
+and the terrain itself,
+
+61
+00:02:21,275 --> 00:02:21,980
+which is what the
+
+62
+00:02:21,980 --> 00:02:24,210
+partial derivative
+tells us.
+
+63
+00:02:24,909 --> 00:02:27,694
+>> So this is the
+multivariable chain rule.
+
+64
+00:02:27,694 --> 00:02:29,210
+>> It's often
+remembered with
+
+65
+00:02:29,210 --> 00:02:31,204
+this convenient
+diagram here.
+
+66
+00:02:31,204 --> 00:02:33,380
+>> The derivative
+with respect to,
+
+67
+00:02:33,380 --> 00:02:35,509
+derivative of z
+with respect to t.
+
+68
+00:02:35,509 --> 00:02:37,610
+>> As you go along
+the branches and
+
+69
+00:02:37,610 --> 00:02:39,110
+multiply and then you
+
+70
+00:02:39,110 --> 00:02:41,495
+add up the result in
+the corresponding,
+
+71
+00:02:41,495 --> 00:02:44,610
+add up the
+corresponding branches.
+
+72
+00:02:47,219 --> 00:02:49,510
+>> Here we have an
+object traveling
+
+73
+00:02:49,510 --> 00:02:51,759
+along a path with some
+given information.
+
+74
+00:02:51,759 --> 00:02:54,250
+>> We know the
+partial derivatives,
+
+75
+00:02:54,250 --> 00:02:55,630
+we know how z is
+
+76
+00:02:55,630 --> 00:02:57,370
+changing with
+respect to x and y.
+
+77
+00:02:57,370 --> 00:02:58,990
+And then we also
+know how x and
+
+78
+00:02:58,990 --> 00:03:01,194
+y are changing
+with respect to t.
+
+79
+00:03:01,194 --> 00:03:03,100
+>> Again, the partial z,
+
+80
+00:03:03,100 --> 00:03:05,290
+partial x is information
+
+81
+00:03:05,290 --> 00:03:07,105
+about how steep
+the graph is,
+
+82
+00:03:07,105 --> 00:03:09,280
+those places and dx,
+
+83
+00:03:09,280 --> 00:03:10,644
+d t, and d t.
+
+84
+00:03:10,644 --> 00:03:12,250
+>> So tell us
+how fast we're
+
+85
+00:03:12,250 --> 00:03:13,480
+moving in the x
+
+86
+00:03:13,480 --> 00:03:15,864
+and y directions
+respectively.
+
+87
+00:03:15,864 --> 00:03:17,200
+>> So this is
+
+88
+00:03:17,200 --> 00:03:18,835
+just a straightforward
+application
+
+89
+00:03:18,835 --> 00:03:20,635
+of the multi-variable
+chain rule,
+
+90
+00:03:20,635 --> 00:03:22,315
+and it illustrates the
+
+91
+00:03:22,315 --> 00:03:24,400
+connection between the,
+
+92
+00:03:24,400 --> 00:03:27,140
+the terrain and the speed.
+
+93
+00:03:28,389 --> 00:03:30,710
+>> We can also
+have functions
+
+94
+00:03:30,710 --> 00:03:33,425
+of more than one parameter,
+
+95
+00:03:33,425 --> 00:03:35,900
+S and T. And if you want
+
+96
+00:03:35,900 --> 00:03:39,245
+to find how z is changing
+with respect to S,
+
+97
+00:03:39,245 --> 00:03:40,970
+you can often
+remember it with
+
+98
+00:03:40,970 --> 00:03:43,205
+a tree diagram like here.
+
+99
+00:03:43,205 --> 00:03:45,200
+If we want to find
+housing is changing as we
+
+100
+00:03:45,200 --> 00:03:47,180
+go along the branches
+with the S and
+
+101
+00:03:47,180 --> 00:03:51,484
+multiply and then add
+up those branches.
+
+102
+00:03:51,484 --> 00:03:54,750
+>> And then similarly
+with respect to t,
+
+103
+00:03:56,860 --> 00:03:59,960
+there's a nice
+side effect with
+
+104
+00:03:59,960 --> 00:04:01,790
+the multivariable
+chain rule that helps
+
+105
+00:04:01,790 --> 00:04:04,650
+us find implicit
+derivatives.
+
+106
+00:04:04,899 --> 00:04:07,640
+>> So let's look at
+the case where we have
+
+107
+00:04:07,640 --> 00:04:10,294
+a function of a couple
+of areas equal to 0.
+
+108
+00:04:10,294 --> 00:04:12,110
+>> And then what
+we're gonna do is
+
+109
+00:04:12,110 --> 00:04:15,020
+set acts as just a
+function of itself,
+
+110
+00:04:15,020 --> 00:04:17,929
+acts as a function of x.
+
+111
+00:04:17,929 --> 00:04:21,480
+>> So we can write
+out the chain rule.
+
+112
+00:04:21,580 --> 00:04:24,950
+But in this case,
+the derivative of
+
+113
+00:04:24,950 --> 00:04:26,240
+z with respect to x and
+
+114
+00:04:26,240 --> 00:04:27,890
+z is a constant function 0,
+
+115
+00:04:27,890 --> 00:04:31,640
+we just get 0 and dx,
+
+116
+00:04:31,640 --> 00:04:33,470
+dx is just one.
+
+117
+00:04:33,470 --> 00:04:36,815
+So if we put these
+two parts here,
+
+118
+00:04:36,815 --> 00:04:39,410
+we get that the DY,
+
+119
+00:04:39,410 --> 00:04:42,410
+DX is just equal
+to negative
+
+120
+00:04:42,410 --> 00:04:44,270
+of the derivative
+after select Ax
+
+121
+00:04:44,270 --> 00:04:46,354
+divided by I drove f
+with respect to y.
+
+122
+00:04:46,354 --> 00:04:48,680
+>> So neat shortcut formula
+
+123
+00:04:48,680 --> 00:04:51,394
+for finding DY, DX.
+
+124
+00:04:51,394 --> 00:04:54,060
+>> Let's look
+at an example.
+
+125
+00:04:57,309 --> 00:04:59,600
+>> So given the
+implicitly defined
+
+126
+00:04:59,600 --> 00:05:00,725
+function here,
+
+127
+00:05:00,725 --> 00:05:04,410
+find Y prime,
+which is d by dx.
+
+128
+00:05:04,779 --> 00:05:07,655
+>> The first step is to,
+
+129
+00:05:07,655 --> 00:05:09,290
+we want to use the
+assumptions of
+
+130
+00:05:09,290 --> 00:05:11,090
+the implicit
+differentiation formula.
+
+131
+00:05:11,090 --> 00:05:13,055
+So if we put everything
+on one side,
+
+132
+00:05:13,055 --> 00:05:15,140
+we now have a
+function that's
+
+133
+00:05:15,140 --> 00:05:18,630
+equal to 0 or equal
+to a constant,
+
+134
+00:05:19,660 --> 00:05:22,010
+we can take the
+partial derivatives of
+
+135
+00:05:22,010 --> 00:05:23,330
+that function with
+respect to x,
+
+136
+00:05:23,330 --> 00:05:24,454
+with respect to y.
+
+137
+00:05:24,454 --> 00:05:26,060
+>> And just apply
+the formula
+
+138
+00:05:26,060 --> 00:05:27,740
+that dy dx is equal to the
+
+139
+00:05:27,740 --> 00:05:30,590
+negative of f partial x
+
+140
+00:05:30,590 --> 00:05:32,790
+divided by f partial y.

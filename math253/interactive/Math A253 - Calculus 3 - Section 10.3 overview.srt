@@ -1,0 +1,1280 @@
+1
+00:00:00,020 --> 00:00:02,640
+Hello and welcome
+to a short video
+
+2
+00:00:02,640 --> 00:00:03,855
+on the dot product.
+
+3
+00:00:03,855 --> 00:00:06,880
+This is an overview
+of section 10.3.
+
+4
+00:00:07,579 --> 00:00:10,860
+>> The dot product
+definition is this.
+
+5
+00:00:10,860 --> 00:00:13,215
+If you have two
+vectors, U and D,
+
+6
+00:00:13,215 --> 00:00:15,300
+then the dot product
+is defined as
+
+7
+00:00:15,300 --> 00:00:18,560
+the sum of the product
+
+8
+00:00:18,560 --> 00:00:19,909
+of the respective
+coordinates.
+
+9
+00:00:19,909 --> 00:00:21,560
+>> So if you have
+two vectors,
+
+10
+00:00:21,560 --> 00:00:23,735
+U and V in two dimensions,
+
+11
+00:00:23,735 --> 00:00:25,490
+you just multiply U1, V1,
+
+12
+00:00:25,490 --> 00:00:27,649
+multiply u2, v2,
+add them up.
+
+13
+00:00:27,649 --> 00:00:29,300
+>> And the same goes with
+
+14
+00:00:29,300 --> 00:00:30,650
+three-dimensional
+vectors or
+
+15
+00:00:30,650 --> 00:00:32,524
+four-dimensional vectors
+for that matter.
+
+16
+00:00:32,524 --> 00:00:33,740
+>> So the dot product is
+
+17
+00:00:33,740 --> 00:00:34,964
+relatively easy to find.
+
+18
+00:00:34,964 --> 00:00:35,960
+>> Let's find
+the dot product
+
+19
+00:00:35,960 --> 00:00:37,890
+for these two vectors.
+
+20
+00:00:39,760 --> 00:00:43,280
+The vector x dot
+product with
+
+21
+00:00:43,280 --> 00:00:47,000
+the vector y is
+equal to this case,
+
+22
+00:00:47,000 --> 00:00:49,070
+two times negative one
+
+23
+00:00:49,070 --> 00:00:54,890
+plus negative two times
+
+24
+00:00:54,890 --> 00:00:59,340
+0 plus five times three.
+
+25
+00:00:59,969 --> 00:01:02,755
+>> And that gives
+us negative two
+
+26
+00:01:02,755 --> 00:01:06,175
+plus 0 plus 15,
+which is 13.
+
+27
+00:01:06,175 --> 00:01:09,385
+Notice that the
+dot product is
+
+28
+00:01:09,385 --> 00:01:12,235
+a way to multiply
+two vectors,
+
+29
+00:01:12,235 --> 00:01:14,604
+except the answer that
+you get is a number.
+
+30
+00:01:14,604 --> 00:01:16,090
+>> So that's pretty
+important. When you take
+
+31
+00:01:16,090 --> 00:01:17,230
+a vector dot product with
+
+32
+00:01:17,230 --> 00:01:19,435
+another vector,
+you get a number.
+
+33
+00:01:19,435 --> 00:01:21,880
+And what that number
+is very important.
+
+34
+00:01:21,880 --> 00:01:23,875
+And it ends up telling
+us information
+
+35
+00:01:23,875 --> 00:01:27,530
+about the angle between
+the two vectors.
+
+36
+00:01:28,199 --> 00:01:30,040
+>> So the properties of
+
+37
+00:01:30,040 --> 00:01:31,870
+the dot product r here,
+
+38
+00:01:31,870 --> 00:01:33,730
+and these are things
+
+39
+00:01:33,730 --> 00:01:36,084
+to just sort of
+casually be aware of.
+
+40
+00:01:36,084 --> 00:01:37,900
+>> The commutative
+property means we can take
+
+41
+00:01:37,900 --> 00:01:38,980
+the dot product in
+
+42
+00:01:38,980 --> 00:01:41,200
+either order and
+get the same thing.
+
+43
+00:01:41,200 --> 00:01:43,400
+It distributes the way that
+
+44
+00:01:43,400 --> 00:01:44,780
+multiplication typically
+
+45
+00:01:44,780 --> 00:01:45,830
+distributes with numbers.
+
+46
+00:01:45,830 --> 00:01:46,580
+But keep in mind that
+
+47
+00:01:46,580 --> 00:01:48,155
+these things are vectors.
+
+48
+00:01:48,155 --> 00:01:51,124
+Scalars behave nicely
+with the dot product.
+
+49
+00:01:51,124 --> 00:01:52,370
+>> You can take a scale.
+
+50
+00:01:52,370 --> 00:01:53,780
+>> If you multiply
+a scalar times
+
+51
+00:01:53,780 --> 00:01:55,205
+the dot product
+of two vectors,
+
+52
+00:01:55,205 --> 00:01:56,750
+that's just the
+same as multiplying
+
+53
+00:01:56,750 --> 00:01:59,390
+the scalar times one
+of those two vectors,
+
+54
+00:01:59,390 --> 00:02:01,730
+the 0 vector, which is
+
+55
+00:02:01,730 --> 00:02:04,130
+a unique vector
+that's just zeros,
+
+56
+00:02:04,130 --> 00:02:05,870
+multiply it times
+any vector,
+
+57
+00:02:05,870 --> 00:02:08,105
+and it has a dot
+product of 0.
+
+58
+00:02:08,105 --> 00:02:10,864
+And number five is
+especially important.
+
+59
+00:02:10,864 --> 00:02:11,720
+>> It says that
+
+60
+00:02:11,720 --> 00:02:13,130
+the dot product
+of a vector with
+
+61
+00:02:13,130 --> 00:02:16,999
+itself is the
+magnitude squared.
+
+62
+00:02:16,999 --> 00:02:19,100
+>> So this is
+actually really
+
+63
+00:02:19,100 --> 00:02:20,630
+nice because
+it's another way
+
+64
+00:02:20,630 --> 00:02:24,960
+for us to find the
+magnitude of a vector.
+
+65
+00:02:26,610 --> 00:02:29,230
+So how does the dot-product
+
+66
+00:02:29,230 --> 00:02:30,789
+relate to an angle?
+
+67
+00:02:30,789 --> 00:02:31,480
+>> That's the width?
+
+68
+00:02:31,480 --> 00:02:33,520
+>> This equation here, so
+
+69
+00:02:33,520 --> 00:02:35,200
+just says that the dot
+product is equal to
+
+70
+00:02:35,200 --> 00:02:37,210
+the norm or the magnitude
+of the two vectors
+
+71
+00:02:37,210 --> 00:02:38,230
+multiplied
+together times the
+
+72
+00:02:38,230 --> 00:02:39,805
+cosine of the angle
+between them.
+
+73
+00:02:39,805 --> 00:02:42,190
+And an important
+thing is to
+
+74
+00:02:42,190 --> 00:02:44,784
+understand where that
+formula comes from.
+
+75
+00:02:44,784 --> 00:02:46,030
+>> And I won't go
+
+76
+00:02:46,030 --> 00:02:47,050
+through it on
+the video here,
+
+77
+00:02:47,050 --> 00:02:49,195
+but feel free to contact
+me with questions.
+
+78
+00:02:49,195 --> 00:02:51,745
+But if you have two
+vectors, u and v,
+
+79
+00:02:51,745 --> 00:02:54,070
+what you can do is
+
+80
+00:02:54,070 --> 00:02:56,560
+look at this picture
+here where you
+
+81
+00:02:56,560 --> 00:03:02,680
+have u minus v And
+that built a triangle.
+
+82
+00:03:02,680 --> 00:03:03,700
+>> And you can
+apply the law of
+
+83
+00:03:03,700 --> 00:03:05,890
+cosines to that
+triangle from trig,
+
+84
+00:03:05,890 --> 00:03:09,030
+and you get exactly
+this formula.
+
+85
+00:03:09,030 --> 00:03:10,820
+So that means if you can
+
+86
+00:03:10,820 --> 00:03:12,575
+solve for cosine theta,
+
+87
+00:03:12,575 --> 00:03:14,960
+and then you take
+the cosine inverse.
+
+88
+00:03:14,960 --> 00:03:16,850
+We have a formula to find
+
+89
+00:03:16,850 --> 00:03:19,595
+the angle between
+two vectors.
+
+90
+00:03:19,595 --> 00:03:20,660
+Keep in mind that
+
+91
+00:03:20,660 --> 00:03:22,640
+the cosine inverse
+function is
+
+92
+00:03:22,640 --> 00:03:23,810
+a function that
+always returns
+
+93
+00:03:23,810 --> 00:03:26,375
+an angle between 0 and pi.
+
+94
+00:03:26,375 --> 00:03:27,320
+So when you're finding
+
+95
+00:03:27,320 --> 00:03:28,760
+the angle between
+two vectors,
+
+96
+00:03:28,760 --> 00:03:30,680
+you can of course look at
+
+97
+00:03:30,680 --> 00:03:32,735
+the shortest angle, right?
+
+98
+00:03:32,735 --> 00:03:33,530
+And then you can look at
+
+99
+00:03:33,530 --> 00:03:34,640
+though angle that
+goes all the way
+
+100
+00:03:34,640 --> 00:03:36,410
+around this angle
+
+101
+00:03:36,410 --> 00:03:37,700
+that if you use
+this formula,
+
+102
+00:03:37,700 --> 00:03:39,140
+this will always give
+you the angle that's
+
+103
+00:03:39,140 --> 00:03:41,820
+the shortest angle
+between two vectors.
+
+104
+00:03:42,460 --> 00:03:44,510
+And important
+concept is the
+
+105
+00:03:44,510 --> 00:03:46,295
+one of orthogonal vectors.
+
+106
+00:03:46,295 --> 00:03:47,930
+So two vectors are
+
+107
+00:03:47,930 --> 00:03:50,795
+orthogonal if their
+dot product is 0.
+
+108
+00:03:50,795 --> 00:03:52,820
+And orthogonal means it's
+
+109
+00:03:52,820 --> 00:03:55,280
+the general idea
+of perpendicular.
+
+110
+00:03:55,280 --> 00:03:57,979
+So if two vectors
+are orthogonal,
+
+111
+00:03:57,979 --> 00:03:59,990
+if you take the dot
+product, you get 0.
+
+112
+00:03:59,990 --> 00:04:01,070
+So it's a really nice,
+
+113
+00:04:01,070 --> 00:04:03,410
+easy way to check to see if
+
+114
+00:04:03,410 --> 00:04:07,534
+two vectors are
+perpendicular or not.
+
+115
+00:04:07,534 --> 00:04:09,545
+>> Now if their
+dot product is 0,
+
+116
+00:04:09,545 --> 00:04:11,255
+let's just go back
+to this slide
+
+117
+00:04:11,255 --> 00:04:12,635
+and take a look at
+
+118
+00:04:12,635 --> 00:04:17,930
+the formula here for
+the cosine of theta.
+
+119
+00:04:17,930 --> 00:04:19,340
+>> If the dot
+product is 0, that
+
+120
+00:04:19,340 --> 00:04:20,600
+means the cosine
+of the angle
+
+121
+00:04:20,600 --> 00:04:21,770
+between them is equal to
+
+122
+00:04:21,770 --> 00:04:24,260
+0 divided by
+something which is 0.
+
+123
+00:04:24,260 --> 00:04:27,095
+So if the cosine
+of an angle is 0,
+
+124
+00:04:27,095 --> 00:04:28,490
+we know from trig that that
+
+125
+00:04:28,490 --> 00:04:29,600
+means that the angle has to
+
+126
+00:04:29,600 --> 00:04:32,090
+be 90 degrees
+or 270 degrees.
+
+127
+00:04:32,090 --> 00:04:33,275
+>> But because
+we're looking at
+
+128
+00:04:33,275 --> 00:04:35,645
+the smaller angle,
+it's 90-degree angle.
+
+129
+00:04:35,645 --> 00:04:37,325
+So the dot product being 0
+
+130
+00:04:37,325 --> 00:04:40,069
+means that the angle
+is 90 degrees.
+
+131
+00:04:40,069 --> 00:04:40,850
+>> So they really are
+
+132
+00:04:40,850 --> 00:04:43,100
+perpendicular
+in that sense.
+
+133
+00:04:43,100 --> 00:04:45,979
+What are some examples
+of orthogonal vectors?
+
+134
+00:04:45,979 --> 00:04:48,559
+>> So that's kinda fun
+to play around with.
+
+135
+00:04:48,559 --> 00:04:50,970
+>> I'll give you
+just a couple
+
+136
+00:04:51,340 --> 00:04:53,465
+fun ones to look at.
+
+137
+00:04:53,465 --> 00:04:55,710
+You could look
+at the vector
+
+138
+00:04:58,360 --> 00:05:01,620
+in two dimensional space,
+
+139
+00:05:03,850 --> 00:05:07,430
+right, with 11 going
+one in the x direction,
+
+140
+00:05:07,430 --> 00:05:09,019
+one in the y direction.
+
+141
+00:05:09,019 --> 00:05:12,390
+>> And you could
+look at the vector y
+
+142
+00:05:12,400 --> 00:05:15,990
+going one in the
+x direction,
+
+143
+00:05:16,510 --> 00:05:19,279
+negative one in
+the y direction.
+
+144
+00:05:19,279 --> 00:05:20,570
+>> And we can
+see if we take
+
+145
+00:05:20,570 --> 00:05:22,680
+the dot product of these,
+
+146
+00:05:25,330 --> 00:05:28,520
+we get one times one
+
+147
+00:05:28,520 --> 00:05:33,784
+plus one times negative
+one equals to 0.
+
+148
+00:05:33,784 --> 00:05:36,560
+>> So those are
+two vectors in
+
+149
+00:05:36,560 --> 00:05:38,060
+two dimensional space
+whose dot product is
+
+150
+00:05:38,060 --> 00:05:40,100
+0. And there are
+many others.
+
+151
+00:05:40,100 --> 00:05:42,740
+Any two vectors who meet
+at a 90 degree angle
+
+152
+00:05:42,740 --> 00:05:46,620
+have a dot product of
+0 and R orthogonal.
+
+153
+00:05:46,900 --> 00:05:49,400
+An important idea
+in vectors is
+
+154
+00:05:49,400 --> 00:05:51,635
+that a vector projection,
+
+155
+00:05:51,635 --> 00:05:54,200
+especially in
+physics if you have
+
+156
+00:05:54,200 --> 00:05:56,525
+forces going in
+two directions.
+
+157
+00:05:56,525 --> 00:05:59,270
+So let's say you wanted
+to pull an object in
+
+158
+00:05:59,270 --> 00:06:02,659
+the direction of v
+in this picture.
+
+159
+00:06:02,659 --> 00:06:05,600
+>> But some things
+in the way perhaps.
+
+160
+00:06:05,600 --> 00:06:06,860
+So you can only
+
+161
+00:06:06,860 --> 00:06:08,780
+pull it in the
+direction of view.
+
+162
+00:06:08,780 --> 00:06:10,730
+You'd, you'd
+want to know how
+
+163
+00:06:10,730 --> 00:06:13,010
+much of that force that
+
+164
+00:06:13,010 --> 00:06:14,840
+you're pulling from
+you is actually
+
+165
+00:06:14,840 --> 00:06:17,164
+in the direction
+that you care about.
+
+166
+00:06:17,164 --> 00:06:17,930
+>> So how much of
+
+167
+00:06:17,930 --> 00:06:20,015
+that is in the
+direction of v?
+
+168
+00:06:20,015 --> 00:06:22,025
+And so that vector
+
+169
+00:06:22,025 --> 00:06:24,440
+is the blue vector
+that you see here.
+
+170
+00:06:24,440 --> 00:06:28,940
+Which is written in this
+strange way to probe
+
+171
+00:06:28,940 --> 00:06:31,970
+project the
+projection PRO J
+
+172
+00:06:31,970 --> 00:06:34,025
+underscore V. And then you,
+
+173
+00:06:34,025 --> 00:06:37,010
+so the underscore,
+the vector that's
+
+174
+00:06:37,010 --> 00:06:39,545
+here in the subscript
+
+175
+00:06:39,545 --> 00:06:41,750
+is the one that you're
+projecting onto.
+
+176
+00:06:41,750 --> 00:06:44,330
+So this is an
+important vector.
+
+177
+00:06:44,330 --> 00:06:45,710
+Whenever you have
+two other vectors,
+
+178
+00:06:45,710 --> 00:06:48,960
+you can, you can get
+this vector from it.
+
+179
+00:06:56,019 --> 00:06:57,800
+>> Another important idea
+
+180
+00:06:57,800 --> 00:06:58,715
+with the dot product
+
+181
+00:06:58,715 --> 00:07:01,864
+is the orthogonal
+decomposition.
+
+182
+00:07:01,864 --> 00:07:04,010
+>> So just like in
+the previous slide,
+
+183
+00:07:04,010 --> 00:07:07,259
+we talked about the
+projection of U on to V.
+
+184
+00:07:07,259 --> 00:07:10,300
+>> Well, that gives
+us, that gives rise to
+
+185
+00:07:10,300 --> 00:07:14,260
+another vector
+which is W here.
+
+186
+00:07:14,260 --> 00:07:16,960
+And we can see that
+in our picture,
+
+187
+00:07:16,960 --> 00:07:20,629
+that if you take w,
+
+188
+00:07:22,380 --> 00:07:25,990
+If you take the
+projection plus w,
+
+189
+00:07:25,990 --> 00:07:27,850
+you get you there.
+
+190
+00:07:27,850 --> 00:07:29,170
+If you take w plus
+
+191
+00:07:29,170 --> 00:07:31,239
+the projection,
+you get you.
+
+192
+00:07:31,239 --> 00:07:33,910
+>> So what is, what
+is this vector w?
+
+193
+00:07:33,910 --> 00:07:35,710
+>> Anyways, it is
+
+194
+00:07:35,710 --> 00:07:38,755
+u minus the
+projection vector.
+
+195
+00:07:38,755 --> 00:07:42,670
+So this is a way of
+writing the vector,
+
+196
+00:07:42,670 --> 00:07:45,295
+the vector u in two parts.
+
+197
+00:07:45,295 --> 00:07:47,080
+The part that's
+parallel with V and
+
+198
+00:07:47,080 --> 00:07:49,494
+the part that's
+perpendicular to B.
+
+199
+00:07:49,494 --> 00:07:51,190
+>> And this is
+just as useful
+
+200
+00:07:51,190 --> 00:07:52,450
+because maybe V is
+
+201
+00:07:52,450 --> 00:07:54,190
+an important direction that
+
+202
+00:07:54,190 --> 00:07:56,065
+we're working with on a,
+
+203
+00:07:56,065 --> 00:07:57,580
+on a certain incline.
+
+204
+00:07:57,580 --> 00:07:59,740
+And we just want to
+write everything
+
+205
+00:07:59,740 --> 00:08:02,169
+about you in terms
+of that vector v.
+
+206
+00:08:02,169 --> 00:08:03,790
+>> And this formula
+
+207
+00:08:03,790 --> 00:08:06,440
+gives us a nice
+way to do that.
+
+208
+00:08:08,939 --> 00:08:11,545
+>> One application for
+
+209
+00:08:11,545 --> 00:08:13,120
+dot product that's
+very important
+
+210
+00:08:13,120 --> 00:08:17,334
+and in physics is
+the concept of work.
+
+211
+00:08:17,334 --> 00:08:19,405
+>> And you might
+know that work
+
+212
+00:08:19,405 --> 00:08:22,914
+is defined as force
+times distance.
+
+213
+00:08:22,914 --> 00:08:23,890
+>> Now that we're
+
+214
+00:08:23,890 --> 00:08:25,240
+talking about
+vectors, though,
+
+215
+00:08:25,240 --> 00:08:28,179
+we can talk about
+work in a better way.
+
+216
+00:08:28,179 --> 00:08:30,115
+>> And we can talk
+about work in a way
+
+217
+00:08:30,115 --> 00:08:32,330
+when we have force not
+
+218
+00:08:32,330 --> 00:08:35,975
+necessarily given in
+exactly the direction
+
+219
+00:08:35,975 --> 00:08:37,999
+of the that we want.
+
+220
+00:08:37,999 --> 00:08:39,320
+>> So you can see
+in this picture,
+
+221
+00:08:39,320 --> 00:08:40,370
+in this example, a box
+
+222
+00:08:40,370 --> 00:08:41,615
+is pushed along a ramp,
+
+223
+00:08:41,615 --> 00:08:43,760
+the raises over a
+distance of 15 feet by
+
+224
+00:08:43,760 --> 00:08:44,900
+applying 50 pounds of
+
+225
+00:08:44,900 --> 00:08:46,265
+force as shown
+in the figure.
+
+226
+00:08:46,265 --> 00:08:48,650
+Compute the work done well.
+
+227
+00:08:48,650 --> 00:08:50,540
+>> So we have a ramp
+that's 15 feet long,
+
+228
+00:08:50,540 --> 00:08:51,800
+three feet high, and
+
+229
+00:08:51,800 --> 00:08:52,865
+then there's a box
+sitting on it.
+
+230
+00:08:52,865 --> 00:08:54,485
+We'd like to
+pull the box up,
+
+231
+00:08:54,485 --> 00:08:55,880
+but we can see that we're
+
+232
+00:08:55,880 --> 00:08:57,650
+pulling the box with
+
+233
+00:08:57,650 --> 00:08:59,180
+a force that's not really
+
+234
+00:08:59,180 --> 00:09:00,980
+parallel with the ramp.
+
+235
+00:09:00,980 --> 00:09:02,750
+It's being pulled up at
+
+236
+00:09:02,750 --> 00:09:03,860
+a 30 degree angle from
+
+237
+00:09:03,860 --> 00:09:06,335
+the, from the horizontal.
+
+238
+00:09:06,335 --> 00:09:08,960
+So without vectors, we
+
+239
+00:09:08,960 --> 00:09:11,330
+couldn't really
+calculate the work here.
+
+240
+00:09:11,330 --> 00:09:14,030
+But because we can take
+
+241
+00:09:14,030 --> 00:09:16,355
+the vector projection of
+
+242
+00:09:16,355 --> 00:09:20,074
+F onto the direction
+that we want.
+
+243
+00:09:20,074 --> 00:09:21,950
+>> Now the direction
+of the ramp,
+
+244
+00:09:21,950 --> 00:09:24,080
+we get a nice
+formula for that.
+
+245
+00:09:24,080 --> 00:09:25,700
+And it turns out, and I'm
+
+246
+00:09:25,700 --> 00:09:29,060
+the derivation
+
+247
+00:09:29,060 --> 00:09:30,500
+from the vector
+projection two,
+
+248
+00:09:30,500 --> 00:09:32,345
+this formula is
+in our book,
+
+249
+00:09:32,345 --> 00:09:34,340
+but it turns out
+that you can
+
+250
+00:09:34,340 --> 00:09:35,930
+find this work
+by just taking
+
+251
+00:09:35,930 --> 00:09:37,985
+the dot product
+of the force
+
+252
+00:09:37,985 --> 00:09:40,610
+with the direction that
+
+253
+00:09:40,610 --> 00:09:41,855
+the work is being done.
+
+254
+00:09:41,855 --> 00:09:43,910
+So here in this case,
+
+255
+00:09:43,910 --> 00:09:45,860
+the work is just
+the dot product of
+
+256
+00:09:45,860 --> 00:09:48,349
+the force with
+the direction d.
+
+257
+00:09:48,349 --> 00:09:50,615
+>> And we can see
+that the ramp
+
+258
+00:09:50,615 --> 00:09:52,250
+has a change in acts of
+
+259
+00:09:52,250 --> 00:09:54,049
+15 and a change
+of y of three.
+
+260
+00:09:54,049 --> 00:09:55,575
+>> And that's what gives,
+
+261
+00:09:55,575 --> 00:09:58,220
+because our D vector,
+
+262
+00:09:58,650 --> 00:10:02,440
+and then we have
+our force vector,
+
+263
+00:10:02,440 --> 00:10:04,660
+which is, it's
+a force of 50,
+
+264
+00:10:04,660 --> 00:10:06,880
+but 3030 degrees of
+
+265
+00:10:06,880 --> 00:10:08,410
+that is in the x direction,
+
+266
+00:10:08,410 --> 00:10:11,080
+and it's a 30 degree angle.
+
+267
+00:10:11,080 --> 00:10:12,460
+So cosine of 30
+
+268
+00:10:12,460 --> 00:10:13,840
+is the portion in
+the x direction.
+
+269
+00:10:13,840 --> 00:10:15,910
+Sine of 30 is of course
+on the y direction.
+
+270
+00:10:15,910 --> 00:10:20,050
+So that gives us
+this simple formula.
+
+271
+00:10:20,050 --> 00:10:21,775
+You can find the
+cosine of 30 and
+
+272
+00:10:21,775 --> 00:10:23,500
+sine of 30 in the same
+way we always do.
+
+273
+00:10:23,500 --> 00:10:25,690
+And trig multiply
+both those times 50,
+
+274
+00:10:25,690 --> 00:10:26,950
+take the dot product and
+
+275
+00:10:26,950 --> 00:10:28,135
+we can see that
+the total work
+
+276
+00:10:28,135 --> 00:10:33,055
+is 724.5 foot pounds.
+
+277
+00:10:33,055 --> 00:10:34,615
+So this is a
+very convenient
+
+278
+00:10:34,615 --> 00:10:36,980
+formula for finding work.

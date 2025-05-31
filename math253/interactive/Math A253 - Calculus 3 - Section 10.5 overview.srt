@@ -1,0 +1,1324 @@
+1
+00:00:00,000 --> 00:00:02,100
+Let's take a look at lines
+
+2
+00:00:02,100 --> 00:00:03,224
+in three-dimensional space.
+
+3
+00:00:03,224 --> 00:00:04,500
+>> This is an
+overview of section
+
+4
+00:00:04,500 --> 00:00:06,674
+10.5 and our text.
+
+5
+00:00:06,674 --> 00:00:08,640
+>> The best way to
+understand lines in
+
+6
+00:00:08,640 --> 00:00:10,770
+three-dimensional
+space is to re,
+
+7
+00:00:10,770 --> 00:00:13,184
+understand lines in
+two-dimensional space.
+
+8
+00:00:13,184 --> 00:00:14,999
+>> This is a familiar
+equation here.
+
+9
+00:00:14,999 --> 00:00:16,080
+>> Y is equal
+to negative two
+
+10
+00:00:16,080 --> 00:00:17,549
+thirds x plus four.
+
+11
+00:00:17,549 --> 00:00:20,009
+>> The graph of the
+line is given here.
+
+12
+00:00:20,009 --> 00:00:22,530
+>> And the main thing
+to remember is that
+
+13
+00:00:22,530 --> 00:00:24,300
+this equation gives us
+
+14
+00:00:24,300 --> 00:00:26,159
+two pieces of information
+about the line.
+
+15
+00:00:26,159 --> 00:00:28,320
+>> It gives us
+a slope, which
+
+16
+00:00:28,320 --> 00:00:30,659
+we can interpret as a
+direction of the line.
+
+17
+00:00:30,659 --> 00:00:32,610
+>> And it gives us a point,
+
+18
+00:00:32,610 --> 00:00:34,320
+which is some
+point on the line,
+
+19
+00:00:34,320 --> 00:00:36,150
+in this case, 0 comma four,
+
+20
+00:00:36,150 --> 00:00:38,199
+which is the y-intercept.
+
+21
+00:00:38,929 --> 00:00:42,040
+>> We can reinterpret
+that information
+
+22
+00:00:42,040 --> 00:00:44,540
+as a direction vector.
+
+23
+00:00:44,540 --> 00:00:46,520
+Remember, the slope
+is the change
+
+24
+00:00:46,520 --> 00:00:48,050
+in y over the change of x.
+
+25
+00:00:48,050 --> 00:00:49,430
+So we can put that
+information into
+
+26
+00:00:49,430 --> 00:00:53,240
+a vector D as three
+comma negative two.
+
+27
+00:00:53,240 --> 00:00:54,200
+And that gives us
+
+28
+00:00:54,200 --> 00:00:56,570
+the green arrow
+that you see here.
+
+29
+00:00:56,570 --> 00:00:59,240
+And then we have a
+starting position,
+
+30
+00:00:59,240 --> 00:01:01,685
+which we see as
+the blue arrow.
+
+31
+00:01:01,685 --> 00:01:05,600
+And that allows us to
+write an equation of
+
+32
+00:01:05,600 --> 00:01:09,035
+a vector that changes
+
+33
+00:01:09,035 --> 00:01:12,290
+as t moves t as a
+parameter, a real number.
+
+34
+00:01:12,290 --> 00:01:16,670
+And as t increases,
+they starting vector,
+
+35
+00:01:16,670 --> 00:01:19,100
+the blue arrow, changes
+
+36
+00:01:19,100 --> 00:01:22,250
+in the direction of
+the direction vector.
+
+37
+00:01:22,250 --> 00:01:24,454
+Now this is a new
+kind of function.
+
+38
+00:01:24,454 --> 00:01:25,160
+>> This is a function
+
+39
+00:01:25,160 --> 00:01:26,735
+whose output is
+not a real number,
+
+40
+00:01:26,735 --> 00:01:29,809
+but whose output
+is a vector.
+
+41
+00:01:29,809 --> 00:01:33,510
+>> This is the vector
+equation of the line.
+
+42
+00:01:34,630 --> 00:01:36,740
+So this gives rise to
+
+43
+00:01:36,740 --> 00:01:39,634
+three new types of
+equations for a line.
+
+44
+00:01:39,634 --> 00:01:41,270
+>> So we have a
+vector equation,
+
+45
+00:01:41,270 --> 00:01:42,679
+which we just saw.
+
+46
+00:01:42,679 --> 00:01:44,930
+>> And if the
+vector equation
+
+47
+00:01:44,930 --> 00:01:48,410
+describes a
+vector x comma y,
+
+48
+00:01:48,410 --> 00:01:51,080
+then we can equate
+the components.
+
+49
+00:01:51,080 --> 00:01:51,394
+>> Here.
+
+50
+00:01:51,394 --> 00:01:54,455
+>> X is equal to 0 plus 3t,
+
+51
+00:01:54,455 --> 00:01:56,929
+which tells us
+the exposition.
+
+52
+00:01:56,929 --> 00:01:58,925
+>> For any value of
+the parameter t,
+
+53
+00:01:58,925 --> 00:02:01,625
+y is equal to
+four minus 2T,
+
+54
+00:02:01,625 --> 00:02:03,200
+which tells us the y
+
+55
+00:02:03,200 --> 00:02:04,730
+position for
+every parameter
+
+56
+00:02:04,730 --> 00:02:06,470
+t. These two equations
+
+57
+00:02:06,470 --> 00:02:07,550
+together are called the
+
+58
+00:02:07,550 --> 00:02:09,394
+parametric equations
+of a line.
+
+59
+00:02:09,394 --> 00:02:11,015
+>> As t varies,
+
+60
+00:02:11,015 --> 00:02:12,410
+it describes a different x
+
+61
+00:02:12,410 --> 00:02:14,404
+comma y point on the line.
+
+62
+00:02:14,404 --> 00:02:16,220
+>> In both of these,
+you can solve for
+
+63
+00:02:16,220 --> 00:02:19,400
+t. And since t is
+the same bolt,
+
+64
+00:02:19,400 --> 00:02:20,600
+set those equal
+to each other.
+
+65
+00:02:20,600 --> 00:02:21,230
+>> And that gives us
+
+66
+00:02:21,230 --> 00:02:23,850
+the symmetric equation
+for the line.
+
+67
+00:02:24,010 --> 00:02:25,640
+So this gives us
+
+68
+00:02:25,640 --> 00:02:27,184
+three new equations
+for the line.
+
+69
+00:02:27,184 --> 00:02:28,130
+>> All of them give
+
+70
+00:02:28,130 --> 00:02:29,929
+us this important
+information.
+
+71
+00:02:29,929 --> 00:02:32,060
+>> One of them
+is the original
+
+72
+00:02:32,060 --> 00:02:34,445
+position on the line,
+
+73
+00:02:34,445 --> 00:02:36,499
+in this case, 0 comma four.
+
+74
+00:02:36,499 --> 00:02:38,450
+>> And all of them,
+all of them give us
+
+75
+00:02:38,450 --> 00:02:40,070
+the direction which we
+
+76
+00:02:40,070 --> 00:02:42,094
+normally think
+of as the slope.
+
+77
+00:02:42,094 --> 00:02:44,030
+>> In the symmetric
+equations,
+
+78
+00:02:44,030 --> 00:02:45,514
+you can solve for y.
+
+79
+00:02:45,514 --> 00:02:46,760
+>> And you actually,
+you get up, you
+
+80
+00:02:46,760 --> 00:02:49,110
+get exactly what
+we started with.
+
+81
+00:02:49,809 --> 00:02:51,889
+>> Minds in
+three-dimensions
+
+82
+00:02:51,889 --> 00:02:53,450
+are pretty much the same,
+
+83
+00:02:53,450 --> 00:02:55,399
+except we have
+three coordinates.
+
+84
+00:02:55,399 --> 00:02:56,780
+>> You have a
+starting, starting
+
+85
+00:02:56,780 --> 00:02:59,119
+position and you have
+a direction vector.
+
+86
+00:02:59,119 --> 00:03:01,505
+>> If you equate the
+three components,
+
+87
+00:03:01,505 --> 00:03:04,699
+you get the three
+parametric equations.
+
+88
+00:03:04,699 --> 00:03:06,050
+>> And if you solve for t
+
+89
+00:03:06,050 --> 00:03:07,489
+in the parametric equations
+
+90
+00:03:07,489 --> 00:03:08,930
+and then set those
+equal to each other,
+
+91
+00:03:08,930 --> 00:03:11,549
+you get the
+symmetric equations
+
+92
+00:03:11,950 --> 00:03:13,940
+Important thing to remember
+
+93
+00:03:13,940 --> 00:03:14,855
+is all of them have
+
+94
+00:03:14,855 --> 00:03:18,060
+a position and a direction.
+
+95
+00:03:18,399 --> 00:03:20,630
+>> Let's find the
+parameter equations
+
+96
+00:03:20,630 --> 00:03:22,010
+of a line through
+the points two
+
+97
+00:03:22,010 --> 00:03:26,940
+negative 12 and the
+0.13 negative one.
+
+98
+00:03:27,280 --> 00:03:29,600
+I'm gonna take an
+initial position
+
+99
+00:03:29,600 --> 00:03:30,815
+vector as two,
+
+100
+00:03:30,815 --> 00:03:33,829
+negative 12 as given.
+
+101
+00:03:33,829 --> 00:03:35,525
+>> And then for
+a direction,
+
+102
+00:03:35,525 --> 00:03:38,495
+I'll just take the
+vector from P to Q.
+
+103
+00:03:38,495 --> 00:03:40,220
+We can find that
+vector to be
+
+104
+00:03:40,220 --> 00:03:42,660
+negative 14,
+negative three.
+
+105
+00:03:43,120 --> 00:03:45,260
+I always like once we have
+
+106
+00:03:45,260 --> 00:03:47,825
+the starting vector
+and a direction,
+
+107
+00:03:47,825 --> 00:03:50,255
+I always write down
+the vector equation
+
+108
+00:03:50,255 --> 00:03:51,814
+just because it's
+handy to have.
+
+109
+00:03:51,814 --> 00:03:53,660
+>> It has the starting
+position and then
+
+110
+00:03:53,660 --> 00:03:56,390
+the direction
+vector right there,
+
+111
+00:03:56,390 --> 00:03:57,830
+where we can skip straight
+
+112
+00:03:57,830 --> 00:03:59,435
+to the parametric
+equations,
+
+113
+00:03:59,435 --> 00:04:00,740
+which are written
+like this,
+
+114
+00:04:00,740 --> 00:04:02,240
+with the starting
+position values
+
+115
+00:04:02,240 --> 00:04:03,634
+x-naught, y-naught,
+z naught.
+
+116
+00:04:03,634 --> 00:04:04,895
+>> And this started in the
+
+117
+00:04:04,895 --> 00:04:07,399
+direction vector
+components a, B, and C.
+
+118
+00:04:07,399 --> 00:04:09,320
+>> So there we have
+the parametric
+
+119
+00:04:09,320 --> 00:04:11,150
+equations for this line.
+
+120
+00:04:11,150 --> 00:04:13,925
+Lines in three-dimensional
+space can
+
+121
+00:04:13,925 --> 00:04:16,114
+be situated in any
+of these four ways.
+
+122
+00:04:16,114 --> 00:04:18,424
+>> They can intersect at 1,
+
+123
+00:04:18,424 --> 00:04:21,080
+they can intersect
+at all points,
+
+124
+00:04:21,080 --> 00:04:23,580
+which means that
+the same line,
+
+125
+00:04:23,800 --> 00:04:27,800
+they can point in
+the same direction
+
+126
+00:04:27,800 --> 00:04:29,615
+but not intersect.
+
+127
+00:04:29,615 --> 00:04:32,015
+And that means the two
+lines are parallel
+
+128
+00:04:32,015 --> 00:04:33,470
+or they can
+non-intersecting
+
+129
+00:04:33,470 --> 00:04:34,430
+point in different
+directions,
+
+130
+00:04:34,430 --> 00:04:36,780
+which means the two
+lines are skew.
+
+131
+00:04:37,079 --> 00:04:38,950
+>> Consider the two lines
+
+132
+00:04:38,950 --> 00:04:40,060
+given here and parametric
+
+133
+00:04:40,060 --> 00:04:42,160
+equations determine
+whether the
+
+134
+00:04:42,160 --> 00:04:44,500
+same they are the same
+line they intersect,
+
+135
+00:04:44,500 --> 00:04:46,780
+are parallel or skew.
+
+136
+00:04:46,780 --> 00:04:49,810
+To determine if the
+lines are parallel,
+
+137
+00:04:49,810 --> 00:04:50,530
+we just have to
+
+138
+00:04:50,530 --> 00:04:52,134
+compare the
+direction vectors.
+
+139
+00:04:52,134 --> 00:04:54,460
+>> And the direction
+vectors are given as
+
+140
+00:04:54,460 --> 00:04:55,780
+the coefficients
+in front of
+
+141
+00:04:55,780 --> 00:04:58,164
+the parameter t and
+s respectively.
+
+142
+00:04:58,164 --> 00:04:59,875
+>> So the direction vector
+
+143
+00:04:59,875 --> 00:05:01,720
+of the line one is three,
+
+144
+00:05:01,720 --> 00:05:03,850
+negative 11, and the
+direction vector
+
+145
+00:05:03,850 --> 00:05:06,594
+of line two is 412.
+
+146
+00:05:06,594 --> 00:05:09,085
+>> If we can see that
+
+147
+00:05:09,085 --> 00:05:12,250
+these two vectors are
+not parallel sends,
+
+148
+00:05:12,250 --> 00:05:14,140
+one can be written as
+a constant multiple
+
+149
+00:05:14,140 --> 00:05:16,090
+of the other just
+by looking at,
+
+150
+00:05:16,090 --> 00:05:17,425
+because the numbers
+are kinda nice.
+
+151
+00:05:17,425 --> 00:05:19,770
+But in general, the
+numbers may not be nice.
+
+152
+00:05:19,770 --> 00:05:21,560
+It may be hard to tell if
+
+153
+00:05:21,560 --> 00:05:22,760
+one vector can
+be written as
+
+154
+00:05:22,760 --> 00:05:24,559
+a constant multiple
+of the other.
+
+155
+00:05:24,559 --> 00:05:27,140
+>> So the procedure
+is to set
+
+156
+00:05:27,140 --> 00:05:28,100
+one vector equal to
+
+157
+00:05:28,100 --> 00:05:30,019
+a constant times the other.
+
+158
+00:05:30,019 --> 00:05:31,610
+>> That gives you,
+in this case,
+
+159
+00:05:31,610 --> 00:05:34,504
+three separate equations
+with C involved.
+
+160
+00:05:34,504 --> 00:05:36,290
+>> But this shows
+that C is equal to
+
+161
+00:05:36,290 --> 00:05:38,090
+three fourths and c is
+equal to negative one,
+
+162
+00:05:38,090 --> 00:05:39,379
+which can't both be true.
+
+163
+00:05:39,379 --> 00:05:40,670
+>> So there is no such.
+
+164
+00:05:40,670 --> 00:05:42,140
+>> See the vectors are not
+
+165
+00:05:42,140 --> 00:05:43,655
+constant multiples
+of each other
+
+166
+00:05:43,655 --> 00:05:45,870
+and they are not parallel.
+
+167
+00:05:46,240 --> 00:05:48,515
+Since the lines
+aren't parallel,
+
+168
+00:05:48,515 --> 00:05:49,940
+they must be either
+intersecting or
+
+169
+00:05:49,940 --> 00:05:54,874
+skew to determine if
+they're intersecting.
+
+170
+00:05:54,874 --> 00:05:57,080
+>> We notice
+that if there is
+
+171
+00:05:57,080 --> 00:05:59,375
+a point where they
+both have in common,
+
+172
+00:05:59,375 --> 00:06:00,620
+then there must
+be a value for
+
+173
+00:06:00,620 --> 00:06:01,790
+t and there must be a value
+
+174
+00:06:01,790 --> 00:06:04,265
+for S that have
+the same x value,
+
+175
+00:06:04,265 --> 00:06:07,009
+the same y value, and
+the same z value.
+
+176
+00:06:07,009 --> 00:06:09,080
+>> So if we set the
+three equations
+
+177
+00:06:09,080 --> 00:06:10,775
+equal to, equal
+to each other,
+
+178
+00:06:10,775 --> 00:06:12,920
+that just gives us a system
+
+179
+00:06:12,920 --> 00:06:14,240
+of linear equations
+to solve,
+
+180
+00:06:14,240 --> 00:06:16,999
+very much like our
+previous algebra class.
+
+181
+00:06:16,999 --> 00:06:18,680
+>> What I did here is I
+
+182
+00:06:18,680 --> 00:06:19,730
+just added the second,
+
+183
+00:06:19,730 --> 00:06:21,140
+third equations
+to eliminate
+
+184
+00:06:21,140 --> 00:06:22,340
+the T. And it turns
+
+185
+00:06:22,340 --> 00:06:23,540
+out that as has to be
+
+186
+00:06:23,540 --> 00:06:25,400
+negative two and
+t has to be one.
+
+187
+00:06:25,400 --> 00:06:26,660
+But if you put
+that back into
+
+188
+00:06:26,660 --> 00:06:29,089
+the top equation, you
+get a contradiction.
+
+189
+00:06:29,089 --> 00:06:30,830
+>> So that means these
+two lines do not
+
+190
+00:06:30,830 --> 00:06:33,960
+intersect, so it
+must be skew.
+
+191
+00:06:34,539 --> 00:06:36,770
+>> Something else we
+need to be able to
+
+192
+00:06:36,770 --> 00:06:38,600
+do is to find the
+distance from a point
+
+193
+00:06:38,600 --> 00:06:42,260
+to a line given a point
+q not on the line,
+
+194
+00:06:42,260 --> 00:06:44,330
+in some line with
+
+195
+00:06:44,330 --> 00:06:46,834
+position p in
+direction vector D.
+
+196
+00:06:46,834 --> 00:06:47,660
+>> You have a picture that
+
+197
+00:06:47,660 --> 00:06:49,565
+looks kinda like this.
+
+198
+00:06:49,565 --> 00:06:51,770
+In a handy way to remember
+
+199
+00:06:51,770 --> 00:06:54,110
+this formula is to remember
+
+200
+00:06:54,110 --> 00:06:56,690
+that the magnitude of
+
+201
+00:06:56,690 --> 00:06:57,710
+the cross-product is
+
+202
+00:06:57,710 --> 00:06:59,285
+the area of the
+parallelogram.
+
+203
+00:06:59,285 --> 00:07:01,115
+So if you take a look
+at this picture,
+
+204
+00:07:01,115 --> 00:07:04,820
+we have a vector PQ and
+we have a vector d,
+
+205
+00:07:04,820 --> 00:07:07,110
+the direction
+vector on the line.
+
+206
+00:07:07,300 --> 00:07:09,860
+What we really want
+is the distance
+
+207
+00:07:09,860 --> 00:07:11,630
+from point q to the line.
+
+208
+00:07:11,630 --> 00:07:13,430
+That's the height of
+
+209
+00:07:13,430 --> 00:07:15,320
+the parallelogram that
+you get when you are
+
+210
+00:07:15,320 --> 00:07:16,670
+that's formed by pq and
+
+211
+00:07:16,670 --> 00:07:19,330
+D. So we can
+find the area of
+
+212
+00:07:19,330 --> 00:07:20,620
+the parallelogram by taking
+
+213
+00:07:20,620 --> 00:07:22,360
+the cross product
+and divide
+
+214
+00:07:22,360 --> 00:07:24,474
+by the base to
+get the height.
+
+215
+00:07:24,474 --> 00:07:25,825
+>> So it's really just area
+
+216
+00:07:25,825 --> 00:07:27,174
+equals base times height.
+
+217
+00:07:27,174 --> 00:07:28,510
+>> But in this
+case we're solving
+
+218
+00:07:28,510 --> 00:07:30,249
+for the height of
+the parallelogram.
+
+219
+00:07:30,249 --> 00:07:31,360
+>> And that's a handy way
+
+220
+00:07:31,360 --> 00:07:33,470
+to remember this formula.
+
+221
+00:07:35,549 --> 00:07:37,840
+>> The distance
+between two lines,
+
+222
+00:07:37,840 --> 00:07:39,430
+if the two lines intersect,
+
+223
+00:07:39,430 --> 00:07:40,630
+the distance is 0.
+
+224
+00:07:40,630 --> 00:07:42,220
+If the two lines
+are parallel,
+
+225
+00:07:42,220 --> 00:07:43,420
+you could just
+take a point on
+
+226
+00:07:43,420 --> 00:07:44,710
+one of the lines
+and then use
+
+227
+00:07:44,710 --> 00:07:46,465
+the previous slide to find
+
+228
+00:07:46,465 --> 00:07:47,560
+the distance from that
+
+229
+00:07:47,560 --> 00:07:49,730
+point to the other line.
+
+230
+00:07:50,339 --> 00:07:52,900
+>> Now the situation's
+more interesting.
+
+231
+00:07:52,900 --> 00:07:54,865
+>> If you have
+to skew lines.
+
+232
+00:07:54,865 --> 00:07:57,295
+If you have to skew lines,
+
+233
+00:07:57,295 --> 00:07:58,900
+what you do is you
+take a point on
+
+234
+00:07:58,900 --> 00:08:02,210
+each line and then you
+take the projection
+
+235
+00:08:02,210 --> 00:08:06,035
+of that vector form
+from 1 to the other
+
+236
+00:08:06,035 --> 00:08:08,420
+on to a vector that's in
+
+237
+00:08:08,420 --> 00:08:10,580
+the direction
+that's orthogonal
+
+238
+00:08:10,580 --> 00:08:12,229
+to both of the lines.
+
+239
+00:08:12,229 --> 00:08:14,225
+>> It takes a little
+bit of thinking to
+
+240
+00:08:14,225 --> 00:08:16,235
+convince yourself that
+that actually works.
+
+241
+00:08:16,235 --> 00:08:18,500
+But the shortest
+distance between
+
+242
+00:08:18,500 --> 00:08:20,570
+these two skew
+lines is exactly
+
+243
+00:08:20,570 --> 00:08:23,330
+the place where the vector
+
+244
+00:08:23,330 --> 00:08:26,404
+that's orthogonal
+to both directions.
+
+245
+00:08:26,404 --> 00:08:28,460
+>> So we can find
+the vector that's
+
+246
+00:08:28,460 --> 00:08:29,990
+orthogonal to both
+directions by
+
+247
+00:08:29,990 --> 00:08:31,820
+finding the directions of
+
+248
+00:08:31,820 --> 00:08:33,620
+both lines, D1 and D2.
+
+249
+00:08:33,620 --> 00:08:35,989
+>> Taking the
+cross-product gives us C.
+
+250
+00:08:35,989 --> 00:08:37,790
+>> And then you can
+use this formula
+
+251
+00:08:37,790 --> 00:08:40,489
+here to calculate
+the distance.
+
+252
+00:08:40,489 --> 00:08:42,680
+>> So let's find the
+distance between
+
+253
+00:08:42,680 --> 00:08:43,640
+the two lines
+that we looked
+
+254
+00:08:43,640 --> 00:08:45,660
+at in the previous example.
+
+255
+00:08:46,209 --> 00:08:48,140
+>> First thing
+you need to do
+
+256
+00:08:48,140 --> 00:08:49,160
+to find the
+distance between
+
+257
+00:08:49,160 --> 00:08:50,720
+two lines is determine
+
+258
+00:08:50,720 --> 00:08:51,904
+what kind of
+lines are they?
+
+259
+00:08:51,904 --> 00:08:53,045
+>> Are they intersecting
+
+260
+00:08:53,045 --> 00:08:54,379
+or are they parallel?
+
+261
+00:08:54,379 --> 00:08:55,820
+>> In this case,
+we already found
+
+262
+00:08:55,820 --> 00:08:57,350
+these two lines to be skew.
+
+263
+00:08:57,350 --> 00:08:58,760
+So we have to
+use the formula
+
+264
+00:08:58,760 --> 00:09:01,860
+for the distance
+between skew lines.
+
+265
+00:09:02,769 --> 00:09:06,905
+>> So first we identify
+a point on each line,
+
+266
+00:09:06,905 --> 00:09:08,540
+and then we identify that
+
+267
+00:09:08,540 --> 00:09:09,950
+the direction vectors of
+
+268
+00:09:09,950 --> 00:09:12,335
+each line, which
+can be found here.
+
+269
+00:09:12,335 --> 00:09:15,800
+A point on the first
+line is one to 0.
+
+270
+00:09:15,800 --> 00:09:18,379
+On the second line
+is negative 235.
+
+271
+00:09:18,379 --> 00:09:19,610
+>> The direction vector of
+
+272
+00:09:19,610 --> 00:09:20,690
+the first line is three,
+
+273
+00:09:20,690 --> 00:09:22,970
+negative 11, and the
+direction vector
+
+274
+00:09:22,970 --> 00:09:25,890
+of the second line is 412.
+
+275
+00:09:26,319 --> 00:09:31,290
+>> Then we can find
+the vector P1, P2.
+
+276
+00:09:33,940 --> 00:09:36,140
+We can find the vector C,
+
+277
+00:09:36,140 --> 00:09:39,124
+which is the cross-product
+of D1 and D2.
+
+278
+00:09:39,124 --> 00:09:41,300
+>> It's good
+practice for finding
+
+279
+00:09:41,300 --> 00:09:43,530
+cross-products,
+the two vectors.
+
+280
+00:09:43,899 --> 00:09:46,400
+>> The dot
+product of P1, P2
+
+281
+00:09:46,400 --> 00:09:48,604
+with C gives us 42,
+
+282
+00:09:48,604 --> 00:09:50,450
+the magnitude of
+the vector c,
+
+283
+00:09:50,450 --> 00:09:52,130
+because a squared
+is 62, and
+
+284
+00:09:52,130 --> 00:09:53,180
+therefore the
+distance between
+
+285
+00:09:53,180 --> 00:09:54,740
+these two skew lines is
+
+286
+00:09:54,740 --> 00:09:58,350
+42 divided by the
+square root of 62.

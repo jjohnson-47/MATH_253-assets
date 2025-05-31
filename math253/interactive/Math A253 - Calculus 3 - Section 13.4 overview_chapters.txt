@@ -1,0 +1,7 @@
+```
+0:00  Mass and Center of Mass
+1:30  Double Integral for Mass
+2:45  Center of Mass in 2D
+3:30  Moments and Center of Mass
+4:15  Center of Mass of a Lamina
+```

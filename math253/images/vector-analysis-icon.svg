@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#001B33" />
+      <stop offset="100%" stop-color="#00142A" />
+    </linearGradient>
+    
+    <!-- Glow effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Aurora patterns -->
+    <linearGradient id="aurora-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C853" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00C853" stop-opacity="0.9" />
+    </linearGradient>
+    
+    <linearGradient id="aurora-magenta" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D500F9" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#D500F9" stop-opacity="0.9" />
+    </linearGradient>
+    
+    <linearGradient id="aurora-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.9" />
+    </linearGradient>
+    
+    <!-- Field gradient -->
+    <radialGradient id="field-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#D500F9" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#D500F9" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="256" height="256" fill="url(#bg-gradient)" />
+  
+  <!-- Subtle star field -->
+  <g>
+    <circle cx="30" cy="40" r="1" fill="white" opacity="0.8" />
+    <circle cx="60" cy="20" r="1" fill="white" opacity="0.6" />
+    <circle cx="90" cy="35" r="1" fill="white" opacity="0.7" />
+    <circle cx="120" cy="15" r="1" fill="white" opacity="0.9" />
+    <circle cx="150" cy="25" r="1" fill="white" opacity="0.7" />
+    <circle cx="180" cy="45" r="1" fill="white" opacity="0.6" />
+    <circle cx="210" cy="30" r="1" fill="white" opacity="0.8" />
+    <circle cx="240" cy="15" r="1" fill="white" opacity="0.7" />
+    
+    <circle cx="20" cy="70" r="1" fill="white" opacity="0.7" />
+    <circle cx="50" cy="90" r="1" fill="white" opacity="0.8" />
+    <circle cx="90" cy="75" r="1" fill="white" opacity="0.6" />
+    <circle cx="130" cy="85" r="1" fill="white" opacity="0.7" />
+    <circle cx="160" cy="65" r="1" fill="white" opacity="0.9" />
+    <circle cx="200" cy="80" r="1" fill="white" opacity="0.6" />
+    <circle cx="230" cy="70" r="1" fill="white" opacity="0.8" />
+    
+    <circle cx="25" cy="115" r="1" fill="white" opacity="0.8" />
+    <circle cx="55" cy="135" r="1" fill="white" opacity="0.7" />
+    <circle cx="85" cy="125" r="1" fill="white" opacity="0.6" />
+    <circle cx="115" cy="145" r="1" fill="white" opacity="0.9" />
+    <circle cx="145" cy="115" r="1" fill="white" opacity="0.7" />
+    <circle cx="175" cy="130" r="1" fill="white" opacity="0.8" />
+    <circle cx="215" cy="120" r="1" fill="white" opacity="0.6" />
+    <circle cx="245" cy="135" r="1" fill="white" opacity="0.7" />
+    
+    <circle cx="35" cy="170" r="1" fill="white" opacity="0.6" />
+    <circle cx="65" cy="185" r="1" fill="white" opacity="0.8" />
+    <circle cx="95" cy="165" r="1" fill="white" opacity="0.7" />
+    <circle cx="125" cy="180" r="1" fill="white" opacity="0.9" />
+    <circle cx="155" cy="165" r="1" fill="white" opacity="0.7" />
+    <circle cx="185" cy="185" r="1" fill="white" opacity="0.6" />
+    <circle cx="225" cy="170" r="1" fill="white" opacity="0.8" />
+    
+    <circle cx="30" cy="210" r="1" fill="white" opacity="0.7" />
+    <circle cx="60" cy="225" r="1" fill="white" opacity="0.6" />
+    <circle cx="100" cy="215" r="1" fill="white" opacity="0.8" />
+    <circle cx="130" cy="230" r="1" fill="white" opacity="0.7" />
+    <circle cx="160" cy="210" r="1" fill="white" opacity="0.9" />
+    <circle cx="190" cy="225" r="1" fill="white" opacity="0.7" />
+    <circle cx="220" cy="215" r="1" fill="white" opacity="0.6" />
+    <circle cx="240" cy="230" r="1" fill="white" opacity="0.8" />
+  </g>
+  
+  <!-- Aurora effect ribbons in background -->
+  <g opacity="0.6">
+    <path d="M0,170 Q60,150 100,180 Q150,210 200,190 Q240,170 256,180" 
+          fill="none" stroke="url(#aurora-green)" stroke-width="8" opacity="0.5" />
+    
+    <path d="M0,200 Q40,190 80,210 Q130,240 180,220 Q230,200 256,210" 
+          fill="none" stroke="url(#aurora-blue)" stroke-width="6" opacity="0.4" />
+    
+    <path d="M0,140 Q50,120 90,140 Q140,170 190,150 Q240,130 256,140" 
+          fill="none" stroke="url(#aurora-magenta)" stroke-width="10" opacity="0.3" />
+  </g>
+  
+  <!-- Vector Analysis Visual -->
+  <g filter="url(#glow)">
+    <!-- Vector field background -->
+    <circle cx="128" cy="128" r="80" fill="url(#field-gradient)" />
+    
+    <!-- Vector field visualization -->
+    <!-- Row 1 -->
+    <line x1="68" y1="78" x2="78" y2="68" stroke="#00C853" stroke-width="2" />
+    <polygon points="78,68 72,71 75,75" fill="#00C853" />
+    
+    <line x1="98" y1="78" x2="105" y2="65" stroke="#00C853" stroke-width="2" />
+    <polygon points="105,65 99,71 104,73" fill="#00C853" />
+    
+    <line x1="128" y1="78" x2="128" y2="65" stroke="#00C853" stroke-width="2" />
+    <polygon points="128,65 124,72 132,72" fill="#00C853" />
+    
+    <line x1="158" y1="78" x2="151" y2="65" stroke="#00C853" stroke-width="2" />
+    <polygon points="151,65 152,73 157,71" fill="#00C853" />
+    
+    <line x1="188" y1="78" x2="178" y2="68" stroke="#00C853" stroke-width="2" />
+    <polygon points="178,68 181,75 184,71" fill="#00C853" />
+    
+    <!-- Row 2 -->
+    <line x1="68" y1="108" x2="81" y2="101" stroke="#00C853" stroke-width="2" />
+    <polygon points="81,101 73,99 75,105" fill="#00C853" />
+    
+    <line x1="98" y1="108" x2="108" y2="98" stroke="#00C853" stroke-width="2" />
+    <polygon points="108,98 101,101 105,105" fill="#00C853" />
+    
+    <line x1="128" y1="108" x2="128" y2="93" stroke="#00C853" stroke-width="2" />
+    <polygon points="128,93 124,100 132,100" fill="#00C853" />
+    
+    <line x1="158" y1="108" x2="148" y2="98" stroke="#00C853" stroke-width="2" />
+    <polygon points="148,98 151,105 155,101" fill="#00C853" />
+    
+    <line x1="188" y1="108" x2="175" y2="101" stroke="#00C853" stroke-width="2" />
+    <polygon points="175,101 181,105 183,99" fill="#00C853" />
+    
+    <!-- Row 3 -->
+    <line x1="68" y1="128" x2="83" y2="128" stroke="#00C853" stroke-width="2" />
+    <polygon points="83,128 76,124 76,132" fill="#00C853" />
+    
+    <line x1="98" y1="128" x2="113" y2="128" stroke="#00C853" stroke-width="2" />
+    <polygon points="113,128 106,124 106,132" fill="#00C853" />
+    
+    <!-- Center point -->
+    <circle cx="128" cy="128" r="5" fill="#D500F9" />
+    
+    <line x1="158" y1="128" x2="143" y2="128" stroke="#00C853" stroke-width="2" />
+    <polygon points="143,128 150,132 150,124" fill="#00C853" />
+    
+    <line x1="188" y1="128" x2="173" y2="128" stroke="#00C853" stroke-width="2" />
+    <polygon points="173,128 180,132 180,124" fill="#00C853" />
+    
+    <!-- Row 4 -->
+    <line x1="68" y1="148" x2="81" y2="155" stroke="#00C853" stroke-width="2" />
+    <polygon points="81,155 79,147 75,153" fill="#00C853" />
+    
+    <line x1="98" y1="148" x2="108" y2="158" stroke="#00C853" stroke-width="2" />
+    <polygon points="108,158 107,150 101,153" fill="#00C853" />
+    
+    <line x1="128" y1="148" x2="128" y2="163" stroke="#00C853" stroke-width="2" />
+    <polygon points="128,163 132,156 124,156" fill="#00C853" />
+    
+    <line x1="158" y1="148" x2="148" y2="158" stroke="#00C853" stroke-width="2" />
+    <polygon points="148,158 155,153 149,150" fill="#00C853" />
+    
+    <line x1="188" y1="148" x2="175" y2="155" stroke="#00C853" stroke-width="2" />
+    <polygon points="175,155 183,153 179,147" fill="#00C853" />
+    
+    <!-- Row 5 -->
+    <line x1="68" y1="178" x2="78" y2="188" stroke="#00C853" stroke-width="2" />
+    <polygon points="78,188 77,180 71,183" fill="#00C853" />
+    
+    <line x1="98" y1="178" x2="105" y2="191" stroke="#00C853" stroke-width="2" />
+    <polygon points="105,191 107,183 100,183" fill="#00C853" />
+    
+    <line x1="128" y1="178" x2="128" y2="191" stroke="#00C853" stroke-width="2" />
+    <polygon points="128,191 132,184 124,184" fill="#00C853" />
+    
+    <line x1="158" y1="178" x2="151" y2="191" stroke="#00C853" stroke-width="2" />
+    <polygon points="151,191 156,183 149,183" fill="#00C853" />
+    
+    <line x1="188" y1="178" x2="178" y2="188" stroke="#00C853" stroke-width="2" />
+    <polygon points="178,188 185,183 179,180" fill="#00C853" />
+    
+    <!-- Integration path -->
+    <path d="M128,128 Q158,98 188,128 Q158,158 128,128" fill="none" stroke="#00E5FF" stroke-width="3" stroke-dasharray="5,3" />
+    <circle cx="128" cy="128" r="3" fill="#00E5FF" />
+    <circle cx="188" cy="128" r="3" fill="#00E5FF" />
+    
+    <!-- Path integration symbol -->
+    <text x="145" y="105" fill="#00E5FF" font-family="Arial" font-weight="bold" font-size="16" filter="url(#glow)">∮</text>
+    
+    <!-- Surface element -->
+    <path d="M128,128 L158,128 L158,158 L128,158 Z" fill="#D500F9" opacity="0.3" stroke="#D500F9" stroke-width="1.5" />
+    <text x="140" y="155" fill="#D500F9" font-family="Arial" font-size="14" filter="url(#glow)">dS</text>
+    
+    <!-- Vector Calculus symbols -->
+    <text x="90" y="95" fill="white" font-family="Arial" font-weight="bold" font-size="16" filter="url(#glow)">∇×F</text>
+    <text x="170" y="170" fill="white" font-family="Arial" font-weight="bold" font-size="16" filter="url(#glow)">∇·F</text>
+  </g>
+</svg>
