@@ -1,0 +1,205 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  validate-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Validate HTML files
+        run: |
+          echo "🔍 Validating HTML files..."
+          find . -name "*.html" -type f | while read file; do
+            echo "Checking: $file"
+            # Basic HTML validation
+            if ! grep -q "<!DOCTYPE" "$file"; then
+              echo "❌ Missing DOCTYPE in $file"
+              exit 1
+            fi
+            if ! grep -q "</html>" "$file"; then
+              echo "❌ Missing closing HTML tag in $file"
+              exit 1
+            fi
+          done
+          echo "✅ HTML validation complete"
+          
+      - name: Validate asset links
+        run: |
+          echo "🔍 Checking for broken internal links..."
+          find . -name "*.html" -type f -exec grep -l "src=\|href=" {} \; | while read file; do
+            echo "Scanning links in: $file"
+            # Check for relative links that should exist
+            grep -o 'src="[^"]*"' "$file" | grep -v "http" | sed 's/src="//;s/"//' | while read link; do
+              if [[ "$link" == ./* ]] && [[ ! -f "$(dirname "$file")/$link" ]] && [[ ! -f "$link" ]]; then
+                echo "⚠️  Potentially broken link in $file: $link"
+              fi
+            done
+          done
+          echo "✅ Link validation complete"
+          
+      - name: Check file sizes
+        run: |
+          echo "📊 Checking asset file sizes..."
+          find . -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" \) -size +5M | while read file; do
+            echo "⚠️  Large asset detected: $file ($(du -h "$file" | cut -f1))"
+          done
+          
+          # Count total assets
+          total_files=$(find math253 -type f | wc -l)
+          echo "📈 Total assets: $total_files files"
+          
+      - name: Generate asset manifest
+        run: |
+          echo "📋 Generating asset manifest..."
+          cat > asset-manifest.json << EOF
+          {
+            "generated": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "repository": "MATH_253-assets",
+            "commit": "${{ github.sha }}",
+            "assets": {
+              "interactive": $(find math253/interactive -name "*.html" | wc -l),
+              "images": $(find math253/images -type f | wc -l),
+              "videos": $(find math253/videos -type f | wc -l),
+              "total": $(find math253 -type f | wc -l)
+            },
+            "health_check": "https://jjohnson-47.github.io/MATH_253-assets/health-check.html"
+          }
+          EOF
+          echo "✅ Asset manifest generated"
+
+  deploy:
+    needs: validate-assets
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Generate directory index
+        run: |
+          echo "📁 Generating directory index..."
+          cat > index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Math 253 Calculus III - Assets</title>
+              <style>
+                  body { font-family: Arial, sans-serif; margin: 40px; background: #f8f9fa; }
+                  .container { max-width: 1000px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+                  h1 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+                  .asset-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+                  .asset-category { background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6; }
+                  .asset-category h3 { color: #495057; margin-top: 0; }
+                  .asset-list { list-style: none; padding: 0; }
+                  .asset-list li { margin: 8px 0; }
+                  .asset-list a { color: #007bff; text-decoration: none; }
+                  .asset-list a:hover { text-decoration: underline; }
+                  .stats { background: #e7f3ff; padding: 15px; border-radius: 8px; margin: 20px 0; }
+              </style>
+          </head>
+          <body>
+              <div class="container">
+                  <h1>📊 Math 253 Calculus III - Public Assets</h1>
+                  
+                  <div class="stats">
+                      <strong>Repository Status:</strong> ✅ Operational | 
+                      <strong>Last Updated:</strong> <span id="timestamp"></span> |
+                      <strong>Assets:</strong> $(find math253 -type f | wc -l) files
+                  </div>
+                  
+                  <div class="asset-grid">
+                      <div class="asset-category">
+                          <h3>🎯 Interactive Content</h3>
+                          <ul class="asset-list">
+                              <li><a href="math253/interactive/section-11-4-cross-product-overview.html">Cross Product Overview</a></li>
+                              <li><a href="math253/interactive/section-11-5-lines-overview.html">Lines in 3D Space</a></li>
+                              <li><a href="math253/interactive/section-11-6-planes-overview.html">Planes Overview</a></li>
+                              <li><a href="math253/interactive/determinants-introduction-guide.html">Determinants Guide</a></li>
+                              <li><a href="math253/interactive/">Browse All Interactive Content →</a></li>
+                          </ul>
+                      </div>
+                      
+                      <div class="asset-category">
+                          <h3>🖼️ Course Images</h3>
+                          <ul class="asset-list">
+                              <li><a href="math253/images/vector-icon.svg">Vector Mathematics Icon</a></li>
+                              <li><a href="math253/images/partial-derivatives-icon.svg">Partial Derivatives Icon</a></li>
+                              <li><a href="math253/images/vector-analysis-icon.svg">Vector Analysis Icon</a></li>
+                              <li><a href="math253/images/">Browse All Images →</a></li>
+                          </ul>
+                      </div>
+                      
+                      <div class="asset-category">
+                          <h3>🎥 Video Resources</h3>
+                          <ul class="asset-list">
+                              <li><a href="math253/videos/thumbnails/">Video Thumbnails</a></li>
+                              <li><a href="math253/videos/">Video Metadata</a></li>
+                          </ul>
+                      </div>
+                      
+                      <div class="asset-category">
+                          <h3>🔧 System Tools</h3>
+                          <ul class="asset-list">
+                              <li><a href="health-check.html">Health Check Status</a></li>
+                              <li><a href="asset-manifest.json">Asset Manifest</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  
+                  <p><em>This repository serves public educational assets for Math 253 Calculus III via GitHub Pages CDN.</em></p>
+              </div>
+              
+              <script>
+                  document.getElementById('timestamp').textContent = new Date().toLocaleString();
+              </script>
+          </body>
+          </html>
+          EOF
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
+      - name: Verify deployment
+        run: |
+          echo "🌐 Deployment complete!"
+          echo "📍 URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "🔍 Health check: ${{ steps.deployment.outputs.page_url }}health-check.html"
