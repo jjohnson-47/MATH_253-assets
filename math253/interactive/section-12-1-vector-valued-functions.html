@@ -237,36 +237,56 @@
         <div class="aurora-section">
             <h2>🎯 Key Exercise Explanations</h2>
             <div class="exercise-container" style="background: linear-gradient(135deg, #E8F8FF 0%, #F0FAFF 100%); border-left: 4px solid var(--aurora-green); border-radius: 8px; padding: 20px; margin: 20px 0;">
-                <h3 style="color: var(--aurora-night); margin-top: 0;">📝 Domain of Multivariable Functions</h3>
+                <h3 style="color: var(--aurora-night); margin-top: 0;">📝 Parameterizing a Curve</h3>
                 <div style="background: var(--aurora-pale); padding: 15px; border-radius: 5px; margin: 10px 0;">
-                    <p><strong>Problem:</strong> Find the domain of $f(x,y) = \sqrt{1 - \frac{x^2}{9} - \frac{y^2}{4}}$</p>
+                    <p><strong>Problem:</strong> Parameterize the curve $y = x^2$ as a vector-valued function</p>
                 </div>
                 <div style="background: rgba(0, 200, 83, 0.1); padding: 15px; border-radius: 5px; margin: 10px 0;">
                     <p><strong>Solution Method:</strong></p>
                     <ol>
-                        <li><strong>Identify constraints:</strong> For square root to be defined: $1 - \frac{x^2}{9} - \frac{y^2}{4} \geq 0$</li>
-                        <li><strong>Rearrange inequality:</strong> $\frac{x^2}{9} + \frac{y^2}{4} \leq 1$</li>
-                        <li><strong>Recognize standard form:</strong> This is an ellipse equation with semi-axes $a = 3, b = 2$</li>
-                        <li><strong>Geometric interpretation:</strong> Domain is all points inside and on the ellipse</li>
+                        <li><strong>Choose parameter:</strong> Let $t$ be our parameter (think of it as time)</li>
+                        <li><strong>Express x in terms of t:</strong> $x = t$</li>
+                        <li><strong>Express y in terms of t:</strong> Since $y = x^2$, we have $y = t^2$</li>
+                        <li><strong>Write vector function:</strong> $\mathbf{r}(t) = \langle t, t^2 \rangle$</li>
                     </ol>
-                    <p><strong>Answer:</strong> All points $(x,y)$ such that $\frac{x^2}{9} + \frac{y^2}{4} \leq 1$</p>
+                    <p><strong>Answer:</strong> $\mathbf{r}(t) = \langle t, t^2 \rangle$ traces the parabola $y = x^2$</p>
+                    <p><strong>Note:</strong> Multiple parameterizations exist! For example, $\mathbf{r}(s) = \langle s, s^2 \rangle$ where $s = 2t$</p>
                 </div>
             </div>
 
             <div class="exercise-container" style="background: linear-gradient(135deg, #E8F8FF 0%, #F0FAFF 100%); border-left: 4px solid var(--aurora-ice); border-radius: 8px; padding: 20px; margin: 20px 0;">
-                <h3 style="color: var(--aurora-night); margin-top: 0;">📊 Range Analysis</h3>
+                <h3 style="color: var(--aurora-night); margin-top: 0;">🌀 Cycloid Vector Function</h3>
                 <div style="background: var(--aurora-pale); padding: 15px; border-radius: 5px; margin: 10px 0;">
-                    <p><strong>Problem:</strong> Find the range of the same function $f(x,y) = \sqrt{1 - \frac{x^2}{9} - \frac{y^2}{4}}$</p>
+                    <p><strong>Problem:</strong> Find a vector-valued function that models a cycloid (curve traced by a point on a rolling circle)</p>
                 </div>
                 <div style="background: rgba(0, 229, 255, 0.1); padding: 15px; border-radius: 5px; margin: 10px 0;">
                     <p><strong>Solution Method:</strong></p>
                     <ol>
-                        <li><strong>Find maximum:</strong> $f(0,0) = \sqrt{1 - 0 - 0} = 1$</li>
-                        <li><strong>Analyze structure:</strong> Function has form $\sqrt{1 - \text{positive terms}}$</li>
-                        <li><strong>Find minimum:</strong> As we approach boundary, expression under square root approaches 0</li>
-                        <li><strong>Establish bounds:</strong> All values between minimum and maximum are achievable</li>
+                        <li><strong>Start simple:</strong> Model point spinning around unit circle: $\langle \cos(\frac{3\pi}{2} - t), \sin(\frac{3\pi}{2} - t) \rangle$</li>
+                        <li><strong>Clockwise rotation:</strong> Use negative $t$ to get clockwise motion</li>
+                        <li><strong>Translate up:</strong> Add 1 to y-component to move circle above x-axis</li>
+                        <li><strong>Rolling motion:</strong> Add $t$ to x-component to translate circle horizontally</li>
                     </ol>
-                    <p><strong>Answer:</strong> Range is $[0, 1]$</p>
+                    <p><strong>Answer:</strong> $\mathbf{r}(t) = \langle t - \sin(t), 1 - \cos(t) \rangle$</p>
+                    <p><strong>Insight:</strong> This creates the famous cycloid curve seen in physics and engineering!</p>
+                </div>
+            </div>
+
+            <div class="exercise-container" style="background: linear-gradient(135deg, #E8F8FF 0%, #F0FAFF 100%); border-left: 4px solid var(--aurora-magenta); border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <h3 style="color: var(--aurora-night); margin-top: 0;">📊 Displacement Vector</h3>
+                <div style="background: var(--aurora-pale); padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <p><strong>Problem:</strong> Given $\mathbf{r}(t) = \langle \cos(t), \sin(t), t \rangle$ (3D helix), find displacement from $t = 0$ to $t = \pi$</p>
+                </div>
+                <div style="background: rgba(213, 0, 249, 0.1); padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <p><strong>Solution Method:</strong></p>
+                    <ol>
+                        <li><strong>Find initial position:</strong> $\mathbf{r}(0) = \langle \cos(0), \sin(0), 0 \rangle = \langle 1, 0, 0 \rangle$</li>
+                        <li><strong>Find final position:</strong> $\mathbf{r}(\pi) = \langle \cos(\pi), \sin(\pi), \pi \rangle = \langle -1, 0, \pi \rangle$</li>
+                        <li><strong>Calculate displacement:</strong> $\mathbf{d} = \mathbf{r}(\pi) - \mathbf{r}(0)$</li>
+                        <li><strong>Compute:</strong> $\mathbf{d} = \langle -1, 0, \pi \rangle - \langle 1, 0, 0 \rangle = \langle -2, 0, \pi \rangle$</li>
+                    </ol>
+                    <p><strong>Answer:</strong> Displacement vector is $\langle -2, 0, \pi \rangle$</p>
+                    <p><strong>Physical meaning:</strong> Net change in position (not total distance traveled!)</p>
                 </div>
             </div>
         </div>
