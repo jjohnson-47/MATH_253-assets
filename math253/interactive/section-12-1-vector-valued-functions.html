@@ -235,6 +235,60 @@
         </div>
 
         <div class="aurora-section">
+            <h2>🎯 Key Exercise Explanations</h2>
+            <div class="exercise-container" style="background: linear-gradient(135deg, #E8F8FF 0%, #F0FAFF 100%); border-left: 4px solid var(--aurora-green); border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <h3 style="color: var(--aurora-night); margin-top: 0;">📝 Domain of Multivariable Functions</h3>
+                <div style="background: var(--aurora-pale); padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <p><strong>Problem:</strong> Find the domain of $f(x,y) = \sqrt{1 - \frac{x^2}{9} - \frac{y^2}{4}}$</p>
+                </div>
+                <div style="background: rgba(0, 200, 83, 0.1); padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <p><strong>Solution Method:</strong></p>
+                    <ol>
+                        <li><strong>Identify constraints:</strong> For square root to be defined: $1 - \frac{x^2}{9} - \frac{y^2}{4} \geq 0$</li>
+                        <li><strong>Rearrange inequality:</strong> $\frac{x^2}{9} + \frac{y^2}{4} \leq 1$</li>
+                        <li><strong>Recognize standard form:</strong> This is an ellipse equation with semi-axes $a = 3, b = 2$</li>
+                        <li><strong>Geometric interpretation:</strong> Domain is all points inside and on the ellipse</li>
+                    </ol>
+                    <p><strong>Answer:</strong> All points $(x,y)$ such that $\frac{x^2}{9} + \frac{y^2}{4} \leq 1$</p>
+                </div>
+            </div>
+
+            <div class="exercise-container" style="background: linear-gradient(135deg, #E8F8FF 0%, #F0FAFF 100%); border-left: 4px solid var(--aurora-ice); border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <h3 style="color: var(--aurora-night); margin-top: 0;">📊 Range Analysis</h3>
+                <div style="background: var(--aurora-pale); padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <p><strong>Problem:</strong> Find the range of the same function $f(x,y) = \sqrt{1 - \frac{x^2}{9} - \frac{y^2}{4}}$</p>
+                </div>
+                <div style="background: rgba(0, 229, 255, 0.1); padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <p><strong>Solution Method:</strong></p>
+                    <ol>
+                        <li><strong>Find maximum:</strong> $f(0,0) = \sqrt{1 - 0 - 0} = 1$</li>
+                        <li><strong>Analyze structure:</strong> Function has form $\sqrt{1 - \text{positive terms}}$</li>
+                        <li><strong>Find minimum:</strong> As we approach boundary, expression under square root approaches 0</li>
+                        <li><strong>Establish bounds:</strong> All values between minimum and maximum are achievable</li>
+                    </ol>
+                    <p><strong>Answer:</strong> Range is $[0, 1]$</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="aurora-section">
+            <h2>🎬 Additional Learning Resources</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                <div class="activity-card" style="background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(0, 229, 255, 0.1) 100%); border: 1px solid rgba(0, 200, 83, 0.3);">
+                    <h3 style="color: var(--aurora-green);">🎓 Professor Leonard</h3>
+                    <p><strong>Comprehensive Lecture:</strong> Full university-level treatment of vector-valued functions</p>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/YThPIdcwr78" frameborder="0" allowfullscreen style="border-radius: 5px;"></iframe>
+                </div>
+                
+                <div class="activity-card" style="background: linear-gradient(135deg, rgba(0, 229, 255, 0.1) 0%, rgba(213, 0, 249, 0.1) 100%); border: 1px solid rgba(0, 229, 255, 0.3);">
+                    <h3 style="color: var(--aurora-ice);">📚 PatrickJMT</h3>
+                    <p><strong>Worked Example:</strong> Practical applications and problem-solving techniques</p>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/3zo0E_lmOm0" frameborder="0" allowfullscreen style="border-radius: 5px;"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="aurora-section">
             <h2>🚀 Activities</h2>
             <div class="activities-grid">
                 <div class="activity-card">
