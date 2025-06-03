@@ -239,57 +239,110 @@
         <div class="aurora-section">
             <h2>🎯 Key Exercise Explanations</h2>
             <div class="exercise-container" style="background: linear-gradient(135deg, #E8F8FF 0%, #F0FAFF 100%); border-left: 4px solid var(--aurora-green); border-radius: 8px; padding: 20px; margin: 20px 0;">
-                <h3 style="color: var(--aurora-night); margin-top: 0;">📝 Derivative of Vector Function</h3>
+                <h3 style="color: var(--aurora-night); margin-top: 0;">📝 Derivative of a Vector-Valued Function: Worked Example 🌟</h3>
+                
                 <div style="background: var(--aurora-pale); padding: 15px; border-radius: 5px; margin: 10px 0;">
-                    <p><strong>Problem:</strong> Find $\mathbf{r}'(t)$ for $\mathbf{r}(t) = \langle t^2, \sin(t), e^t \rangle$</p>
+                    <p><strong>The Problem:</strong> Given the vector-valued function $\mathbf{r}(t) = \langle t^2, \sin(t), e^t \rangle$, find its derivative $\mathbf{r}'(t)$.</p>
                 </div>
+
+                <div style="background: rgba(0, 200, 83, 0.05); padding: 15px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: var(--aurora-green); margin-top: 0;">🧠 Conceptual Foundation: How do we differentiate vector functions?</h4>
+                    <p>To find the derivative of a vector-valued function, we rely on <a href="https://opentext.uleth.ca/apex-calculus/sec_vvf_calc.html#def_vvf_derivative" target="_blank" rel="noopener" style="color: var(--aurora-green); font-weight: bold;">Definition 12.2.8</a>. This definition states that if $\mathbf{r}(t) = \langle f(t), g(t), h(t) \rangle$, where each component function is differentiable, then:</p>
+                    <div style="text-align: center; background: white; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                        $\mathbf{r}'(t) = \langle f'(t), g'(t), h'(t) \rangle$
+                    </div>
+                    <p>This component-wise differentiation is reinforced by <a href="https://opentext.uleth.ca/apex-calculus/sec_vvf_calc.html#thm_vvf_deriv" target="_blank" rel="noopener" style="color: var(--aurora-green); font-weight: bold;">Theorem 12.2.9</a>, which states that a vector function is differentiable if and only if each component is differentiable.</p>
+                </div>
+
                 <div style="background: rgba(0, 200, 83, 0.1); padding: 15px; border-radius: 5px; margin: 10px 0;">
-                    <p><strong>Key Concept:</strong> By <a href="https://opentext.uleth.ca/apex-calculus/sec_vvf_calc.html#def_vvf_derivative" target="_blank" rel="noopener" style="color: var(--aurora-green); font-weight: bold;">Definition 12.2.8</a>, we differentiate each component separately.</p>
+                    <h4 style="color: var(--aurora-night); margin-top: 0;">📝 Solution Steps:</h4>
                     
-                    <p><strong>Solution Method:</strong></p>
-                    <ol>
-                        <li><strong>Component-wise differentiation:</strong> Differentiate each component separately</li>
-                        <li><strong>First component:</strong> $\frac{d}{dt}[t^2] = 2t$</li>
-                        <li><strong>Second component:</strong> $\frac{d}{dt}[\sin(t)] = \cos(t)$</li>
-                        <li><strong>Third component:</strong> $\frac{d}{dt}[e^t] = e^t$</li>
-                    </ol>
-                    <p><strong>Answer:</strong> $\mathbf{r}'(t) = \langle 2t, \cos(t), e^t \rangle$</p>
+                    <p><strong>1. Identify component functions:</strong> For $\mathbf{r}(t) = \langle t^2, \sin(t), e^t \rangle$, we have $f(t) = t^2$, $g(t) = \sin(t)$, and $h(t) = e^t$.</p>
                     
-                    <p><strong>Why this works:</strong> <a href="https://opentext.uleth.ca/apex-calculus/sec_vvf_calc.html#thm_vvf_deriv" target="_blank" rel="noopener" style="color: var(--aurora-green); font-weight: bold;">Theorem 12.2.9</a> guarantees that a vector function is differentiable if each component is differentiable. For more complex operations, see <a href="https://opentext.uleth.ca/apex-calculus/sec_vvf_calc.html#thm_vvf_deriv_prop" target="_blank" rel="noopener" style="color: var(--aurora-green); font-weight: bold;">Theorem 12.2.20</a> on derivative properties.</p>
+                    <p><strong>2. Differentiate each component:</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>First component:</strong> $f'(t) = \frac{d}{dt}(t^2) = 2t$ (power rule)</li>
+                        <li><strong>Second component:</strong> $g'(t) = \frac{d}{dt}(\sin(t)) = \cos(t)$ (trigonometric derivative)</li>
+                        <li><strong>Third component:</strong> $h'(t) = \frac{d}{dt}(e^t) = e^t$ (exponential derivative)</li>
+                    </ul>
+                    
+                    <p><strong>3. Construct the derivative vector:</strong> Combining these results gives us:</p>
+                    <div style="text-align: center; background: white; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                        $\mathbf{r}'(t) = \langle 2t, \cos(t), e^t \rangle$
+                    </div>
+                </div>
+
+                <div style="background: rgba(0, 200, 83, 0.05); padding: 15px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: var(--aurora-green); margin-top: 0;">💡 Further Context:</h4>
+                    <p>While this example uses straightforward component-wise differentiation, <a href="https://opentext.uleth.ca/apex-calculus/sec_vvf_calc.html#thm_vvf_deriv_prop" target="_blank" rel="noopener" style="color: var(--aurora-green); font-weight: bold;">Theorem 12.2.20</a> provides important properties for more complex operations, such as derivatives of sums, scalar multiples, and products of vector functions. These properties ensure differentiation works predictably with vector operations.</p>
                 </div>
             </div>
 
             <div class="exercise-container" style="background: linear-gradient(135deg, #E8F8FF 0%, #F0FAFF 100%); border-left: 4px solid var(--aurora-ice); border-radius: 8px; padding: 20px; margin: 20px 0;">
-                <h3 style="color: var(--aurora-night); margin-top: 0;">📊 Tangent Line Equation</h3>
+                <h3 style="color: var(--aurora-night); margin-top: 0;">📊 Tangent Line to a Vector Function: Geometric Insight 🌟</h3>
+                
                 <div style="background: var(--aurora-pale); padding: 15px; border-radius: 5px; margin: 10px 0;">
-                    <p><strong>Problem:</strong> Find the tangent line to $\mathbf{r}(t) = \langle t^2, t^3 \rangle$ at $t = 1$</p>
+                    <p><strong>The Problem:</strong> Find the equation of the tangent line to the vector-valued function $\mathbf{r}(t) = \langle t^2, t^3 \rangle$ at the point where $t = 1$.</p>
                 </div>
+
+                <div style="background: rgba(0, 229, 255, 0.05); padding: 15px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: var(--aurora-ice); margin-top: 0;">🧠 Conceptual Foundation: What is a tangent line to a vector function?</h4>
+                    <p>When we have a vector-valued function $\mathbf{r}(t)$, its graph traces out a curve in space. At any point on this curve, we can find a tangent line that "best approximates" the curve at that specific location. The direction of this tangent line is given by the derivative vector $\mathbf{r}'(t)$, which points in the direction of instantaneous motion along the curve.</p>
+                    <p>The parametric equation of a tangent line follows the general form: $\mathbf{L}(s) = \mathbf{r}(t_0) + s \cdot \mathbf{r}'(t_0)$, where $\mathbf{r}(t_0)$ is the point of tangency and $\mathbf{r}'(t_0)$ is the direction vector.</p>
+                </div>
+
                 <div style="background: rgba(0, 229, 255, 0.1); padding: 15px; border-radius: 5px; margin: 10px 0;">
-                    <p><strong>Solution Method:</strong></p>
-                    <ol>
-                        <li><strong>Find point:</strong> $\mathbf{r}(1) = \langle 1, 1 \rangle$</li>
-                        <li><strong>Find derivative:</strong> $\mathbf{r}'(t) = \langle 2t, 3t^2 \rangle$</li>
-                        <li><strong>Evaluate derivative:</strong> $\mathbf{r}'(1) = \langle 2, 3 \rangle$</li>
-                        <li><strong>Write parametric equation:</strong> $\mathbf{L}(s) = \mathbf{r}(1) + s \cdot \mathbf{r}'(1)$</li>
-                    </ol>
-                    <p><strong>Answer:</strong> $\mathbf{L}(s) = \langle 1, 1 \rangle + s\langle 2, 3 \rangle = \langle 1 + 2s, 1 + 3s \rangle$</p>
+                    <h4 style="color: var(--aurora-night); margin-top: 0;">📝 Solution Process:</h4>
+                    
+                    <p><strong>Step 1 - Find the point of tangency:</strong> We need to evaluate $\mathbf{r}(t)$ at $t = 1$ to find where the tangent line touches the curve. Substituting $t = 1$ into $\mathbf{r}(t) = \langle t^2, t^3 \rangle$ gives us $\mathbf{r}(1) = \langle 1^2, 1^3 \rangle = \langle 1, 1 \rangle$. This point $(1, 1)$ is where our tangent line will touch the curve.</p>
+                    
+                    <p><strong>Step 2 - Find the direction vector:</strong> The direction of the tangent line is determined by the derivative $\mathbf{r}'(t)$. Using component-wise differentiation: $\mathbf{r}'(t) = \langle \frac{d}{dt}(t^2), \frac{d}{dt}(t^3) \rangle = \langle 2t, 3t^2 \rangle$. At $t = 1$, this becomes $\mathbf{r}'(1) = \langle 2(1), 3(1)^2 \rangle = \langle 2, 3 \rangle$.</p>
+                    
+                    <p><strong>Step 3 - Construct the tangent line equation:</strong> Using the standard form $\mathbf{L}(s) = \mathbf{r}(t_0) + s \cdot \mathbf{r}'(t_0)$, we substitute our values:</p>
+                    <div style="text-align: center; background: white; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                        $\mathbf{L}(s) = \langle 1, 1 \rangle + s \langle 2, 3 \rangle = \langle 1 + 2s, 1 + 3s \rangle$
+                    </div>
+                </div>
+
+                <div style="background: rgba(0, 229, 255, 0.05); padding: 15px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: var(--aurora-ice); margin-top: 0;">💡 Geometric Interpretation:</h4>
+                    <p>The tangent line $\mathbf{L}(s) = \langle 1 + 2s, 1 + 3s \rangle$ starts at the point $(1, 1)$ when $s = 0$, and moves in the direction of the vector $\langle 2, 3 \rangle$. This means that for every 2 units we move in the x-direction, we move 3 units in the y-direction, creating a line with slope $\frac{3}{2}$. This tangent line provides the best linear approximation to our original curve $\mathbf{r}(t) = \langle t^2, t^3 \rangle$ near the point $t = 1$.</p>
                 </div>
             </div>
 
             <div class="exercise-container" style="background: linear-gradient(135deg, #E8F8FF 0%, #F0FAFF 100%); border-left: 4px solid var(--aurora-magenta); border-radius: 8px; padding: 20px; margin: 20px 0;">
-                <h3 style="color: var(--aurora-night); margin-top: 0;">🧮 Integration of Vector Functions</h3>
+                <h3 style="color: var(--aurora-night); margin-top: 0;">🧮 Integration of Vector Functions: Finding Displacement 🌟</h3>
+                
                 <div style="background: var(--aurora-pale); padding: 15px; border-radius: 5px; margin: 10px 0;">
-                    <p><strong>Problem:</strong> Evaluate $\int_0^1 \langle 2t, t^2, 1 \rangle \, dt$</p>
+                    <p><strong>The Problem:</strong> Evaluate the definite integral $\int_0^1 \langle 2t, t^2, 1 \rangle \, dt$ and interpret its meaning.</p>
                 </div>
+
+                <div style="background: rgba(213, 0, 249, 0.05); padding: 15px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: var(--aurora-magenta); margin-top: 0;">🧠 Conceptual Foundation: What does integrating a vector function mean?</h4>
+                    <p>When we integrate a vector-valued function, we're essentially finding the "accumulation" of the vector field over the given interval. If $\mathbf{v}(t)$ represents a velocity vector, then $\int_a^b \mathbf{v}(t) \, dt$ gives us the displacement (net change in position) from time $t = a$ to $t = b$. This is the vector analog of how integrating a scalar function gives us the area under the curve.</p>
+                    <p>The key insight is that integration of vector functions is performed component-wise, just like differentiation. Each component is integrated independently using the familiar techniques from single-variable calculus.</p>
+                </div>
+
                 <div style="background: rgba(213, 0, 249, 0.1); padding: 15px; border-radius: 5px; margin: 10px 0;">
-                    <p><strong>Solution Method:</strong></p>
-                    <ol>
-                        <li><strong>Component-wise integration:</strong> Integrate each component separately</li>
-                        <li><strong>First component:</strong> $\int_0^1 2t \, dt = [t^2]_0^1 = 1$</li>
-                        <li><strong>Second component:</strong> $\int_0^1 t^2 \, dt = [\frac{t^3}{3}]_0^1 = \frac{1}{3}$</li>
-                        <li><strong>Third component:</strong> $\int_0^1 1 \, dt = [t]_0^1 = 1$</li>
-                    </ol>
-                    <p><strong>Answer:</strong> $\langle 1, \frac{1}{3}, 1 \rangle$</p>
+                    <h4 style="color: var(--aurora-night); margin-top: 0;">📝 Solution Process:</h4>
+                    
+                    <p><strong>Component-wise integration approach:</strong> For the vector function $\langle 2t, t^2, 1 \rangle$, we integrate each component separately over the interval $[0, 1]$.</p>
+                    
+                    <p><strong>First component:</strong> $\int_0^1 2t \, dt$. Using the power rule, we find the antiderivative: $\int 2t \, dt = t^2 + C$. Applying the fundamental theorem of calculus: $[t^2]_0^1 = 1^2 - 0^2 = 1$.</p>
+                    
+                    <p><strong>Second component:</strong> $\int_0^1 t^2 \, dt$. The antiderivative of $t^2$ is $\frac{t^3}{3}$, so we evaluate: $[\frac{t^3}{3}]_0^1 = \frac{1^3}{3} - \frac{0^3}{3} = \frac{1}{3}$.</p>
+                    
+                    <p><strong>Third component:</strong> $\int_0^1 1 \, dt$. The antiderivative of the constant function 1 is simply $t$, giving us: $[t]_0^1 = 1 - 0 = 1$.</p>
+                    
+                    <p><strong>Combining the results:</strong> The final answer is the vector formed by these three integrated components:</p>
+                    <div style="text-align: center; background: white; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                        $\int_0^1 \langle 2t, t^2, 1 \rangle \, dt = \langle 1, \frac{1}{3}, 1 \rangle$
+                    </div>
+                </div>
+
+                <div style="background: rgba(213, 0, 249, 0.05); padding: 15px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: var(--aurora-magenta); margin-top: 0;">💡 Physical Interpretation:</h4>
+                    <p>If we interpret $\langle 2t, t^2, 1 \rangle$ as a velocity vector (with units of distance per time), then our result $\langle 1, \frac{1}{3}, 1 \rangle$ represents the displacement vector over the time interval from $t = 0$ to $t = 1$. This means an object following this velocity pattern would move 1 unit in the x-direction, $\frac{1}{3}$ unit in the y-direction, and 1 unit in the z-direction. The integration process has converted instantaneous rates of change into total accumulated change.</p>
                 </div>
             </div>
         </div>
