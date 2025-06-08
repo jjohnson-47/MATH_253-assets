@@ -629,7 +629,7 @@
         <section class="concept-introduction">
             <div class="aurora-callout">
                 <div class="aurora-callout-title">Aurora Connection ✨ — The Dance of Direction and Curvature</div>
-                <p>Like watching the Aurora Borealis flow gracefully across the night sky, this week we study how curves move through space. Unit tangent vectors act like compass needles, always pointing in the direction of motion, while curvature measures how sharply the aurora bends as it dances. Together, they reveal the complete geometric story of motion in three-dimensional space.</p>
+                <p>The Aurora Borealis forms when charged particles from the sun follow curved magnetic field lines in Earth's upper atmosphere. These particles trace out parametric paths through three-dimensional space, each with its own velocity, acceleration, and curvature. This week we study the mathematical tools that describe exactly how curves move through space—unit tangent vectors showing pure direction, unit normal vectors revealing the geometry of turning, and curvature measuring the rate of bending. Together, they give us complete geometric insight into motion through three-dimensional space.</p>
             </div>
 
             <div class="concept-intro-grid">
@@ -671,8 +671,8 @@
                     </div>
 
                     <div class="aurora-callout">
-                        <div class="aurora-callout-title">Aurora Metaphor</div>
-                        <p>Think of unit tangent vectors as compass needles embedded in the flowing aurora, always pointing in the direction of motion with exactly unit length. The unit normal vectors point perpendicular to this flow, showing which way the aurora is turning as it curves through the sky.</p>
+                        <div class="aurora-callout-title">Aurora Physics Connection</div>
+                        <p>Charged particles in the aurora follow helical paths around Earth's magnetic field lines. Unit tangent vectors $\mathbf{T}(t)$ point along the instantaneous direction of particle motion, while unit normal vectors $\mathbf{N}(t)$ point toward the center of the helical path—exactly perpendicular to the motion and revealing how the magnetic field curves the particle trajectories.</p>
                     </div>
 
                     <div class="formula-box">
@@ -706,17 +706,14 @@
 
                     <div class="interactive-container">
                         <div class="interactive-header">
-                            <h3>Interactive: Unit Tangent Vector Visualization</h3>
+                            <h3>🎮 Interactive: Unit Tangent Vector Visualization</h3>
                             <div class="interactive-description">
-                                Explore how unit tangent vectors change along different curves
+                                Explore how unit tangent and normal vectors change along a 3D helix
                             </div>
                         </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; text-align: center; color: #94a3b8;">
-                            [Interactive GeoGebra visualization would go here]<br>
-                            <em>Shows unit tangent vectors along parametric curves</em>
-                        </div>
+                        <iframe src="https://www.geogebra.org/3d/kt5dawhb?embed" width="100%" height="600" allowfullscreen style="border: 1px solid #e4e4e4; border-radius: 10px;" frameborder="0"></iframe>
                         <div class="interactive-instructions">
-                            <strong>Try This:</strong> Watch how the unit tangent vectors maintain constant length but change direction as you move along the curve. Notice how they're always tangent to the path.
+                            <strong>Try This:</strong> Use the slider to move along the helix. Watch how the unit tangent vectors $\mathbf{T}$ (green) maintain constant length but change direction, while the unit normal vectors $\mathbf{N}$ (blue) point toward the center of curvature. Notice how $\mathbf{T} \perp \mathbf{N}$ always.
                         </div>
                     </div>
                 </div>
@@ -732,8 +729,8 @@
                     </div>
 
                     <div class="aurora-callout">
-                        <div class="aurora-callout-title">Aurora Metaphor</div>
-                        <p>Arc length measures the total distance an aurora stream travels as it flows across the sky. Curvature tells us how sharply the aurora bends—think of a gently curving arc versus a tight spiral. High curvature means the aurora is changing direction rapidly; low curvature means it's flowing in a relatively straight path.</p>
+                        <div class="aurora-callout-title">Aurora Physics Connection</div>
+                        <p>Arc length measures the actual distance charged particles travel along their curved paths through the magnetosphere. Curvature quantifies how sharply these paths bend due to magnetic forces—particles in stronger magnetic fields experience higher curvature and trace tighter helical patterns. The relationship $a_N = \kappa v^2$ directly connects the centripetal acceleration of particles to their speed and the curvature of their trajectories.</p>
                     </div>
 
                     <div class="formula-box">
@@ -765,22 +762,60 @@
                         <li>Relationship between curvature and normal acceleration: $a_N = \kappa v^2$</li>
                     </ul>
 
+                    <div class="formula-box">
+                        <div class="formula-title">📐 Example: Arc Length Reparameterization</div>
+                        <div style="text-align: left; padding: 0 1rem;">
+                            <p><strong>Given:</strong> $\vec{r}(t) = \langle 3\cos(t), 3\sin(t), 4t \rangle$ (circular helix)</p>
+                            
+                            <p><strong>Step 1:</strong> Find $\vec{r}'(t) = \langle -3\sin(t), 3\cos(t), 4 \rangle$</p>
+                            
+                            <p><strong>Step 2:</strong> Calculate magnitude:
+                            $$||\vec{r}'(t)|| = \sqrt{9\sin^2(t) + 9\cos^2(t) + 16} = \sqrt{9 + 16} = 5$$</p>
+                            
+                            <p><strong>Step 3:</strong> Arc length function: $s(t) = \int_0^t 5 \, du = 5t$</p>
+                            
+                            <p><strong>Step 4:</strong> Solve for $t$: $t = \frac{s}{5}$</p>
+                            
+                            <p><strong>Result:</strong> Arc length parameterization:
+                            $$\vec{r}(s) = \left\langle 3\cos\left(\frac{s}{5}\right), 3\sin\left(\frac{s}{5}\right), \frac{4s}{5} \right\rangle$$</p>
+                            
+                            <p><strong>Verification:</strong> $||\vec{r}'(s)|| = 1$ ✓</p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-container">
+                        <div class="interactive-header">
+                            <h3>🌀 Interactive: Circular Helix Arc Length</h3>
+                            <div class="interactive-description">
+                                Explore the circular helix from our example above
+                            </div>
+                        </div>
+                        <iframe src="https://www.geogebra.org/3d/yejjbzur?embed" width="100%" height="600" allowfullscreen style="border: 1px solid #e4e4e4; border-radius: 10px;" frameborder="0"></iframe>
+                        <div class="interactive-instructions">
+                            <strong>Explore:</strong> This is the helix $\vec{r}(t) = \langle 3\cos(t), 3\sin(t), 4t \rangle$ from our example. Notice how it has radius 3 and rises at a constant rate. The arc length parameter $s = 5t$ means we travel 5 units of distance for each unit of parameter $t$.
+                        </div>
+                    </div>
+
                     <div class="applications-grid">
                         <div class="application-card">
                             <div class="application-title">🏎️ Vehicle Dynamics</div>
                             <p>Race car engineers use curvature to design safe turns and banking angles.</p>
+                            <a href="https://en.wikipedia.org/wiki/Vehicle_dynamics" target="_blank" style="color: var(--aurora-blue); font-size: 0.8rem; text-decoration: none;">→ Learn more about vehicle dynamics</a>
                         </div>
                         <div class="application-card">
                             <div class="application-title">🛰️ Orbital Mechanics</div>
                             <p>Spacecraft trajectories are analyzed using curvature and arc length.</p>
+                            <a href="https://en.wikipedia.org/wiki/Orbital_mechanics" target="_blank" style="color: var(--aurora-blue); font-size: 0.8rem; text-decoration: none;">→ Explore orbital mechanics</a>
                         </div>
                         <div class="application-card">
                             <div class="application-title">🎮 Computer Graphics</div>
                             <p>Smooth animations rely on controlled curvature for natural motion.</p>
+                            <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve" target="_blank" style="color: var(--aurora-blue); font-size: 0.8rem; text-decoration: none;">→ Discover Bézier curves</a>
                         </div>
                         <div class="application-card">
                             <div class="application-title">🏗️ Structural Engineering</div>
                             <p>Bridge and roller coaster design uses curvature for safety and comfort.</p>
+                            <a href="https://en.wikipedia.org/wiki/Structural_engineering" target="_blank" style="color: var(--aurora-blue); font-size: 0.8rem; text-decoration: none;">→ Study structural engineering</a>
                         </div>
                     </div>
                 </div>
@@ -820,6 +855,14 @@
                                 <li><a href="https://opentext.uleth.ca/apex-calculus/sec_tan_norm.html#ex_tan_norm2" target="_blank">Example 12.4.2: Acceleration Components</a></li>
                                 <li><a href="https://opentext.uleth.ca/apex-calculus/sec_curvature.html#ex_curvature1" target="_blank">Example 12.5.1: Arc Length Calculation</a></li>
                                 <li><a href="https://opentext.uleth.ca/apex-calculus/sec_curvature.html#ex_curvature2" target="_blank">Example 12.5.2: Finding Curvature</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>🔗 Interactive Tools</h4>
+                            <ul class="resource-list">
+                                <li><a href="https://www.geogebra.org/3d/kt5dawhb" target="_blank">Unit Tangent & Normal Vectors</a></li>
+                                <li><a href="https://www.geogebra.org/3d/yejjbzur" target="_blank">Circular Helix Arc Length</a></li>
                             </ul>
                         </div>
                     </div>
