@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Overview: Unit Tangent, Normal Vectors, and Curvature</title>
+    
+    <!-- MathJax Configuration -->
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            tags: 'ams'
+        },
+        startup: {
+            ready: function() {
+                setTimeout(() => MathJax.startup.defaultReady(), 1000);
+            }
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        /* Aurora Borealis Theme - Week 4 Comprehensive Overview */
+        :root {
+            --night: #001B33;
+            --green: #00C853;
+            --magenta: #D500F9;
+            --ice: #00E5FF;
+            --pale: #F6FCFE;
+            --gray: #EFF2F4;
+            --aurora-green: #22c55e;
+            --aurora-blue: #3b82f6;
+            --aurora-purple: #a855f7;
+            --aurora-pink: #ec4899;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Aurora Animation Background */
+        .aurora-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .aurora-wave {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(34, 197, 94, 0.1) 25%,
+                rgba(59, 130, 246, 0.15) 50%,
+                rgba(168, 85, 247, 0.1) 75%,
+                transparent 100%
+            );
+            animation: aurora-flow 15s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        .aurora-wave:nth-child(2) {
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(236, 72, 153, 0.08) 30%,
+                rgba(34, 197, 94, 0.12) 60%,
+                transparent 100%
+            );
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+        .aurora-wave:nth-child(3) {
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(59, 130, 246, 0.06) 40%,
+                rgba(168, 85, 247, 0.1) 70%,
+                transparent 100%
+            );
+            animation-delay: -10s;
+            animation-duration: 25s;
+        }
+
+        @keyframes aurora-flow {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0px) rotate(0deg);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translateX(-25%) translateY(-20px) rotate(1deg);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateX(0%) translateY(-10px) rotate(-0.5deg);
+                opacity: 0.4;
+            }
+            75% {
+                transform: translateX(-25%) translateY(-30px) rotate(1.5deg);
+                opacity: 0.7;
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .aurora-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 2rem;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .aurora-title {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--aurora-green), var(--aurora-blue), var(--aurora-purple));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+        }
+
+        .aurora-subtitle {
+            font-size: 1.4rem;
+            color: #94a3b8;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .week-progress {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .progress-indicator {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .week-current {
+            background: rgba(34, 197, 94, 0.2);
+            border: 2px solid var(--aurora-green);
+            color: var(--aurora-green);
+        }
+
+        .week-dates {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--aurora-blue);
+        }
+
+        /* Concept Introduction Section */
+        .concept-introduction {
+            margin-bottom: 4rem;
+        }
+
+        .concept-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .intro-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .intro-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--aurora-green);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .intro-card h3 {
+            color: var(--aurora-green);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Aurora Callout */
+        .aurora-callout {
+            background: rgba(34, 197, 94, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .aurora-callout::before {
+            content: '✨';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: rgba(15, 23, 42, 0.9);
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        .aurora-callout-title {
+            font-weight: 700;
+            color: var(--aurora-green);
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+
+        /* Formula Boxes */
+        .formula-box {
+            background: rgba(168, 85, 247, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .formula-title {
+            font-weight: 700;
+            color: var(--aurora-purple);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .formula-content {
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .formula-explanation {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--aurora-purple);
+        }
+
+        /* Interactive Tools */
+        .interactive-container {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            margin: 2rem 0;
+        }
+
+        .interactive-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .interactive-header h3 {
+            color: var(--aurora-blue);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .interactive-description {
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .interactive-embed {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .interactive-instructions {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--aurora-blue);
+        }
+
+        /* Content Grid */
+        .content-main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .content-primary {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .content-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .section-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--aurora-green);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-right: 1.5rem;
+            background: linear-gradient(45deg, var(--aurora-green), var(--aurora-blue));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--aurora-green);
+            margin: 0;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            font-size: 1rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Key Concepts List */
+        .concept-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .concept-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .concept-list li:last-child {
+            border-bottom: none;
+        }
+
+        .concept-list li::before {
+            content: '→';
+            color: var(--aurora-blue);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        /* Textbook Resources */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .resource-category {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .resource-category h4 {
+            color: var(--aurora-purple);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resource-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .resource-list a {
+            color: var(--aurora-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-list a:hover {
+            color: var(--aurora-green);
+        }
+
+        .resource-list a::before {
+            content: '📖';
+            font-size: 0.9rem;
+        }
+
+        /* Applications Grid */
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .application-card {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .application-card:hover {
+            border-color: var(--aurora-pink);
+            transform: translateY(-2px);
+        }
+
+        .application-title {
+            font-weight: 700;
+            color: var(--aurora-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Assignment Cards */
+        .assignments-section {
+            margin-top: 3rem;
+        }
+
+        .assignment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .assignment-card {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .assignment-card:hover {
+            border-color: rgba(236, 72, 153, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .assignment-title {
+            font-weight: 700;
+            color: var(--aurora-pink);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .assignment-due {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .assignment-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .aurora-footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(34, 197, 94, 0.2);
+            margin-top: 4rem;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+        }
+
+        .footer-message {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-details {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .content-main-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .aurora-title {
+                font-size: 2.2rem;
+            }
+
+            .aurora-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .concept-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .week-progress {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .section-card,
+            .intro-card {
+                padding: 1.5rem;
+            }
+
+            .assignment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-container">
+        <div class="aurora-wave"></div>
+        <div class="aurora-wave"></div>
+        <div class="aurora-wave"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="aurora-header">
+            <h1 class="aurora-title">Week 4: Vector-Valued Functions II</h1>
+            <p class="aurora-subtitle">Understanding the geometry of motion through unit vectors and curvature</p>
+            
+            <div class="week-progress">
+                <div class="progress-indicator week-current">Week 4 of 10</div>
+                <div class="progress-indicator week-dates">June 9-13, 2025</div>
+            </div>
+        </header>
+
+        <!-- Concept Introduction -->
+        <section class="concept-introduction">
+            <div class="aurora-callout">
+                <div class="aurora-callout-title">Aurora Connection ✨ — The Dance of Direction and Curvature</div>
+                <p>Like watching the Aurora Borealis flow gracefully across the night sky, this week we study how curves move through space. Unit tangent vectors act like compass needles, always pointing in the direction of motion, while curvature measures how sharply the aurora bends as it dances. Together, they reveal the complete geometric story of motion in three-dimensional space.</p>
+            </div>
+
+            <div class="concept-intro-grid">
+                <div class="intro-card">
+                    <h3>🧭 The Journey So Far</h3>
+                    <p>In Week 3, we learned that <strong>velocity vectors</strong> $\mathbf{r}'(t)$ tell us both speed and direction. But sometimes we want to separate these two aspects of motion:</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li><strong>Direction</strong>: Which way are we going?</li>
+                        <li><strong>Speed</strong>: How fast are we moving?</li>
+                        <li><strong>Turning</strong>: How sharply are we changing direction?</li>
+                    </ul>
+                </div>
+
+                <div class="intro-card">
+                    <h3>🎯 This Week's Mission</h3>
+                    <p>Week 4 gives us the mathematical tools to analyze motion with surgical precision:</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li><strong>Unit Tangent Vector</strong>: Pure direction</li>
+                        <li><strong>Unit Normal Vector</strong>: Direction of turning</li>
+                        <li><strong>Arc Length</strong>: Distance traveled</li>
+                        <li><strong>Curvature</strong>: Rate of turning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="content-main-grid">
+            <!-- Primary Content -->
+            <div class="content-primary">
+                <!-- Section 12.4: Unit Tangent and Normal Vectors -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon">📐</div>
+                        <div>
+                            <h2 class="section-title">Section 12.4: Unit Tangent and Normal Vectors</h2>
+                            <p class="section-subtitle">Separating direction from speed in vector-valued motion</p>
+                        </div>
+                    </div>
+
+                    <div class="aurora-callout">
+                        <div class="aurora-callout-title">Aurora Metaphor</div>
+                        <p>Think of unit tangent vectors as compass needles embedded in the flowing aurora, always pointing in the direction of motion with exactly unit length. The unit normal vectors point perpendicular to this flow, showing which way the aurora is turning as it curves through the sky.</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <div class="formula-title">Unit Tangent Vector Definition</div>
+                        <div class="formula-content">
+                            $$\mathbf{T}(t) = \frac{\mathbf{r}'(t)}{||\mathbf{r}'(t)||}$$
+                        </div>
+                        <div class="formula-explanation">
+                            <strong>Key Insight:</strong> The unit tangent vector $\mathbf{T}(t)$ gives us pure direction by normalizing the velocity vector $\mathbf{r}'(t)$. It always has magnitude 1, regardless of how fast we're moving.
+                        </div>
+                    </div>
+
+                    <div class="formula-box">
+                        <div class="formula-title">Principal Unit Normal Vector</div>
+                        <div class="formula-content">
+                            $$\mathbf{N}(t) = \frac{\mathbf{T}'(t)}{||\mathbf{T}'(t)||}$$
+                        </div>
+                        <div class="formula-explanation">
+                            <strong>Geometric Meaning:</strong> $\mathbf{N}(t)$ points in the direction that $\mathbf{T}(t)$ is changing. It's always perpendicular to $\mathbf{T}(t)$ and points toward the "inside" of the curve.
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--aurora-green); margin: 2rem 0 1rem;">Key Concepts You'll Master:</h4>
+                    <ul class="concept-list">
+                        <li>Computing unit tangent vectors by normalizing velocity</li>
+                        <li>Finding unit normal vectors using the derivative of $\mathbf{T}(t)$</li>
+                        <li>Understanding why $\mathbf{T}(t) \cdot \mathbf{N}(t) = 0$ (orthogonality)</li>
+                        <li>Decomposing acceleration into tangential and normal components</li>
+                        <li>Interpreting $a_T$ (change in speed) vs $a_N$ (change in direction)</li>
+                    </ul>
+
+                    <div class="interactive-container">
+                        <div class="interactive-header">
+                            <h3>Interactive: Unit Tangent Vector Visualization</h3>
+                            <div class="interactive-description">
+                                Explore how unit tangent vectors change along different curves
+                            </div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; text-align: center; color: #94a3b8;">
+                            [Interactive GeoGebra visualization would go here]<br>
+                            <em>Shows unit tangent vectors along parametric curves</em>
+                        </div>
+                        <div class="interactive-instructions">
+                            <strong>Try This:</strong> Watch how the unit tangent vectors maintain constant length but change direction as you move along the curve. Notice how they're always tangent to the path.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 12.5: Arc Length and Curvature -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon">🌊</div>
+                        <div>
+                            <h2 class="section-title">Section 12.5: Arc Length and Curvature</h2>
+                            <p class="section-subtitle">Measuring distance traveled and rate of turning</p>
+                        </div>
+                    </div>
+
+                    <div class="aurora-callout">
+                        <div class="aurora-callout-title">Aurora Metaphor</div>
+                        <p>Arc length measures the total distance an aurora stream travels as it flows across the sky. Curvature tells us how sharply the aurora bends—think of a gently curving arc versus a tight spiral. High curvature means the aurora is changing direction rapidly; low curvature means it's flowing in a relatively straight path.</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <div class="formula-title">Arc Length Function</div>
+                        <div class="formula-content">
+                            $$s(t) = \int_a^t ||\mathbf{r}'(u)|| \, du$$
+                        </div>
+                        <div class="formula-explanation">
+                            <strong>Physical Meaning:</strong> $s(t)$ represents the total distance traveled along the curve from time $a$ to time $t$. It's like reading the odometer in your car.
+                        </div>
+                    </div>
+
+                    <div class="formula-box">
+                        <div class="formula-title">Curvature Definition</div>
+                        <div class="formula-content">
+                            $$\kappa = \frac{||\mathbf{T}'(t)||}{||\mathbf{r}'(t)||} = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||^3}$$
+                        </div>
+                        <div class="formula-explanation">
+                            <strong>Geometric Interpretation:</strong> Curvature $\kappa$ measures how fast the unit tangent vector is changing. It's the "bendiness" of the curve—large $\kappa$ means sharp turns, small $\kappa$ means gradual curves.
+                        </div>
+                    </div>
+
+                    <h4 style="color: var(--aurora-green); margin: 2rem 0 1rem;">Advanced Concepts:</h4>
+                    <ul class="concept-list">
+                        <li>Arc length parameterization: when $||\mathbf{r}'(s)|| = 1$</li>
+                        <li>Alternative curvature formulas for different curve types</li>
+                        <li>Radius of curvature: $\rho = \frac{1}{\kappa}$</li>
+                        <li>Osculating circle: the "best fit" circle at each point</li>
+                        <li>Relationship between curvature and normal acceleration: $a_N = \kappa v^2$</li>
+                    </ul>
+
+                    <div class="applications-grid">
+                        <div class="application-card">
+                            <div class="application-title">🏎️ Vehicle Dynamics</div>
+                            <p>Race car engineers use curvature to design safe turns and banking angles.</p>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-title">🛰️ Orbital Mechanics</div>
+                            <p>Spacecraft trajectories are analyzed using curvature and arc length.</p>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-title">🎮 Computer Graphics</div>
+                            <p>Smooth animations rely on controlled curvature for natural motion.</p>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-title">🏗️ Structural Engineering</div>
+                            <p>Bridge and roller coaster design uses curvature for safety and comfort.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Content -->
+            <div class="content-sidebar">
+                <!-- Textbook Resources -->
+                <div class="section-card">
+                    <h3 style="color: var(--aurora-purple); margin-bottom: 1.5rem;">📚 APEX Calculus Resources</h3>
+                    
+                    <div class="resources-grid">
+                        <div class="resource-category">
+                            <h4>📖 Section 12.4 - Unit Tangent & Normal</h4>
+                            <ul class="resource-list">
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_tan_norm.html" target="_blank">Complete Section 12.4</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_tan_norm.html#def_unit_tangent" target="_blank">Definition: Unit Tangent Vector</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_tan_norm.html#def_unit_normal" target="_blank">Definition: Unit Normal Vector</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_tan_norm.html#thm_acc_decomp" target="_blank">Theorem: Acceleration Decomposition</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>📖 Section 12.5 - Arc Length & Curvature</h4>
+                            <ul class="resource-list">
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_curvature.html" target="_blank">Complete Section 12.5</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_curvature.html#def_arc_length_param" target="_blank">Arc Length Parameter</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_curvature.html#def_curvature" target="_blank">Definition: Curvature</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_curvature.html#thm_curvature_formulas" target="_blank">Alternative Curvature Formulas</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="resource-category">
+                            <h4>🎯 Worked Examples</h4>
+                            <ul class="resource-list">
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_tan_norm.html#ex_tan_norm1" target="_blank">Example 12.4.1: Computing T(t) and N(t)</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_tan_norm.html#ex_tan_norm2" target="_blank">Example 12.4.2: Acceleration Components</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_curvature.html#ex_curvature1" target="_blank">Example 12.5.1: Arc Length Calculation</a></li>
+                                <li><a href="https://opentext.uleth.ca/apex-calculus/sec_curvature.html#ex_curvature2" target="_blank">Example 12.5.2: Finding Curvature</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Reference -->
+                <div class="section-card">
+                    <h3 style="color: var(--aurora-blue); margin-bottom: 1.5rem;">⚡ Quick Reference</h3>
+                    
+                    <div style="font-family: monospace; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <strong style="color: var(--aurora-green);">Key Formulas:</strong><br><br>
+                        <span style="color: var(--aurora-blue);">Unit Tangent:</span><br>
+                        T(t) = r'(t) / ||r'(t)||<br><br>
+                        <span style="color: var(--aurora-blue);">Unit Normal:</span><br>
+                        N(t) = T'(t) / ||T'(t)||<br><br>
+                        <span style="color: var(--aurora-blue);">Curvature:</span><br>
+                        κ = ||T'(t)|| / ||r'(t)||<br><br>
+                        <span style="color: var(--aurora-blue);">Arc Length:</span><br>
+                        s = ∫ ||r'(t)|| dt
+                    </div>
+
+                    <div style="background: rgba(59, 130, 246, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--aurora-blue);">
+                        <strong>Memory Aid:</strong><br>
+                        • T points WHERE you're going<br>
+                        • N points HOW you're turning<br>
+                        • κ measures HOW MUCH you're turning<br>
+                        • s measures HOW FAR you've traveled
+                    </div>
+                </div>
+
+                <!-- Learning Objectives -->
+                <div class="section-card">
+                    <h3 style="color: var(--aurora-green); margin-bottom: 1.5rem;">🎯 Learning Objectives</h3>
+                    
+                    <p style="margin-bottom: 1rem;">By the end of Week 4, you will be able to:</p>
+                    
+                    <ul class="concept-list">
+                        <li>Calculate unit tangent vectors $\mathbf{T}(t)$ for any parametric curve</li>
+                        <li>Find principal unit normal vectors $\mathbf{N}(t)$ and verify orthogonality</li>
+                        <li>Decompose acceleration into tangential ($a_T$) and normal ($a_N$) components</li>
+                        <li>Compute arc length for parametric curves in 2D and 3D</li>
+                        <li>Calculate curvature using multiple equivalent formulas</li>
+                        <li>Interpret curvature geometrically and apply to real-world problems</li>
+                        <li>Understand the relationship between curvature and turning radius</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assignments Section -->
+        <section class="assignments-section">
+            <div class="section-card">
+                <h2 style="color: var(--aurora-pink); margin-bottom: 2rem; text-align: center;">📋 Week 4 Assignments</h2>
+                
+                <div class="assignment-grid">
+                    <div class="assignment-card">
+                        <div class="assignment-title">Discussion Board #4</div>
+                        <div class="assignment-due">Due: Wednesday, June 11, 11:59 PM</div>
+                        <div class="assignment-description">
+                            Explore real-world applications of curvature. Choose a situation from engineering, physics, or computer graphics where understanding curvature is essential. Explain the mathematical concepts involved and why they matter.
+                        </div>
+                    </div>
+
+                    <div class="assignment-card">
+                        <div class="assignment-title">Weekly Quiz #4</div>
+                        <div class="assignment-due">Due: Friday, June 13, 11:59 PM</div>
+                        <div class="assignment-description">
+                            Comprehensive quiz covering unit tangent vectors, normal vectors, and curvature calculations. Includes both computational problems and conceptual questions about geometric interpretation.
+                        </div>
+                    </div>
+
+                    <div class="assignment-card">
+                        <div class="assignment-title">Edfinity Homework</div>
+                        <div class="assignment-due">Chapter 12, Sections 12.4-12.5<br>Due: Friday, June 13, 11:59 PM</div>
+                        <div class="assignment-description">
+                            Practice problems covering all major concepts: computing T(t) and N(t), finding acceleration components, calculating arc length, and determining curvature for various parametric curves.
+                        </div>
+                    </div>
+
+                    <div class="assignment-card">
+                        <div class="assignment-title">Written Assignment #2</div>
+                        <div class="assignment-due">Chapter 12 Problems<br>Due: Monday, June 16, 11:59 PM</div>
+                        <div class="assignment-description">
+                            Multi-step problems requiring detailed solutions. Focus on showing complete work for unit vector calculations, curvature analysis, and real-world application problems. Submit as PDF with clear mathematical notation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="aurora-footer">
+            <div class="footer-message">
+                <strong>Remember the Big Picture:</strong> Unit tangent vectors show pure direction, unit normal vectors point toward turning, and curvature measures how sharply paths bend. Together, they give us complete geometric insight into motion through space.
+            </div>
+            <div class="footer-details">
+                Math 253 Calculus III • Week 4 Module • Summer 2025<br>
+                🌌 Experience the Aurora Borealis of Mathematical Learning
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
